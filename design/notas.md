@@ -1,0 +1,3 @@
+ - user stories: legal terem criado IDs para as user stories. tentem usar isso nas mensagens de commit e na documentação do doxygen.
+ - user stories: excelente documento. parece até que foi feito em markdown e "impresso". podem deixar em markdown para editarem no futuro. pode facilitar a vida de vocês.
+ - notas gerais: trabalho muito bom. as user stories ficaram ótimas. porém não está definido nos crc como serão feitas as hierarquias. vejo oportunidades, mas alerto para não se esquecerem de aplicar essa técnica de OO. fora isso, o trabalho está na direção correta.
