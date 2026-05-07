@@ -64,3 +64,4 @@ A saída HTML estará disponível em `docs/html/index.html`.
 | Nº Matrícula | Nome |
 |--------------|------| 
 | 2024010002 | Felipe Hildegardes Jorge |
+| 2022028400 | Wennedes de Oliveira Nogueira Junior |
