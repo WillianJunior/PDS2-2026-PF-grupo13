@@ -1,0 +1,306 @@
+\doxysection{Parametro Class Reference}
+\hypertarget{class_parametro}{}\label{class_parametro}\index{Parametro@{Parametro}}
+
+
+Representa um parâmetro monitorado de um equipamento.  
+
+
+
+
+{\ttfamily \+\#include $<$Parametro.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_parametro_a0071399fb14dfc6022306a1b11eb395b}{Parametro}} (double Valor\+Atual, std::\+string Desc, int id)
+\begin{DoxyCompactList}\small\item\em Constrói um parâmetro sem limites definidos. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_parametro_a7b2c8bd8c468fdd88cad4bbf38f153fd}{Parametro}} (double Valor\+Atual, double Max, double Min, std::\+string Desc, int id)
+\begin{DoxyCompactList}\small\item\em Constrói um parâmetro com limites Min/\+\+Max definidos. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_parametro_a40863e45c012d1e208bf5f7b7ed06eab}{Valor\+Valido}} (double Valor) const
+\begin{DoxyCompactList}\small\item\em Verifica se um valor está dentro dos limites configurados. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_parametro_a9d7bc8cf2f7b31f0f11739f808afdfb9}{Set\+Valor\+Atual}} (double Valor)
+\begin{DoxyCompactList}\small\item\em Atualiza o valor atual e registra no histórico. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_parametro_a58e763786ad2dc5d763f200a8337629c}{Set\+Max}} (double Valor)
+\begin{DoxyCompactList}\small\item\em Define o limite superior. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_parametro_aba1d2eb02bc196060fc0da4e473c53bd}{Set\+Min}} (double Valor)
+\begin{DoxyCompactList}\small\item\em Define o limite inferior. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_parametro_af57b4351acc5f3e2d1e2aae6fd06d1d2}{Set\+Desc}} (std::\+string Desc)
+\begin{DoxyCompactList}\small\item\em Atualiza a descrição do parâmetro. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_parametro_a0985c6385fe78316d91cd68cc61ea7b7}{Diagnosticar\+Parametro}} ()
+\begin{DoxyCompactList}\small\item\em Verifica se o valor atual viola os limites e atualiza o estado. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_parametro_ad5b0dce0bb7758bc67390241b9769974}{Get\+Valor\+Atual}} () const
+\item 
+double \doxymbox{\hyperlink{class_parametro_a487efbab0fbe485dad3e0536a06af78f}{Get\+Max}} () const
+\item 
+double \doxymbox{\hyperlink{class_parametro_a056e131a4b34487487ff19dee0e9cf38}{Get\+Min}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_parametro_ac1e57352a73f75358b0c93688bc6dbff}{Get\+Desc}} () const
+\item 
+bool \doxymbox{\hyperlink{class_parametro_ab1149bfe68c5c06085f5b9fd714ca548}{Get\+Estado}} () const
+\item 
+const std::\+vector$<$ double $>$ \& \doxymbox{\hyperlink{class_parametro_aa8306fd9abfef11b9198be7748af1453}{Get\+Hist}} () const
+\item 
+int \doxymbox{\hyperlink{class_parametro_aa71debbc4cc40756af3306ea98e95802}{Get\+Id}} ()
+\item 
+void \doxymbox{\hyperlink{class_parametro_ad3d3cb1b501c9bd64761eb1cc588e6de}{Resetar\+Limites}} ()
+\begin{DoxyCompactList}\small\item\em Restaura os limites Min/\+\+Max para os valores padrão (sem restrição). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_parametro_a537f27f6b22c7f828bd9a9676909bfe9}{Resetar\+Historico}} ()
+\begin{DoxyCompactList}\small\item\em Limpa o histórico de leituras. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa um parâmetro monitorado de um equipamento. 
+
+Armazena um valor numérico em tempo real, limites aceitáveis (Min/\+\+Max), histórico de leituras e um estado de diagnóstico. 
+
+Definition at line \doxymbox{\hyperlink{_parametro_8hpp_source_l00013}{13}} of file \doxymbox{\hyperlink{_parametro_8hpp_source}{Parametro.\+hpp}}.
+
+
+
+\label{class_parametro_doc-constructors}
+\Hypertarget{class_parametro_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_parametro_a0071399fb14dfc6022306a1b11eb395b}\index{Parametro@{Parametro}!Parametro@{Parametro}}
+\index{Parametro@{Parametro}!Parametro@{Parametro}}
+\doxysubsubsection{\texorpdfstring{Parametro()}{Parametro()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_parametro_a0071399fb14dfc6022306a1b11eb395b} 
+Parametro::\+\+Parametro (\begin{DoxyParamCaption}\item[{double}]{Valor\+Atual}{, }\item[{std::\+string}]{Desc}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Constrói um parâmetro sem limites definidos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Valor\+Atual} & Leitura inicial do parâmetro. \\
+\hline
+{\em Desc} & Descrição do parâmetro. \\
+\hline
+{\em id} & Identificador único. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_parametro_a7b2c8bd8c468fdd88cad4bbf38f153fd}\index{Parametro@{Parametro}!Parametro@{Parametro}}
+\index{Parametro@{Parametro}!Parametro@{Parametro}}
+\doxysubsubsection{\texorpdfstring{Parametro()}{Parametro()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_parametro_a7b2c8bd8c468fdd88cad4bbf38f153fd} 
+Parametro::\+\+Parametro (\begin{DoxyParamCaption}\item[{double}]{Valor\+Atual}{, }\item[{double}]{Max}{, }\item[{double}]{Min}{, }\item[{std::\+string}]{Desc}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Constrói um parâmetro com limites Min/\+\+Max definidos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Valor\+Atual} & Leitura inicial do parâmetro. \\
+\hline
+{\em Max} & Limite superior aceitável. \\
+\hline
+{\em Min} & Limite inferior aceitável. \\
+\hline
+{\em Desc} & Descrição do parâmetro. \\
+\hline
+{\em id} & Identificador único. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Implementa US-\/018 (Configurar parâmetros de equipamentos). 
+\end{DoxyNote}
+
+
+\label{class_parametro_doc-func-members}
+\Hypertarget{class_parametro_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_parametro_a0985c6385fe78316d91cd68cc61ea7b7}\index{Parametro@{Parametro}!DiagnosticarParametro@{DiagnosticarParametro}}
+\index{DiagnosticarParametro@{DiagnosticarParametro}!Parametro@{Parametro}}
+\doxysubsubsection{\texorpdfstring{DiagnosticarParametro()}{DiagnosticarParametro()}}
+{\footnotesize\ttfamily \label{class_parametro_a0985c6385fe78316d91cd68cc61ea7b7} 
+bool Parametro::\+\+Diagnosticar\+Parametro (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se o valor atual viola os limites e atualiza o estado. 
+
+\begin{DoxyReturn}{Returns}
+true se o parâmetro estiver fora dos limites (em falha). 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Implementa US-\/011 (Diagnóstico de \doxylink{class_equipamento}{Equipamento}). 
+\end{DoxyNote}
+\Hypertarget{class_parametro_ac1e57352a73f75358b0c93688bc6dbff}\index{Parametro@{Parametro}!GetDesc@{GetDesc}}
+\index{GetDesc@{GetDesc}!Parametro@{Parametro}}
+\doxysubsubsection{\texorpdfstring{GetDesc()}{GetDesc()}}
+{\footnotesize\ttfamily \label{class_parametro_ac1e57352a73f75358b0c93688bc6dbff} 
+std::\+string Parametro::\+\+Get\+Desc (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Descrição do parâmetro. 
+\end{DoxyReturn}
+\Hypertarget{class_parametro_ab1149bfe68c5c06085f5b9fd714ca548}\index{Parametro@{Parametro}!GetEstado@{GetEstado}}
+\index{GetEstado@{GetEstado}!Parametro@{Parametro}}
+\doxysubsubsection{\texorpdfstring{GetEstado()}{GetEstado()}}
+{\footnotesize\ttfamily \label{class_parametro_ab1149bfe68c5c06085f5b9fd714ca548} 
+bool Parametro::\+\+Get\+Estado (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+true se o parâmetro estiver em estado de falha. 
+\end{DoxyReturn}
+\Hypertarget{class_parametro_aa8306fd9abfef11b9198be7748af1453}\index{Parametro@{Parametro}!GetHist@{GetHist}}
+\index{GetHist@{GetHist}!Parametro@{Parametro}}
+\doxysubsubsection{\texorpdfstring{GetHist()}{GetHist()}}
+{\footnotesize\ttfamily \label{class_parametro_aa8306fd9abfef11b9198be7748af1453} 
+const std::\+vector$<$ double $>$ \& Parametro::\+\+Get\+Hist (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Histórico de leituras anteriores. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Relacionado a US-\/010 (Leitura do \doxylink{class_equipamento}{Equipamento}). 
+\end{DoxyNote}
+\Hypertarget{class_parametro_aa71debbc4cc40756af3306ea98e95802}\index{Parametro@{Parametro}!GetId@{GetId}}
+\index{GetId@{GetId}!Parametro@{Parametro}}
+\doxysubsubsection{\texorpdfstring{GetId()}{GetId()}}
+{\footnotesize\ttfamily \label{class_parametro_aa71debbc4cc40756af3306ea98e95802} 
+int Parametro::\+\+Get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Identificador único do parâmetro. 
+\end{DoxyReturn}
+\Hypertarget{class_parametro_a487efbab0fbe485dad3e0536a06af78f}\index{Parametro@{Parametro}!GetMax@{GetMax}}
+\index{GetMax@{GetMax}!Parametro@{Parametro}}
+\doxysubsubsection{\texorpdfstring{GetMax()}{GetMax()}}
+{\footnotesize\ttfamily \label{class_parametro_a487efbab0fbe485dad3e0536a06af78f} 
+double Parametro::\+\+Get\+Max (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Limite máximo configurado. 
+\end{DoxyReturn}
+\Hypertarget{class_parametro_a056e131a4b34487487ff19dee0e9cf38}\index{Parametro@{Parametro}!GetMin@{GetMin}}
+\index{GetMin@{GetMin}!Parametro@{Parametro}}
+\doxysubsubsection{\texorpdfstring{GetMin()}{GetMin()}}
+{\footnotesize\ttfamily \label{class_parametro_a056e131a4b34487487ff19dee0e9cf38} 
+double Parametro::\+\+Get\+Min (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Limite mínimo configurado. 
+\end{DoxyReturn}
+\Hypertarget{class_parametro_ad5b0dce0bb7758bc67390241b9769974}\index{Parametro@{Parametro}!GetValorAtual@{GetValorAtual}}
+\index{GetValorAtual@{GetValorAtual}!Parametro@{Parametro}}
+\doxysubsubsection{\texorpdfstring{GetValorAtual()}{GetValorAtual()}}
+{\footnotesize\ttfamily \label{class_parametro_ad5b0dce0bb7758bc67390241b9769974} 
+double Parametro::\+\+Get\+Valor\+Atual (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Valor atual do parâmetro. 
+\end{DoxyReturn}
+\Hypertarget{class_parametro_a537f27f6b22c7f828bd9a9676909bfe9}\index{Parametro@{Parametro}!ResetarHistorico@{ResetarHistorico}}
+\index{ResetarHistorico@{ResetarHistorico}!Parametro@{Parametro}}
+\doxysubsubsection{\texorpdfstring{ResetarHistorico()}{ResetarHistorico()}}
+{\footnotesize\ttfamily \label{class_parametro_a537f27f6b22c7f828bd9a9676909bfe9} 
+void Parametro::\+\+Resetar\+Historico (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Limpa o histórico de leituras. 
+
+\Hypertarget{class_parametro_ad3d3cb1b501c9bd64761eb1cc588e6de}\index{Parametro@{Parametro}!ResetarLimites@{ResetarLimites}}
+\index{ResetarLimites@{ResetarLimites}!Parametro@{Parametro}}
+\doxysubsubsection{\texorpdfstring{ResetarLimites()}{ResetarLimites()}}
+{\footnotesize\ttfamily \label{class_parametro_ad3d3cb1b501c9bd64761eb1cc588e6de} 
+void Parametro::\+\+Resetar\+Limites (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Restaura os limites Min/\+\+Max para os valores padrão (sem restrição). 
+
+\Hypertarget{class_parametro_af57b4351acc5f3e2d1e2aae6fd06d1d2}\index{Parametro@{Parametro}!SetDesc@{SetDesc}}
+\index{SetDesc@{SetDesc}!Parametro@{Parametro}}
+\doxysubsubsection{\texorpdfstring{SetDesc()}{SetDesc()}}
+{\footnotesize\ttfamily \label{class_parametro_af57b4351acc5f3e2d1e2aae6fd06d1d2} 
+void Parametro::\+\+Set\+Desc (\begin{DoxyParamCaption}\item[{std::\+string}]{Desc}{}\end{DoxyParamCaption})}
+
+
+
+Atualiza a descrição do parâmetro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Desc} & Nova descrição. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_parametro_a58e763786ad2dc5d763f200a8337629c}\index{Parametro@{Parametro}!SetMax@{SetMax}}
+\index{SetMax@{SetMax}!Parametro@{Parametro}}
+\doxysubsubsection{\texorpdfstring{SetMax()}{SetMax()}}
+{\footnotesize\ttfamily \label{class_parametro_a58e763786ad2dc5d763f200a8337629c} 
+void Parametro::\+\+Set\+Max (\begin{DoxyParamCaption}\item[{double}]{Valor}{}\end{DoxyParamCaption})}
+
+
+
+Define o limite superior. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Valor} & Novo limite máximo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Implementa US-\/018 (Configurar parâmetros de equipamentos). 
+\end{DoxyNote}
+\Hypertarget{class_parametro_aba1d2eb02bc196060fc0da4e473c53bd}\index{Parametro@{Parametro}!SetMin@{SetMin}}
+\index{SetMin@{SetMin}!Parametro@{Parametro}}
+\doxysubsubsection{\texorpdfstring{SetMin()}{SetMin()}}
+{\footnotesize\ttfamily \label{class_parametro_aba1d2eb02bc196060fc0da4e473c53bd} 
+void Parametro::\+\+Set\+Min (\begin{DoxyParamCaption}\item[{double}]{Valor}{}\end{DoxyParamCaption})}
+
+
+
+Define o limite inferior. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Valor} & Novo limite mínimo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Implementa US-\/018 (Configurar parâmetros de equipamentos). 
+\end{DoxyNote}
+\Hypertarget{class_parametro_a9d7bc8cf2f7b31f0f11739f808afdfb9}\index{Parametro@{Parametro}!SetValorAtual@{SetValorAtual}}
+\index{SetValorAtual@{SetValorAtual}!Parametro@{Parametro}}
+\doxysubsubsection{\texorpdfstring{SetValorAtual()}{SetValorAtual()}}
+{\footnotesize\ttfamily \label{class_parametro_a9d7bc8cf2f7b31f0f11739f808afdfb9} 
+void Parametro::\+\+Set\+Valor\+Atual (\begin{DoxyParamCaption}\item[{double}]{Valor}{}\end{DoxyParamCaption})}
+
+
+
+Atualiza o valor atual e registra no histórico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Valor} & Novo valor lido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Implementa US-\/010 (Leitura do \doxylink{class_equipamento}{Equipamento}). 
+\end{DoxyNote}
+\Hypertarget{class_parametro_a40863e45c012d1e208bf5f7b7ed06eab}\index{Parametro@{Parametro}!ValorValido@{ValorValido}}
+\index{ValorValido@{ValorValido}!Parametro@{Parametro}}
+\doxysubsubsection{\texorpdfstring{ValorValido()}{ValorValido()}}
+{\footnotesize\ttfamily \label{class_parametro_a40863e45c012d1e208bf5f7b7ed06eab} 
+bool Parametro::\+\+Valor\+Valido (\begin{DoxyParamCaption}\item[{double}]{Valor}{}\end{DoxyParamCaption}) const}
+
+
+
+Verifica se um valor está dentro dos limites configurados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Valor} & Valor a verificar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o valor estiver dentro dos limites. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{_parametro_8hpp}{Parametro.\+hpp}}\end{DoxyCompactItemize}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #ifndef CONJUNTO_HPP
 #define CONJUNTO_HPP
 
@@ -6,6 +5,12 @@
 #include <vector>
 #include "Equipamento.hpp"
 
+/**
+ * @brief Agrupamento lógico de equipamentos dentro de uma LinhaDeProducao.
+ *
+ * Um conjunto reúne equipamentos correlacionados e propaga operações de
+ * diagnóstico e atualização de alarmes para todos eles.
+ */
 class Conjunto {
 private:
     int _id;
@@ -14,71 +19,79 @@ private:
 
     std::vector<Equipamento> _Equipamentos;
 public:
+    /**
+     * @brief Constrói um conjunto.
+     * @param id   Identificador único.
+     * @param desc Descrição do conjunto.
+     */
     Conjunto(int id, std::string desc);
 
-    void AdicionarEquipamento (int id, std::string desc);
-    void RemoverEquipamento (int id);
+    /**
+     * @brief Adiciona um equipamento ao conjunto.
+     * @param id   Identificador único do equipamento.
+     * @param desc Descrição do equipamento.
+     * @note Implementa US-007 (Criar Equipamentos).
+     */
+    void AdicionarEquipamento(int id, std::string desc);
 
-    void SetDesc (std::string desc);
-    void SetNome (std::string nome);
+    /**
+     * @brief Remove o equipamento com o ID fornecido.
+     * @param id Identificador do equipamento a remover.
+     * @note Implementa US-008 (Remover Equipamento).
+     */
+    void RemoverEquipamento(int id);
 
-    void ExibirEquipamentos () const;
-    void ExibirAlarmes () const;
-    void ExibirTudo () const;
+    /** @brief Atualiza a descrição do conjunto. @param desc Nova descrição. */
+    void SetDesc(std::string desc);
 
+    /** @brief Atualiza o nome do conjunto. @param nome Novo nome. */
+    void SetNome(std::string nome);
+
+    /**
+     * @brief Exibe no console os equipamentos do conjunto.
+     * @note Implementa US-006 (Acessar Conjunto).
+     */
+    void ExibirEquipamentos() const;
+
+    /** @brief Exibe no console os alarmes ativos de todos os equipamentos. */
+    void ExibirAlarmes() const;
+
+    /**
+     * @brief Exibe equipamentos e alarmes de forma consolidada.
+     * @note Implementa US-006 (Acessar Conjunto).
+     */
+    void ExibirTudo() const;
+
+    /** @return Número de equipamentos cadastrados no conjunto. */
     int QuantidadeEquipamentos() const;
+
+    /** @return Número total de alarmes ativos no conjunto. */
     int QuantidadeAlarmes() const;
 
+    /**
+     * @brief Diagnostica todos os equipamentos do conjunto.
+     * @return Vetor com IDs dos parâmetros em estado de falha.
+     * @note Implementa US-012 (Diagnóstico de Conjunto).
+     */
     std::vector<int> DiagnosticarConjunto() const;
-    void AtualizarAlarmes ();
 
+    /**
+     * @brief Propaga a atualização de alarmes para todos os equipamentos.
+     * @note Implementa US-014 (Criar Alarme).
+     */
+    void AtualizarAlarmes();
+
+    /** @return Referência constante ao vetor de equipamentos. */
     const std::vector<Equipamento>& GetEquipamentos() const;
 
-    int GetId () const;
-    std::string GetDesc () const;
-    std::string GetNome () const;
+    /** @return Identificador único do conjunto. */
+    int GetId() const;
+
+    /** @return Descrição do conjunto. */
+    std::string GetDesc() const;
+
+    /** @return Nome do conjunto. */
+    std::string GetNome() const;
 };
 
-=======
-#ifndef CONJUNTO_HPP
-#define CONJUNTO_HPP
-
-#include <string>
-#include <vector>
-#include "Equipamento.hpp"
-
-class Conjunto {
-private:
-    int _id;
-    std::string _desc;
-    std::string _nome;
-
-    std::vector<Equipamento> _Equipamentos;
-public:
-    Conjunto(int id, std::string desc);
-
-    void AdicionarEquipamento (int id, std::string desc);
-    void RemoverEquipamento (int id);
-
-    void SetDesc (std::string desc);
-    void SetNome (std::string nome);
-
-    void ExibirEquipamentos () const;
-    void ExibirAlarmes () const;
-    void ExibirTudo () const;
-
-    int QuantidadeEquipamentos() const;
-    int QuantidadeAlarmes() const;
-
-    std::vector<int> DiagnosticarConjunto() const;
-    void AtualizarAlarmes ();
-
-    const std::vector<Equipamento>& GetEquipamentos() const;
-
-    int GetId () const;
-    std::string GetDesc () const;
-    std::string GetNome () const;
-};
-
->>>>>>> e0f0725 (Atualização de Cartões CRC e inclusão de contratos completos)
 #endif

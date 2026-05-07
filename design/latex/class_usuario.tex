@@ -1,0 +1,114 @@
+\doxysection{Usuario Class Reference}
+\hypertarget{class_usuario}{}\label{class_usuario}\index{Usuario@{Usuario}}
+
+
+Representa um usuário do sistema com credenciais e cargo.  
+
+
+
+
+{\ttfamily \+\#include $<$Usuario.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_usuario_a05d2c861def2501777c8abd608496f84}{Usuario}} (std::\+string login, std::\+string senha, \doxymbox{\hyperlink{_cargo_8hpp_ad202395025143887571b4a5f857b1ac1}{Cargo}} cargo)
+\begin{DoxyCompactList}\small\item\em Constrói um usuário. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_usuario_a0af876c7c8d9dcc6adbc83220ddb1149}{Validar\+Senha}} (std::\+string senha) const
+\begin{DoxyCompactList}\small\item\em Verifica se a senha fornecida corresponde à senha do usuário. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_usuario_acbf27b0c58e85a50a4415507d4f55130}{Get\+Login}} () const
+\item 
+\doxymbox{\hyperlink{_cargo_8hpp_ad202395025143887571b4a5f857b1ac1}{Cargo}} \doxymbox{\hyperlink{class_usuario_a74f88159d10c106ca0fd4e9ad3eab9c6}{Get\+Cargo}} (std::\+string login)
+\begin{DoxyCompactList}\small\item\em Retorna o cargo do usuário identificado pelo login. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa um usuário do sistema com credenciais e cargo. 
+
+Definition at line \doxymbox{\hyperlink{_usuario_8hpp_source_l00011}{11}} of file \doxymbox{\hyperlink{_usuario_8hpp_source}{Usuario.\+hpp}}.
+
+
+
+\label{class_usuario_doc-constructors}
+\Hypertarget{class_usuario_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_usuario_a05d2c861def2501777c8abd608496f84}\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{Usuario()}{Usuario()}}
+{\footnotesize\ttfamily \label{class_usuario_a05d2c861def2501777c8abd608496f84} 
+Usuario::\+\+Usuario (\begin{DoxyParamCaption}\item[{std::\+string}]{login}{, }\item[{std::\+string}]{senha}{, }\item[{\doxymbox{\hyperlink{_cargo_8hpp_ad202395025143887571b4a5f857b1ac1}{Cargo}}}]{cargo}{}\end{DoxyParamCaption})}
+
+
+
+Constrói um usuário. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & Login de acesso. \\
+\hline
+{\em senha} & Senha do usuário. \\
+\hline
+{\em cargo} & Cargo/\+nível de acesso. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Implementa US-\/015 (Criar usuários). 
+\end{DoxyNote}
+
+
+\label{class_usuario_doc-func-members}
+\Hypertarget{class_usuario_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_usuario_a74f88159d10c106ca0fd4e9ad3eab9c6}\index{Usuario@{Usuario}!GetCargo@{GetCargo}}
+\index{GetCargo@{GetCargo}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{GetCargo()}{GetCargo()}}
+{\footnotesize\ttfamily \label{class_usuario_a74f88159d10c106ca0fd4e9ad3eab9c6} 
+\doxymbox{\hyperlink{_cargo_8hpp_ad202395025143887571b4a5f857b1ac1}{Cargo}} Usuario::\+\+Get\+Cargo (\begin{DoxyParamCaption}\item[{std::\+string}]{login}{}\end{DoxyParamCaption})}
+
+
+
+Retorna o cargo do usuário identificado pelo login. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & Login do usuário. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{_cargo_8hpp_ad202395025143887571b4a5f857b1ac1}{Cargo} associado ao login. 
+\end{DoxyReturn}
+\Hypertarget{class_usuario_acbf27b0c58e85a50a4415507d4f55130}\index{Usuario@{Usuario}!GetLogin@{GetLogin}}
+\index{GetLogin@{GetLogin}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{GetLogin()}{GetLogin()}}
+{\footnotesize\ttfamily \label{class_usuario_acbf27b0c58e85a50a4415507d4f55130} 
+std::\+string Usuario::\+\+Get\+Login (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Login do usuário. 
+\end{DoxyReturn}
+\Hypertarget{class_usuario_a0af876c7c8d9dcc6adbc83220ddb1149}\index{Usuario@{Usuario}!ValidarSenha@{ValidarSenha}}
+\index{ValidarSenha@{ValidarSenha}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{ValidarSenha()}{ValidarSenha()}}
+{\footnotesize\ttfamily \label{class_usuario_a0af876c7c8d9dcc6adbc83220ddb1149} 
+bool Usuario::\+\+Validar\+Senha (\begin{DoxyParamCaption}\item[{std::\+string}]{senha}{}\end{DoxyParamCaption}) const}
+
+
+
+Verifica se a senha fornecida corresponde à senha do usuário. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em senha} & Senha a validar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se a senha estiver correta. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Implementa US-\/017 (Login de usuário). 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{_usuario_8hpp}{Usuario.\+hpp}}\end{DoxyCompactItemize}

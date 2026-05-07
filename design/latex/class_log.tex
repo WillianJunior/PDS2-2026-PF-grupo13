@@ -1,0 +1,107 @@
+\doxysection{Log Class Reference}
+\hypertarget{class_log}{}\label{class_log}\index{Log@{Log}}
+
+
+Registra eventos e operações do sistema em arquivo de texto.  
+
+
+
+
+{\ttfamily \+\#include $<$Log.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_log_ad592a109d67757245443131fef02d424}{Log}} (const std::\+string \&arquivo)
+\begin{DoxyCompactList}\small\item\em Constrói o logger apontando para o arquivo especificado. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_log_a5f476bffc3750d30552903cdd6f5f46c}{Registrar}} (const std::\+string \&mensagem) const
+\begin{DoxyCompactList}\small\item\em Acrescenta uma mensagem ao arquivo de log. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_log_a0dab4da0516a1d37bc6dc8e9a6d8d9e0}{Get\+Arquivo\+Log}} () const
+\item 
+bool \doxymbox{\hyperlink{class_log_a78ce2ab250a615657d8229c02c0a56d2}{Set\+Arquivo\+Log}} (const std::\+string \&arquivo)
+\begin{DoxyCompactList}\small\item\em Redireciona o log para um novo arquivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Registra eventos e operações do sistema em arquivo de texto. 
+
+Definition at line \doxymbox{\hyperlink{_log_8hpp_source_l00009}{9}} of file \doxymbox{\hyperlink{_log_8hpp_source}{Log.\+hpp}}.
+
+
+
+\label{class_log_doc-constructors}
+\Hypertarget{class_log_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_log_ad592a109d67757245443131fef02d424}\index{Log@{Log}!Log@{Log}}
+\index{Log@{Log}!Log@{Log}}
+\doxysubsubsection{\texorpdfstring{Log()}{Log()}}
+{\footnotesize\ttfamily \label{class_log_ad592a109d67757245443131fef02d424} 
+Log::\+\+Log (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{arquivo}{}\end{DoxyParamCaption})}
+
+
+
+Constrói o logger apontando para o arquivo especificado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arquivo} & Caminho do arquivo de log. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_log_doc-func-members}
+\Hypertarget{class_log_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_log_a0dab4da0516a1d37bc6dc8e9a6d8d9e0}\index{Log@{Log}!GetArquivoLog@{GetArquivoLog}}
+\index{GetArquivoLog@{GetArquivoLog}!Log@{Log}}
+\doxysubsubsection{\texorpdfstring{GetArquivoLog()}{GetArquivoLog()}}
+{\footnotesize\ttfamily \label{class_log_a0dab4da0516a1d37bc6dc8e9a6d8d9e0} 
+std::\+string Log::\+\+Get\+Arquivo\+Log (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Caminho do arquivo de log atual. 
+\end{DoxyReturn}
+\Hypertarget{class_log_a5f476bffc3750d30552903cdd6f5f46c}\index{Log@{Log}!Registrar@{Registrar}}
+\index{Registrar@{Registrar}!Log@{Log}}
+\doxysubsubsection{\texorpdfstring{Registrar()}{Registrar()}}
+{\footnotesize\ttfamily \label{class_log_a5f476bffc3750d30552903cdd6f5f46c} 
+bool Log::\+\+Registrar (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{mensagem}{}\end{DoxyParamCaption}) const}
+
+
+
+Acrescenta uma mensagem ao arquivo de log. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mensagem} & Texto a registrar (limite de 500 caracteres). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o registro foi bem-\/sucedido. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Implementa US-\/019 (Registro de informações no log). 
+\end{DoxyNote}
+\Hypertarget{class_log_a78ce2ab250a615657d8229c02c0a56d2}\index{Log@{Log}!SetArquivoLog@{SetArquivoLog}}
+\index{SetArquivoLog@{SetArquivoLog}!Log@{Log}}
+\doxysubsubsection{\texorpdfstring{SetArquivoLog()}{SetArquivoLog()}}
+{\footnotesize\ttfamily \label{class_log_a78ce2ab250a615657d8229c02c0a56d2} 
+bool Log::\+\+Set\+Arquivo\+Log (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{arquivo}{}\end{DoxyParamCaption})}
+
+
+
+Redireciona o log para um novo arquivo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arquivo} & Novo caminho de arquivo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se a alteração foi aceita. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{_log_8hpp}{Log.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,259 @@
+\doxysection{Equipamento Class Reference}
+\hypertarget{class_equipamento}{}\label{class_equipamento}\index{Equipamento@{Equipamento}}
+
+
+Representa um equipamento físico dentro de um \doxylink{class_conjunto}{Conjunto}.  
+
+
+
+
+{\ttfamily \+\#include $<$Equipamento.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_equipamento_a131f6acfe602264f51c0c93ba4234703}{Equipamento}} (int id, std::\+string desc)
+\begin{DoxyCompactList}\small\item\em Constrói um equipamento. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_equipamento_a1e51e4ce70132f4365347cc88f5f3fb0}{Adicionar\+Parametro}} (double Valor\+Atual, std::\+string Desc, int id)
+\begin{DoxyCompactList}\small\item\em Adiciona um parâmetro sem limites definidos. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_equipamento_aa308d5676affb32977fb8610a0bea891}{Adicionar\+Parametro\+Com\+Limites}} (double Valor\+Atual, double Max, double Min, std::\+string Desc)
+\begin{DoxyCompactList}\small\item\em Adiciona um parâmetro com limites Min/\+\+Max definidos. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_equipamento_a90faf362b3817114b4a470dc25038347}{Remover\+Parametro}} (int id)
+\begin{DoxyCompactList}\small\item\em Remove o parâmetro com o ID fornecido. \end{DoxyCompactList}\item 
+std::\+vector$<$ int $>$ \doxymbox{\hyperlink{class_equipamento_a6dc73f373caee0457d4f2cd950632183}{Diagnosticar\+Equipamento}} () const
+\begin{DoxyCompactList}\small\item\em Diagnostica todos os parâmetros do equipamento. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_equipamento_a98c146e7c59c2205b8610119b482a30e}{Atualizar\+Alarmes}} ()
+\begin{DoxyCompactList}\small\item\em Atualiza o estado de todos os alarmes do equipamento. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_equipamento_a2b482e9eba7a94022ca7bc8344c99683}{Exibir\+Parametros}} () const
+\begin{DoxyCompactList}\small\item\em Exibe no console os parâmetros e seus valores atuais. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_equipamento_a53c098fd86db6cfe8d2c2d8d8eb3a195}{Exibir\+Alarmes}} () const
+\begin{DoxyCompactList}\small\item\em Exibe no console os alarmes ativos do equipamento. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_equipamento_a4bbe1273b8856a92af2edbf08f1a8aa1}{Quantidade\+Parametros}} () const
+\item 
+int \doxymbox{\hyperlink{class_equipamento_a54aa230d3f8515f083201f7b7d05f8cc}{Quantidade\+Alarmes}} () const
+\item 
+int \doxymbox{\hyperlink{class_equipamento_a89ad82a030d8405f2265660dfa6f8337}{Get\+Id}} () const
+\item 
+const std::\+vector$<$ \doxymbox{\hyperlink{class_parametro}{Parametro}} $>$ \& \doxymbox{\hyperlink{class_equipamento_a8b4e35c8e5cca419eff957cac3f4737c}{Get\+Parametros}} () const
+\item 
+const std::\+vector$<$ \doxymbox{\hyperlink{class_alarme}{Alarme}} $>$ \& \doxymbox{\hyperlink{class_equipamento_aee8fceeffa2acdd1d74ca38f5edf21aa}{Get\+Alarmes}} () const
+\item 
+void \doxymbox{\hyperlink{class_equipamento_a6fbfa6de77f2b1d919a62e82d22e89b1}{Set\+Desc}} (std::\+string desc)
+\begin{DoxyCompactList}\small\item\em Atualiza a descrição do equipamento. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa um equipamento físico dentro de um \doxylink{class_conjunto}{Conjunto}. 
+
+Gerencia uma coleção de parâmetros monitorados e os alarmes derivados deles. Oferece diagnóstico consolidado do estado do equipamento. 
+
+Definition at line \doxymbox{\hyperlink{_equipamento_8hpp_source_l00015}{15}} of file \doxymbox{\hyperlink{_equipamento_8hpp_source}{Equipamento.\+hpp}}.
+
+
+
+\label{class_equipamento_doc-constructors}
+\Hypertarget{class_equipamento_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_equipamento_a131f6acfe602264f51c0c93ba4234703}\index{Equipamento@{Equipamento}!Equipamento@{Equipamento}}
+\index{Equipamento@{Equipamento}!Equipamento@{Equipamento}}
+\doxysubsubsection{\texorpdfstring{Equipamento()}{Equipamento()}}
+{\footnotesize\ttfamily \label{class_equipamento_a131f6acfe602264f51c0c93ba4234703} 
+Equipamento::\+\+Equipamento (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{std::\+string}]{desc}{}\end{DoxyParamCaption})}
+
+
+
+Constrói um equipamento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador único. \\
+\hline
+{\em desc} & Descrição do equipamento. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_equipamento_doc-func-members}
+\Hypertarget{class_equipamento_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_equipamento_a1e51e4ce70132f4365347cc88f5f3fb0}\index{Equipamento@{Equipamento}!AdicionarParametro@{AdicionarParametro}}
+\index{AdicionarParametro@{AdicionarParametro}!Equipamento@{Equipamento}}
+\doxysubsubsection{\texorpdfstring{AdicionarParametro()}{AdicionarParametro()}}
+{\footnotesize\ttfamily \label{class_equipamento_a1e51e4ce70132f4365347cc88f5f3fb0} 
+void Equipamento::\+\+Adicionar\+Parametro (\begin{DoxyParamCaption}\item[{double}]{Valor\+Atual}{, }\item[{std::\+string}]{Desc}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Adiciona um parâmetro sem limites definidos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Valor\+Atual} & Leitura inicial. \\
+\hline
+{\em Desc} & Descrição do parâmetro. \\
+\hline
+{\em id} & Identificador único do parâmetro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Implementa US-\/018 (Configurar parâmetros de equipamentos). 
+\end{DoxyNote}
+\Hypertarget{class_equipamento_aa308d5676affb32977fb8610a0bea891}\index{Equipamento@{Equipamento}!AdicionarParametroComLimites@{AdicionarParametroComLimites}}
+\index{AdicionarParametroComLimites@{AdicionarParametroComLimites}!Equipamento@{Equipamento}}
+\doxysubsubsection{\texorpdfstring{AdicionarParametroComLimites()}{AdicionarParametroComLimites()}}
+{\footnotesize\ttfamily \label{class_equipamento_aa308d5676affb32977fb8610a0bea891} 
+void Equipamento::\+\+Adicionar\+Parametro\+Com\+Limites (\begin{DoxyParamCaption}\item[{double}]{Valor\+Atual}{, }\item[{double}]{Max}{, }\item[{double}]{Min}{, }\item[{std::\+string}]{Desc}{}\end{DoxyParamCaption})}
+
+
+
+Adiciona um parâmetro com limites Min/\+\+Max definidos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Valor\+Atual} & Leitura inicial. \\
+\hline
+{\em Max} & Limite superior aceitável. \\
+\hline
+{\em Min} & Limite inferior aceitável. \\
+\hline
+{\em Desc} & Descrição do parâmetro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Implementa US-\/018 (Configurar parâmetros de equipamentos). 
+\end{DoxyNote}
+\Hypertarget{class_equipamento_a98c146e7c59c2205b8610119b482a30e}\index{Equipamento@{Equipamento}!AtualizarAlarmes@{AtualizarAlarmes}}
+\index{AtualizarAlarmes@{AtualizarAlarmes}!Equipamento@{Equipamento}}
+\doxysubsubsection{\texorpdfstring{AtualizarAlarmes()}{AtualizarAlarmes()}}
+{\footnotesize\ttfamily \label{class_equipamento_a98c146e7c59c2205b8610119b482a30e} 
+void Equipamento::\+\+Atualizar\+Alarmes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Atualiza o estado de todos os alarmes do equipamento. 
+
+\begin{DoxyNote}{Note}
+Implementa US-\/014 (Criar \doxylink{class_alarme}{Alarme}). 
+\end{DoxyNote}
+\Hypertarget{class_equipamento_a6dc73f373caee0457d4f2cd950632183}\index{Equipamento@{Equipamento}!DiagnosticarEquipamento@{DiagnosticarEquipamento}}
+\index{DiagnosticarEquipamento@{DiagnosticarEquipamento}!Equipamento@{Equipamento}}
+\doxysubsubsection{\texorpdfstring{DiagnosticarEquipamento()}{DiagnosticarEquipamento()}}
+{\footnotesize\ttfamily \label{class_equipamento_a6dc73f373caee0457d4f2cd950632183} 
+std::\+vector$<$ int $>$ Equipamento::\+\+Diagnosticar\+Equipamento (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Diagnostica todos os parâmetros do equipamento. 
+
+\begin{DoxyReturn}{Returns}
+Vetor com IDs dos parâmetros em estado de falha. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Implementa US-\/011 (Diagnóstico de \doxylink{class_equipamento}{Equipamento}). 
+\end{DoxyNote}
+\Hypertarget{class_equipamento_a53c098fd86db6cfe8d2c2d8d8eb3a195}\index{Equipamento@{Equipamento}!ExibirAlarmes@{ExibirAlarmes}}
+\index{ExibirAlarmes@{ExibirAlarmes}!Equipamento@{Equipamento}}
+\doxysubsubsection{\texorpdfstring{ExibirAlarmes()}{ExibirAlarmes()}}
+{\footnotesize\ttfamily \label{class_equipamento_a53c098fd86db6cfe8d2c2d8d8eb3a195} 
+void Equipamento::\+\+Exibir\+Alarmes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Exibe no console os alarmes ativos do equipamento. 
+
+\begin{DoxyNote}{Note}
+Implementa US-\/009 (Acessar \doxylink{class_equipamento}{Equipamento}). 
+\end{DoxyNote}
+\Hypertarget{class_equipamento_a2b482e9eba7a94022ca7bc8344c99683}\index{Equipamento@{Equipamento}!ExibirParametros@{ExibirParametros}}
+\index{ExibirParametros@{ExibirParametros}!Equipamento@{Equipamento}}
+\doxysubsubsection{\texorpdfstring{ExibirParametros()}{ExibirParametros()}}
+{\footnotesize\ttfamily \label{class_equipamento_a2b482e9eba7a94022ca7bc8344c99683} 
+void Equipamento::\+\+Exibir\+Parametros (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Exibe no console os parâmetros e seus valores atuais. 
+
+\begin{DoxyNote}{Note}
+Implementa US-\/009 (Acessar \doxylink{class_equipamento}{Equipamento}). 
+\end{DoxyNote}
+\Hypertarget{class_equipamento_aee8fceeffa2acdd1d74ca38f5edf21aa}\index{Equipamento@{Equipamento}!GetAlarmes@{GetAlarmes}}
+\index{GetAlarmes@{GetAlarmes}!Equipamento@{Equipamento}}
+\doxysubsubsection{\texorpdfstring{GetAlarmes()}{GetAlarmes()}}
+{\footnotesize\ttfamily \label{class_equipamento_aee8fceeffa2acdd1d74ca38f5edf21aa} 
+const std::\+vector$<$ \doxymbox{\hyperlink{class_alarme}{Alarme}} $>$ \& Equipamento::\+\+Get\+Alarmes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Referência constante ao vetor de alarmes. 
+\end{DoxyReturn}
+\Hypertarget{class_equipamento_a89ad82a030d8405f2265660dfa6f8337}\index{Equipamento@{Equipamento}!GetId@{GetId}}
+\index{GetId@{GetId}!Equipamento@{Equipamento}}
+\doxysubsubsection{\texorpdfstring{GetId()}{GetId()}}
+{\footnotesize\ttfamily \label{class_equipamento_a89ad82a030d8405f2265660dfa6f8337} 
+int Equipamento::\+\+Get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Identificador único do equipamento. 
+\end{DoxyReturn}
+\Hypertarget{class_equipamento_a8b4e35c8e5cca419eff957cac3f4737c}\index{Equipamento@{Equipamento}!GetParametros@{GetParametros}}
+\index{GetParametros@{GetParametros}!Equipamento@{Equipamento}}
+\doxysubsubsection{\texorpdfstring{GetParametros()}{GetParametros()}}
+{\footnotesize\ttfamily \label{class_equipamento_a8b4e35c8e5cca419eff957cac3f4737c} 
+const std::\+vector$<$ \doxymbox{\hyperlink{class_parametro}{Parametro}} $>$ \& Equipamento::\+\+Get\+Parametros (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Referência constante ao vetor de parâmetros. 
+\end{DoxyReturn}
+\Hypertarget{class_equipamento_a54aa230d3f8515f083201f7b7d05f8cc}\index{Equipamento@{Equipamento}!QuantidadeAlarmes@{QuantidadeAlarmes}}
+\index{QuantidadeAlarmes@{QuantidadeAlarmes}!Equipamento@{Equipamento}}
+\doxysubsubsection{\texorpdfstring{QuantidadeAlarmes()}{QuantidadeAlarmes()}}
+{\footnotesize\ttfamily \label{class_equipamento_a54aa230d3f8515f083201f7b7d05f8cc} 
+int Equipamento::\+\+Quantidade\+Alarmes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Número de alarmes ativos. 
+\end{DoxyReturn}
+\Hypertarget{class_equipamento_a4bbe1273b8856a92af2edbf08f1a8aa1}\index{Equipamento@{Equipamento}!QuantidadeParametros@{QuantidadeParametros}}
+\index{QuantidadeParametros@{QuantidadeParametros}!Equipamento@{Equipamento}}
+\doxysubsubsection{\texorpdfstring{QuantidadeParametros()}{QuantidadeParametros()}}
+{\footnotesize\ttfamily \label{class_equipamento_a4bbe1273b8856a92af2edbf08f1a8aa1} 
+int Equipamento::\+\+Quantidade\+Parametros (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Número de parâmetros cadastrados. 
+\end{DoxyReturn}
+\Hypertarget{class_equipamento_a90faf362b3817114b4a470dc25038347}\index{Equipamento@{Equipamento}!RemoverParametro@{RemoverParametro}}
+\index{RemoverParametro@{RemoverParametro}!Equipamento@{Equipamento}}
+\doxysubsubsection{\texorpdfstring{RemoverParametro()}{RemoverParametro()}}
+{\footnotesize\ttfamily \label{class_equipamento_a90faf362b3817114b4a470dc25038347} 
+void Equipamento::\+\+Remover\+Parametro (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Remove o parâmetro com o ID fornecido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador do parâmetro a remover. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_equipamento_a6fbfa6de77f2b1d919a62e82d22e89b1}\index{Equipamento@{Equipamento}!SetDesc@{SetDesc}}
+\index{SetDesc@{SetDesc}!Equipamento@{Equipamento}}
+\doxysubsubsection{\texorpdfstring{SetDesc()}{SetDesc()}}
+{\footnotesize\ttfamily \label{class_equipamento_a6fbfa6de77f2b1d919a62e82d22e89b1} 
+void Equipamento::\+\+Set\+Desc (\begin{DoxyParamCaption}\item[{std::\+string}]{desc}{}\end{DoxyParamCaption})}
+
+
+
+Atualiza a descrição do equipamento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em desc} & Nova descrição. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{_equipamento_8hpp}{Equipamento.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,306 @@
+\doxysection{Linha\+De\+Producao Class Reference}
+\hypertarget{class_linha_de_producao}{}\label{class_linha_de_producao}\index{LinhaDeProducao@{LinhaDeProducao}}
+
+
+Representa uma linha de produção industrial.  
+
+
+
+
+{\ttfamily \+\#include $<$Linha\+De\+Producao.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_linha_de_producao_abfde46b4aa1bee19d376148a23e44cf7}{Linha\+De\+Producao}} (int id, std::\+string desc, std::\+string local, std::\+string nome)
+\begin{DoxyCompactList}\small\item\em Constrói uma linha de produção. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_linha_de_producao_a061a9759e25120fe97de7951e68b29e5}{Adicionar\+Conjunto}} (int id, std::\+string desc)
+\begin{DoxyCompactList}\small\item\em Adiciona um conjunto à linha. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_linha_de_producao_a9e96fea06487f7abf7d623b1add5b10f}{Remover\+Conjunto}} (int id)
+\begin{DoxyCompactList}\small\item\em Remove o conjunto com o ID fornecido. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_linha_de_producao_a45c0669fc45116e9069fda5610861a82}{Exibir\+Conjuntos}} () const
+\begin{DoxyCompactList}\small\item\em Exibe no console os conjuntos da linha. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_linha_de_producao_a2f1bd14df0b7f8fe902ff805f2867ad3}{Exibir\+Alarmes}} () const
+\begin{DoxyCompactList}\small\item\em Exibe no console os alarmes ativos de toda a linha. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_linha_de_producao_aaa49222f70259868b7cff5484fed4493}{Exibir\+Tudo}} () const
+\begin{DoxyCompactList}\small\item\em Exibe conjuntos, equipamentos e alarmes de forma consolidada. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_linha_de_producao_a481cd2f0bc7b1b2601bc98165a583e0e}{Quantidade\+Conjuntos}} () const
+\item 
+int \doxymbox{\hyperlink{class_linha_de_producao_a19bafa9e1d4430f76765039a6c8fb7ca}{Quantidade\+Alarmes}} () const
+\item 
+std::\+vector$<$ int $>$ \doxymbox{\hyperlink{class_linha_de_producao_ac860854176c80a10b980ff4e24733723}{Diagnosticar\+Linha}} () const
+\begin{DoxyCompactList}\small\item\em Diagnostica todos os conjuntos da linha. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_linha_de_producao_a3c906d444346487287a70e6309d0d02b}{Atualizar\+Alarmes}} ()
+\begin{DoxyCompactList}\small\item\em Propaga a atualização de alarmes para todos os conjuntos. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_linha_de_producao_a2a4a34c305f898cb16dbb84339337498}{Set\+Desc}} (std::\+string desc)
+\begin{DoxyCompactList}\small\item\em Atualiza a descrição da linha. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_linha_de_producao_a3498ffab9e070a362a62b7fe6eb0b56a}{Set\+Local}} (std::\+string local)
+\begin{DoxyCompactList}\small\item\em Atualiza a localização da linha. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_linha_de_producao_ad640463cbd6c17d5297090fbcfd553db}{Set\+Nome}} (std::\+string nome)
+\begin{DoxyCompactList}\small\item\em Atualiza o nome da linha. \end{DoxyCompactList}\item 
+const std::\+vector$<$ \doxymbox{\hyperlink{class_conjunto}{Conjunto}} $>$ \& \doxymbox{\hyperlink{class_linha_de_producao_a4bb88cbb8b40ca33cca894f59d41ac3e}{Get\+Conjuntos}} () const
+\item 
+int \doxymbox{\hyperlink{class_linha_de_producao_a87af99f13b353c7cd59b52b542e3d054}{Get\+Id}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_linha_de_producao_aff1b3903e1eaf4736214d1b6c4573771}{Get\+Desc}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_linha_de_producao_a28273480c40c11e856c10a3345a0a783}{Get\+Local}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_linha_de_producao_ac4766c4d1bf710b7362ea74d0555917e}{Get\+Nome}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa uma linha de produção industrial. 
+
+Agrega conjuntos de equipamentos e oferece operações de diagnóstico e visualização para toda a linha. 
+
+Definition at line \doxymbox{\hyperlink{_linha_de_producao_8hpp_source_l00015}{15}} of file \doxymbox{\hyperlink{_linha_de_producao_8hpp_source}{Linha\+De\+Producao.\+hpp}}.
+
+
+
+\label{class_linha_de_producao_doc-constructors}
+\Hypertarget{class_linha_de_producao_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_linha_de_producao_abfde46b4aa1bee19d376148a23e44cf7}\index{LinhaDeProducao@{LinhaDeProducao}!LinhaDeProducao@{LinhaDeProducao}}
+\index{LinhaDeProducao@{LinhaDeProducao}!LinhaDeProducao@{LinhaDeProducao}}
+\doxysubsubsection{\texorpdfstring{LinhaDeProducao()}{LinhaDeProducao()}}
+{\footnotesize\ttfamily \label{class_linha_de_producao_abfde46b4aa1bee19d376148a23e44cf7} 
+Linha\+De\+Producao::\+\+Linha\+De\+Producao (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{std::\+string}]{desc}{, }\item[{std::\+string}]{local}{, }\item[{std::\+string}]{nome}{}\end{DoxyParamCaption})}
+
+
+
+Constrói uma linha de produção. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador único. \\
+\hline
+{\em desc} & Descrição da linha. \\
+\hline
+{\em local} & Localização física. \\
+\hline
+{\em nome} & Nome da linha. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_linha_de_producao_doc-func-members}
+\Hypertarget{class_linha_de_producao_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_linha_de_producao_a061a9759e25120fe97de7951e68b29e5}\index{LinhaDeProducao@{LinhaDeProducao}!AdicionarConjunto@{AdicionarConjunto}}
+\index{AdicionarConjunto@{AdicionarConjunto}!LinhaDeProducao@{LinhaDeProducao}}
+\doxysubsubsection{\texorpdfstring{AdicionarConjunto()}{AdicionarConjunto()}}
+{\footnotesize\ttfamily \label{class_linha_de_producao_a061a9759e25120fe97de7951e68b29e5} 
+void Linha\+De\+Producao::\+\+Adicionar\+Conjunto (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{std::\+string}]{desc}{}\end{DoxyParamCaption})}
+
+
+
+Adiciona um conjunto à linha. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador único do conjunto. \\
+\hline
+{\em desc} & Descrição do conjunto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Implementa US-\/004 (Criar Conjuntos). 
+\end{DoxyNote}
+\Hypertarget{class_linha_de_producao_a3c906d444346487287a70e6309d0d02b}\index{LinhaDeProducao@{LinhaDeProducao}!AtualizarAlarmes@{AtualizarAlarmes}}
+\index{AtualizarAlarmes@{AtualizarAlarmes}!LinhaDeProducao@{LinhaDeProducao}}
+\doxysubsubsection{\texorpdfstring{AtualizarAlarmes()}{AtualizarAlarmes()}}
+{\footnotesize\ttfamily \label{class_linha_de_producao_a3c906d444346487287a70e6309d0d02b} 
+void Linha\+De\+Producao::\+\+Atualizar\+Alarmes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Propaga a atualização de alarmes para todos os conjuntos. 
+
+\begin{DoxyNote}{Note}
+Implementa US-\/014 (Criar \doxylink{class_alarme}{Alarme}). 
+\end{DoxyNote}
+\Hypertarget{class_linha_de_producao_ac860854176c80a10b980ff4e24733723}\index{LinhaDeProducao@{LinhaDeProducao}!DiagnosticarLinha@{DiagnosticarLinha}}
+\index{DiagnosticarLinha@{DiagnosticarLinha}!LinhaDeProducao@{LinhaDeProducao}}
+\doxysubsubsection{\texorpdfstring{DiagnosticarLinha()}{DiagnosticarLinha()}}
+{\footnotesize\ttfamily \label{class_linha_de_producao_ac860854176c80a10b980ff4e24733723} 
+std::\+vector$<$ int $>$ Linha\+De\+Producao::\+\+Diagnosticar\+Linha (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Diagnostica todos os conjuntos da linha. 
+
+\begin{DoxyReturn}{Returns}
+Vetor com IDs dos parâmetros em estado de falha. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Implementa US-\/013 (Diagnóstico de Linha de Produção). 
+\end{DoxyNote}
+\Hypertarget{class_linha_de_producao_a2f1bd14df0b7f8fe902ff805f2867ad3}\index{LinhaDeProducao@{LinhaDeProducao}!ExibirAlarmes@{ExibirAlarmes}}
+\index{ExibirAlarmes@{ExibirAlarmes}!LinhaDeProducao@{LinhaDeProducao}}
+\doxysubsubsection{\texorpdfstring{ExibirAlarmes()}{ExibirAlarmes()}}
+{\footnotesize\ttfamily \label{class_linha_de_producao_a2f1bd14df0b7f8fe902ff805f2867ad3} 
+void Linha\+De\+Producao::\+\+Exibir\+Alarmes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Exibe no console os alarmes ativos de toda a linha. 
+
+\Hypertarget{class_linha_de_producao_a45c0669fc45116e9069fda5610861a82}\index{LinhaDeProducao@{LinhaDeProducao}!ExibirConjuntos@{ExibirConjuntos}}
+\index{ExibirConjuntos@{ExibirConjuntos}!LinhaDeProducao@{LinhaDeProducao}}
+\doxysubsubsection{\texorpdfstring{ExibirConjuntos()}{ExibirConjuntos()}}
+{\footnotesize\ttfamily \label{class_linha_de_producao_a45c0669fc45116e9069fda5610861a82} 
+void Linha\+De\+Producao::\+\+Exibir\+Conjuntos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Exibe no console os conjuntos da linha. 
+
+\begin{DoxyNote}{Note}
+Implementa US-\/003 (Acessar Linhas de Produção). 
+\end{DoxyNote}
+\Hypertarget{class_linha_de_producao_aaa49222f70259868b7cff5484fed4493}\index{LinhaDeProducao@{LinhaDeProducao}!ExibirTudo@{ExibirTudo}}
+\index{ExibirTudo@{ExibirTudo}!LinhaDeProducao@{LinhaDeProducao}}
+\doxysubsubsection{\texorpdfstring{ExibirTudo()}{ExibirTudo()}}
+{\footnotesize\ttfamily \label{class_linha_de_producao_aaa49222f70259868b7cff5484fed4493} 
+void Linha\+De\+Producao::\+\+Exibir\+Tudo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Exibe conjuntos, equipamentos e alarmes de forma consolidada. 
+
+\begin{DoxyNote}{Note}
+Implementa US-\/003 (Acessar Linhas de Produção). 
+\end{DoxyNote}
+\Hypertarget{class_linha_de_producao_a4bb88cbb8b40ca33cca894f59d41ac3e}\index{LinhaDeProducao@{LinhaDeProducao}!GetConjuntos@{GetConjuntos}}
+\index{GetConjuntos@{GetConjuntos}!LinhaDeProducao@{LinhaDeProducao}}
+\doxysubsubsection{\texorpdfstring{GetConjuntos()}{GetConjuntos()}}
+{\footnotesize\ttfamily \label{class_linha_de_producao_a4bb88cbb8b40ca33cca894f59d41ac3e} 
+const std::\+vector$<$ \doxymbox{\hyperlink{class_conjunto}{Conjunto}} $>$ \& Linha\+De\+Producao::\+\+Get\+Conjuntos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Referência constante ao vetor de conjuntos. 
+\end{DoxyReturn}
+\Hypertarget{class_linha_de_producao_aff1b3903e1eaf4736214d1b6c4573771}\index{LinhaDeProducao@{LinhaDeProducao}!GetDesc@{GetDesc}}
+\index{GetDesc@{GetDesc}!LinhaDeProducao@{LinhaDeProducao}}
+\doxysubsubsection{\texorpdfstring{GetDesc()}{GetDesc()}}
+{\footnotesize\ttfamily \label{class_linha_de_producao_aff1b3903e1eaf4736214d1b6c4573771} 
+std::\+string Linha\+De\+Producao::\+\+Get\+Desc (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Descrição da linha. 
+\end{DoxyReturn}
+\Hypertarget{class_linha_de_producao_a87af99f13b353c7cd59b52b542e3d054}\index{LinhaDeProducao@{LinhaDeProducao}!GetId@{GetId}}
+\index{GetId@{GetId}!LinhaDeProducao@{LinhaDeProducao}}
+\doxysubsubsection{\texorpdfstring{GetId()}{GetId()}}
+{\footnotesize\ttfamily \label{class_linha_de_producao_a87af99f13b353c7cd59b52b542e3d054} 
+int Linha\+De\+Producao::\+\+Get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Identificador único da linha. 
+\end{DoxyReturn}
+\Hypertarget{class_linha_de_producao_a28273480c40c11e856c10a3345a0a783}\index{LinhaDeProducao@{LinhaDeProducao}!GetLocal@{GetLocal}}
+\index{GetLocal@{GetLocal}!LinhaDeProducao@{LinhaDeProducao}}
+\doxysubsubsection{\texorpdfstring{GetLocal()}{GetLocal()}}
+{\footnotesize\ttfamily \label{class_linha_de_producao_a28273480c40c11e856c10a3345a0a783} 
+std::\+string Linha\+De\+Producao::\+\+Get\+Local (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Localização física da linha. 
+\end{DoxyReturn}
+\Hypertarget{class_linha_de_producao_ac4766c4d1bf710b7362ea74d0555917e}\index{LinhaDeProducao@{LinhaDeProducao}!GetNome@{GetNome}}
+\index{GetNome@{GetNome}!LinhaDeProducao@{LinhaDeProducao}}
+\doxysubsubsection{\texorpdfstring{GetNome()}{GetNome()}}
+{\footnotesize\ttfamily \label{class_linha_de_producao_ac4766c4d1bf710b7362ea74d0555917e} 
+std::\+string Linha\+De\+Producao::\+\+Get\+Nome (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Nome da linha. 
+\end{DoxyReturn}
+\Hypertarget{class_linha_de_producao_a19bafa9e1d4430f76765039a6c8fb7ca}\index{LinhaDeProducao@{LinhaDeProducao}!QuantidadeAlarmes@{QuantidadeAlarmes}}
+\index{QuantidadeAlarmes@{QuantidadeAlarmes}!LinhaDeProducao@{LinhaDeProducao}}
+\doxysubsubsection{\texorpdfstring{QuantidadeAlarmes()}{QuantidadeAlarmes()}}
+{\footnotesize\ttfamily \label{class_linha_de_producao_a19bafa9e1d4430f76765039a6c8fb7ca} 
+int Linha\+De\+Producao::\+\+Quantidade\+Alarmes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Número total de alarmes ativos na linha. 
+\end{DoxyReturn}
+\Hypertarget{class_linha_de_producao_a481cd2f0bc7b1b2601bc98165a583e0e}\index{LinhaDeProducao@{LinhaDeProducao}!QuantidadeConjuntos@{QuantidadeConjuntos}}
+\index{QuantidadeConjuntos@{QuantidadeConjuntos}!LinhaDeProducao@{LinhaDeProducao}}
+\doxysubsubsection{\texorpdfstring{QuantidadeConjuntos()}{QuantidadeConjuntos()}}
+{\footnotesize\ttfamily \label{class_linha_de_producao_a481cd2f0bc7b1b2601bc98165a583e0e} 
+int Linha\+De\+Producao::\+\+Quantidade\+Conjuntos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Número de conjuntos cadastrados na linha. 
+\end{DoxyReturn}
+\Hypertarget{class_linha_de_producao_a9e96fea06487f7abf7d623b1add5b10f}\index{LinhaDeProducao@{LinhaDeProducao}!RemoverConjunto@{RemoverConjunto}}
+\index{RemoverConjunto@{RemoverConjunto}!LinhaDeProducao@{LinhaDeProducao}}
+\doxysubsubsection{\texorpdfstring{RemoverConjunto()}{RemoverConjunto()}}
+{\footnotesize\ttfamily \label{class_linha_de_producao_a9e96fea06487f7abf7d623b1add5b10f} 
+void Linha\+De\+Producao::\+\+Remover\+Conjunto (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Remove o conjunto com o ID fornecido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador do conjunto a remover. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Implementa US-\/005 (Remover \doxylink{class_conjunto}{Conjunto}). 
+\end{DoxyNote}
+\Hypertarget{class_linha_de_producao_a2a4a34c305f898cb16dbb84339337498}\index{LinhaDeProducao@{LinhaDeProducao}!SetDesc@{SetDesc}}
+\index{SetDesc@{SetDesc}!LinhaDeProducao@{LinhaDeProducao}}
+\doxysubsubsection{\texorpdfstring{SetDesc()}{SetDesc()}}
+{\footnotesize\ttfamily \label{class_linha_de_producao_a2a4a34c305f898cb16dbb84339337498} 
+void Linha\+De\+Producao::\+\+Set\+Desc (\begin{DoxyParamCaption}\item[{std::\+string}]{desc}{}\end{DoxyParamCaption})}
+
+
+
+Atualiza a descrição da linha. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em desc} & Nova descrição. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_linha_de_producao_a3498ffab9e070a362a62b7fe6eb0b56a}\index{LinhaDeProducao@{LinhaDeProducao}!SetLocal@{SetLocal}}
+\index{SetLocal@{SetLocal}!LinhaDeProducao@{LinhaDeProducao}}
+\doxysubsubsection{\texorpdfstring{SetLocal()}{SetLocal()}}
+{\footnotesize\ttfamily \label{class_linha_de_producao_a3498ffab9e070a362a62b7fe6eb0b56a} 
+void Linha\+De\+Producao::\+\+Set\+Local (\begin{DoxyParamCaption}\item[{std::\+string}]{local}{}\end{DoxyParamCaption})}
+
+
+
+Atualiza a localização da linha. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em local} & Nova localização. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_linha_de_producao_ad640463cbd6c17d5297090fbcfd553db}\index{LinhaDeProducao@{LinhaDeProducao}!SetNome@{SetNome}}
+\index{SetNome@{SetNome}!LinhaDeProducao@{LinhaDeProducao}}
+\doxysubsubsection{\texorpdfstring{SetNome()}{SetNome()}}
+{\footnotesize\ttfamily \label{class_linha_de_producao_ad640463cbd6c17d5297090fbcfd553db} 
+void Linha\+De\+Producao::\+\+Set\+Nome (\begin{DoxyParamCaption}\item[{std::\+string}]{nome}{}\end{DoxyParamCaption})}
+
+
+
+Atualiza o nome da linha. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & Novo nome. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{_linha_de_producao_8hpp}{Linha\+De\+Producao.\+hpp}}\end{DoxyCompactItemize}

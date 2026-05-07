@@ -1,0 +1,314 @@
+\doxysection{Sistema Class Reference}
+\hypertarget{class_sistema}{}\label{class_sistema}\index{Sistema@{Sistema}}
+
+
+Ponto de entrada central do sistema de monitoramento.  
+
+
+
+
+{\ttfamily \+\#include $<$Sistema.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_sistema_a815b07845ef6b03247b239333fe75e28}{Sistema}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa o sistema sem linhas, usuários ou sessão ativa. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_sistema_a878f077185c666adaf0da24192435d7c}{Adicionar\+Linha}} (int id, std::\+string desc, std::\+string local, std::\+string nome)
+\begin{DoxyCompactList}\small\item\em Cadastra uma nova linha de produção. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_sistema_a9cf54706260cb403619df72940089d6e}{Remover\+Linha}} (int id)
+\begin{DoxyCompactList}\small\item\em Remove a linha de produção com o ID fornecido. \end{DoxyCompactList}\item 
+const std::\+vector$<$ \doxymbox{\hyperlink{class_linha_de_producao}{Linha\+De\+Producao}} $>$ \& \doxymbox{\hyperlink{class_sistema_a73427fe75e93f606df215b1dec44de01}{Get\+Linhas}} () const
+\item 
+void \doxymbox{\hyperlink{class_sistema_a79b06a0f2d5288337b017110d10e14ec}{Exibir\+Linhas}} ()
+\begin{DoxyCompactList}\small\item\em Exibe no console todas as linhas de produção cadastradas. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_sistema_a5bfff695d8a4275e957c6168880996ef}{Adicionar\+Usuario}} (std::\+string login, std::\+string senha, \doxymbox{\hyperlink{_cargo_8hpp_ad202395025143887571b4a5f857b1ac1}{Cargo}} cargo)
+\begin{DoxyCompactList}\small\item\em Cadastra um novo usuário no sistema. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_sistema_abd2044ab39677a027952f72b6a2ce512}{Remover\+Usuario}} (std::\+string login)
+\begin{DoxyCompactList}\small\item\em Remove o usuário identificado pelo login. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_sistema_a0b89a026170c87279c8a01df8846fe04}{Proximo\+Id\+Disponivel}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o próximo ID disponível para cadastro. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_sistema_a12bbaaa2b85ac1d975baa3f8c92835de}{Id\+Disponivel}} (int Id) const
+\begin{DoxyCompactList}\small\item\em Verifica se um ID está disponível para uso. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_sistema_a6d00833c2b564cff4946a23b322a54aa}{Login}} (std::\+string login, std::\+string senha)
+\begin{DoxyCompactList}\small\item\em Autentica um usuário e inicia a sessão. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_sistema_a374ad1c7944790e9732f1a7b27f3b277}{Logout}} ()
+\begin{DoxyCompactList}\small\item\em Encerra a sessão do usuário atual. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_usuario}{Usuario}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_sistema_a90d2365d1826c9b8c7e2d8bbf18e2e9d}{Get\+Usuario\+Logado}} () const
+\item 
+bool \doxymbox{\hyperlink{class_sistema_a646f8804b22e56ac26b556d20c6eb5d5}{Salvar\+Alteracoes}} ()
+\begin{DoxyCompactList}\small\item\em Persiste o estado atual do sistema em arquivo. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_sistema_a3c93d0378078aa5079f52bdec12910d0}{Carregar\+Ultimo\+Save}} ()
+\begin{DoxyCompactList}\small\item\em Carrega o último estado salvo do sistema. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_sistema_a5badd4c242b4768ff987d7fcc8ff8fc6}{Carregar\+Save}} (std::\+string arquivo)
+\begin{DoxyCompactList}\small\item\em Carrega o estado do sistema a partir de um arquivo específico. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ponto de entrada central do sistema de monitoramento. 
+
+Gerencia o conjunto de linhas de produção, os usuários cadastrados, o controle de sessão (login/\+logout) e a persistência dos dados. 
+
+Definition at line \doxymbox{\hyperlink{_sistema_8hpp_source_l00017}{17}} of file \doxymbox{\hyperlink{_sistema_8hpp_source}{Sistema.\+hpp}}.
+
+
+
+\label{class_sistema_doc-constructors}
+\Hypertarget{class_sistema_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_sistema_a815b07845ef6b03247b239333fe75e28}\index{Sistema@{Sistema}!Sistema@{Sistema}}
+\index{Sistema@{Sistema}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{Sistema()}{Sistema()}}
+{\footnotesize\ttfamily \label{class_sistema_a815b07845ef6b03247b239333fe75e28} 
+Sistema::\+\+Sistema (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Inicializa o sistema sem linhas, usuários ou sessão ativa. 
+
+
+
+\label{class_sistema_doc-func-members}
+\Hypertarget{class_sistema_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sistema_a878f077185c666adaf0da24192435d7c}\index{Sistema@{Sistema}!AdicionarLinha@{AdicionarLinha}}
+\index{AdicionarLinha@{AdicionarLinha}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{AdicionarLinha()}{AdicionarLinha()}}
+{\footnotesize\ttfamily \label{class_sistema_a878f077185c666adaf0da24192435d7c} 
+void Sistema::\+\+Adicionar\+Linha (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{std::\+string}]{desc}{, }\item[{std::\+string}]{local}{, }\item[{std::\+string}]{nome}{}\end{DoxyParamCaption})}
+
+
+
+Cadastra uma nova linha de produção. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador único da linha. \\
+\hline
+{\em desc} & Descrição da linha. \\
+\hline
+{\em local} & Localização física. \\
+\hline
+{\em nome} & Nome da linha. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Implementa US-\/001 (Criar Linhas de Produção). 
+\end{DoxyNote}
+\Hypertarget{class_sistema_a5bfff695d8a4275e957c6168880996ef}\index{Sistema@{Sistema}!AdicionarUsuario@{AdicionarUsuario}}
+\index{AdicionarUsuario@{AdicionarUsuario}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{AdicionarUsuario()}{AdicionarUsuario()}}
+{\footnotesize\ttfamily \label{class_sistema_a5bfff695d8a4275e957c6168880996ef} 
+void Sistema::\+\+Adicionar\+Usuario (\begin{DoxyParamCaption}\item[{std::\+string}]{login}{, }\item[{std::\+string}]{senha}{, }\item[{\doxymbox{\hyperlink{_cargo_8hpp_ad202395025143887571b4a5f857b1ac1}{Cargo}}}]{cargo}{}\end{DoxyParamCaption})}
+
+
+
+Cadastra um novo usuário no sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & Login de acesso. \\
+\hline
+{\em senha} & Senha do usuário. \\
+\hline
+{\em cargo} & Cargo/\+nível de acesso. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Implementa US-\/015 (Criar usuários). 
+\end{DoxyNote}
+\Hypertarget{class_sistema_a5badd4c242b4768ff987d7fcc8ff8fc6}\index{Sistema@{Sistema}!CarregarSave@{CarregarSave}}
+\index{CarregarSave@{CarregarSave}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{CarregarSave()}{CarregarSave()}}
+{\footnotesize\ttfamily \label{class_sistema_a5badd4c242b4768ff987d7fcc8ff8fc6} 
+bool Sistema::\+\+Carregar\+Save (\begin{DoxyParamCaption}\item[{std::\+string}]{arquivo}{}\end{DoxyParamCaption})}
+
+
+
+Carrega o estado do sistema a partir de um arquivo específico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arquivo} & Caminho do arquivo de save. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o carregamento foi bem-\/sucedido. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Implementa US-\/021 (Carregar dados). 
+\end{DoxyNote}
+\Hypertarget{class_sistema_a3c93d0378078aa5079f52bdec12910d0}\index{Sistema@{Sistema}!CarregarUltimoSave@{CarregarUltimoSave}}
+\index{CarregarUltimoSave@{CarregarUltimoSave}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{CarregarUltimoSave()}{CarregarUltimoSave()}}
+{\footnotesize\ttfamily \label{class_sistema_a3c93d0378078aa5079f52bdec12910d0} 
+bool Sistema::\+\+Carregar\+Ultimo\+Save (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Carrega o último estado salvo do sistema. 
+
+\begin{DoxyReturn}{Returns}
+true se o carregamento foi bem-\/sucedido. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Implementa US-\/021 (Carregar dados). 
+\end{DoxyNote}
+\Hypertarget{class_sistema_a79b06a0f2d5288337b017110d10e14ec}\index{Sistema@{Sistema}!ExibirLinhas@{ExibirLinhas}}
+\index{ExibirLinhas@{ExibirLinhas}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{ExibirLinhas()}{ExibirLinhas()}}
+{\footnotesize\ttfamily \label{class_sistema_a79b06a0f2d5288337b017110d10e14ec} 
+void Sistema::\+\+Exibir\+Linhas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Exibe no console todas as linhas de produção cadastradas. 
+
+\begin{DoxyNote}{Note}
+Implementa US-\/003 (Acessar Linhas de Produção). 
+\end{DoxyNote}
+\Hypertarget{class_sistema_a73427fe75e93f606df215b1dec44de01}\index{Sistema@{Sistema}!GetLinhas@{GetLinhas}}
+\index{GetLinhas@{GetLinhas}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{GetLinhas()}{GetLinhas()}}
+{\footnotesize\ttfamily \label{class_sistema_a73427fe75e93f606df215b1dec44de01} 
+const std::\+vector$<$ \doxymbox{\hyperlink{class_linha_de_producao}{Linha\+De\+Producao}} $>$ \& Sistema::\+\+Get\+Linhas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Referência constante ao vetor de linhas cadastradas. 
+\end{DoxyReturn}
+\Hypertarget{class_sistema_a90d2365d1826c9b8c7e2d8bbf18e2e9d}\index{Sistema@{Sistema}!GetUsuarioLogado@{GetUsuarioLogado}}
+\index{GetUsuarioLogado@{GetUsuarioLogado}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{GetUsuarioLogado()}{GetUsuarioLogado()}}
+{\footnotesize\ttfamily \label{class_sistema_a90d2365d1826c9b8c7e2d8bbf18e2e9d} 
+\doxymbox{\hyperlink{class_usuario}{Usuario}} \texorpdfstring{$\ast$}{*} Sistema::\+\+Get\+Usuario\+Logado (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Ponteiro para o usuário atualmente logado, ou nullptr se não houver sessão. 
+\end{DoxyReturn}
+\Hypertarget{class_sistema_a12bbaaa2b85ac1d975baa3f8c92835de}\index{Sistema@{Sistema}!IdDisponivel@{IdDisponivel}}
+\index{IdDisponivel@{IdDisponivel}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{IdDisponivel()}{IdDisponivel()}}
+{\footnotesize\ttfamily \label{class_sistema_a12bbaaa2b85ac1d975baa3f8c92835de} 
+bool Sistema::\+\+Id\+Disponivel (\begin{DoxyParamCaption}\item[{int}]{Id}{}\end{DoxyParamCaption}) const}
+
+
+
+Verifica se um ID está disponível para uso. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Id} & ID a verificar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o ID não estiver em uso. 
+\end{DoxyReturn}
+\Hypertarget{class_sistema_a6d00833c2b564cff4946a23b322a54aa}\index{Sistema@{Sistema}!Login@{Login}}
+\index{Login@{Login}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{Login()}{Login()}}
+{\footnotesize\ttfamily \label{class_sistema_a6d00833c2b564cff4946a23b322a54aa} 
+bool Sistema::\+\+Login (\begin{DoxyParamCaption}\item[{std::\+string}]{login}{, }\item[{std::\+string}]{senha}{}\end{DoxyParamCaption})}
+
+
+
+Autentica um usuário e inicia a sessão. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & Login do usuário. \\
+\hline
+{\em senha} & Senha do usuário. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se as credenciais forem válidas. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Implementa US-\/017 (Login de usuário). 
+\end{DoxyNote}
+\Hypertarget{class_sistema_a374ad1c7944790e9732f1a7b27f3b277}\index{Sistema@{Sistema}!Logout@{Logout}}
+\index{Logout@{Logout}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{Logout()}{Logout()}}
+{\footnotesize\ttfamily \label{class_sistema_a374ad1c7944790e9732f1a7b27f3b277} 
+bool Sistema::\+\+Logout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Encerra a sessão do usuário atual. 
+
+\begin{DoxyReturn}{Returns}
+true se havia uma sessão ativa e foi encerrada com sucesso. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Implementa US-\/022 (Logoff de usuário). 
+\end{DoxyNote}
+\Hypertarget{class_sistema_a0b89a026170c87279c8a01df8846fe04}\index{Sistema@{Sistema}!ProximoIdDisponivel@{ProximoIdDisponivel}}
+\index{ProximoIdDisponivel@{ProximoIdDisponivel}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{ProximoIdDisponivel()}{ProximoIdDisponivel()}}
+{\footnotesize\ttfamily \label{class_sistema_a0b89a026170c87279c8a01df8846fe04} 
+int Sistema::\+\+Proximo\+Id\+Disponivel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retorna o próximo ID disponível para cadastro. 
+
+\begin{DoxyReturn}{Returns}
+Menor ID inteiro ainda não utilizado. 
+\end{DoxyReturn}
+\Hypertarget{class_sistema_a9cf54706260cb403619df72940089d6e}\index{Sistema@{Sistema}!RemoverLinha@{RemoverLinha}}
+\index{RemoverLinha@{RemoverLinha}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{RemoverLinha()}{RemoverLinha()}}
+{\footnotesize\ttfamily \label{class_sistema_a9cf54706260cb403619df72940089d6e} 
+void Sistema::\+\+Remover\+Linha (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Remove a linha de produção com o ID fornecido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador da linha a remover. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Implementa US-\/002 (Remover Linhas de Produção). 
+\end{DoxyNote}
+\Hypertarget{class_sistema_abd2044ab39677a027952f72b6a2ce512}\index{Sistema@{Sistema}!RemoverUsuario@{RemoverUsuario}}
+\index{RemoverUsuario@{RemoverUsuario}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{RemoverUsuario()}{RemoverUsuario()}}
+{\footnotesize\ttfamily \label{class_sistema_abd2044ab39677a027952f72b6a2ce512} 
+void Sistema::\+\+Remover\+Usuario (\begin{DoxyParamCaption}\item[{std::\+string}]{login}{}\end{DoxyParamCaption})}
+
+
+
+Remove o usuário identificado pelo login. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & Login do usuário a remover. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Implementa US-\/016 (Remover usuários). 
+\end{DoxyNote}
+\Hypertarget{class_sistema_a646f8804b22e56ac26b556d20c6eb5d5}\index{Sistema@{Sistema}!SalvarAlteracoes@{SalvarAlteracoes}}
+\index{SalvarAlteracoes@{SalvarAlteracoes}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{SalvarAlteracoes()}{SalvarAlteracoes()}}
+{\footnotesize\ttfamily \label{class_sistema_a646f8804b22e56ac26b556d20c6eb5d5} 
+bool Sistema::\+\+Salvar\+Alteracoes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Persiste o estado atual do sistema em arquivo. 
+
+\begin{DoxyReturn}{Returns}
+true se o salvamento foi bem-\/sucedido. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Implementa US-\/020 (Persistir dados). 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{_sistema_8hpp}{Sistema.\+hpp}}\end{DoxyCompactItemize}

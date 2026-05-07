@@ -1,0 +1,70 @@
+\chapter{Sistema de Tolerância de Falha em Fábricas }
+\hypertarget{index}{}\label{index}\index{Sistema de Tolerância de Falha em Fábricas@{Sistema de Tolerância de Falha em Fábricas}}
+\label{index_md__r_e_a_d_m_e}%
+\Hypertarget{index_md__r_e_a_d_m_e}%
+
+
+\doxylink{class_sistema}{Sistema} de monitoramento industrial orientado a objetos desenvolvido em C++. Permite o acompanhamento em tempo real de parâmetros de equipamentos organizados em linhas de produção, detectando automaticamente condições de falha e disparando alarmes.\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Funcionalidades}{Funcionalidades}}\label{index_autotoc_md1}
+
+\begin{DoxyItemize}
+\item Gerenciamento hierárquico de {\bfseries{Linhas de Produção → Conjuntos → Equipamentos → Parâmetros}}
+\item Monitoramento de parâmetros com limites configuráveis (Min/\+\+Max)
+\item Disparo automático de {\bfseries{alarmes}} quando parâmetros violam seus limites
+\item {\bfseries{Diagnóstico}} propagado por toda a hierarquia, identificando os pontos de falha
+\item Controle de acesso por usuários com três níveis de cargo
+\item Persistência de dados com save/\+load de estado
+\item Registro de eventos via {\bfseries{\doxylink{class_log}{Log}}} em arquivo
+\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Hierarquia do Sistema}{Hierarquia do Sistema}}\label{index_autotoc_md2}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Sistema}
+\DoxyCodeLine{\ └──\ LinhaDeProducao}
+\DoxyCodeLine{\ \ \ \ \ \ \ └──\ Conjunto}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ └──\ Equipamento}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ├──\ Parametro}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ └──\ Alarme}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Cargos de Usuário}{Cargos de Usuário}}\label{index_autotoc_md3}
+
+\begin{DoxyTable}{2}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}\doxylink{_cargo_8hpp_ad202395025143887571b4a5f857b1ac1}{Cargo}  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Permissões  \\
+{\ttfamily ADMIN}  &Gerencia usuários e toda a estrutura do sistema  \\
+{\ttfamily ENGENHEIRO}  &Configura linhas, conjuntos e equipamentos  \\
+{\ttfamily TECNICO}  &Visualiza dados e alarmes  \\
+\end{DoxyTable}
+\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Estrutura de Diretórios}{Estrutura de Diretórios}}\label{index_autotoc_md4}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.}
+\DoxyCodeLine{├──\ include/\ \ \ \ \ \ \ \ \#\ Contratos\ das\ classes\ (.hpp)}
+\DoxyCodeLine{├──\ src/\ \ \ \ \ \ \ \ \ \ \ \ \#\ Implementações\ (.cpp)}
+\DoxyCodeLine{├──\ design/\ \ \ \ \ \ \ \ \ \#\ User\ Stories\ e\ Cartões\ CRC}
+\DoxyCodeLine{├──\ tests/\ \ \ \ \ \ \ \ \ \ \#\ Testes\ automatizados}
+\DoxyCodeLine{├──\ build/\ \ \ \ \ \ \ \ \ \ \#\ Artefatos\ de\ compilação}
+\DoxyCodeLine{├──\ docs/\ \ \ \ \ \ \ \ \ \ \ \#\ Documentação\ gerada\ pelo\ Doxygen}
+\DoxyCodeLine{└──\ README.md}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md5}{}\doxysection{\texorpdfstring{Compilação}{Compilação}}\label{index_autotoc_md5}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md6}{}\doxysection{\texorpdfstring{Documentação}{Documentação}}\label{index_autotoc_md6}
+A documentação das classes pode ser gerada com o Doxygen a partir da raiz do projeto:\+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{doxygen\ Doxyfile}
+
+\end{DoxyCode}
+
+
+A saída HTML estará disponível em {\ttfamily docs/\+html/\+index.\+html}.\hypertarget{index_autotoc_md7}{}\doxysection{\texorpdfstring{Equipe}{Equipe}}\label{index_autotoc_md7}
+
+\begin{DoxyTable}{2}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Nº Matrícula  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Nome  \\
+2024010002  &Felipe Hildegardes Jorge  \\
+\end{DoxyTable}

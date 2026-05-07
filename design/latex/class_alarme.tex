@@ -1,0 +1,125 @@
+\doxysection{Alarme Class Reference}
+\hypertarget{class_alarme}{}\label{class_alarme}\index{Alarme@{Alarme}}
+
+
+\doxylink{class_alarme}{Alarme} associado a um \doxylink{class_parametro}{Parametro} de um equipamento.  
+
+
+
+
+{\ttfamily \+\#include $<$Alarme.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_alarme_a72267ff4275f34d2e2b5acf11e9d1b92}{Alarme}} (std::\+string Desc, int Id, \doxymbox{\hyperlink{class_parametro}{Parametro}} \&p)
+\begin{DoxyCompactList}\small\item\em Constrói um alarme vinculado a um parâmetro. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_alarme_a7ff2c7d02ce421c5e202f87e4127d7c1}{Atualizar\+Alarme}} ()
+\begin{DoxyCompactList}\small\item\em Consulta o parâmetro associado e atualiza o estado do alarme. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_alarme_a54906c69439d758cc8b90cf743636cc1}{Get\+Estado}} () const
+\item 
+void \doxymbox{\hyperlink{class_alarme_a83f11534931b839a94580d8b8838f378}{Set\+Estado}} (bool Estado)
+\begin{DoxyCompactList}\small\item\em Força o estado do alarme manualmente. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_alarme_a2e5f13392a139b7c2a4a5c5e832c5e90}{Set\+Desc}} (std::\+string desc)
+\begin{DoxyCompactList}\small\item\em Atualiza a descrição do alarme. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_alarme}{Alarme} associado a um \doxylink{class_parametro}{Parametro} de um equipamento. 
+
+Monitora um único parâmetro e mantém um estado booleano que indica se o valor atual viola os limites configurados naquele parâmetro. 
+
+Definition at line \doxymbox{\hyperlink{_alarme_8hpp_source_l00014}{14}} of file \doxymbox{\hyperlink{_alarme_8hpp_source}{Alarme.\+hpp}}.
+
+
+
+\label{class_alarme_doc-constructors}
+\Hypertarget{class_alarme_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_alarme_a72267ff4275f34d2e2b5acf11e9d1b92}\index{Alarme@{Alarme}!Alarme@{Alarme}}
+\index{Alarme@{Alarme}!Alarme@{Alarme}}
+\doxysubsubsection{\texorpdfstring{Alarme()}{Alarme()}}
+{\footnotesize\ttfamily \label{class_alarme_a72267ff4275f34d2e2b5acf11e9d1b92} 
+Alarme::\+\+Alarme (\begin{DoxyParamCaption}\item[{std::\+string}]{Desc}{, }\item[{int}]{Id}{, }\item[{\doxymbox{\hyperlink{class_parametro}{Parametro}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Constrói um alarme vinculado a um parâmetro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Desc} & Descrição do alarme. \\
+\hline
+{\em Id} & Identificador único do alarme. \\
+\hline
+{\em p} & Parâmetro monitorado por este alarme. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Implementa US-\/014 (Criar \doxylink{class_alarme}{Alarme}). 
+\end{DoxyNote}
+
+
+\label{class_alarme_doc-func-members}
+\Hypertarget{class_alarme_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_alarme_a7ff2c7d02ce421c5e202f87e4127d7c1}\index{Alarme@{Alarme}!AtualizarAlarme@{AtualizarAlarme}}
+\index{AtualizarAlarme@{AtualizarAlarme}!Alarme@{Alarme}}
+\doxysubsubsection{\texorpdfstring{AtualizarAlarme()}{AtualizarAlarme()}}
+{\footnotesize\ttfamily \label{class_alarme_a7ff2c7d02ce421c5e202f87e4127d7c1} 
+bool Alarme::\+\+Atualizar\+Alarme (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Consulta o parâmetro associado e atualiza o estado do alarme. 
+
+\begin{DoxyReturn}{Returns}
+true se o alarme estiver ativo (parâmetro em falha). 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Implementa US-\/014 (Criar \doxylink{class_alarme}{Alarme}). 
+\end{DoxyNote}
+\Hypertarget{class_alarme_a54906c69439d758cc8b90cf743636cc1}\index{Alarme@{Alarme}!GetEstado@{GetEstado}}
+\index{GetEstado@{GetEstado}!Alarme@{Alarme}}
+\doxysubsubsection{\texorpdfstring{GetEstado()}{GetEstado()}}
+{\footnotesize\ttfamily \label{class_alarme_a54906c69439d758cc8b90cf743636cc1} 
+bool Alarme::\+\+Get\+Estado (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+true se o alarme estiver ativo. 
+\end{DoxyReturn}
+\Hypertarget{class_alarme_a2e5f13392a139b7c2a4a5c5e832c5e90}\index{Alarme@{Alarme}!SetDesc@{SetDesc}}
+\index{SetDesc@{SetDesc}!Alarme@{Alarme}}
+\doxysubsubsection{\texorpdfstring{SetDesc()}{SetDesc()}}
+{\footnotesize\ttfamily \label{class_alarme_a2e5f13392a139b7c2a4a5c5e832c5e90} 
+void Alarme::\+\+Set\+Desc (\begin{DoxyParamCaption}\item[{std::\+string}]{desc}{}\end{DoxyParamCaption})}
+
+
+
+Atualiza a descrição do alarme. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em desc} & Nova descrição. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_alarme_a83f11534931b839a94580d8b8838f378}\index{Alarme@{Alarme}!SetEstado@{SetEstado}}
+\index{SetEstado@{SetEstado}!Alarme@{Alarme}}
+\doxysubsubsection{\texorpdfstring{SetEstado()}{SetEstado()}}
+{\footnotesize\ttfamily \label{class_alarme_a83f11534931b839a94580d8b8838f378} 
+void Alarme::\+\+Set\+Estado (\begin{DoxyParamCaption}\item[{bool}]{Estado}{}\end{DoxyParamCaption})}
+
+
+
+Força o estado do alarme manualmente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Estado} & Novo estado. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{_alarme_8hpp}{Alarme.\+hpp}}\end{DoxyCompactItemize}

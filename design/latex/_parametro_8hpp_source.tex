@@ -1,0 +1,61 @@
+\doxysection{Parametro.\+hpp}
+\hypertarget{_parametro_8hpp_source}{}\label{_parametro_8hpp_source}\index{include/Parametro.hpp@{include/Parametro.hpp}}
+\doxymbox{\hyperlink{_parametro_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ PARAMETRO\_HPP}}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#define\ PARAMETRO\_HPP}}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00013}\doxymbox{\hyperlink{class_parametro}{00013}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_parametro_a0071399fb14dfc6022306a1b11eb395b}{Parametro}}\ \{}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00014}00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \_id;}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00016}00016\ \ \ \ \ std::string\ \_Desc;}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00018}00018\ \ \ \ \ \textcolor{keywordtype}{double}\ \_ValorAtual;}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00019}00019\ \ \ \ \ std::vector<double>\ \_Hist;}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordtype}{double}\ \_Max;}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{double}\ \_Min;}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ \_Estado;}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00025}00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00032}\doxymbox{\hyperlink{class_parametro_a0071399fb14dfc6022306a1b11eb395b}{00032}}\ \ \ \ \ \doxymbox{\hyperlink{class_parametro_a0071399fb14dfc6022306a1b11eb395b}{Parametro}}(\textcolor{keywordtype}{double}\ ValorAtual,\ std::string\ Desc,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00043}\doxymbox{\hyperlink{class_parametro_a7b2c8bd8c468fdd88cad4bbf38f153fd}{00043}}\ \ \ \ \ \doxymbox{\hyperlink{class_parametro_a7b2c8bd8c468fdd88cad4bbf38f153fd}{Parametro}}(\textcolor{keywordtype}{double}\ ValorAtual,\ \textcolor{keywordtype}{double}\ Max,\ \textcolor{keywordtype}{double}\ Min,\ std::string\ Desc,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00050}\doxymbox{\hyperlink{class_parametro_a40863e45c012d1e208bf5f7b7ed06eab}{00050}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_parametro_a40863e45c012d1e208bf5f7b7ed06eab}{ValorValido}}(\textcolor{keywordtype}{double}\ Valor)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00057}\doxymbox{\hyperlink{class_parametro_a9d7bc8cf2f7b31f0f11739f808afdfb9}{00057}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_parametro_a9d7bc8cf2f7b31f0f11739f808afdfb9}{SetValorAtual}}(\textcolor{keywordtype}{double}\ Valor);}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00064}\doxymbox{\hyperlink{class_parametro_a58e763786ad2dc5d763f200a8337629c}{00064}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_parametro_a58e763786ad2dc5d763f200a8337629c}{SetMax}}(\textcolor{keywordtype}{double}\ Valor);}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00071}\doxymbox{\hyperlink{class_parametro_aba1d2eb02bc196060fc0da4e473c53bd}{00071}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_parametro_aba1d2eb02bc196060fc0da4e473c53bd}{SetMin}}(\textcolor{keywordtype}{double}\ Valor);}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00074}\doxymbox{\hyperlink{class_parametro_af57b4351acc5f3e2d1e2aae6fd06d1d2}{00074}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_parametro_af57b4351acc5f3e2d1e2aae6fd06d1d2}{SetDesc}}(std::string\ Desc);}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00081}\doxymbox{\hyperlink{class_parametro_a0985c6385fe78316d91cd68cc61ea7b7}{00081}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_parametro_a0985c6385fe78316d91cd68cc61ea7b7}{DiagnosticarParametro}}();}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00084}\doxymbox{\hyperlink{class_parametro_ad5b0dce0bb7758bc67390241b9769974}{00084}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_parametro_ad5b0dce0bb7758bc67390241b9769974}{GetValorAtual}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00087}\doxymbox{\hyperlink{class_parametro_a487efbab0fbe485dad3e0536a06af78f}{00087}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_parametro_a487efbab0fbe485dad3e0536a06af78f}{GetMax}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00090}\doxymbox{\hyperlink{class_parametro_a056e131a4b34487487ff19dee0e9cf38}{00090}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_parametro_a056e131a4b34487487ff19dee0e9cf38}{GetMin}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00093}\doxymbox{\hyperlink{class_parametro_ac1e57352a73f75358b0c93688bc6dbff}{00093}}\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_parametro_ac1e57352a73f75358b0c93688bc6dbff}{GetDesc}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00096}\doxymbox{\hyperlink{class_parametro_ab1149bfe68c5c06085f5b9fd714ca548}{00096}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_parametro_ab1149bfe68c5c06085f5b9fd714ca548}{GetEstado}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00102}\doxymbox{\hyperlink{class_parametro_aa8306fd9abfef11b9198be7748af1453}{00102}}\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<double>\&\ \doxymbox{\hyperlink{class_parametro_aa8306fd9abfef11b9198be7748af1453}{GetHist}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00105}\doxymbox{\hyperlink{class_parametro_aa71debbc4cc40756af3306ea98e95802}{00105}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_parametro_aa71debbc4cc40756af3306ea98e95802}{GetId}}();}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00108}\doxymbox{\hyperlink{class_parametro_ad3d3cb1b501c9bd64761eb1cc588e6de}{00108}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_parametro_ad3d3cb1b501c9bd64761eb1cc588e6de}{ResetarLimites}}();}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00111}\doxymbox{\hyperlink{class_parametro_a537f27f6b22c7f828bd9a9676909bfe9}{00111}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_parametro_a537f27f6b22c7f828bd9a9676909bfe9}{ResetarHistorico}}();}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00112}00112\ \};}
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{_parametro_8hpp_source_l00114}00114\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
