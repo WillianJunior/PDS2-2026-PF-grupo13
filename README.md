@@ -40,7 +40,6 @@ Sistema
 +-- design/         # User Stories e Cartoes CRC
 +-- tests/          # Testes automatizados
 +-- build/          # Artefatos de compilacao
-+-- docs/           # Documentacao gerada pelo Doxygen
 \-- README.md
 ```
 
