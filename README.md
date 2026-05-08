@@ -65,5 +65,5 @@ Uma versão, atualiza, em PDF pode ser encontrada na raiz do projeto como `doxyg
 | Nº Matrícula | Nome |
 |--------------|------| 
 | 2024010002 | Felipe Hildegardes Jorge |
-| 2022028400dox | Wennedes de Oliveira Nogueira Junior |
+| 2022028400 | Wennedes de Oliveira Nogueira Junior |
 | 2020057144 | Gustavo Coelho Santos |
