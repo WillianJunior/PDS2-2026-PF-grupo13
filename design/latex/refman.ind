@@ -1,0 +1,317 @@
+\begin{theindex}
+
+  \item {AdicionarConjunto}
+    \subitem {LinhaDeProducao}, \hyperpage{24}
+  \item {AdicionarEquipamento}
+    \subitem {Conjunto}, \hyperpage{14}
+  \item {AdicionarLinha}
+    \subitem {Sistema}, \hyperpage{36}
+  \item {AdicionarParametro}
+    \subitem {Equipamento}, \hyperpage{19}
+  \item {AdicionarParametroComLimites}
+    \subitem {Equipamento}, \hyperpage{19}
+  \item {AdicionarUsuario}
+    \subitem {Sistema}, \hyperpage{36}
+  \item {ADMIN}
+    \subitem {Cargo.hpp}, \hyperpage{44}
+  \item {Alarme}, \hyperpage{11}
+    \subitem {Alarme}, \hyperpage{12}
+    \subitem {AtualizarAlarme}, \hyperpage{12}
+    \subitem {GetEstado}, \hyperpage{12}
+    \subitem {SetDesc}, \hyperpage{12}
+    \subitem {SetEstado}, \hyperpage{13}
+  \item {AtualizarAlarme}
+    \subitem {Alarme}, \hyperpage{12}
+  \item {AtualizarAlarmes}
+    \subitem {Conjunto}, \hyperpage{15}
+    \subitem {Equipamento}, \hyperpage{20}
+    \subitem {LinhaDeProducao}, \hyperpage{24}
+
+  \indexspace
+
+  \item {Cargo}
+    \subitem {Cargo.hpp}, \hyperpage{44}
+  \item {Cargo.hpp}
+    \subitem {ADMIN}, \hyperpage{44}
+    \subitem {Cargo}, \hyperpage{44}
+    \subitem {ENGENHEIRO}, \hyperpage{44}
+    \subitem {TECNICO}, \hyperpage{44}
+  \item {CarregarSave}
+    \subitem {Sistema}, \hyperpage{37}
+  \item {CarregarUltimoSave}
+    \subitem {Sistema}, \hyperpage{37}
+  \item {Conjunto}, \hyperpage{13}
+    \subitem {AdicionarEquipamento}, \hyperpage{14}
+    \subitem {AtualizarAlarmes}, \hyperpage{15}
+    \subitem {Conjunto}, \hyperpage{14}
+    \subitem {DiagnosticarConjunto}, \hyperpage{15}
+    \subitem {ExibirAlarmes}, \hyperpage{15}
+    \subitem {ExibirEquipamentos}, \hyperpage{15}
+    \subitem {ExibirTudo}, \hyperpage{15}
+    \subitem {GetDesc}, \hyperpage{16}
+    \subitem {GetEquipamentos}, \hyperpage{16}
+    \subitem {GetId}, \hyperpage{16}
+    \subitem {GetNome}, \hyperpage{16}
+    \subitem {QuantidadeAlarmes}, \hyperpage{16}
+    \subitem {QuantidadeEquipamentos}, \hyperpage{17}
+    \subitem {RemoverEquipamento}, \hyperpage{17}
+    \subitem {SetDesc}, \hyperpage{17}
+    \subitem {SetNome}, \hyperpage{17}
+
+  \indexspace
+
+  \item {DiagnosticarConjunto}
+    \subitem {Conjunto}, \hyperpage{15}
+  \item {DiagnosticarEquipamento}
+    \subitem {Equipamento}, \hyperpage{20}
+  \item {DiagnosticarLinha}
+    \subitem {LinhaDeProducao}, \hyperpage{24}
+  \item {DiagnosticarParametro}
+    \subitem {Parametro}, \hyperpage{31}
+
+  \indexspace
+
+  \item {ENGENHEIRO}
+    \subitem {Cargo.hpp}, \hyperpage{44}
+  \item {Equipamento}, \hyperpage{18}
+    \subitem {AdicionarParametro}, \hyperpage{19}
+    \subitem {AdicionarParametroComLimites}, \hyperpage{19}
+    \subitem {AtualizarAlarmes}, \hyperpage{20}
+    \subitem {DiagnosticarEquipamento}, \hyperpage{20}
+    \subitem {Equipamento}, \hyperpage{19}
+    \subitem {ExibirAlarmes}, \hyperpage{20}
+    \subitem {ExibirParametros}, \hyperpage{21}
+    \subitem {GetAlarmes}, \hyperpage{21}
+    \subitem {GetId}, \hyperpage{21}
+    \subitem {GetParametros}, \hyperpage{21}
+    \subitem {QuantidadeAlarmes}, \hyperpage{21}
+    \subitem {QuantidadeParametros}, \hyperpage{22}
+    \subitem {RemoverParametro}, \hyperpage{22}
+    \subitem {SetDesc}, \hyperpage{22}
+  \item {ExibirAlarmes}
+    \subitem {Conjunto}, \hyperpage{15}
+    \subitem {Equipamento}, \hyperpage{20}
+    \subitem {LinhaDeProducao}, \hyperpage{24}
+  \item {ExibirConjuntos}
+    \subitem {LinhaDeProducao}, \hyperpage{25}
+  \item {ExibirEquipamentos}
+    \subitem {Conjunto}, \hyperpage{15}
+  \item {ExibirLinhas}
+    \subitem {Sistema}, \hyperpage{37}
+  \item {ExibirParametros}
+    \subitem {Equipamento}, \hyperpage{21}
+  \item {ExibirTudo}
+    \subitem {Conjunto}, \hyperpage{15}
+    \subitem {LinhaDeProducao}, \hyperpage{25}
+
+  \indexspace
+
+  \item {GetAlarmes}
+    \subitem {Equipamento}, \hyperpage{21}
+  \item {GetArquivoLog}
+    \subitem {Log}, \hyperpage{29}
+  \item {GetCargo}
+    \subitem {Usuario}, \hyperpage{42}
+  \item {GetConjuntos}
+    \subitem {LinhaDeProducao}, \hyperpage{25}
+  \item {GetDesc}
+    \subitem {Conjunto}, \hyperpage{16}
+    \subitem {LinhaDeProducao}, \hyperpage{25}
+    \subitem {Parametro}, \hyperpage{31}
+  \item {GetEquipamentos}
+    \subitem {Conjunto}, \hyperpage{16}
+  \item {GetEstado}
+    \subitem {Alarme}, \hyperpage{12}
+    \subitem {Parametro}, \hyperpage{32}
+  \item {GetHist}
+    \subitem {Parametro}, \hyperpage{32}
+  \item {GetId}
+    \subitem {Conjunto}, \hyperpage{16}
+    \subitem {Equipamento}, \hyperpage{21}
+    \subitem {LinhaDeProducao}, \hyperpage{25}
+    \subitem {Parametro}, \hyperpage{32}
+  \item {GetLinhas}
+    \subitem {Sistema}, \hyperpage{38}
+  \item {GetLocal}
+    \subitem {LinhaDeProducao}, \hyperpage{26}
+  \item {GetLogin}
+    \subitem {Usuario}, \hyperpage{42}
+  \item {GetMax}
+    \subitem {Parametro}, \hyperpage{32}
+  \item {GetMin}
+    \subitem {Parametro}, \hyperpage{32}
+  \item {GetNome}
+    \subitem {Conjunto}, \hyperpage{16}
+    \subitem {LinhaDeProducao}, \hyperpage{26}
+  \item {GetParametros}
+    \subitem {Equipamento}, \hyperpage{21}
+  \item {GetUsuarioLogado}
+    \subitem {Sistema}, \hyperpage{38}
+  \item {GetValorAtual}
+    \subitem {Parametro}, \hyperpage{33}
+
+  \indexspace
+
+  \item {IdDisponivel}
+    \subitem {Sistema}, \hyperpage{38}
+  \item {include Directory Reference}, \hyperpage{9}
+  \item {include/Alarme.hpp}, \hyperpage{43}
+  \item {include/Cargo.hpp}, \hyperpage{44}
+  \item {include/Conjunto.hpp}, \hyperpage{44, 45}
+  \item {include/Equipamento.hpp}, \hyperpage{45, 46}
+  \item {include/LinhaDeProducao.hpp}, \hyperpage{46}
+  \item {include/Log.hpp}, \hyperpage{47}
+  \item {include/Parametro.hpp}, \hyperpage{48}
+  \item {include/Sistema.hpp}, \hyperpage{49}
+  \item {include/Usuario.hpp}, \hyperpage{50}
+
+  \indexspace
+
+  \item {LinhaDeProducao}, \hyperpage{22}
+    \subitem {AdicionarConjunto}, \hyperpage{24}
+    \subitem {AtualizarAlarmes}, \hyperpage{24}
+    \subitem {DiagnosticarLinha}, \hyperpage{24}
+    \subitem {ExibirAlarmes}, \hyperpage{24}
+    \subitem {ExibirConjuntos}, \hyperpage{25}
+    \subitem {ExibirTudo}, \hyperpage{25}
+    \subitem {GetConjuntos}, \hyperpage{25}
+    \subitem {GetDesc}, \hyperpage{25}
+    \subitem {GetId}, \hyperpage{25}
+    \subitem {GetLocal}, \hyperpage{26}
+    \subitem {GetNome}, \hyperpage{26}
+    \subitem {LinhaDeProducao}, \hyperpage{23}
+    \subitem {QuantidadeAlarmes}, \hyperpage{26}
+    \subitem {QuantidadeConjuntos}, \hyperpage{26}
+    \subitem {RemoverConjunto}, \hyperpage{26}
+    \subitem {SetDesc}, \hyperpage{27}
+    \subitem {SetLocal}, \hyperpage{27}
+    \subitem {SetNome}, \hyperpage{27}
+  \item {Log}, \hyperpage{28}
+    \subitem {GetArquivoLog}, \hyperpage{29}
+    \subitem {Log}, \hyperpage{28}
+    \subitem {Registrar}, \hyperpage{29}
+    \subitem {SetArquivoLog}, \hyperpage{29}
+  \item {Login}
+    \subitem {Sistema}, \hyperpage{38}
+  \item {Logout}
+    \subitem {Sistema}, \hyperpage{39}
+
+  \indexspace
+
+  \item {Parametro}, \hyperpage{30}
+    \subitem {DiagnosticarParametro}, \hyperpage{31}
+    \subitem {GetDesc}, \hyperpage{31}
+    \subitem {GetEstado}, \hyperpage{32}
+    \subitem {GetHist}, \hyperpage{32}
+    \subitem {GetId}, \hyperpage{32}
+    \subitem {GetMax}, \hyperpage{32}
+    \subitem {GetMin}, \hyperpage{32}
+    \subitem {GetValorAtual}, \hyperpage{33}
+    \subitem {Parametro}, \hyperpage{31}
+    \subitem {ResetarHistorico}, \hyperpage{33}
+    \subitem {ResetarLimites}, \hyperpage{33}
+    \subitem {SetDesc}, \hyperpage{33}
+    \subitem {SetMax}, \hyperpage{33}
+    \subitem {SetMin}, \hyperpage{34}
+    \subitem {SetValorAtual}, \hyperpage{34}
+    \subitem {ValorValido}, \hyperpage{34}
+  \item {ProximoIdDisponivel}
+    \subitem {Sistema}, \hyperpage{39}
+
+  \indexspace
+
+  \item {QuantidadeAlarmes}
+    \subitem {Conjunto}, \hyperpage{16}
+    \subitem {Equipamento}, \hyperpage{21}
+    \subitem {LinhaDeProducao}, \hyperpage{26}
+  \item {QuantidadeConjuntos}
+    \subitem {LinhaDeProducao}, \hyperpage{26}
+  \item {QuantidadeEquipamentos}
+    \subitem {Conjunto}, \hyperpage{17}
+  \item {QuantidadeParametros}
+    \subitem {Equipamento}, \hyperpage{22}
+
+  \indexspace
+
+  \item {README.md}, \hyperpage{50}
+  \item {Registrar}
+    \subitem {Log}, \hyperpage{29}
+  \item {RemoverConjunto}
+    \subitem {LinhaDeProducao}, \hyperpage{26}
+  \item {RemoverEquipamento}
+    \subitem {Conjunto}, \hyperpage{17}
+  \item {RemoverLinha}
+    \subitem {Sistema}, \hyperpage{39}
+  \item {RemoverParametro}
+    \subitem {Equipamento}, \hyperpage{22}
+  \item {RemoverUsuario}
+    \subitem {Sistema}, \hyperpage{40}
+  \item {ResetarHistorico}
+    \subitem {Parametro}, \hyperpage{33}
+  \item {ResetarLimites}
+    \subitem {Parametro}, \hyperpage{33}
+
+  \indexspace
+
+  \item {SalvarAlteracoes}
+    \subitem {Sistema}, \hyperpage{40}
+  \item {SetArquivoLog}
+    \subitem {Log}, \hyperpage{29}
+  \item {SetDesc}
+    \subitem {Alarme}, \hyperpage{12}
+    \subitem {Conjunto}, \hyperpage{17}
+    \subitem {Equipamento}, \hyperpage{22}
+    \subitem {LinhaDeProducao}, \hyperpage{27}
+    \subitem {Parametro}, \hyperpage{33}
+  \item {SetEstado}
+    \subitem {Alarme}, \hyperpage{13}
+  \item {SetLocal}
+    \subitem {LinhaDeProducao}, \hyperpage{27}
+  \item {SetMax}
+    \subitem {Parametro}, \hyperpage{33}
+  \item {SetMin}
+    \subitem {Parametro}, \hyperpage{34}
+  \item {SetNome}
+    \subitem {Conjunto}, \hyperpage{17}
+    \subitem {LinhaDeProducao}, \hyperpage{27}
+  \item {SetValorAtual}
+    \subitem {Parametro}, \hyperpage{34}
+  \item {Sistema}, \hyperpage{35}
+    \subitem {AdicionarLinha}, \hyperpage{36}
+    \subitem {AdicionarUsuario}, \hyperpage{36}
+    \subitem {CarregarSave}, \hyperpage{37}
+    \subitem {CarregarUltimoSave}, \hyperpage{37}
+    \subitem {ExibirLinhas}, \hyperpage{37}
+    \subitem {GetLinhas}, \hyperpage{38}
+    \subitem {GetUsuarioLogado}, \hyperpage{38}
+    \subitem {IdDisponivel}, \hyperpage{38}
+    \subitem {Login}, \hyperpage{38}
+    \subitem {Logout}, \hyperpage{39}
+    \subitem {ProximoIdDisponivel}, \hyperpage{39}
+    \subitem {RemoverLinha}, \hyperpage{39}
+    \subitem {RemoverUsuario}, \hyperpage{40}
+    \subitem {SalvarAlteracoes}, \hyperpage{40}
+    \subitem {Sistema}, \hyperpage{36}
+  \item {Sistema de Tolerância de Falha em Fábricas}, \hyperpage{1}
+
+  \indexspace
+
+  \item {TECNICO}
+    \subitem {Cargo.hpp}, \hyperpage{44}
+
+  \indexspace
+
+  \item {Usuario}, \hyperpage{41}
+    \subitem {GetCargo}, \hyperpage{42}
+    \subitem {GetLogin}, \hyperpage{42}
+    \subitem {Usuario}, \hyperpage{41}
+    \subitem {ValidarSenha}, \hyperpage{42}
+
+  \indexspace
+
+  \item {ValidarSenha}
+    \subitem {Usuario}, \hyperpage{42}
+  \item {ValorValido}
+    \subitem {Parametro}, \hyperpage{34}
+
+\end{theindex}

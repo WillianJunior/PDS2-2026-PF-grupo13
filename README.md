@@ -16,11 +16,11 @@ Sistema de monitoramento industrial orientado a objetos desenvolvido em C++. Per
 
 ```
 Sistema
- └── LinhaDeProducao
-       └── Conjunto
-             └── Equipamento
-                   ├── Parametro
-                   └── Alarme
+ \-- LinhaDeProducao
+       \-- Conjunto
+             \-- Equipamento
+                   +-- Parametro
+                   \-- Alarme
 ```
 
 ## Cargos de Usuário
@@ -35,13 +35,13 @@ Sistema
 
 ```
 .
-├── include/        # Contratos das classes (.hpp)
-├── src/            # Implementações (.cpp)
-├── design/         # User Stories e Cartões CRC
-├── tests/          # Testes automatizados
-├── build/          # Artefatos de compilação
-├── docs/           # Documentação gerada pelo Doxygen
-└── README.md
++-- include/        # Contratos das classes (.hpp)
++-- src/            # Implementacoes (.cpp)
++-- design/         # User Stories e Cartoes CRC
++-- tests/          # Testes automatizados
++-- build/          # Artefatos de compilacao
++-- docs/           # Documentacao gerada pelo Doxygen
+\-- README.md
 ```
 
 ## Compilação
@@ -59,10 +59,11 @@ doxygen Doxyfile
 ```
 
 A saída HTML estará disponível em `docs/html/index.html`.
+Uma versão, atualiza, em PDF pode ser encontrada na raiz do projeto como `doxygen_doc.pdf`.
 
 ## Equipe
 | Nº Matrícula | Nome |
 |--------------|------| 
 | 2024010002 | Felipe Hildegardes Jorge |
 | 2022028400dox | Wennedes de Oliveira Nogueira Junior |
-|2020057144| Gustavo Coelho Santos|
+| 2020057144 | Gustavo Coelho Santos |

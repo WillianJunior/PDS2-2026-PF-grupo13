@@ -1,0 +1,166 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Sistema de Tolerância de Falha em Fábricas }{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Funcionalidades}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Hierarquia do Sistema}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Cargos de Usuário}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Estrutura de Diretórios}{2}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Compilação}{2}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Documentação}{2}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Equipe}{2}{section.1.7}%
+\contentsline {chapter}{\numberline {2}Directory Hierarchy}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Directories}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Class List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}File Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}File List}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Directory Documentation}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}include Directory Reference}{9}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Class Documentation}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Alarme Class Reference}{11}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{11}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Constructor \& Destructor Documentation}{12}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}Alarme()}{12}{subsubsection.6.1.2.1}%
+\contentsline {subsection}{\numberline {6.1.3}Member Function Documentation}{12}{subsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.3.1}AtualizarAlarme()}{12}{subsubsection.6.1.3.1}%
+\contentsline {subsubsection}{\numberline {6.1.3.2}GetEstado()}{12}{subsubsection.6.1.3.2}%
+\contentsline {subsubsection}{\numberline {6.1.3.3}SetDesc()}{13}{subsubsection.6.1.3.3}%
+\contentsline {subsubsection}{\numberline {6.1.3.4}SetEstado()}{13}{subsubsection.6.1.3.4}%
+\contentsline {section}{\numberline {6.2}Conjunto Class Reference}{13}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{14}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Constructor \& Destructor Documentation}{14}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}Conjunto()}{14}{subsubsection.6.2.2.1}%
+\contentsline {subsection}{\numberline {6.2.3}Member Function Documentation}{14}{subsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.3.1}AdicionarEquipamento()}{14}{subsubsection.6.2.3.1}%
+\contentsline {subsubsection}{\numberline {6.2.3.2}AtualizarAlarmes()}{15}{subsubsection.6.2.3.2}%
+\contentsline {subsubsection}{\numberline {6.2.3.3}DiagnosticarConjunto()}{15}{subsubsection.6.2.3.3}%
+\contentsline {subsubsection}{\numberline {6.2.3.4}ExibirAlarmes()}{15}{subsubsection.6.2.3.4}%
+\contentsline {subsubsection}{\numberline {6.2.3.5}ExibirEquipamentos()}{15}{subsubsection.6.2.3.5}%
+\contentsline {subsubsection}{\numberline {6.2.3.6}ExibirTudo()}{16}{subsubsection.6.2.3.6}%
+\contentsline {subsubsection}{\numberline {6.2.3.7}GetDesc()}{16}{subsubsection.6.2.3.7}%
+\contentsline {subsubsection}{\numberline {6.2.3.8}GetEquipamentos()}{16}{subsubsection.6.2.3.8}%
+\contentsline {subsubsection}{\numberline {6.2.3.9}GetId()}{16}{subsubsection.6.2.3.9}%
+\contentsline {subsubsection}{\numberline {6.2.3.10}GetNome()}{16}{subsubsection.6.2.3.10}%
+\contentsline {subsubsection}{\numberline {6.2.3.11}QuantidadeAlarmes()}{17}{subsubsection.6.2.3.11}%
+\contentsline {subsubsection}{\numberline {6.2.3.12}QuantidadeEquipamentos()}{17}{subsubsection.6.2.3.12}%
+\contentsline {subsubsection}{\numberline {6.2.3.13}RemoverEquipamento()}{17}{subsubsection.6.2.3.13}%
+\contentsline {subsubsection}{\numberline {6.2.3.14}SetDesc()}{17}{subsubsection.6.2.3.14}%
+\contentsline {subsubsection}{\numberline {6.2.3.15}SetNome()}{18}{subsubsection.6.2.3.15}%
+\contentsline {section}{\numberline {6.3}Equipamento Class Reference}{18}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Detailed Description}{19}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Constructor \& Destructor Documentation}{19}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}Equipamento()}{19}{subsubsection.6.3.2.1}%
+\contentsline {subsection}{\numberline {6.3.3}Member Function Documentation}{19}{subsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.3.1}AdicionarParametro()}{19}{subsubsection.6.3.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.3.2}AdicionarParametroComLimites()}{20}{subsubsection.6.3.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3.3}AtualizarAlarmes()}{20}{subsubsection.6.3.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.3.4}DiagnosticarEquipamento()}{20}{subsubsection.6.3.3.4}%
+\contentsline {subsubsection}{\numberline {6.3.3.5}ExibirAlarmes()}{21}{subsubsection.6.3.3.5}%
+\contentsline {subsubsection}{\numberline {6.3.3.6}ExibirParametros()}{21}{subsubsection.6.3.3.6}%
+\contentsline {subsubsection}{\numberline {6.3.3.7}GetAlarmes()}{21}{subsubsection.6.3.3.7}%
+\contentsline {subsubsection}{\numberline {6.3.3.8}GetId()}{21}{subsubsection.6.3.3.8}%
+\contentsline {subsubsection}{\numberline {6.3.3.9}GetParametros()}{21}{subsubsection.6.3.3.9}%
+\contentsline {subsubsection}{\numberline {6.3.3.10}QuantidadeAlarmes()}{22}{subsubsection.6.3.3.10}%
+\contentsline {subsubsection}{\numberline {6.3.3.11}QuantidadeParametros()}{22}{subsubsection.6.3.3.11}%
+\contentsline {subsubsection}{\numberline {6.3.3.12}RemoverParametro()}{22}{subsubsection.6.3.3.12}%
+\contentsline {subsubsection}{\numberline {6.3.3.13}SetDesc()}{22}{subsubsection.6.3.3.13}%
+\contentsline {section}{\numberline {6.4}Linha\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}De\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Producao Class Reference}{22}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Detailed Description}{23}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Constructor \& Destructor Documentation}{23}{subsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.1}LinhaDeProducao()}{23}{subsubsection.6.4.2.1}%
+\contentsline {subsection}{\numberline {6.4.3}Member Function Documentation}{24}{subsection.6.4.3}%
+\contentsline {subsubsection}{\numberline {6.4.3.1}AdicionarConjunto()}{24}{subsubsection.6.4.3.1}%
+\contentsline {subsubsection}{\numberline {6.4.3.2}AtualizarAlarmes()}{24}{subsubsection.6.4.3.2}%
+\contentsline {subsubsection}{\numberline {6.4.3.3}DiagnosticarLinha()}{24}{subsubsection.6.4.3.3}%
+\contentsline {subsubsection}{\numberline {6.4.3.4}ExibirAlarmes()}{25}{subsubsection.6.4.3.4}%
+\contentsline {subsubsection}{\numberline {6.4.3.5}ExibirConjuntos()}{25}{subsubsection.6.4.3.5}%
+\contentsline {subsubsection}{\numberline {6.4.3.6}ExibirTudo()}{25}{subsubsection.6.4.3.6}%
+\contentsline {subsubsection}{\numberline {6.4.3.7}GetConjuntos()}{25}{subsubsection.6.4.3.7}%
+\contentsline {subsubsection}{\numberline {6.4.3.8}GetDesc()}{25}{subsubsection.6.4.3.8}%
+\contentsline {subsubsection}{\numberline {6.4.3.9}GetId()}{26}{subsubsection.6.4.3.9}%
+\contentsline {subsubsection}{\numberline {6.4.3.10}GetLocal()}{26}{subsubsection.6.4.3.10}%
+\contentsline {subsubsection}{\numberline {6.4.3.11}GetNome()}{26}{subsubsection.6.4.3.11}%
+\contentsline {subsubsection}{\numberline {6.4.3.12}QuantidadeAlarmes()}{26}{subsubsection.6.4.3.12}%
+\contentsline {subsubsection}{\numberline {6.4.3.13}QuantidadeConjuntos()}{26}{subsubsection.6.4.3.13}%
+\contentsline {subsubsection}{\numberline {6.4.3.14}RemoverConjunto()}{27}{subsubsection.6.4.3.14}%
+\contentsline {subsubsection}{\numberline {6.4.3.15}SetDesc()}{27}{subsubsection.6.4.3.15}%
+\contentsline {subsubsection}{\numberline {6.4.3.16}SetLocal()}{27}{subsubsection.6.4.3.16}%
+\contentsline {subsubsection}{\numberline {6.4.3.17}SetNome()}{27}{subsubsection.6.4.3.17}%
+\contentsline {section}{\numberline {6.5}Log Class Reference}{28}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Detailed Description}{28}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Constructor \& Destructor Documentation}{28}{subsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.1}Log()}{28}{subsubsection.6.5.2.1}%
+\contentsline {subsection}{\numberline {6.5.3}Member Function Documentation}{29}{subsection.6.5.3}%
+\contentsline {subsubsection}{\numberline {6.5.3.1}GetArquivoLog()}{29}{subsubsection.6.5.3.1}%
+\contentsline {subsubsection}{\numberline {6.5.3.2}Registrar()}{29}{subsubsection.6.5.3.2}%
+\contentsline {subsubsection}{\numberline {6.5.3.3}SetArquivoLog()}{29}{subsubsection.6.5.3.3}%
+\contentsline {section}{\numberline {6.6}Parametro Class Reference}{30}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Detailed Description}{30}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Constructor \& Destructor Documentation}{31}{subsection.6.6.2}%
+\contentsline {subsubsection}{\numberline {6.6.2.1}Parametro()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{31}{subsubsection.6.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.6.2.2}Parametro()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{31}{subsubsection.6.6.2.2}%
+\contentsline {subsection}{\numberline {6.6.3}Member Function Documentation}{31}{subsection.6.6.3}%
+\contentsline {subsubsection}{\numberline {6.6.3.1}DiagnosticarParametro()}{31}{subsubsection.6.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.6.3.2}GetDesc()}{32}{subsubsection.6.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.6.3.3}GetEstado()}{32}{subsubsection.6.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.6.3.4}GetHist()}{32}{subsubsection.6.6.3.4}%
+\contentsline {subsubsection}{\numberline {6.6.3.5}GetId()}{32}{subsubsection.6.6.3.5}%
+\contentsline {subsubsection}{\numberline {6.6.3.6}GetMax()}{32}{subsubsection.6.6.3.6}%
+\contentsline {subsubsection}{\numberline {6.6.3.7}GetMin()}{33}{subsubsection.6.6.3.7}%
+\contentsline {subsubsection}{\numberline {6.6.3.8}GetValorAtual()}{33}{subsubsection.6.6.3.8}%
+\contentsline {subsubsection}{\numberline {6.6.3.9}ResetarHistorico()}{33}{subsubsection.6.6.3.9}%
+\contentsline {subsubsection}{\numberline {6.6.3.10}ResetarLimites()}{33}{subsubsection.6.6.3.10}%
+\contentsline {subsubsection}{\numberline {6.6.3.11}SetDesc()}{33}{subsubsection.6.6.3.11}%
+\contentsline {subsubsection}{\numberline {6.6.3.12}SetMax()}{34}{subsubsection.6.6.3.12}%
+\contentsline {subsubsection}{\numberline {6.6.3.13}SetMin()}{34}{subsubsection.6.6.3.13}%
+\contentsline {subsubsection}{\numberline {6.6.3.14}SetValorAtual()}{34}{subsubsection.6.6.3.14}%
+\contentsline {subsubsection}{\numberline {6.6.3.15}ValorValido()}{35}{subsubsection.6.6.3.15}%
+\contentsline {section}{\numberline {6.7}Sistema Class Reference}{35}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Detailed Description}{36}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Constructor \& Destructor Documentation}{36}{subsection.6.7.2}%
+\contentsline {subsubsection}{\numberline {6.7.2.1}Sistema()}{36}{subsubsection.6.7.2.1}%
+\contentsline {subsection}{\numberline {6.7.3}Member Function Documentation}{36}{subsection.6.7.3}%
+\contentsline {subsubsection}{\numberline {6.7.3.1}AdicionarLinha()}{36}{subsubsection.6.7.3.1}%
+\contentsline {subsubsection}{\numberline {6.7.3.2}AdicionarUsuario()}{37}{subsubsection.6.7.3.2}%
+\contentsline {subsubsection}{\numberline {6.7.3.3}CarregarSave()}{37}{subsubsection.6.7.3.3}%
+\contentsline {subsubsection}{\numberline {6.7.3.4}CarregarUltimoSave()}{37}{subsubsection.6.7.3.4}%
+\contentsline {subsubsection}{\numberline {6.7.3.5}ExibirLinhas()}{38}{subsubsection.6.7.3.5}%
+\contentsline {subsubsection}{\numberline {6.7.3.6}GetLinhas()}{38}{subsubsection.6.7.3.6}%
+\contentsline {subsubsection}{\numberline {6.7.3.7}GetUsuarioLogado()}{38}{subsubsection.6.7.3.7}%
+\contentsline {subsubsection}{\numberline {6.7.3.8}IdDisponivel()}{38}{subsubsection.6.7.3.8}%
+\contentsline {subsubsection}{\numberline {6.7.3.9}Login()}{39}{subsubsection.6.7.3.9}%
+\contentsline {subsubsection}{\numberline {6.7.3.10}Logout()}{39}{subsubsection.6.7.3.10}%
+\contentsline {subsubsection}{\numberline {6.7.3.11}ProximoIdDisponivel()}{39}{subsubsection.6.7.3.11}%
+\contentsline {subsubsection}{\numberline {6.7.3.12}RemoverLinha()}{40}{subsubsection.6.7.3.12}%
+\contentsline {subsubsection}{\numberline {6.7.3.13}RemoverUsuario()}{40}{subsubsection.6.7.3.13}%
+\contentsline {subsubsection}{\numberline {6.7.3.14}SalvarAlteracoes()}{40}{subsubsection.6.7.3.14}%
+\contentsline {section}{\numberline {6.8}Usuario Class Reference}{41}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Detailed Description}{41}{subsection.6.8.1}%
+\contentsline {subsection}{\numberline {6.8.2}Constructor \& Destructor Documentation}{41}{subsection.6.8.2}%
+\contentsline {subsubsection}{\numberline {6.8.2.1}Usuario()}{41}{subsubsection.6.8.2.1}%
+\contentsline {subsection}{\numberline {6.8.3}Member Function Documentation}{42}{subsection.6.8.3}%
+\contentsline {subsubsection}{\numberline {6.8.3.1}GetCargo()}{42}{subsubsection.6.8.3.1}%
+\contentsline {subsubsection}{\numberline {6.8.3.2}GetLogin()}{42}{subsubsection.6.8.3.2}%
+\contentsline {subsubsection}{\numberline {6.8.3.3}ValidarSenha()}{42}{subsubsection.6.8.3.3}%
+\contentsline {chapter}{\numberline {7}File Documentation}{43}{chapter.7}%
+\contentsline {section}{\numberline {7.1}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Alarme.hpp File Reference}{43}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Alarme.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{43}{section.7.2}%
+\contentsline {section}{\numberline {7.3}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cargo.hpp File Reference}{44}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Enumeration Type Documentation}{44}{subsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.1.1}Cargo}{44}{subsubsection.7.3.1.1}%
+\contentsline {section}{\numberline {7.4}Cargo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{44}{section.7.4}%
+\contentsline {section}{\numberline {7.5}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Conjunto.hpp File Reference}{44}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Conjunto.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{45}{section.7.6}%
+\contentsline {section}{\numberline {7.7}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Equipamento.hpp File Reference}{45}{section.7.7}%
+\contentsline {section}{\numberline {7.8}Equipamento.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{46}{section.7.8}%
+\contentsline {section}{\numberline {7.9}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Linha\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}De\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Producao.hpp File Reference}{46}{section.7.9}%
+\contentsline {section}{\numberline {7.10}Linha\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}De\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Producao.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{46}{section.7.10}%
+\contentsline {section}{\numberline {7.11}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Log.hpp File Reference}{47}{section.7.11}%
+\contentsline {section}{\numberline {7.12}Log.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{47}{section.7.12}%
+\contentsline {section}{\numberline {7.13}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Parametro.hpp File Reference}{48}{section.7.13}%
+\contentsline {section}{\numberline {7.14}Parametro.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{48}{section.7.14}%
+\contentsline {section}{\numberline {7.15}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sistema.hpp File Reference}{49}{section.7.15}%
+\contentsline {section}{\numberline {7.16}Sistema.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{49}{section.7.16}%
+\contentsline {section}{\numberline {7.17}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Usuario.hpp File Reference}{50}{section.7.17}%
+\contentsline {section}{\numberline {7.18}Usuario.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{50}{section.7.18}%
+\contentsline {section}{\numberline {7.19}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{50}{section.7.19}%
+\contentsline {chapter}{Index}{51}{section*.19}%

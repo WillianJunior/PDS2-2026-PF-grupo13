@@ -134,11 +134,11 @@ Funcionalidades</h1>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
 Hierarquia do Sistema</h1>
 <div class="fragment"><div class="line">Sistema</div>
-<div class="line"> └── LinhaDeProducao</div>
-<div class="line">       └── Conjunto</div>
-<div class="line">             └── Equipamento</div>
-<div class="line">                   ├── Parametro</div>
-<div class="line">                   └── Alarme</div>
+<div class="line"> \-- LinhaDeProducao</div>
+<div class="line">       \-- Conjunto</div>
+<div class="line">             \-- Equipamento</div>
+<div class="line">                   +-- Parametro</div>
+<div class="line">                   \-- Alarme</div>
 </div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
 Cargos de Usuário</h1>
 <table class="markdownTable">
@@ -154,13 +154,13 @@ Cargos de Usuário</h1>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
 Estrutura de Diretórios</h1>
 <div class="fragment"><div class="line">.</div>
-<div class="line">├── include/        # Contratos das classes (.hpp)</div>
-<div class="line">├── src/            # Implementações (.cpp)</div>
-<div class="line">├── design/         # User Stories e Cartões CRC</div>
-<div class="line">├── tests/          # Testes automatizados</div>
-<div class="line">├── build/          # Artefatos de compilação</div>
-<div class="line">├── docs/           # Documentação gerada pelo Doxygen</div>
-<div class="line">└── README.md</div>
+<div class="line">+-- include/        # Contratos das classes (.hpp)</div>
+<div class="line">+-- src/            # Implementacoes (.cpp)</div>
+<div class="line">+-- design/         # User Stories e Cartoes CRC</div>
+<div class="line">+-- tests/          # Testes automatizados</div>
+<div class="line">+-- build/          # Artefatos de compilacao</div>
+<div class="line">+-- docs/           # Documentacao gerada pelo Doxygen</div>
+<div class="line">\-- README.md</div>
 </div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
 Compilação</h1>
 <div class="fragment"><div class="line">make</div>
@@ -168,7 +168,7 @@ Compilação</h1>
 Documentação</h1>
 <p>A documentação das classes pode ser gerada com o Doxygen a partir da raiz do projeto:</p>
 <div class="fragment"><div class="line">doxygen Doxyfile</div>
-</div><!-- fragment --><p>A saída HTML estará disponível em <span class="tt">docs/html/index.html</span>.</p>
+</div><!-- fragment --><p>A saída HTML estará disponível em <span class="tt">docs/html/index.html</span>. Uma versão, atualiza, em PDF pode ser encontrada na raiz do projeto como <span class="tt">doxygen_doc.pdf</span>.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
 Equipe</h1>
 <table class="markdownTable">
@@ -176,6 +176,10 @@ Equipe</h1>
 <th class="markdownTableHeadNone">Nº Matrícula  </th><th class="markdownTableHeadNone">Nome  </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">2024010002  </td><td class="markdownTableBodyNone">Felipe Hildegardes Jorge  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">2022028400dox  </td><td class="markdownTableBodyNone">Wennedes de Oliveira Nogueira Junior  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">2020057144  </td><td class="markdownTableBodyNone">Gustavo Coelho Santos  </td></tr>
 </table>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
