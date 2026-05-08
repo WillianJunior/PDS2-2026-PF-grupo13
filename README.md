@@ -65,3 +65,4 @@ A saída HTML estará disponível em `docs/html/index.html`.
 |--------------|------| 
 | 2024010002 | Felipe Hildegardes Jorge |
 | 2022028400dox | Wennedes de Oliveira Nogueira Junior |
+|2020057144| Gustavo Coelho Santos|
