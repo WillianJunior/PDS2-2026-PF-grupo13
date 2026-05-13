@@ -1,0 +1,7 @@
+ - Excelente uso das notas de use cases.
+ - Cuidado com os nomes de métodos/funções. Por convenção usamos capitalização apenas para nome de Tipos/Structs/Classes. Métodos/funções começam com letra minuscula.
+ - Não encontrei nenhuma hierarquia de classes. Seria bom ter ao menos uma hierarquia significativa.
+ - Documentação incompleta: cadê a classe Cargo?
+ - Cuidado com descrições obvias. Em Usuario::Usuario(): "Constrói um usuário.", sim, a classe é Usuário e é isso o que construtores fazem. Uma descrição mais legal foi de Sistema::GetUsuarioLocado(): "Ponteiro para o usuário atualmente logado, ou nullptr se não houver sessão.". Aqui vocês mencionam que existe uma sessão de usuário que persiste em execução, e que ela pode não estar carregada. Apenas neste caso retorna nullptr.
+ - A parte de Log não ajuda muito. Basicamente ela recebe mensagens e escreve em um arquivo. Embora seja bom centralizar isso, Log parece meio anêmica. Será que não tem uma sobrecarga de Log::Registrar para cada classe que pode ser logada?
+ - No README: não foi justificada a escolha do tema. Por causa do uso de notas de use cases irei considerar a entrega, mas leiam com mais cuidado as descrições dos checkpoints. Esse requisito estava em negrito, inclusive.
