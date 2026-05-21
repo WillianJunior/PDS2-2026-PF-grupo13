@@ -1,0 +1,35 @@
+#include "Sistema.hpp"
+
+Sistema::Sistema() : _UsuarioLogado(nullptr) {}
+
+void Sistema::AdicionarId(int Id) {}
+
+void Sistema::RemoverId(int Id) {}
+
+void Sistema::AdicionarLinha(int id, std::string desc, std::string local, std::string nome) {}
+
+void Sistema::RemoverLinha(int id) {}
+
+const std::vector<LinhaDeProducao>& Sistema::GetLinhas() const { return _Linhas; }
+
+void Sistema::ExibirLinhas() {}
+
+void Sistema::AdicionarUsuario(std::string login, std::string senha, Cargo cargo) {}
+
+void Sistema::RemoverUsuario(std::string login) {}
+
+int Sistema::ProximoIdDisponivel() const { return 0; }
+
+bool Sistema::IdDisponivel(int Id) const { return false; }
+
+bool Sistema::Login(std::string login, std::string senha) { return false; }
+
+bool Sistema::Logout() { return false; }
+
+Usuario* Sistema::GetUsuarioLogado() const { return nullptr; }
+
+bool Sistema::SalvarAlteracoes() { return false; }
+
+bool Sistema::CarregarUltimoSave() { return false; }
+
+bool Sistema::CarregarSave(std::string arquivo) { return false; }
