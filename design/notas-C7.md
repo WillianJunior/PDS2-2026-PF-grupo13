@@ -1,0 +1,4 @@
+ - projeto bem limpo e organizado. diretório build e .gitignore corretos.
+ - o makeclean só funciona para windows: não tem powershell para linux :)
+ - makefile bem escrito: só compila o que precisa, e apenas quando alteram arquivos
+ - interessante usar o python para rodar o gcovr no windows
