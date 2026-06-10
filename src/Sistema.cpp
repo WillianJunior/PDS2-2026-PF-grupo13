@@ -43,7 +43,21 @@ int Sistema::ProximoIdDisponivel() const { return 0; }
 
 bool Sistema::IdDisponivel(int Id) const { return false; }
 
-bool Sistema::Login(std::string login, std::string senha) { return false; }
+bool Sistema::Login(std::string login, std::string senha) { 
+
+    for (int i = 0; i < this->_Usuarios.size; i++){
+        if (this->_Usuarios[i].GetLogin == login && this->_Usuarios[i].ValidarSenha(senha) == true){
+            this->_UsuarioLogado = &this->_Usuarios[i];
+
+            std::cout << "Usuário " << login << " logado." << endl;
+
+            return true;
+        }
+    }
+    std::cout << "Usuário " << login << " não encontrado." << endl;
+    return false;
+
+ }
 
 bool Sistema::Logout() { return false; }
 
@@ -53,4 +67,4 @@ bool Sistema::SalvarAlteracoes() { return false; }
 
 bool Sistema::CarregarUltimoSave() { return false; }
 
-bool Sistema::CarregarSave(std::string arquivo) { return false; }
+bool Sistema::CarregarSave(std::string arquivo) {  }
