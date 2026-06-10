@@ -6,7 +6,13 @@ Usuario::Usuario(std::string login, std::string senha, Cargo cargo) {
     this->_cargo = cargo;
 }
 
-bool Usuario::ValidarSenha(std::string senha) const { return false; }
+bool Usuario::ValidarSenha(std::string senha) const { 
+
+    if (senha = this->_senha){
+        return true;
+    }
+    return false;
+ }
 
 std::string Usuario::GetLogin() const { return ""; }
 
