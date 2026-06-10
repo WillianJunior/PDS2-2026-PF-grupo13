@@ -14,7 +14,13 @@ const std::vector<LinhaDeProducao>& Sistema::GetLinhas() const { return _Linhas;
 
 void Sistema::ExibirLinhas() {}
 
-void Sistema::AdicionarUsuario(std::string login, std::string senha, Cargo cargo) {}
+void Sistema::AdicionarUsuario(std::string login, std::string senha, Cargo cargo) {
+     Usuario user(login, senha, cargo);
+
+    this->_Usuarios.push_back(user);
+
+    std::cout << "Usuário " << login << " adicionado." << endl;
+}
 
 void Sistema::RemoverUsuario(std::string login) {}
 
