@@ -22,7 +22,22 @@ void Sistema::AdicionarUsuario(std::string login, std::string senha, Cargo cargo
     std::cout << "Usuário " << login << " adicionado." << endl;
 }
 
-void Sistema::RemoverUsuario(std::string login) {}
+void Sistema::RemoverUsuario(std::string login) {
+
+    if (this->_Usuarios.size < 1){
+        return;
+    }
+
+    for (int i = 0; i < this->_Usuarios.size; i++){
+        if (this->_Usuarios[i] == login){
+            this->_Usuarios.erase(i);
+            std::cout << "Usuário " << login << " removido." << endl;
+
+            return;
+        }
+    }
+    std::cout << "Nenhum usuário removido." << endl
+}
 
 int Sistema::ProximoIdDisponivel() const { return 0; }
 
