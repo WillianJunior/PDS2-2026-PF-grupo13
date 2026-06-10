@@ -15,6 +15,8 @@ bool Usuario::ValidarSenha(std::string senha) const {
  }
 
 std::string Usuario::GetLogin() const { 
-    return this->_login; }
+    return this->_login; 
+}
 
-Cargo Usuario::GetCargo(std::string login) { return Cargo::ADMIN; }
+Cargo Usuario::GetCargo(std::string login) { 
+    return this->_cargo; }
