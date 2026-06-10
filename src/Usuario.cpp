@@ -14,6 +14,7 @@ bool Usuario::ValidarSenha(std::string senha) const {
     return false;
  }
 
-std::string Usuario::GetLogin() const { return ""; }
+std::string Usuario::GetLogin() const { 
+    return this->_login; }
 
 Cargo Usuario::GetCargo(std::string login) { return Cargo::ADMIN; }
