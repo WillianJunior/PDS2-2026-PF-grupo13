@@ -1,6 +1,10 @@
 #include "Usuario.hpp"
 
-Usuario::Usuario(std::string login, std::string senha, Cargo cargo) {}
+Usuario::Usuario(std::string login, std::string senha, Cargo cargo) {
+    this->_login = login;
+    this->_senha = senha;
+    this->_cargo = cargo;
+}
 
 bool Usuario::ValidarSenha(std::string senha) const { return false; }
 
