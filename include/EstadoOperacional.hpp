@@ -1,0 +1,11 @@
+#ifndef ESTADOOPERACIONAL_HPP
+#define ESTADOOPERACIONAL_HPP
+
+enum class EstadoOperacional {
+    OPERACIONAL,
+    FALHA_NA_ALIMENTACAO,
+    FALHA_INTERNA,
+    FALHA_NA_SAIDA
+}
+
+#endif
