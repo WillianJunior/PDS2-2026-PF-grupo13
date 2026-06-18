@@ -32,7 +32,9 @@ void Sistema::RemoverLinha(int id) {
     this->_Linhas.erase(id);
 }
 
-const std::vector<LinhaDeProducao>& Sistema::GetLinhas() const { return _Linhas; }
+const std::map<LinhaDeProducao>& Sistema::GetLinhas() const { 
+    return _Linhas; 
+}
 
 void Sistema::ExibirLinhas() {}
 
