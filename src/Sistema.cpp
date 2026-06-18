@@ -1,14 +1,36 @@
 #include "Sistema.hpp"
 
-Sistema::Sistema() : _UsuarioLogado(nullptr) {}
+Sistema::Sistema() : _UsuarioLogado(nullptr) {
+    this->_ProximoId = 1;
+}
 
-void Sistema::AdicionarId(int Id) {}
+void Sistema::AdicionarId(int Id) {
+    this->_IdsAtivos.push_back(Id);
+}
 
-void Sistema::RemoverId(int Id) {}
+void Sistema::RemoverId(int Id) {
+    this->_IdsAtivos.erase(Id);
+}
 
-void Sistema::AdicionarLinha(int id, std::string desc, std::string local, std::string nome) {}
+void Sistema::AdicionarLinha(int id, std::string desc, std::string local, std::string nome) {
+    LinhaDeProducao Linha(id, desc, local, nome);
 
-void Sistema::RemoverLinha(int id) {}
+    _Linhas[id] = Linha;
+}
+
+void Sistema::AdicionarLinha(std::string desc, std::string local, std::string nome) {
+
+    int id = this->ProximoIdDisponivel();
+    this->AdicionarId(id);
+
+    LinhaDeProducao Linha(id, desc, local, nome);
+
+    _Linhas[id] = Linha;
+}
+
+void Sistema::RemoverLinha(int id) {
+    this->_Linhas.erase(id);
+}
 
 const std::vector<LinhaDeProducao>& Sistema::GetLinhas() const { return _Linhas; }
 
@@ -39,9 +61,11 @@ void Sistema::RemoverUsuario(std::string login) {
     std::cout << "Nenhum usuário removido." << endl
 }
 
-int Sistema::ProximoIdDisponivel() const { return 0; }
+int Sistema::ProximoIdDisponivel() const {
+    return this->_ProximoId;
+}
 
-bool Sistema::IdDisponivel(int Id) const { return false; }
+bool Sistema::IdAtivo(int Id) const { return false; }
 
 bool Sistema::Login(std::string login, std::string senha) { 
 

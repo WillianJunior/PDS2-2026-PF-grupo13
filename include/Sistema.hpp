@@ -2,6 +2,7 @@
 #define SISTEMA_HPP
 
 #include <vector>
+#include <map>
 #include <string>
 
 #include "LinhaDeProducao.hpp"
@@ -16,9 +17,10 @@
  */
 class Sistema {
 private:
-    std::vector<LinhaDeProducao> _Linhas;
+    int _ProximoId;
+    std::map<int,LinhaDeProducao> _Linhas;
     std::vector<Usuario> _Usuarios;
-    std::vector<int> _IdsUtilizados;
+    std::vector<int> _IdsAtivos;
 
     Usuario* _UsuarioLogado;
 
@@ -40,6 +42,7 @@ public:
      * @note Implementa US-001 (Criar Linhas de Produção).
      */
     void AdicionarLinha(int id, std::string desc, std::string local, std::string nome);
+    void AdicionarLinha(std::string desc, std::string local, std::string nome);
 
     /**
      * @brief Remove a linha de produção com o ID fornecido.
@@ -84,7 +87,7 @@ public:
      * @param Id ID a verificar.
      * @return true se o ID não estiver em uso.
      */
-    bool IdDisponivel(int Id) const;
+    bool IdAtivo(int Id) const;
 
     /**
      * @brief Autentica um usuário e inicia a sessão.
