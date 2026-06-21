@@ -105,7 +105,13 @@ bool Sistema::Logout() {
     return false; 
 }
 
-Usuario* Sistema::GetUsuarioLogado() const { return nullptr; }
+Usuario* Sistema::GetUsuarioLogado() const {
+    if (this->_UsuarioLogado == nullptr){
+        return nullptr;
+    }
+
+    return this->_UsuarioLogado;
+}
 
 bool Sistema::SalvarAlteracoes() { return false; }
 
