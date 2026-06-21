@@ -17,7 +17,7 @@ void Sistema::RemoverId(int Id) {
 void Sistema::AdicionarLinha(int id, std::string desc, std::string local, std::string nome) {
     LinhaDeProducao Linha(id, desc, local, nome);
 
-    _Linhas[id] = Linha;
+    this->_Linhas[id] = Linha;
 }
 
 void Sistema::AdicionarLinha(std::string desc, std::string local, std::string nome) {

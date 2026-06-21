@@ -1,6 +1,7 @@
 #ifndef LINHADEPRODUCAO_HPP
 #define LINHADEPRODUCAO_HPP
 
+#include <map>
 #include <vector>
 #include <string>
 
@@ -19,7 +20,7 @@ private:
     std::string _local;
     std::string _desc;
 
-    std::vector<Conjunto> _Conjuntos;
+    std::map<int, Conjunto> _Conjuntos;
 public:
     /**
      * @brief Constrói uma linha de produção.

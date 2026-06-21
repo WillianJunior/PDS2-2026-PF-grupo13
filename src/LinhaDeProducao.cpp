@@ -1,8 +1,13 @@
 #include "LinhaDeProducao.hpp"
 
-LinhaDeProducao::LinhaDeProducao(int id, std::string desc, std::string local, std::string nome) {}
+LinhaDeProducao::LinhaDeProducao(int id, std::string desc, std::string local, std::string nome) {
+    
+}
 
-void LinhaDeProducao::AdicionarConjunto(int id, std::string desc) {}
+void LinhaDeProducao::AdicionarConjunto(int id, std::string desc) {
+    Conjunto c(id, desc);
+    this->_Conjuntos[id] = c;
+}
 
 void LinhaDeProducao::RemoverConjunto(int id) {}
 
