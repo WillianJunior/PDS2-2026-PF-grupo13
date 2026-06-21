@@ -94,9 +94,16 @@ bool Sistema::Login(std::string login, std::string senha) {
     std::cout << "Usuário " << login << " não encontrado." << endl;
     return false;
 
- }
+}
 
-bool Sistema::Logout() { return false; }
+bool Sistema::Logout() {
+    if (this->_UsuarioLogado != nullptr){
+        this->_UsuarioLogado = nullptr;
+        return true;
+    }
+
+    return false; 
+}
 
 Usuario* Sistema::GetUsuarioLogado() const { return nullptr; }
 
