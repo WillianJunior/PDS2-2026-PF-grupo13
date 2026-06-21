@@ -1,5 +1,7 @@
 #include "Sistema.hpp"
 
+#include <iostream>
+
 Sistema::Sistema() : _UsuarioLogado(nullptr) {
     this->_ProximoId = 1;
 }
@@ -23,9 +25,7 @@ void Sistema::AdicionarLinha(std::string desc, std::string local, std::string no
     int id = this->ProximoIdDisponivel();
     this->AdicionarId(id);
 
-    LinhaDeProducao Linha(id, desc, local, nome);
-
-    _Linhas[id] = Linha;
+    Sistema::AdicionarLinha(id, desc, local, nome);
 }
 
 void Sistema::RemoverLinha(int id) {
@@ -36,7 +36,14 @@ const std::map<LinhaDeProducao>& Sistema::GetLinhas() const {
     return _Linhas; 
 }
 
-void Sistema::ExibirLinhas() {}
+void Sistema::ExibirLinhas() {
+    std::cout << "Linhas de produção:" << endl;
+    for (const auto& linha : this->_Linhas){
+        std::cout << "Linha " << linha.first << " - " << linha.second.GetNome << endl
+        << "Local: " << linha.second.GetLocal << endl
+        << "Descrição: " << linha.second.GetDesc << endl;
+    }
+}
 
 void Sistema::AdicionarUsuario(std::string login, std::string senha, Cargo cargo) {
      Usuario user(login, senha, cargo);
@@ -67,7 +74,11 @@ int Sistema::ProximoIdDisponivel() const {
     return this->_ProximoId;
 }
 
-bool Sistema::IdAtivo(int Id) const { return false; }
+bool Sistema::IdAtivo(int Id) const {
+    for (const auto& elemento : this->_IdsAtivos){
+        elemento
+    }
+}
 
 bool Sistema::Login(std::string login, std::string senha) { 
 
