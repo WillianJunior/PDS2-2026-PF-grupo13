@@ -40,18 +40,32 @@ std::vector<int> LinhaDeProducao::DiagnosticarLinha() const { return {}; }
 
 void LinhaDeProducao::AtualizarAlarmes() {}
 
-void LinhaDeProducao::SetDesc(std::string desc) {}
+void LinhaDeProducao::SetDesc(std::string desc) {
+    this->_desc = desc;
+}
 
-void LinhaDeProducao::SetLocal(std::string local) {}
+void LinhaDeProducao::SetLocal(std::string local) {
+    this->_local = local;
+}
 
-void LinhaDeProducao::SetNome(std::string nome) {}
+void LinhaDeProducao::SetNome(std::string nome) {
+    this->_nome = nome;
+}
 
 const std::vector<Conjunto>& LinhaDeProducao::GetConjuntos() const { return _Conjuntos; }
 
-int LinhaDeProducao::GetId() const { return 0; }
+int LinhaDeProducao::GetId() const { 
+    return this->_id; 
+}
 
-std::string LinhaDeProducao::GetDesc() const { return ""; }
+std::string LinhaDeProducao::GetDesc() const {
+    return this->_desc;
+}
 
-std::string LinhaDeProducao::GetLocal() const { return ""; }
+std::string LinhaDeProducao::GetLocal() const {
+    return this->_local;
+}
 
-std::string LinhaDeProducao::GetNome() const { return ""; }
+std::string LinhaDeProducao::GetNome() const {
+    return this->_nome;
+}
