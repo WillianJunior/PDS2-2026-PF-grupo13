@@ -26,7 +26,13 @@ void LinhaDeProducao::ExibirAlarmes() const {}
 
 void LinhaDeProducao::ExibirTudo() const {}
 
-int LinhaDeProducao::QuantidadeConjuntos() const { return 0; }
+int LinhaDeProducao::QuantidadeConjuntos() const {
+    int i = 0;
+    for (const auto& conjunto : this->_Conjuntos){
+        i++;
+    }
+    return i;
+}
 
 int LinhaDeProducao::QuantidadeAlarmes() const { return 0; }
 
