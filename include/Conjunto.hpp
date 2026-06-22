@@ -24,7 +24,7 @@ public:
      * @param id   Identificador único.
      * @param desc Descrição do conjunto.
      */
-    Conjunto(int id, std::string desc);
+    Conjunto(int id, std::string nome ,std::string desc);
 
     /**
      * @brief Adiciona um equipamento ao conjunto.

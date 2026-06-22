@@ -39,7 +39,7 @@ const std::map<LinhaDeProducao>& Sistema::GetLinhas() const {
 void Sistema::ExibirLinhas() {
     std::cout << "Linhas de produção:" << endl;
     for (const auto& linha : this->_Linhas){
-        std::cout << "Linha " << linha.first << " - " << linha.second.GetNome << endl
+        std::cout << "Linha ID: " << linha.first << " - " << linha.second.GetNome << endl
         << "Local: " << linha.second.GetLocal << endl
         << "Descrição: " << linha.second.GetDesc << endl;
     }

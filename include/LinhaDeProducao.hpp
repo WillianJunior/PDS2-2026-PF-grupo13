@@ -37,7 +37,7 @@ public:
      * @param desc Descrição do conjunto.
      * @note Implementa US-004 (Criar Conjuntos).
      */
-    void AdicionarConjunto(int id, std::string desc);
+    void AdicionarConjunto(int id, std::string nome, std::string desc);
 
     /**
      * @brief Remove o conjunto com o ID fornecido.

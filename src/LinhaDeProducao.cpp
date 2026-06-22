@@ -1,17 +1,26 @@
 #include "LinhaDeProducao.hpp"
 
+#include <iostream>
+
 LinhaDeProducao::LinhaDeProducao(int id, std::string desc, std::string local, std::string nome) {
     
 }
 
-void LinhaDeProducao::AdicionarConjunto(int id, std::string desc) {
-    Conjunto c(id, desc);
+void LinhaDeProducao::AdicionarConjunto(int id, std:string nome, std::string desc) {
+    Conjunto c(id, nome, desc);
     this->_Conjuntos[id] = c;
 }
 
-void LinhaDeProducao::RemoverConjunto(int id) {}
+void LinhaDeProducao::RemoverConjunto(int id) {
+    this->_Conjuntos.erase(id);
+}
 
-void LinhaDeProducao::ExibirConjuntos() const {}
+void LinhaDeProducao::ExibirConjuntos() const {
+    for (const auto& conjunto : this->_Conjuntos){
+        std::cout << "Conjunto ID: " << conjunto.first << " - " << conjunto.second.GetNome() << endl;
+        std::cout << "Desc: " << conjunto.second.GetDesc(); << endl;
+    }
+}
 
 void LinhaDeProducao::ExibirAlarmes() const {}
 
