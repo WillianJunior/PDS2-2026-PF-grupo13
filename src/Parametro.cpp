@@ -11,6 +11,7 @@ Parametro::Parametro(double ValorAtual, std::string Desc, int id) {
 
     if (this->ValorValido(ValorAtual)){
         this->_ValorAtual = _ValorAtual;
+        this->_Hist.push_back(this->_ValorAtual);
     } else {
         this->_Min = Backup_min;
         this->_Max = Backup_max;
@@ -37,6 +38,7 @@ Parametro::Parametro(double ValorAtual, double Max, double Min, std::string Desc
 
     if (this->ValorValido(ValorAtual)){
         this->_ValorAtual = _ValorAtual;
+        this->_Hist.push_back(this->_ValorAtual);
     } else {
         this->_Min = Backup_min;
         this->_Max = Backup_max;
@@ -53,6 +55,7 @@ bool Parametro::ValorValido(double Valor) const {
 
 void Parametro::SetValorAtual(double Valor) {
     this->_ValorAtual = Valor;
+    this->_Hist.push_back(this->_ValorAtual);
 }
 
 void Parametro::SetMax(double Valor) {
@@ -102,4 +105,6 @@ void Parametro::ResetarLimites() {
     this->_Max = std::numeric_limits<double>::max;
 }
 
-void Parametro::ResetarHistorico() {}
+void Parametro::ResetarHistorico() {
+    this->_Hist.clear;
+}
