@@ -17,6 +17,7 @@ class Equipamento {
 private:
     int _id;
     std::string _desc;
+    std::string _nome;
 
     std::map<int, Parametro> _Parametros;
     std::vector<Alarme> _Alarmes;
@@ -26,7 +27,7 @@ public:
      * @param id   Identificador único.
      * @param desc Descrição do equipamento.
      */
-    Equipamento(int id, std::string desc);
+    Equipamento(int id, std::string desc, std::string nome);
 
     /**
      * @brief Adiciona um parâmetro sem limites definidos.

@@ -1,8 +1,11 @@
 #include "Equipamento.hpp"
 
-Equipamento::Equipamento(int id, std::string desc) {
+#include <iostream>
+
+Equipamento::Equipamento(int id, std::string desc, std::string nome) {
     this->_id = id;
     this->_desc = desc;
+    this->_nome = nome;
 }
 
 void Equipamento::AdicionarParametro(double ValorAtual, std::string Desc, int id) {
@@ -17,13 +20,20 @@ void Equipamento::AdicionarParametro(double ValorAtual, double Max, double Min, 
     this->_Parametros.insert(id, p);
 }
 
-void Equipamento::RemoverParametro(int id) {}
+void Equipamento::RemoverParametro(int id) {
+    this->_Parametros.erase(id);
+}
 
 std::vector<int> Equipamento::DiagnosticarEquipamento() const { return {}; }
 
 void Equipamento::AtualizarAlarmes() {}
 
-void Equipamento::ExibirParametros() const {}
+void Equipamento::ExibirParametros() const {
+    std::cout << "Equipamento " << this->_nome << std::endl;
+    for (const auto& p : this->_Parametros) {
+        std::cout << p.first << " - " << p.second.GetDesc() << " " << p.second.GetValorAtual() << std::endl;
+    }
+}
 
 void Equipamento::ExibirAlarmes() const {}
 
