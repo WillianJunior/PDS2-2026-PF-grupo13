@@ -6,6 +6,6 @@ enum class EstadoOperacional {
     FALHA_NA_ALIMENTACAO,
     FALHA_INTERNA,
     FALHA_NA_SAIDA
-}
+};
 
 #endif

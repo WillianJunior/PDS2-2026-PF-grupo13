@@ -28,20 +28,20 @@ TEST_CASE("LinhaDeProducao - QuantidadeConjuntos inicia em zero") {
 
 TEST_CASE("LinhaDeProducao - AdicionarConjunto incrementa quantidade") {
     LinhaDeProducao l(6, "Desc", "Local", "Linha6");
-    l.AdicionarConjunto(1, "Conjunto 1");
+    l.AdicionarConjunto(1, "Conjunto 1", "Desc");
     CHECK(l.QuantidadeConjuntos() == 1);
 }
 
 TEST_CASE("LinhaDeProducao - AdicionarConjunto multiplos") {
     LinhaDeProducao l(7, "Desc", "Local", "Linha7");
-    l.AdicionarConjunto(1, "C1");
-    l.AdicionarConjunto(2, "C2");
+    l.AdicionarConjunto(1, "C1", "Desc");
+    l.AdicionarConjunto(2, "C2", "Desc");
     CHECK(l.QuantidadeConjuntos() == 2);
 }
 
 TEST_CASE("LinhaDeProducao - RemoverConjunto decrementa quantidade") {
     LinhaDeProducao l(8, "Desc", "Local", "Linha8");
-    l.AdicionarConjunto(1, "C1");
+    l.AdicionarConjunto(1, "C1", "Desc");
     l.RemoverConjunto(1);
     CHECK(l.QuantidadeConjuntos() == 0);
 }
@@ -60,6 +60,6 @@ TEST_CASE("LinhaDeProducao - DiagnosticarLinha vazio sem falhas") {
 
 TEST_CASE("LinhaDeProducao - GetConjuntos retorna vetor correto") {
     LinhaDeProducao l(11, "Desc", "Local", "Linha11");
-    l.AdicionarConjunto(1, "C1");
+    l.AdicionarConjunto(1, "C1", "Desc");
     CHECK(l.GetConjuntos().size() == 1);
 }

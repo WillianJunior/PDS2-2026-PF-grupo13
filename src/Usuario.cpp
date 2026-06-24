@@ -8,7 +8,7 @@ Usuario::Usuario(std::string login, std::string senha, Cargo cargo) {
 
 bool Usuario::ValidarSenha(std::string senha) const { 
 
-    if (senha = this->_senha){
+    if (senha == this->_senha){
         return true;
     }
     return false;

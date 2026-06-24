@@ -82,8 +82,8 @@ public:
      */
     void AtualizarAlarmes();
 
-    /** @return Referência constante ao vetor de equipamentos. */
-    const std::map<Equipamento>& GetEquipamentos() const;
+    /** @return Referência constante ao mapa de equipamentos. */
+    const std::map<int, Equipamento>& GetEquipamentos() const;
 
     /** @return Identificador único do conjunto. */
     int GetId() const;

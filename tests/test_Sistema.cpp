@@ -61,15 +61,15 @@ TEST_CASE("Sistema - Logout retorna false sem sessao ativa") {
     CHECK(s.Logout() == false);
 }
 
-TEST_CASE("Sistema - IdDisponivel retorna true para id nao usado") {
+TEST_CASE("Sistema - IdAtivo retorna false para id nao usado") {
     Sistema s;
-    CHECK(s.IdDisponivel(99) == true);
+    CHECK(s.IdAtivo(99) == false);
 }
 
-TEST_CASE("Sistema - IdDisponivel retorna false para id em uso") {
+TEST_CASE("Sistema - IdAtivo retorna true para id em uso") {
     Sistema s;
     s.AdicionarLinha(5, "Desc", "Local", "Linha");
-    CHECK(s.IdDisponivel(5) == false);
+    CHECK(s.IdAtivo(5) == true);
 }
 
 TEST_CASE("Sistema - ProximoIdDisponivel retorna 1 no inicio") {

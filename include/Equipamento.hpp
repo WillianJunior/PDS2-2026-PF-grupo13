@@ -88,8 +88,8 @@ public:
     /** @return Identificador único do equipamento. */
     int GetId() const;
 
-    /** @return Referência constante ao vetor de parâmetros. */
-    const std::vector<Parametro>& GetParametros() const;
+    /** @return Referência constante ao mapa de parâmetros. */
+    const std::map<int, Parametro>& GetParametros() const;
 
     /** @return Referência constante ao vetor de alarmes. */
     const std::vector<Alarme>& GetAlarmes() const;

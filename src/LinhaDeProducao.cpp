@@ -9,9 +9,9 @@ LinhaDeProducao::LinhaDeProducao(int id, std::string desc, std::string local, st
     this->_nome = nome;
 }
 
-void LinhaDeProducao::AdicionarConjunto(int id, std:string nome, std::string desc) {
+void LinhaDeProducao::AdicionarConjunto(int id, std::string nome, std::string desc) {
     Conjunto c(id, nome, desc);
-    this->_Conjuntos[id] = c;
+    this->_Conjuntos.insert({id, c});
 }
 
 void LinhaDeProducao::RemoverConjunto(int id) {
@@ -20,37 +20,51 @@ void LinhaDeProducao::RemoverConjunto(int id) {
 
 void LinhaDeProducao::ExibirConjuntos() const {
     for (const auto& conjunto : this->_Conjuntos){
-        std::cout << "Conjunto ID: " << conjunto.first << " - " << conjunto.second.GetNome() << endl;
-        std::cout << "Desc: " << conjunto.second.GetDesc(); << endl;
+        std::cout << "Conjunto ID: " << conjunto.first << " - " << conjunto.second.GetNome() << std::endl;
+        std::cout << "Desc: " << conjunto.second.GetDesc() << std::endl;
     }
 }
 
-void LinhaDeProducao::ExibirAlarmes() const {}
+void LinhaDeProducao::ExibirAlarmes() const {
+    for (const auto& conjunto : this->_Conjuntos){
+        conjunto.second.ExibirAlarmes();
+    }
+}
 
 void LinhaDeProducao::ExibirTudo() const {
     for (const auto& conjunto : this->_Conjuntos){
-        std::cout << "Conjunto ID: " << conjunto.first << " - " << conjunto.second.GetNome() << endl;
-        std::cout << "Desc: " << conjunto.second.GetDesc(); << endl;
-
-        for (const auto& equip : conjunto.second.GetEquipamentos()){
-            
-        }
+        std::cout << "Conjunto ID: " << conjunto.first << " - " << conjunto.second.GetNome() << std::endl;
+        std::cout << "Desc: " << conjunto.second.GetDesc() << std::endl;
+        conjunto.second.ExibirTudo();
     }
 }
 
 int LinhaDeProducao::QuantidadeConjuntos() const {
-    int i = 0;
-    for (const auto& conjunto : this->_Conjuntos){
-        i++;
-    }
-    return i;
+    return static_cast<int>(this->_Conjuntos.size());
 }
 
-int LinhaDeProducao::QuantidadeAlarmes() const { return 0; }
+int LinhaDeProducao::QuantidadeAlarmes() const {
+    int total = 0;
+    for (const auto& conjunto : this->_Conjuntos){
+        total += conjunto.second.QuantidadeAlarmes();
+    }
+    return total;
+}
 
-std::vector<int> LinhaDeProducao::DiagnosticarLinha() const { return {}; }
+std::vector<int> LinhaDeProducao::DiagnosticarLinha() const {
+    std::vector<int> falhas;
+    for (const auto& conjunto : this->_Conjuntos){
+        std::vector<int> f = conjunto.second.DiagnosticarConjunto();
+        falhas.insert(falhas.end(), f.begin(), f.end());
+    }
+    return falhas;
+}
 
-void LinhaDeProducao::AtualizarAlarmes() {}
+void LinhaDeProducao::AtualizarAlarmes() {
+    for (auto& conjunto : this->_Conjuntos){
+        conjunto.second.AtualizarAlarmes();
+    }
+}
 
 void LinhaDeProducao::SetDesc(std::string desc) {
     this->_desc = desc;
@@ -64,7 +78,7 @@ void LinhaDeProducao::SetNome(std::string nome) {
     this->_nome = nome;
 }
 
-const std::vector<Conjunto>& LinhaDeProducao::GetConjuntos() const { return _Conjuntos; }
+const std::map<int, Conjunto>& LinhaDeProducao::GetConjuntos() const { return _Conjuntos; }
 
 int LinhaDeProducao::GetId() const { 
     return this->_id; 

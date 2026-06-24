@@ -4,6 +4,17 @@ LDFLAGS  = --coverage
 
 BUILD_DIR = build
 
+# Deteccao de SO: comandos diferem entre Windows e POSIX (Linux/macOS)
+ifeq ($(OS),Windows_NT)
+    MKDIR  = if not exist "$(BUILD_DIR)" mkdir "$(BUILD_DIR)"
+    RMDIR  = if exist "$(BUILD_DIR)" rmdir /S /Q "$(BUILD_DIR)"
+    PYTHON = python
+else
+    MKDIR  = mkdir -p $(BUILD_DIR)
+    RMDIR  = rm -rf $(BUILD_DIR)
+    PYTHON = python3
+endif
+
 SRC_OBJS = $(BUILD_DIR)/Alarme.o \
            $(BUILD_DIR)/Parametro.o \
            $(BUILD_DIR)/Equipamento.o \
@@ -30,7 +41,7 @@ TEST_BIN = $(BUILD_DIR)/test_runner
 all: $(TEST_BIN)
 
 $(BUILD_DIR):
-	mkdir -p $(BUILD_DIR)
+	$(MKDIR)
 
 $(BUILD_DIR)/%.o: src/%.cpp | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
@@ -43,15 +54,15 @@ $(TEST_BIN): $(SRC_OBJS) $(TEST_OBJS)
 
 test: $(TEST_BIN)
 	-$(TEST_BIN)
-	python -m gcovr -r . --object-directory=$(BUILD_DIR) \
+	$(PYTHON) -m gcovr -r . --object-directory=$(BUILD_DIR) \
 	    --exclude='tests/.*' \
 	    --exclude='include/doctest\.h' \
 	    --txt
-	python -m gcovr -r . --object-directory=$(BUILD_DIR) \
+	$(PYTHON) -m gcovr -r . --object-directory=$(BUILD_DIR) \
 	    --exclude='tests/.*' \
 	    --exclude='include/doctest\.h' \
 	    --html --html-details \
 	    -o $(BUILD_DIR)/coverage.html
 
 clean:
-	powershell -Command "Remove-Item -Recurse -Force -ErrorAction SilentlyContinue '$(BUILD_DIR)'"
+	$(RMDIR)

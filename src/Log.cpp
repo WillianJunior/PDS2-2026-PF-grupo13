@@ -1,9 +1,33 @@
 #include "Log.hpp"
 
-Log::Log(const std::string& arquivo) {}
+#include <fstream>
 
-bool Log::Registrar(const std::string& mensagem) const { return false; }
+Log::Log(const std::string& arquivo) {
+    this->_arquivo = arquivo;
+}
 
-std::string Log::GetArquivoLog() const { return ""; }
+bool Log::Registrar(const std::string& mensagem) const {
+    if (mensagem.empty() || mensagem.size() > 500) {
+        return false;
+    }
 
-bool Log::SetArquivoLog(const std::string& arquivo) { return false; }
+    std::ofstream ofs(this->_arquivo, std::ios::app);
+    if (!ofs.is_open()) {
+        return false;
+    }
+
+    ofs << mensagem << '\n';
+    return ofs.good();
+}
+
+std::string Log::GetArquivoLog() const {
+    return this->_arquivo;
+}
+
+bool Log::SetArquivoLog(const std::string& arquivo) {
+    if (arquivo.empty()) {
+        return false;
+    }
+    this->_arquivo = arquivo;
+    return true;
+}

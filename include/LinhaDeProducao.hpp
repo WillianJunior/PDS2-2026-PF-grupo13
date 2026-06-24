@@ -89,8 +89,8 @@ public:
     /** @brief Atualiza o nome da linha. @param nome Novo nome. */
     void SetNome(std::string nome);
 
-    /** @return Referência constante ao vetor de conjuntos. */
-    const std::map<Conjunto>& GetConjuntos() const;
+    /** @return Referência constante ao mapa de conjuntos. */
+    const std::map<int, Conjunto>& GetConjuntos() const;
 
     /** @return Identificador único da linha. */
     int GetId() const;

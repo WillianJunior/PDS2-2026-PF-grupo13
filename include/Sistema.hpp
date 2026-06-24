@@ -22,7 +22,7 @@ private:
     std::vector<Usuario> _Usuarios;
     std::vector<int> _IdsAtivos;
 
-    Usuario* _UsuarioLogado;
+    int _UsuarioLogadoIdx;
 
     /** @brief Registra um ID como utilizado. @param Id ID a reservar. */
     void AdicionarId(int Id);
@@ -51,8 +51,8 @@ public:
      */
     void RemoverLinha(int id);
 
-    /** @return Referência constante ao vetor de linhas cadastradas. */
-    const std::vector<LinhaDeProducao>& GetLinhas() const;
+    /** @return Referência constante ao mapa de linhas cadastradas. */
+    const std::map<int, LinhaDeProducao>& GetLinhas() const;
 
     /**
      * @brief Exibe no console todas as linhas de produção cadastradas.

@@ -1,33 +1,79 @@
 #include "Conjunto.hpp"
 
-Conjunto::Conjunto(int id, std::string desc) {}
+#include <iostream>
 
-void Conjunto::AdicionarEquipamento(int id, std::string desc) {}
+Conjunto::Conjunto(int id, std::string nome, std::string desc) {
+    this->_id = id;
+    this->_nome = nome;
+    this->_desc = desc;
+}
 
-void Conjunto::RemoverEquipamento(int id) {}
+void Conjunto::AdicionarEquipamento(int id, std::string desc) {
+    this->_Equipamentos.insert({id, Equipamento(id, desc, desc)});
+}
 
-void Conjunto::SetDesc(std::string desc) {}
+void Conjunto::RemoverEquipamento(int id) {
+    this->_Equipamentos.erase(id);
+}
 
-void Conjunto::SetNome(std::string nome) {}
+void Conjunto::SetDesc(std::string desc) {
+    this->_desc = desc;
+}
 
-void Conjunto::ExibirEquipamentos() const {}
+void Conjunto::SetNome(std::string nome) {
+    this->_nome = nome;
+}
 
-void Conjunto::ExibirAlarmes() const {}
+void Conjunto::ExibirEquipamentos() const {
+    std::cout << "Conjunto " << this->_nome << std::endl;
+    for (const auto& e : this->_Equipamentos) {
+        std::cout << "Equipamento ID: " << e.first << std::endl;
+        e.second.ExibirParametros();
+    }
+}
 
-void Conjunto::ExibirTudo() const {}
+void Conjunto::ExibirAlarmes() const {
+    for (const auto& e : this->_Equipamentos) {
+        e.second.ExibirAlarmes();
+    }
+}
 
-int Conjunto::QuantidadeEquipamentos() const { return 0; }
+void Conjunto::ExibirTudo() const {
+    this->ExibirEquipamentos();
+    this->ExibirAlarmes();
+}
 
-int Conjunto::QuantidadeAlarmes() const { return 0; }
+int Conjunto::QuantidadeEquipamentos() const {
+    return static_cast<int>(this->_Equipamentos.size());
+}
 
-std::vector<int> Conjunto::DiagnosticarConjunto() const { return {}; }
+int Conjunto::QuantidadeAlarmes() const {
+    int total = 0;
+    for (const auto& e : this->_Equipamentos) {
+        total += e.second.QuantidadeAlarmes();
+    }
+    return total;
+}
 
-void Conjunto::AtualizarAlarmes() {}
+std::vector<int> Conjunto::DiagnosticarConjunto() const {
+    std::vector<int> falhas;
+    for (const auto& e : this->_Equipamentos) {
+        std::vector<int> f = e.second.DiagnosticarEquipamento();
+        falhas.insert(falhas.end(), f.begin(), f.end());
+    }
+    return falhas;
+}
 
-const std::vector<Equipamento>& Conjunto::GetEquipamentos() const { return _Equipamentos; }
+void Conjunto::AtualizarAlarmes() {
+    for (auto& e : this->_Equipamentos) {
+        e.second.AtualizarAlarmes();
+    }
+}
 
-int Conjunto::GetId() const { return 0; }
+const std::map<int, Equipamento>& Conjunto::GetEquipamentos() const { return _Equipamentos; }
 
-std::string Conjunto::GetDesc() const { return ""; }
+int Conjunto::GetId() const { return this->_id; }
 
-std::string Conjunto::GetNome() const { return ""; }
+std::string Conjunto::GetDesc() const { return this->_desc; }
+
+std::string Conjunto::GetNome() const { return this->_nome; }

@@ -3,14 +3,16 @@
 #include <limits>
 
 Parametro::Parametro(double ValorAtual, std::string Desc, int id) {
+    this->_Estado = false;
+
     double Backup_min = this->_Min;
     double Backup_max = this->_Max;
 
-    this->_Min = std::numeric_limits<double>::lowest;
-    this->_Max = std::numeric_limits<double>::max;
+    this->_Min = std::numeric_limits<double>::lowest();
+    this->_Max = std::numeric_limits<double>::max();
 
     if (this->ValorValido(ValorAtual)){
-        this->_ValorAtual = _ValorAtual;
+        this->_ValorAtual = ValorAtual;
         this->_Hist.push_back(this->_ValorAtual);
     } else {
         this->_Min = Backup_min;
@@ -19,16 +21,18 @@ Parametro::Parametro(double ValorAtual, std::string Desc, int id) {
     }
 
     this->_Desc = Desc;
-    this->_id = Id;
+    this->_id = id;
 }
 
 Parametro::Parametro(double ValorAtual, double Max, double Min, std::string Desc, int id) {
+    this->_Estado = false;
+
     double Backup_min = this->_Min;
     double Backup_max = this->_Max;
 
     if ((Max >= Min) && 
-        (Min >= std::numeric_limits<double>::lowest) &&
-        (Max <= std::numeric_limits<double>::max)){
+        (Min >= std::numeric_limits<double>::lowest()) &&
+        (Max <= std::numeric_limits<double>::max())){
 
             this->_Min = Min;
             this->_Max = Max;
@@ -37,7 +41,7 @@ Parametro::Parametro(double ValorAtual, double Max, double Min, std::string Desc
     }
 
     if (this->ValorValido(ValorAtual)){
-        this->_ValorAtual = _ValorAtual;
+        this->_ValorAtual = ValorAtual;
         this->_Hist.push_back(this->_ValorAtual);
     } else {
         this->_Min = Backup_min;
@@ -46,7 +50,7 @@ Parametro::Parametro(double ValorAtual, double Max, double Min, std::string Desc
     }
 
     this->_Desc = Desc;
-    this->_id = Id;
+    this->_id = id;
 }
 
 bool Parametro::ValorValido(double Valor) const {
@@ -70,7 +74,10 @@ void Parametro::SetDesc(std::string Desc) {
     this->_Desc = Desc;
 }
 
-bool Parametro::DiagnosticarParametro() { return false; }
+bool Parametro::DiagnosticarParametro() {
+    this->_Estado = !this->ValorValido(this->_ValorAtual);
+    return this->_Estado;
+}
 
 double Parametro::GetValorAtual() const { 
     return this->_ValorAtual;
@@ -101,10 +108,10 @@ int Parametro::GetId() {
 }
 
 void Parametro::ResetarLimites() {
-    this->_Min = std::numeric_limits<double>::lowest;
-    this->_Max = std::numeric_limits<double>::max;
+    this->_Min = std::numeric_limits<double>::lowest();
+    this->_Max = std::numeric_limits<double>::max();
 }
 
 void Parametro::ResetarHistorico() {
-    this->_Hist.clear;
+    this->_Hist.clear();
 }
