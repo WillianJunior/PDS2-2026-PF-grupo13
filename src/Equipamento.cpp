@@ -41,10 +41,18 @@ int Equipamento::QuantidadeParametros() const { return 0; }
 
 int Equipamento::QuantidadeAlarmes() const { return 0; }
 
-int Equipamento::GetId() const { return 0; }
+int Equipamento::GetId() const {
+    return this->_id;
+}
 
-const std::vector<Parametro>& Equipamento::GetParametros() const { return _Parametros; }
+const std::vector<Parametro>& Equipamento::GetParametros() const {
+    return this->_Parametros;
+}
 
-const std::vector<Alarme>& Equipamento::GetAlarmes() const { return _Alarmes; }
+const std::vector<Alarme>& Equipamento::GetAlarmes() const {
+    return this->_Alarmes;
+}
 
-void Equipamento::SetDesc(std::string desc) {}
+void Equipamento::SetDesc(std::string desc) {
+    this->_desc = desc;
+}
