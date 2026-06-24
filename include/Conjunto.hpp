@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include <map>
 #include "Equipamento.hpp"
 
 /**
@@ -17,7 +18,7 @@ private:
     std::string _desc;
     std::string _nome;
 
-    std::vector<Equipamento> _Equipamentos;
+    std::map<int, Equipamento> _Equipamentos;
 public:
     /**
      * @brief Constrói um conjunto.
@@ -82,7 +83,7 @@ public:
     void AtualizarAlarmes();
 
     /** @return Referência constante ao vetor de equipamentos. */
-    const std::vector<Equipamento>& GetEquipamentos() const;
+    const std::map<Equipamento>& GetEquipamentos() const;
 
     /** @return Identificador único do conjunto. */
     int GetId() const;

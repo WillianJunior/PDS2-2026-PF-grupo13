@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include <map>
 #include "Parametro.hpp"
 #include "Alarme.hpp"
 

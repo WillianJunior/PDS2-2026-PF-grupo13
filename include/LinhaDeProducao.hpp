@@ -90,7 +90,7 @@ public:
     void SetNome(std::string nome);
 
     /** @return Referência constante ao vetor de conjuntos. */
-    const std::vector<Conjunto>& GetConjuntos() const;
+    const std::map<Conjunto>& GetConjuntos() const;
 
     /** @return Identificador único da linha. */
     int GetId() const;

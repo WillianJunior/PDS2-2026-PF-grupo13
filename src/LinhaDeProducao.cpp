@@ -3,7 +3,10 @@
 #include <iostream>
 
 LinhaDeProducao::LinhaDeProducao(int id, std::string desc, std::string local, std::string nome) {
-    
+    this->_id = id;
+    this->_desc = desc;
+    this->_local = local;
+    this->_nome = nome;
 }
 
 void LinhaDeProducao::AdicionarConjunto(int id, std:string nome, std::string desc) {
@@ -24,7 +27,16 @@ void LinhaDeProducao::ExibirConjuntos() const {
 
 void LinhaDeProducao::ExibirAlarmes() const {}
 
-void LinhaDeProducao::ExibirTudo() const {}
+void LinhaDeProducao::ExibirTudo() const {
+    for (const auto& conjunto : this->_Conjuntos){
+        std::cout << "Conjunto ID: " << conjunto.first << " - " << conjunto.second.GetNome() << endl;
+        std::cout << "Desc: " << conjunto.second.GetDesc(); << endl;
+
+        for (const auto& equip : conjunto.second.GetEquipamentos()){
+            
+        }
+    }
+}
 
 int LinhaDeProducao::QuantidadeConjuntos() const {
     int i = 0;
