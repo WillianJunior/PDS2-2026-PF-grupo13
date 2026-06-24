@@ -12,11 +12,12 @@ bool Usuario::ValidarSenha(std::string senha) const {
         return true;
     }
     return false;
- }
+}
 
 std::string Usuario::GetLogin() const { 
     return this->_login; 
 }
 
 Cargo Usuario::GetCargo(std::string login) { 
-    return this->_cargo; }
+    return this->_cargo; 
+}
