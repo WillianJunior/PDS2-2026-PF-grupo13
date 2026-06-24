@@ -1,26 +1,44 @@
 #include "Equipamento.hpp"
+#include "Excecoes.hpp"
 
 #include <iostream>
 
 Equipamento::Equipamento(int id, std::string desc, std::string nome) {
+    if (id < 0) {
+        throw IdInvalido("Equipamento: id nao pode ser negativo");
+    }
+    if (desc.empty()) {
+        throw EntradaInvalida("Equipamento: descricao vazia");
+    }
     this->_id = id;
     this->_desc = desc;
     this->_nome = nome;
 }
 
+std::string Equipamento::Tipo() const { return "Equipamento"; }
+
 void Equipamento::AdicionarParametro(double ValorAtual, std::string Desc, int id) {
+    if (this->_Parametros.count(id) > 0) {
+        throw IdDuplicado("Equipamento: parametro com id ja existente");
+    }
     Parametro p(ValorAtual, Desc, id);
 
     this->_Parametros.insert({id, p});
 }
 
 void Equipamento::AdicionarParametro(double ValorAtual, double Max, double Min, std::string Desc, int id) {
+    if (this->_Parametros.count(id) > 0) {
+        throw IdDuplicado("Equipamento: parametro com id ja existente");
+    }
     Parametro p(ValorAtual, Max, Min, Desc, id);
 
     this->_Parametros.insert({id, p});
 }
 
 void Equipamento::RemoverParametro(int id) {
+    if (this->_Parametros.count(id) == 0) {
+        throw IdInexistente("Equipamento: parametro inexistente");
+    }
     this->_Parametros.erase(id);
 }
 
@@ -64,6 +82,10 @@ int Equipamento::QuantidadeAlarmes() const { return static_cast<int>(this->_Alar
 int Equipamento::GetId() const {
     return this->_id;
 }
+
+std::string Equipamento::GetDesc() const { return this->_desc; }
+
+std::string Equipamento::GetNome() const { return this->_nome; }
 
 const std::map<int, Parametro>& Equipamento::GetParametros() const {
     return this->_Parametros;

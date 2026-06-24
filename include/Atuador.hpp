@@ -4,11 +4,11 @@
 #include "Equipamento.hpp"
 
 class Atuador : public Equipamento {
-private:
-
 public:
     Atuador(int id, std::string desc, double retorno);
-    ~Atuador();
+    ~Atuador() override = default;
+
+    std::string Tipo() const override;
 };
 
 #endif

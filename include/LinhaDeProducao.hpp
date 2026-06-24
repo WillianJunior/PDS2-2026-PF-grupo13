@@ -92,6 +92,14 @@ public:
     /** @return Referência constante ao mapa de conjuntos. */
     const std::map<int, Conjunto>& GetConjuntos() const;
 
+    /**
+     * @brief Acesso mutável a um conjunto pelo ID.
+     * @param id Identificador do conjunto.
+     * @return Referência ao conjunto.
+     * @throws IdInexistente se não houver conjunto com o ID.
+     */
+    Conjunto& AcessarConjunto(int id);
+
     /** @return Identificador único da linha. */
     int GetId() const;
 

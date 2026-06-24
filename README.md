@@ -51,10 +51,11 @@ Equipamento
 
 ```
 .
-+-- include/        # Contratos das classes (.hpp)
-+-- src/            # Implementacoes (.cpp)
++-- include/        # Contratos das classes (.hpp), incl. Excecoes.hpp
++-- src/            # Implementacoes (.cpp) e main.cpp (interface de terminal)
 +-- design/         # User Stories, Cartoes CRC e documentacao gerada
 +-- tests/          # Testes automatizados (doctest)
++-- dados/          # Arquivos de inicializacao (ex.: inicial.txt)
 +-- build/          # Artefatos de compilacao
 +-- Makefile        # Automacao de build e testes
 +-- Doxyfile        # Configuracao do Doxygen
@@ -63,12 +64,41 @@ Equipamento
 
 ## Estado de Desenvolvimento
 
-O projeto está em fase de implementação dos comportamentos:
+Comportamentos implementados e validados:
 
-- **Contratos (`.hpp`)** e **documentação Doxygen**: definidos para todas as classes principais.
-- **Testes de unidade**: há uma suíte por classe principal (Parametro, Equipamento, Conjunto, LinhaDeProducao, Sistema, Usuario, Alarme, Log).
-- **Implementação (`.cpp`)**: em andamento. Parte das classes (Parametro, Usuario, Sistema, partes de Equipamento) já tem comportamento; outras ainda possuem métodos a serem implementados, refletido nos testes que ainda não passam.
-- As especializações de equipamento (Motor, Sensor, Válvula, Atuador) e a persistência de dados estão modeladas e em desenvolvimento.
+- **Contratos (`.hpp`)** e **documentação Doxygen** para todas as classes principais.
+- **Implementação (`.cpp`)** completa das entidades e do `Sistema`, incluindo
+  diagnóstico propagado, alarmes e persistência (save/load) de estado.
+- **Especializações** de equipamento (Motor, Sensor, Válvula, Atuador) integradas
+  via **polimorfismo** com `std::unique_ptr<Equipamento>`.
+- **Programação defensiva**: validação de entradas com **exceções próprias**
+  (hierarquia `ExcecaoSistema` em `include/Excecoes.hpp`).
+- **RAII**: nenhuma gestão manual de memória (`new`/`delete`); alocação dinâmica
+  apenas via smart pointers.
+- **Interface de terminal** interativa (`src/main.cpp`) com login, controle de
+  acesso por cargo e tratamento de exceções.
+- **Testes de unidade** (doctest): uma suíte por classe principal + suíte de
+  exceções/polimorfismo/persistência. Atualmente **98 testes** passando com
+  **~74% de cobertura** (`gcovr`).
+
+## Programação Defensiva e Tratamento de Exceções
+
+As entradas inválidas lançam exceções específicas do domínio, todas derivadas de
+`ExcecaoSistema` (logo, captráveis por um único `catch (const ExcecaoSistema&)`):
+
+| Exceção | Quando |
+|---|---|
+| `EntradaInvalida` | string vazia (descrição, login, senha) |
+| `LimitesInvalidos` | `Max < Min` em um parâmetro |
+| `IdInvalido` | identificador negativo |
+| `IdDuplicado` | inserir um ID já existente |
+| `IdInexistente` | acessar/remover um ID ausente |
+| `AcessoNegado` | operação acima do cargo do usuário (interface) |
+| `SessaoInvalida` | operação que exige sessão sem usuário logado (interface) |
+
+> Observação: uma **leitura fora dos limites** de um parâmetro **não** é erro —
+> é justamente a condição de falha que o sistema detecta, então é armazenada e
+> sinalizada via diagnóstico/alarme.
 
 ## Compilação e Testes
 
@@ -78,6 +108,8 @@ O `Makefile` automatiza a compilação e a verificação por testes de unidade
 ```bash
 make        # compila os módulos e gera build/test_runner
 make test   # executa os testes e gera os relatórios de cobertura (gcovr)
+make app    # compila a aplicação interativa em build/sistema
+make run    # compila (se preciso) e executa a aplicação
 make clean  # remove a pasta build/
 ```
 
@@ -112,6 +144,26 @@ Alternativas pelo gerenciador de pacotes do sistema:
 Verifique a instalação com `python3 -m gcovr --version` (use `python` no
 Windows). O Makefile invoca `python3 -m gcovr` em Linux/macOS e `python -m gcovr`
 em Windows.
+
+## Execução da Aplicação
+
+```bash
+make run     # ou: make app && ./build/sistema
+```
+
+Ao iniciar, o sistema carrega o arquivo de inicialização `dados/inicial.txt`
+(fornecido no repositório), que cadastra três usuários de exemplo:
+
+| Login | Senha | Cargo |
+|---|---|---|
+| `admin` | `admin123` | ADMIN |
+| `eng` | `eng123` | ENGENHEIRO |
+| `tec` | `tec123` | TECNICO |
+
+Após o login, um menu por cargo permite criar/listar/remover linhas, conjuntos,
+equipamentos (Motor/Sensor/Válvula/Atuador) e parâmetros, executar diagnóstico,
+e salvar/carregar o estado (`save.txt`). Entradas inválidas são tratadas por
+exceções e exibidas sem encerrar o programa.
 
 ## Documentação
 

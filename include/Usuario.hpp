@@ -40,6 +40,12 @@ public:
      * @return Cargo associado ao login.
      */
     Cargo GetCargo(std::string login);
+
+    /** @return Cargo do usuário. */
+    Cargo GetCargo() const;
+
+    /** @return Senha do usuário (uso interno: persistência). */
+    std::string GetSenha() const;
 };
 
 #endif

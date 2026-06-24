@@ -23,6 +23,7 @@ private:
     std::vector<int> _IdsAtivos;
 
     int _UsuarioLogadoIdx;
+    std::string _arquivoSave;
 
     /** @brief Registra um ID como utilizado. @param Id ID a reservar. */
     void AdicionarId(int Id);
@@ -53,6 +54,14 @@ public:
 
     /** @return Referência constante ao mapa de linhas cadastradas. */
     const std::map<int, LinhaDeProducao>& GetLinhas() const;
+
+    /**
+     * @brief Acesso mutável a uma linha pelo ID.
+     * @param id Identificador da linha.
+     * @return Referência à linha.
+     * @throws IdInexistente se não houver linha com o ID.
+     */
+    LinhaDeProducao& AcessarLinha(int id);
 
     /**
      * @brief Exibe no console todas as linhas de produção cadastradas.

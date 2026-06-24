@@ -18,6 +18,10 @@ endif
 SRC_OBJS = $(BUILD_DIR)/Alarme.o \
            $(BUILD_DIR)/Parametro.o \
            $(BUILD_DIR)/Equipamento.o \
+           $(BUILD_DIR)/Motor.o \
+           $(BUILD_DIR)/Sensor.o \
+           $(BUILD_DIR)/Valvula.o \
+           $(BUILD_DIR)/Atuador.o \
            $(BUILD_DIR)/Conjunto.o \
            $(BUILD_DIR)/LinhaDeProducao.o \
            $(BUILD_DIR)/Log.o \
@@ -32,11 +36,13 @@ TEST_OBJS = $(BUILD_DIR)/test_main.o \
             $(BUILD_DIR)/test_LinhaDeProducao.o \
             $(BUILD_DIR)/test_Log.o \
             $(BUILD_DIR)/test_Usuario.o \
-            $(BUILD_DIR)/test_Sistema.o
+            $(BUILD_DIR)/test_Sistema.o \
+            $(BUILD_DIR)/test_Excecoes.o
 
 TEST_BIN = $(BUILD_DIR)/test_runner
+APP_BIN  = $(BUILD_DIR)/sistema
 
-.PHONY: all test clean
+.PHONY: all test clean app run
 
 all: $(TEST_BIN)
 
@@ -51,6 +57,15 @@ $(BUILD_DIR)/%.o: tests/%.cpp | $(BUILD_DIR)
 
 $(TEST_BIN): $(SRC_OBJS) $(TEST_OBJS)
 	$(CXX) $(LDFLAGS) -o $@ $^
+
+# Aplicacao interativa de terminal
+app: $(APP_BIN)
+
+$(APP_BIN): $(SRC_OBJS) $(BUILD_DIR)/main.o
+	$(CXX) $(LDFLAGS) -o $@ $^
+
+run: $(APP_BIN)
+	./$(APP_BIN)
 
 test: $(TEST_BIN)
 	-$(TEST_BIN)

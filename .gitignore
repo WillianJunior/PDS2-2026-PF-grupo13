@@ -1,2 +1,6 @@
 build/*
 !build/.gitkeep
+
+# Artefatos de runtime
+save.txt
+*.log

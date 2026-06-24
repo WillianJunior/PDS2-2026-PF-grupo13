@@ -29,6 +29,15 @@ public:
      */
     Equipamento(int id, std::string desc, std::string nome);
 
+    /** @brief Destrutor virtual: permite uso polimórfico via ponteiro de base. */
+    virtual ~Equipamento() = default;
+
+    /**
+     * @brief Tipo concreto do equipamento (sobrescrito pelas especializações).
+     * @return Nome do tipo (ex.: "Equipamento", "Motor", "Sensor").
+     */
+    virtual std::string Tipo() const;
+
     /**
      * @brief Adiciona um parâmetro sem limites definidos.
      * @param ValorAtual Leitura inicial.
@@ -87,6 +96,12 @@ public:
 
     /** @return Identificador único do equipamento. */
     int GetId() const;
+
+    /** @return Descrição do equipamento. */
+    std::string GetDesc() const;
+
+    /** @return Nome do equipamento. */
+    std::string GetNome() const;
 
     /** @return Referência constante ao mapa de parâmetros. */
     const std::map<int, Parametro>& GetParametros() const;

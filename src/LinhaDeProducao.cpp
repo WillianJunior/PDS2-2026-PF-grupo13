@@ -1,8 +1,16 @@
 #include "LinhaDeProducao.hpp"
+#include "Excecoes.hpp"
 
 #include <iostream>
+#include <utility>
 
 LinhaDeProducao::LinhaDeProducao(int id, std::string desc, std::string local, std::string nome) {
+    if (id < 0) {
+        throw IdInvalido("LinhaDeProducao: id nao pode ser negativo");
+    }
+    if (desc.empty()) {
+        throw EntradaInvalida("LinhaDeProducao: descricao vazia");
+    }
     this->_id = id;
     this->_desc = desc;
     this->_local = local;
@@ -10,11 +18,17 @@ LinhaDeProducao::LinhaDeProducao(int id, std::string desc, std::string local, st
 }
 
 void LinhaDeProducao::AdicionarConjunto(int id, std::string nome, std::string desc) {
+    if (this->_Conjuntos.count(id) > 0) {
+        throw IdDuplicado("LinhaDeProducao: conjunto com id ja existente");
+    }
     Conjunto c(id, nome, desc);
-    this->_Conjuntos.insert({id, c});
+    this->_Conjuntos.emplace(id, std::move(c));
 }
 
 void LinhaDeProducao::RemoverConjunto(int id) {
+    if (this->_Conjuntos.count(id) == 0) {
+        throw IdInexistente("LinhaDeProducao: conjunto inexistente");
+    }
     this->_Conjuntos.erase(id);
 }
 
@@ -79,6 +93,14 @@ void LinhaDeProducao::SetNome(std::string nome) {
 }
 
 const std::map<int, Conjunto>& LinhaDeProducao::GetConjuntos() const { return _Conjuntos; }
+
+Conjunto& LinhaDeProducao::AcessarConjunto(int id) {
+    auto it = this->_Conjuntos.find(id);
+    if (it == this->_Conjuntos.end()) {
+        throw IdInexistente("LinhaDeProducao: conjunto inexistente");
+    }
+    return it->second;
+}
 
 int LinhaDeProducao::GetId() const { 
     return this->_id; 

@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include "Equipamento.hpp"
 
 /**
@@ -18,7 +19,7 @@ private:
     std::string _desc;
     std::string _nome;
 
-    std::map<int, Equipamento> _Equipamentos;
+    std::map<int, std::unique_ptr<Equipamento>> _Equipamentos;
 public:
     /**
      * @brief Constrói um conjunto.
@@ -34,6 +35,13 @@ public:
      * @note Implementa US-007 (Criar Equipamentos).
      */
     void AdicionarEquipamento(int id, std::string desc);
+
+    /**
+     * @brief Adiciona um equipamento já construído (permite tipos derivados).
+     * @param equip Equipamento (posse transferida ao conjunto via unique_ptr).
+     * @note Suporta polimorfismo: Motor, Sensor, Valvula, Atuador.
+     */
+    void AdicionarEquipamento(std::unique_ptr<Equipamento> equip);
 
     /**
      * @brief Remove o equipamento com o ID fornecido.
@@ -82,8 +90,16 @@ public:
      */
     void AtualizarAlarmes();
 
-    /** @return Referência constante ao mapa de equipamentos. */
-    const std::map<int, Equipamento>& GetEquipamentos() const;
+    /** @return Referência constante ao mapa de equipamentos (posse via unique_ptr). */
+    const std::map<int, std::unique_ptr<Equipamento>>& GetEquipamentos() const;
+
+    /**
+     * @brief Acesso mutável a um equipamento pelo ID.
+     * @param id Identificador do equipamento.
+     * @return Referência ao equipamento.
+     * @throws IdInexistente se não houver equipamento com o ID.
+     */
+    Equipamento& AcessarEquipamento(int id);
 
     /** @return Identificador único do conjunto. */
     int GetId() const;

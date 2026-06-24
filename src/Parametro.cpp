@@ -1,53 +1,46 @@
 #include "Parametro.hpp"
+#include "Excecoes.hpp"
 
 #include <limits>
 
 Parametro::Parametro(double ValorAtual, std::string Desc, int id) {
+    if (Desc.empty()) {
+        throw EntradaInvalida("Parametro: descricao vazia");
+    }
+    if (id < 0) {
+        throw IdInvalido("Parametro: id nao pode ser negativo");
+    }
+
     this->_Estado = false;
-
-    double Backup_min = this->_Min;
-    double Backup_max = this->_Max;
-
     this->_Min = std::numeric_limits<double>::lowest();
     this->_Max = std::numeric_limits<double>::max();
 
-    if (this->ValorValido(ValorAtual)){
-        this->_ValorAtual = ValorAtual;
-        this->_Hist.push_back(this->_ValorAtual);
-    } else {
-        this->_Min = Backup_min;
-        this->_Max = Backup_max;
-        return;
-    }
+    // Uma leitura pode estar fora dos limites (caso de falha): sempre armazenada.
+    this->_ValorAtual = ValorAtual;
+    this->_Hist.push_back(this->_ValorAtual);
 
     this->_Desc = Desc;
     this->_id = id;
 }
 
 Parametro::Parametro(double ValorAtual, double Max, double Min, std::string Desc, int id) {
+    if (Desc.empty()) {
+        throw EntradaInvalida("Parametro: descricao vazia");
+    }
+    if (id < 0) {
+        throw IdInvalido("Parametro: id nao pode ser negativo");
+    }
+    if (Max < Min) {
+        throw LimitesInvalidos("Parametro: Max nao pode ser menor que Min");
+    }
+
     this->_Estado = false;
+    this->_Min = Min;
+    this->_Max = Max;
 
-    double Backup_min = this->_Min;
-    double Backup_max = this->_Max;
-
-    if ((Max >= Min) && 
-        (Min >= std::numeric_limits<double>::lowest()) &&
-        (Max <= std::numeric_limits<double>::max())){
-
-            this->_Min = Min;
-            this->_Max = Max;
-    } else {
-        return;
-    }
-
-    if (this->ValorValido(ValorAtual)){
-        this->_ValorAtual = ValorAtual;
-        this->_Hist.push_back(this->_ValorAtual);
-    } else {
-        this->_Min = Backup_min;
-        this->_Max = Backup_max;
-        return;
-    }
+    // Uma leitura pode estar fora dos limites (caso de falha): sempre armazenada.
+    this->_ValorAtual = ValorAtual;
+    this->_Hist.push_back(this->_ValorAtual);
 
     this->_Desc = Desc;
     this->_id = id;
@@ -63,14 +56,23 @@ void Parametro::SetValorAtual(double Valor) {
 }
 
 void Parametro::SetMax(double Valor) {
+    if (Valor < this->_Min) {
+        throw LimitesInvalidos("Parametro: Max nao pode ser menor que Min");
+    }
     this->_Max = Valor;
 }
 
 void Parametro::SetMin(double Valor) {
+    if (Valor > this->_Max) {
+        throw LimitesInvalidos("Parametro: Min nao pode ser maior que Max");
+    }
     this->_Min = Valor;
 }
 
 void Parametro::SetDesc(std::string Desc) {
+    if (Desc.empty()) {
+        throw EntradaInvalida("Parametro: descricao vazia");
+    }
     this->_Desc = Desc;
 }
 

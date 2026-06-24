@@ -4,11 +4,11 @@
 #include "Equipamento.hpp"
 
 class Sensor : public Equipamento {
-private:
-    
 public:
     Sensor(int id, std::string desc, double sinal);
-    ~Sensor();
+    ~Sensor() override = default;
+
+    std::string Tipo() const override;
 };
 
 #endif
