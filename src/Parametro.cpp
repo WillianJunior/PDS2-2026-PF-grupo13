@@ -1,8 +1,51 @@
 #include "Parametro.hpp"
 
-Parametro::Parametro(double ValorAtual, std::string Desc, int id) {}
+#include <limits>
 
-Parametro::Parametro(double ValorAtual, double Max, double Min, std::string Desc, int id) {}
+Parametro::Parametro(double ValorAtual, std::string Desc, int id) {
+    double Backup_min = this->_Min;
+    double Backup_max = this->_Max;
+
+    this->_Min = std::numeric_limits<double>::lowest;
+    this->_Max = std::numeric_limits<double>::max;
+
+    if (this->ValorValido(ValorAtual)){
+        this->_ValorAtual = _ValorAtual;
+    } else {
+        this->_Min = Backup_min;
+        this->_Max = Backup_max;
+        return;
+    }
+
+    this->_Desc = Desc;
+    this->_id = Id;
+}
+
+Parametro::Parametro(double ValorAtual, double Max, double Min, std::string Desc, int id) {
+    double Backup_min = this->_Min;
+    double Backup_max = this->_Max;
+
+    if ((Max >= Min) && 
+        (Min >= std::numeric_limits<double>::lowest) &&
+        (Max <= std::numeric_limits<double>::max)){
+
+            this->_Min = Min;
+            this->_Max = Max;
+    } else {
+        return;
+    }
+
+    if (this->ValorValido(ValorAtual)){
+        this->_ValorAtual = _ValorAtual;
+    } else {
+        this->_Min = Backup_min;
+        this->_Max = Backup_max;
+        return;
+    }
+
+    this->_Desc = Desc;
+    this->_id = Id;
+}
 
 bool Parametro::ValorValido(double Valor) const {
     return (Valor >= this->_Min)&&(Valor <= this->_Max);
@@ -46,12 +89,17 @@ bool Parametro::GetEstado() const {
     return this->_Estado;
 }
 
-const std::vector<double>& Parametro::GetHist() const { return _Hist; }
+const std::vector<double>& Parametro::GetHist() const { 
+    return this->_Hist;
+}
 
 int Parametro::GetId() {
     return this->_id;
 }
 
-void Parametro::ResetarLimites() {}
+void Parametro::ResetarLimites() {
+    this->_Min = std::numeric_limits<double>::lowest;
+    this->_Max = std::numeric_limits<double>::max;
+}
 
 void Parametro::ResetarHistorico() {}
