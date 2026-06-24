@@ -1,10 +1,21 @@
 #include "Equipamento.hpp"
 
-Equipamento::Equipamento(int id, std::string desc) {}
+Equipamento::Equipamento(int id, std::string desc) {
+    this->_id = id;
+    this->_desc = desc;
+}
 
-void Equipamento::AdicionarParametro(double ValorAtual, std::string Desc, int id) {}
+void Equipamento::AdicionarParametro(double ValorAtual, std::string Desc, int id) {
+    Parametro p(ValorAtual, Desc, id);
 
-void Equipamento::AdicionarParametroComLimites(double ValorAtual, double Max, double Min, std::string Desc) {}
+    this->_Parametros.insert(id, p);
+}
+
+void Equipamento::AdicionarParametro(double ValorAtual, double Max, double Min, std::string Desc, ind id) {
+    Parametro p(ValorAtual, Max, Min, Desc, id);
+
+    this->_Parametros.insert(id, p);
+}
 
 void Equipamento::RemoverParametro(int id) {}
 

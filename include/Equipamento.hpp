@@ -18,7 +18,7 @@ private:
     int _id;
     std::string _desc;
 
-    std::vector<Parametro> _Parametros;
+    std::map<int, Parametro> _Parametros;
     std::vector<Alarme> _Alarmes;
 public:
     /**
@@ -45,7 +45,7 @@ public:
      * @param Desc       Descrição do parâmetro.
      * @note Implementa US-018 (Configurar parâmetros de equipamentos).
      */
-    void AdicionarParametroComLimites(double ValorAtual, double Max, double Min, std::string Desc);
+    void AdicionarParametro(double ValorAtual, double Max, double Min, std::string Desc, int id);
 
     /**
      * @brief Remove o parâmetro com o ID fornecido.
