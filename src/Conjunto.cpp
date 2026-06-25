@@ -63,18 +63,30 @@ void Conjunto::SetNome(std::string nome) {
 }
 
 void Conjunto::ExibirEquipamentos() const {
-    std::cout << "Conjunto " << this->_nome << std::endl;
-    for (const auto& e : this->_Equipamentos) {
-        std::cout << "Equipamento ID: " << e.first
-                  << " (" << e.second->Tipo() << ")" << std::endl;
-        e.second->ExibirParametros();
+    if (this->_Equipamentos.size() > 0){
+        std::cout << "Conjunto " << this->_nome << std::endl;
+        for (const auto& e : this->_Equipamentos) {
+            std::cout << "Equipamento ID: " << e.first
+                    << " (" << e.second->Tipo() << ")" << std::endl;
+            e.second->ExibirParametros();
+        }
+
+        return;
     }
+    
+    std::cout << "Nenhum equipamento presente" << std::endl;
 }
 
 void Conjunto::ExibirAlarmes() const {
-    for (const auto& e : this->_Equipamentos) {
-        e.second->ExibirAlarmes();
+    if (this->_Equipamentos.size() > 0){
+        for (const auto& e : this->_Equipamentos) {
+            e.second->ExibirAlarmes();
+        }
+
+        return;
     }
+
+    std::cout << "Nenhum alarme presente" << std::endl;
 }
 
 void Conjunto::ExibirTudo() const {

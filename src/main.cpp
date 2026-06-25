@@ -107,8 +107,9 @@ void criarConjunto(Sistema& s) {
     int lid = lerInt("ID da linha: ");
     std::string nome = lerLinha("Nome: ");
     std::string desc = lerLinha("Descricao: ");
-    int id = s.AcessarLinha(lid).AdicionarConjunto(nome, desc);
-    std::cout << "Conjunto criado com ID " << id << ".\n";
+    int next = s.ProximoIdDisponivel();
+    s.AcessarLinha(lid).AdicionarConjunto(next ,nome, desc);
+    std::cout << "Conjunto criado com ID " << next << ".\n";
 }
 
 void criarEquipamento(Sistema& s) {
