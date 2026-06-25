@@ -85,7 +85,9 @@ void Equipamento::AtualizarAlarmes() {
 
 void Equipamento::ExibirParametros() const {
     std::cout << "Equipamento " << this->_nome << std::endl;
+    int iterator = 0;
     for (const auto& p : this->_Parametros) {
+        iterator += 1;
         std::cout << p.first << " - " << p.second.GetDesc() << " " << p.second.GetValorAtual() << std::endl;
     }
 }

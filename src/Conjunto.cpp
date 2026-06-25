@@ -65,6 +65,7 @@ void Conjunto::SetNome(std::string nome) {
 void Conjunto::ExibirEquipamentos() const {
     if (this->_Equipamentos.size() > 0){
         std::cout << "Conjunto " << this->_nome << std::endl;
+        std::cout << "Descrição " << this->_desc << std::endl;
         for (const auto& e : this->_Equipamentos) {
             std::cout << "Equipamento ID: " << e.first
                     << " (" << e.second->Tipo() << ")" << std::endl;
