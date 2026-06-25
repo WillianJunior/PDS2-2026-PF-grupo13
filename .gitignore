@@ -1,5 +1,7 @@
 build/*
 !build/.gitkeep
+design/html/
+design/latex/
 
 # Artefatos de runtime
 save.txt

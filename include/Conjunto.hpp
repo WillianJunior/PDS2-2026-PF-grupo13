@@ -18,6 +18,7 @@ private:
     int _id;
     std::string _desc;
     std::string _nome;
+    int _ProximoIdEquipamento = 1;
 
     std::map<int, std::unique_ptr<Equipamento>> _Equipamentos;
 public:
@@ -42,6 +43,9 @@ public:
      * @note Suporta polimorfismo: Motor, Sensor, Valvula, Atuador.
      */
     void AdicionarEquipamento(std::unique_ptr<Equipamento> equip);
+
+    /** @return Próximo ID disponível para equipamento (monotônico). */
+    int ProximoIdEquipamento() const;
 
     /**
      * @brief Remove o equipamento com o ID fornecido.

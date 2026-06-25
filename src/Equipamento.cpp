@@ -24,6 +24,15 @@ void Equipamento::AdicionarParametro(double ValorAtual, std::string Desc, int id
     Parametro p(ValorAtual, Desc, id);
 
     this->_Parametros.insert({id, p});
+    if (id >= this->_ProximoIdParametro) {
+        this->_ProximoIdParametro = id + 1;
+    }
+}
+
+int Equipamento::AdicionarParametro(double ValorAtual, std::string Desc) {
+    int id = this->_ProximoIdParametro;
+    this->AdicionarParametro(ValorAtual, Desc, id);
+    return id;
 }
 
 void Equipamento::AdicionarParametro(double ValorAtual, double Max, double Min, std::string Desc, int id) {
@@ -33,6 +42,19 @@ void Equipamento::AdicionarParametro(double ValorAtual, double Max, double Min, 
     Parametro p(ValorAtual, Max, Min, Desc, id);
 
     this->_Parametros.insert({id, p});
+    if (id >= this->_ProximoIdParametro) {
+        this->_ProximoIdParametro = id + 1;
+    }
+}
+
+int Equipamento::AdicionarParametro(double ValorAtual, double Max, double Min, std::string Desc) {
+    int id = this->_ProximoIdParametro;
+    this->AdicionarParametro(ValorAtual, Max, Min, Desc, id);
+    return id;
+}
+
+int Equipamento::ProximoIdParametro() const {
+    return this->_ProximoIdParametro;
 }
 
 void Equipamento::RemoverParametro(int id) {

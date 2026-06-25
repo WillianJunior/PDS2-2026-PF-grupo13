@@ -23,6 +23,19 @@ void LinhaDeProducao::AdicionarConjunto(int id, std::string nome, std::string de
     }
     Conjunto c(id, nome, desc);
     this->_Conjuntos.emplace(id, std::move(c));
+    if (id >= this->_ProximoIdConjunto) {
+        this->_ProximoIdConjunto = id + 1;
+    }
+}
+
+int LinhaDeProducao::AdicionarConjunto(std::string nome, std::string desc) {
+    int id = this->_ProximoIdConjunto;
+    this->AdicionarConjunto(id, nome, desc);
+    return id;
+}
+
+int LinhaDeProducao::ProximoIdConjunto() const {
+    return this->_ProximoIdConjunto;
 }
 
 void LinhaDeProducao::RemoverConjunto(int id) {

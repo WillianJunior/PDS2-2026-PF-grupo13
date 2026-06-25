@@ -19,6 +19,7 @@ private:
     std::string _nome;
     std::string _local;
     std::string _desc;
+    int _ProximoIdConjunto = 1;
 
     std::map<int, Conjunto> _Conjuntos;
 public:
@@ -38,6 +39,15 @@ public:
      * @note Implementa US-004 (Criar Conjuntos).
      */
     void AdicionarConjunto(int id, std::string nome, std::string desc);
+
+    /**
+     * @brief Adiciona um conjunto com ID gerado automaticamente (incremental).
+     * @return ID atribuído ao conjunto criado.
+     */
+    int AdicionarConjunto(std::string nome, std::string desc);
+
+    /** @return Próximo ID disponível para conjunto (monotônico). */
+    int ProximoIdConjunto() const;
 
     /**
      * @brief Remove o conjunto com o ID fornecido.

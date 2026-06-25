@@ -11,16 +11,6 @@ Sistema::Sistema() : _UsuarioLogadoIdx(-1), _arquivoSave("save.txt") {
     this->_ProximoId = 1;
 }
 
-void Sistema::AdicionarId(int Id) {
-    this->_IdsAtivos.push_back(Id);
-}
-
-void Sistema::RemoverId(int Id) {
-    this->_IdsAtivos.erase(
-        std::remove(this->_IdsAtivos.begin(), this->_IdsAtivos.end(), Id),
-        this->_IdsAtivos.end());
-}
-
 void Sistema::AdicionarLinha(int id, std::string desc, std::string local, std::string nome) {
     if (this->IdAtivo(id)) {
         throw IdDuplicado("Sistema: linha com id ja existente");
@@ -28,14 +18,15 @@ void Sistema::AdicionarLinha(int id, std::string desc, std::string local, std::s
     LinhaDeProducao Linha(id, desc, local, nome);
 
     this->_Linhas.emplace(id, std::move(Linha));
-    this->AdicionarId(id);
+    if (id >= this->_ProximoId) {
+        this->_ProximoId = id + 1;
+    }
 }
 
-void Sistema::AdicionarLinha(std::string desc, std::string local, std::string nome) {
-
-    int id = this->ProximoIdDisponivel();
-
+int Sistema::AdicionarLinha(std::string desc, std::string local, std::string nome) {
+    int id = this->_ProximoId;
     Sistema::AdicionarLinha(id, desc, local, nome);
+    return id;
 }
 
 void Sistema::RemoverLinha(int id) {
@@ -43,7 +34,6 @@ void Sistema::RemoverLinha(int id) {
         throw IdInexistente("Sistema: linha inexistente");
     }
     this->_Linhas.erase(id);
-    this->RemoverId(id);
 }
 
 const std::map<int, LinhaDeProducao>& Sistema::GetLinhas() const {
@@ -59,11 +49,11 @@ LinhaDeProducao& Sistema::AcessarLinha(int id) {
 }
 
 void Sistema::ExibirLinhas() {
-    std::cout << "Linhas de produção:" << std::endl;
+    std::cout << "Linhas de producao:" << std::endl;
     for (const auto& linha : this->_Linhas){
         std::cout << "Linha ID: " << linha.first << " - " << linha.second.GetNome() << std::endl
         << "Local: " << linha.second.GetLocal() << std::endl
-        << "Descrição: " << linha.second.GetDesc() << std::endl;
+        << "Descricao: " << linha.second.GetDesc() << std::endl;
     }
 }
 
@@ -72,7 +62,7 @@ void Sistema::AdicionarUsuario(std::string login, std::string senha, Cargo cargo
 
     this->_Usuarios.push_back(user);
 
-    std::cout << "Usuário " << login << " adicionado." << std::endl;
+    std::cout << "Usuario " << login << " adicionado." << std::endl;
 }
 
 void Sistema::RemoverUsuario(std::string login) {
@@ -84,29 +74,20 @@ void Sistema::RemoverUsuario(std::string login) {
     for (size_t i = 0; i < this->_Usuarios.size(); i++){
         if (this->_Usuarios[i].GetLogin() == login){
             this->_Usuarios.erase(this->_Usuarios.begin() + i);
-            std::cout << "Usuário " << login << " removido." << std::endl;
+            std::cout << "Usuario " << login << " removido." << std::endl;
 
             return;
         }
     }
-    std::cout << "Nenhum usuário removido." << std::endl;
+    std::cout << "Nenhum usuario removido." << std::endl;
 }
 
 int Sistema::ProximoIdDisponivel() const {
-    int x = 1;
-    while (this->IdAtivo(x)) {
-        x++;
-    }
-    return x;
+    return this->_ProximoId;
 }
 
 bool Sistema::IdAtivo(int Id) const {
-    for (const auto& elemento : this->_IdsAtivos){
-        if (elemento == Id){
-            return true;
-        }
-    }
-    return false;
+    return this->_Linhas.count(Id) > 0;
 }
 
 bool Sistema::Login(std::string login, std::string senha) {
@@ -115,12 +96,12 @@ bool Sistema::Login(std::string login, std::string senha) {
         if (this->_Usuarios[i].GetLogin() == login && this->_Usuarios[i].ValidarSenha(senha) == true){
             this->_UsuarioLogadoIdx = static_cast<int>(i);
 
-            std::cout << "Usuário " << login << " logado." << std::endl;
+            std::cout << "Usuario " << login << " logado." << std::endl;
 
             return true;
         }
     }
-    std::cout << "Usuário " << login << " não encontrado." << std::endl;
+    std::cout << "Usuario " << login << " nao encontrado." << std::endl;
     return false;
 
 }
@@ -228,7 +209,7 @@ bool Sistema::CarregarSave(std::string arquivo) {
     // Substitui o estado atual pelo conteúdo do arquivo.
     this->_Linhas.clear();
     this->_Usuarios.clear();
-    this->_IdsAtivos.clear();
+    this->_ProximoId = 1;
     this->_UsuarioLogadoIdx = -1;
 
     try {

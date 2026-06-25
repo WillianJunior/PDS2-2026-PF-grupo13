@@ -18,6 +18,7 @@ private:
     int _id;
     std::string _desc;
     std::string _nome;
+    int _ProximoIdParametro = 1;
 
     std::map<int, Parametro> _Parametros;
     std::vector<Alarme> _Alarmes;
@@ -48,6 +49,12 @@ public:
     void AdicionarParametro(double ValorAtual, std::string Desc, int id);
 
     /**
+     * @brief Adiciona um parâmetro sem limites com ID gerado automaticamente.
+     * @return ID atribuído ao parâmetro criado.
+     */
+    int AdicionarParametro(double ValorAtual, std::string Desc);
+
+    /**
      * @brief Adiciona um parâmetro com limites Min/Max definidos.
      * @param ValorAtual Leitura inicial.
      * @param Max        Limite superior aceitável.
@@ -56,6 +63,15 @@ public:
      * @note Implementa US-018 (Configurar parâmetros de equipamentos).
      */
     void AdicionarParametro(double ValorAtual, double Max, double Min, std::string Desc, int id);
+
+    /**
+     * @brief Adiciona um parâmetro com limites Min/Max e ID gerado automaticamente.
+     * @return ID atribuído ao parâmetro criado.
+     */
+    int AdicionarParametro(double ValorAtual, double Max, double Min, std::string Desc);
+
+    /** @return Próximo ID disponível para parâmetro (monotônico). */
+    int ProximoIdParametro() const;
 
     /**
      * @brief Remove o parâmetro com o ID fornecido.

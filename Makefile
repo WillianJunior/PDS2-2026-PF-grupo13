@@ -42,9 +42,16 @@ TEST_OBJS = $(BUILD_DIR)/test_main.o \
 TEST_BIN = $(BUILD_DIR)/test_runner
 APP_BIN  = $(BUILD_DIR)/sistema
 
-.PHONY: all test clean app run
+.PHONY: all test test-bin clean app run
 
-all: $(TEST_BIN)
+# Alvo default: apenas o executavel da aplicacao
+app: $(APP_BIN)
+
+# Builda tudo (app + test runner)
+all: $(APP_BIN) $(TEST_BIN)
+
+# Builda apenas o binario de testes
+test-bin: $(TEST_BIN)
 
 $(BUILD_DIR):
 	$(MKDIR)
@@ -57,9 +64,6 @@ $(BUILD_DIR)/%.o: tests/%.cpp | $(BUILD_DIR)
 
 $(TEST_BIN): $(SRC_OBJS) $(TEST_OBJS)
 	$(CXX) $(LDFLAGS) -o $@ $^
-
-# Aplicacao interativa de terminal
-app: $(APP_BIN)
 
 $(APP_BIN): $(SRC_OBJS) $(BUILD_DIR)/main.o
 	$(CXX) $(LDFLAGS) -o $@ $^

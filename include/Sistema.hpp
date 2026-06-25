@@ -20,16 +20,9 @@ private:
     int _ProximoId;
     std::map<int,LinhaDeProducao> _Linhas;
     std::vector<Usuario> _Usuarios;
-    std::vector<int> _IdsAtivos;
 
     int _UsuarioLogadoIdx;
     std::string _arquivoSave;
-
-    /** @brief Registra um ID como utilizado. @param Id ID a reservar. */
-    void AdicionarId(int Id);
-
-    /** @brief Libera um ID previamente reservado. @param Id ID a liberar. */
-    void RemoverId(int Id);
 public:
     /** @brief Inicializa o sistema sem linhas, usuários ou sessão ativa. */
     Sistema();
@@ -43,7 +36,12 @@ public:
      * @note Implementa US-001 (Criar Linhas de Produção).
      */
     void AdicionarLinha(int id, std::string desc, std::string local, std::string nome);
-    void AdicionarLinha(std::string desc, std::string local, std::string nome);
+
+    /**
+     * @brief Cadastra uma linha com ID gerado automaticamente (incremental).
+     * @return ID atribuído à linha criada.
+     */
+    int AdicionarLinha(std::string desc, std::string local, std::string nome);
 
     /**
      * @brief Remove a linha de produção com o ID fornecido.
@@ -86,15 +84,14 @@ public:
     void RemoverUsuario(std::string login);
 
     /**
-     * @brief Retorna o próximo ID disponível para cadastro.
-     * @return Menor ID inteiro ainda não utilizado.
+     * @brief Retorna o próximo ID disponível para cadastro (monotônico).
+     * @return Valor atual do contador interno (não consumido).
      */
     int ProximoIdDisponivel() const;
 
     /**
-     * @brief Verifica se um ID está disponível para uso.
+     * @brief Verifica se um ID já está em uso (existe uma linha cadastrada com ele).
      * @param Id ID a verificar.
-     * @return true se o ID não estiver em uso.
      */
     bool IdAtivo(int Id) const;
 

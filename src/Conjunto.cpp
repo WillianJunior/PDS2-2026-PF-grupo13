@@ -21,6 +21,9 @@ void Conjunto::AdicionarEquipamento(int id, std::string desc) {
         throw IdDuplicado("Conjunto: equipamento com id ja existente");
     }
     this->_Equipamentos.emplace(id, std::make_unique<Equipamento>(id, desc, desc));
+    if (id >= this->_ProximoIdEquipamento) {
+        this->_ProximoIdEquipamento = id + 1;
+    }
 }
 
 void Conjunto::AdicionarEquipamento(std::unique_ptr<Equipamento> equip) {
@@ -32,6 +35,13 @@ void Conjunto::AdicionarEquipamento(std::unique_ptr<Equipamento> equip) {
         throw IdDuplicado("Conjunto: equipamento com id ja existente");
     }
     this->_Equipamentos.emplace(id, std::move(equip));
+    if (id >= this->_ProximoIdEquipamento) {
+        this->_ProximoIdEquipamento = id + 1;
+    }
+}
+
+int Conjunto::ProximoIdEquipamento() const {
+    return this->_ProximoIdEquipamento;
 }
 
 void Conjunto::RemoverEquipamento(int id) {

@@ -10,6 +10,7 @@
 #include <string>
 #include <memory>
 #include <limits>
+#include <cstdlib>
 
 namespace {
 
@@ -46,6 +47,20 @@ double lerDouble(const std::string& prompt) {
     }
 }
 
+void limparTela() {
+#ifdef _WIN32
+    std::system("cls");
+#else
+    std::system("clear");
+#endif
+}
+
+void pausar() {
+    std::cout << "\nPressione ENTER para continuar...";
+    std::string lixo;
+    std::getline(std::cin, lixo);
+}
+
 // ---- Permissões ----
 
 int rank(Cargo c) {
@@ -80,29 +95,28 @@ void exigir(const Sistema& s, int minimo) {
 
 void criarLinha(Sistema& s) {
     exigir(s, rank(Cargo::ENGENHEIRO));
-    int id = lerInt("ID da linha: ");
     std::string nome = lerLinha("Nome: ");
     std::string local = lerLinha("Local: ");
     std::string desc = lerLinha("Descricao: ");
-    s.AdicionarLinha(id, desc, local, nome);
-    std::cout << "Linha criada.\n";
+    int id = s.AdicionarLinha(desc, local, nome);
+    std::cout << "Linha criada com ID " << id << ".\n";
 }
 
 void criarConjunto(Sistema& s) {
     exigir(s, rank(Cargo::ENGENHEIRO));
     int lid = lerInt("ID da linha: ");
-    int id = lerInt("ID do conjunto: ");
     std::string nome = lerLinha("Nome: ");
     std::string desc = lerLinha("Descricao: ");
-    s.AcessarLinha(lid).AdicionarConjunto(id, nome, desc);
-    std::cout << "Conjunto criado.\n";
+    int id = s.AcessarLinha(lid).AdicionarConjunto(nome, desc);
+    std::cout << "Conjunto criado com ID " << id << ".\n";
 }
 
 void criarEquipamento(Sistema& s) {
     exigir(s, rank(Cargo::ENGENHEIRO));
     int lid = lerInt("ID da linha: ");
     int cid = lerInt("ID do conjunto: ");
-    int eid = lerInt("ID do equipamento: ");
+    Conjunto& conj = s.AcessarLinha(lid).AcessarConjunto(cid);
+    int eid = conj.ProximoIdEquipamento();
     std::string desc = lerLinha("Descricao: ");
     std::cout << "Tipo: 1-Motor 2-Sensor 3-Valvula 4-Atuador 5-Generico\n";
     int tipo = lerInt("Opcao: ");
@@ -137,8 +151,8 @@ void criarEquipamento(Sistema& s) {
         }
     }
 
-    s.AcessarLinha(lid).AcessarConjunto(cid).AdicionarEquipamento(std::move(eq));
-    std::cout << "Equipamento criado.\n";
+    conj.AdicionarEquipamento(std::move(eq));
+    std::cout << "Equipamento criado com ID " << eid << ".\n";
 }
 
 void criarParametro(Sistema& s) {
@@ -146,14 +160,13 @@ void criarParametro(Sistema& s) {
     int lid = lerInt("ID da linha: ");
     int cid = lerInt("ID do conjunto: ");
     int eid = lerInt("ID do equipamento: ");
-    int pid = lerInt("ID do parametro: ");
     std::string desc = lerLinha("Descricao: ");
     double minimo = lerDouble("Limite minimo: ");
     double maximo = lerDouble("Limite maximo: ");
     double valor = lerDouble("Leitura atual: ");
-    s.AcessarLinha(lid).AcessarConjunto(cid).AcessarEquipamento(eid)
-        .AdicionarParametro(valor, maximo, minimo, desc, pid);
-    std::cout << "Parametro criado.\n";
+    int pid = s.AcessarLinha(lid).AcessarConjunto(cid).AcessarEquipamento(eid)
+        .AdicionarParametro(valor, maximo, minimo, desc);
+    std::cout << "Parametro criado com ID " << pid << ".\n";
 }
 
 void diagnosticar(Sistema& s) {
@@ -213,6 +226,7 @@ void gerenciarUsuarios(Sistema& s) {
 void menu(Sistema& s) {
     bool continuar = true;
     while (continuar) {
+        limparTela();
         Usuario* u = s.GetUsuarioLogado();
         std::cout << "\n=== Menu (" << (u ? cargoTexto(u->GetCargo()) : "?")
                   << ") ===\n"
@@ -256,6 +270,9 @@ void menu(Sistema& s) {
         } catch (const ExcecaoSistema& e) {
             std::cout << "[Erro] " << e.what() << '\n';
         }
+        if (continuar) {
+            pausar();
+        }
     }
 }
 
@@ -275,6 +292,7 @@ int main() {
 
     bool executando = true;
     while (executando) {
+        limparTela();
         std::cout << "\n--- Login (login vazio encerra) ---\n";
         std::string login = lerLinha("Login: ");
         if (login.empty()) {
