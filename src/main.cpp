@@ -192,7 +192,7 @@ void listar(Sistema& s) {
         return;
     }
     for (const auto& par : linhas) {
-        std::cout << "== Linha " << par.first << " ==\n";
+        std::cout << "== Linha " << par.second.GetNome() << " ==\n";
         par.second.ExibirTudo();
     }
 }
@@ -228,6 +228,9 @@ void menu(Sistema& s) {
     while (continuar) {
         limparTela();
         Usuario* u = s.GetUsuarioLogado();
+        if (!u) {
+         break;   
+        }
         std::cout << "\n=== Menu (" << (u ? cargoTexto(u->GetCargo()) : "?")
                   << ") ===\n"
                   << "1 - Listar tudo\n"

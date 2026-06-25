@@ -59,8 +59,12 @@ void LinhaDeProducao::ExibirAlarmes() const {
 }
 
 void LinhaDeProducao::ExibirTudo() const {
+    std::cout << "Desc: " << this-> GetDesc() << std::endl;
+    std::cout << "Local: " << this->GetLocal() << std::endl;
+    std::cout << "Id " << this->GetId() << std::endl;
     for (const auto& conjunto : this->_Conjuntos){
-        std::cout << "Conjunto ID: " << conjunto.first << " - " << conjunto.second.GetNome() << std::endl;
+        std::cout << "-- Conjunto " << conjunto.second.GetNome() << " --" << std::endl;
+        std::cout << "ID: " << conjunto.first << std::endl;
         std::cout << "Desc: " << conjunto.second.GetDesc() << std::endl;
         conjunto.second.ExibirTudo();
     }
