@@ -43,3 +43,10 @@ TEST_CASE("Alarme - AtualizarAlarme sincroniza estado interno") {
     a.AtualizarAlarme();
     CHECK(a.GetEstado() == true);
 }
+
+TEST_CASE("Alarme - SetDesc nao quebra estado") {
+    Parametro p(5.0, 10.0, 0.0, "Temp", 7);
+    Alarme a("Antiga", 7, p);
+    a.SetDesc("Nova descricao");
+    CHECK(a.GetEstado() == false);
+}

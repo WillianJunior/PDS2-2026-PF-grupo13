@@ -76,10 +76,12 @@ test: $(TEST_BIN)
 	$(PYTHON) -m gcovr -r . --object-directory=$(BUILD_DIR) \
 	    --exclude='tests/.*' \
 	    --exclude='include/doctest\.h' \
+	    --exclude='src/main\.cpp' \
 	    --txt
 	$(PYTHON) -m gcovr -r . --object-directory=$(BUILD_DIR) \
 	    --exclude='tests/.*' \
 	    --exclude='include/doctest\.h' \
+	    --exclude='src/main\.cpp' \
 	    --html --html-details \
 	    -o $(BUILD_DIR)/coverage.html
 
