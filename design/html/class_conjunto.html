@@ -126,10 +126,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_conjunto
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a584d6d3df7d8aa38b607551a10af3186" id="r_a584d6d3df7d8aa38b607551a10af3186"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a584d6d3df7d8aa38b607551a10af3186">Conjunto</a> (int id, std::string desc)</td></tr>
-<tr class="memdesc:a584d6d3df7d8aa38b607551a10af3186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrói um conjunto.  <br /></td></tr>
+<tr class="memitem:a6ed2a14038d54e06d1f5c19f579184c2" id="r_a6ed2a14038d54e06d1f5c19f579184c2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6ed2a14038d54e06d1f5c19f579184c2">Conjunto</a> (int id, std::string nome, std::string desc)</td></tr>
+<tr class="memdesc:a6ed2a14038d54e06d1f5c19f579184c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrói um conjunto.  <br /></td></tr>
 <tr class="memitem:af6904bb53f69fbdbdb8353cd3526e8f4" id="r_af6904bb53f69fbdbdb8353cd3526e8f4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af6904bb53f69fbdbdb8353cd3526e8f4">AdicionarEquipamento</a> (int id, std::string desc)</td></tr>
 <tr class="memdesc:af6904bb53f69fbdbdb8353cd3526e8f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona um equipamento ao conjunto.  <br /></td></tr>
+<tr class="memitem:aa263654c35ae4d905518dfa77d21104d" id="r_aa263654c35ae4d905518dfa77d21104d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa263654c35ae4d905518dfa77d21104d">AdicionarEquipamento</a> (std::unique_ptr&lt; <a class="el" href="class_equipamento.html">Equipamento</a> &gt; equip)</td></tr>
+<tr class="memdesc:aa263654c35ae4d905518dfa77d21104d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona um equipamento já construído (permite tipos derivados).  <br /></td></tr>
+<tr class="memitem:a4e8dd548627ec53335bd6d7b4618c7dd" id="r_a4e8dd548627ec53335bd6d7b4618c7dd"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a4e8dd548627ec53335bd6d7b4618c7dd">ProximoIdEquipamento</a> () const</td></tr>
 <tr class="memitem:a89809c3933ae572644c4e4c8eb9f88f0" id="r_a89809c3933ae572644c4e4c8eb9f88f0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a89809c3933ae572644c4e4c8eb9f88f0">RemoverEquipamento</a> (int id)</td></tr>
 <tr class="memdesc:a89809c3933ae572644c4e4c8eb9f88f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove o equipamento com o ID fornecido.  <br /></td></tr>
 <tr class="memitem:a6ffa3278b3e9deb5e16caeff6dba9ee0" id="r_a6ffa3278b3e9deb5e16caeff6dba9ee0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6ffa3278b3e9deb5e16caeff6dba9ee0">SetDesc</a> (std::string desc)</td></tr>
@@ -148,7 +151,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7884a0038c48f1ff5828a75222dc0347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Diagnostica todos os equipamentos do conjunto.  <br /></td></tr>
 <tr class="memitem:a0739cef0f5b457b0c831d7e9058577ff" id="r_a0739cef0f5b457b0c831d7e9058577ff"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0739cef0f5b457b0c831d7e9058577ff">AtualizarAlarmes</a> ()</td></tr>
 <tr class="memdesc:a0739cef0f5b457b0c831d7e9058577ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Propaga a atualização de alarmes para todos os equipamentos.  <br /></td></tr>
-<tr class="memitem:a1205859c86ccfbeeff22c80b872ad8ff" id="r_a1205859c86ccfbeeff22c80b872ad8ff"><td class="memItemLeft">const std::vector&lt; <a class="el" href="class_equipamento.html">Equipamento</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a1205859c86ccfbeeff22c80b872ad8ff">GetEquipamentos</a> () const</td></tr>
+<tr class="memitem:adc19bf681108c526a5a761884ac0e8ac" id="r_adc19bf681108c526a5a761884ac0e8ac"><td class="memItemLeft">const std::map&lt; int, std::unique_ptr&lt; <a class="el" href="class_equipamento.html">Equipamento</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#adc19bf681108c526a5a761884ac0e8ac">GetEquipamentos</a> () const</td></tr>
+<tr class="memitem:af30103ab5528f286e6041a4c2156e24c" id="r_af30103ab5528f286e6041a4c2156e24c"><td class="memItemLeft"><a class="el" href="class_equipamento.html">Equipamento</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af30103ab5528f286e6041a4c2156e24c">AcessarEquipamento</a> (int id)</td></tr>
+<tr class="memdesc:af30103ab5528f286e6041a4c2156e24c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acesso mutável a um equipamento pelo ID.  <br /></td></tr>
 <tr class="memitem:a8a2649d2b5bfc3f47df79428cf926712" id="r_a8a2649d2b5bfc3f47df79428cf926712"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a8a2649d2b5bfc3f47df79428cf926712">GetId</a> () const</td></tr>
 <tr class="memitem:a37138db72cda36c28e0164986d506365" id="r_a37138db72cda36c28e0164986d506365"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a37138db72cda36c28e0164986d506365">GetDesc</a> () const</td></tr>
 <tr class="memitem:a421fd30a997cb6323668105bb29150ed" id="r_a421fd30a997cb6323668105bb29150ed"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a421fd30a997cb6323668105bb29150ed">GetNome</a> () const</td></tr>
@@ -157,10 +162,10 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Agrupamento lógico de equipamentos dentro de uma <a class="el" href="class_linha_de_producao.html" title="Representa uma linha de produção industrial.">LinhaDeProducao</a>. </p>
 <p>Um conjunto reúne equipamentos correlacionados e propaga operações de diagnóstico e atualização de alarmes para todos eles. </p>
 
-<p class="definition">Definition at line <a class="el" href="_conjunto_8hpp_source.html#l00014">14</a> of file <a class="el" href="_conjunto_8hpp_source.html">Conjunto.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_conjunto_8hpp_source.html#l00016">16</a> of file <a class="el" href="_conjunto_8hpp_source.html">Conjunto.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a584d6d3df7d8aa38b607551a10af3186" name="a584d6d3df7d8aa38b607551a10af3186"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a584d6d3df7d8aa38b607551a10af3186">&#9670;&#160;</a></span>Conjunto()</h2>
+<a id="a6ed2a14038d54e06d1f5c19f579184c2" name="a6ed2a14038d54e06d1f5c19f579184c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ed2a14038d54e06d1f5c19f579184c2">&#9670;&#160;</a></span>Conjunto()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,6 +174,11 @@ Public Member Functions</h2></td></tr>
           <td class="memname">Conjunto::Conjunto </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>nome</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -187,11 +197,47 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="_conjunto_8cpp_source.html#l00007">7</a> of file <a class="el" href="_conjunto_8cpp_source.html">Conjunto.cpp</a>.</p>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="af30103ab5528f286e6041a4c2156e24c" name="af30103ab5528f286e6041a4c2156e24c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af30103ab5528f286e6041a4c2156e24c">&#9670;&#160;</a></span>AcessarEquipamento()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_equipamento.html">Equipamento</a> &amp; Conjunto::AcessarEquipamento </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Acesso mutável a um equipamento pelo ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Identificador do equipamento. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Referência ao equipamento. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IdInexistente</td><td>se não houver equipamento com o ID. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_conjunto_8cpp_source.html#l00128">128</a> of file <a class="el" href="_conjunto_8cpp_source.html">Conjunto.cpp</a>.</p>
+
+</div>
+</div>
 <a id="af6904bb53f69fbdbdb8353cd3526e8f4" name="af6904bb53f69fbdbdb8353cd3526e8f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6904bb53f69fbdbdb8353cd3526e8f4">&#9670;&#160;</a></span>AdicionarEquipamento()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af6904bb53f69fbdbdb8353cd3526e8f4">&#9670;&#160;</a></span>AdicionarEquipamento() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,6 +265,36 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Implementa US-007 (Criar Equipamentos). </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="_conjunto_8cpp_source.html#l00019">19</a> of file <a class="el" href="_conjunto_8cpp_source.html">Conjunto.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa263654c35ae4d905518dfa77d21104d" name="aa263654c35ae4d905518dfa77d21104d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa263654c35ae4d905518dfa77d21104d">&#9670;&#160;</a></span>AdicionarEquipamento() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Conjunto::AdicionarEquipamento </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_equipamento.html">Equipamento</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>equip</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adiciona um equipamento já construído (permite tipos derivados). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">equip</td><td><a class="el" href="class_equipamento.html" title="Representa um equipamento físico dentro de um Conjunto.">Equipamento</a> (posse transferida ao conjunto via unique_ptr). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Suporta polimorfismo: <a class="el" href="class_motor.html">Motor</a>, <a class="el" href="class_sensor.html">Sensor</a>, <a class="el" href="class_valvula.html">Valvula</a>, <a class="el" href="class_atuador.html">Atuador</a>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_conjunto_8cpp_source.html#l00029">29</a> of file <a class="el" href="_conjunto_8cpp_source.html">Conjunto.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a0739cef0f5b457b0c831d7e9058577ff" name="a0739cef0f5b457b0c831d7e9058577ff"></a>
@@ -238,6 +314,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Propaga a atualização de alarmes para todos os equipamentos. </p>
 <dl class="section note"><dt>Note</dt><dd>Implementa US-014 (Criar <a class="el" href="class_alarme.html" title="Alarme associado a um Parametro de um equipamento.">Alarme</a>). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_conjunto_8cpp_source.html#l00118">118</a> of file <a class="el" href="_conjunto_8cpp_source.html">Conjunto.cpp</a>.</p>
 
 </div>
 </div>
@@ -260,6 +338,8 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Vetor com IDs dos parâmetros em estado de falha. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Implementa US-012 (Diagnóstico de <a class="el" href="class_conjunto.html" title="Agrupamento lógico de equipamentos dentro de uma LinhaDeProducao.">Conjunto</a>). </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="_conjunto_8cpp_source.html#l00109">109</a> of file <a class="el" href="_conjunto_8cpp_source.html">Conjunto.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a54e91ee8dfa4f75dc42accc2c82ec404" name="a54e91ee8dfa4f75dc42accc2c82ec404"></a>
@@ -278,6 +358,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Exibe no console os alarmes ativos de todos os equipamentos. </p>
+
+<p class="definition">Definition at line <a class="el" href="_conjunto_8cpp_source.html#l00080">80</a> of file <a class="el" href="_conjunto_8cpp_source.html">Conjunto.cpp</a>.</p>
 
 </div>
 </div>
@@ -299,6 +381,8 @@ Public Member Functions</h2></td></tr>
 <p>Exibe no console os equipamentos do conjunto. </p>
 <dl class="section note"><dt>Note</dt><dd>Implementa US-006 (Acessar <a class="el" href="class_conjunto.html" title="Agrupamento lógico de equipamentos dentro de uma LinhaDeProducao.">Conjunto</a>). </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="_conjunto_8cpp_source.html#l00065">65</a> of file <a class="el" href="_conjunto_8cpp_source.html">Conjunto.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a51adba06dc4a931f49943e053b60278d" name="a51adba06dc4a931f49943e053b60278d"></a>
@@ -319,6 +403,8 @@ Public Member Functions</h2></td></tr>
 <p>Exibe equipamentos e alarmes de forma consolidada. </p>
 <dl class="section note"><dt>Note</dt><dd>Implementa US-006 (Acessar <a class="el" href="class_conjunto.html" title="Agrupamento lógico de equipamentos dentro de uma LinhaDeProducao.">Conjunto</a>). </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="_conjunto_8cpp_source.html#l00092">92</a> of file <a class="el" href="_conjunto_8cpp_source.html">Conjunto.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a37138db72cda36c28e0164986d506365" name="a37138db72cda36c28e0164986d506365"></a>
@@ -337,23 +423,27 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Descrição do conjunto. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="_conjunto_8cpp_source.html#l00138">138</a> of file <a class="el" href="_conjunto_8cpp_source.html">Conjunto.cpp</a>.</p>
+
 </div>
 </div>
-<a id="a1205859c86ccfbeeff22c80b872ad8ff" name="a1205859c86ccfbeeff22c80b872ad8ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1205859c86ccfbeeff22c80b872ad8ff">&#9670;&#160;</a></span>GetEquipamentos()</h2>
+<a id="adc19bf681108c526a5a761884ac0e8ac" name="adc19bf681108c526a5a761884ac0e8ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc19bf681108c526a5a761884ac0e8ac">&#9670;&#160;</a></span>GetEquipamentos()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; <a class="el" href="class_equipamento.html">Equipamento</a> &gt; &amp; Conjunto::GetEquipamentos </td>
+          <td class="memname">const std::map&lt; int, std::unique_ptr&lt; <a class="el" href="class_equipamento.html">Equipamento</a> &gt; &gt; &amp; Conjunto::GetEquipamentos </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>Referência constante ao vetor de equipamentos. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Referência constante ao mapa de equipamentos (posse via unique_ptr). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_conjunto_8cpp_source.html#l00124">124</a> of file <a class="el" href="_conjunto_8cpp_source.html">Conjunto.cpp</a>.</p>
 
 </div>
 </div>
@@ -373,6 +463,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Identificador único do conjunto. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="_conjunto_8cpp_source.html#l00136">136</a> of file <a class="el" href="_conjunto_8cpp_source.html">Conjunto.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a421fd30a997cb6323668105bb29150ed" name="a421fd30a997cb6323668105bb29150ed"></a>
@@ -390,6 +482,28 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Nome do conjunto. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_conjunto_8cpp_source.html#l00140">140</a> of file <a class="el" href="_conjunto_8cpp_source.html">Conjunto.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4e8dd548627ec53335bd6d7b4618c7dd" name="a4e8dd548627ec53335bd6d7b4618c7dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e8dd548627ec53335bd6d7b4618c7dd">&#9670;&#160;</a></span>ProximoIdEquipamento()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Conjunto::ProximoIdEquipamento </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Próximo ID disponível para equipamento (monotônico). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_conjunto_8cpp_source.html#l00043">43</a> of file <a class="el" href="_conjunto_8cpp_source.html">Conjunto.cpp</a>.</p>
 
 </div>
 </div>
@@ -409,6 +523,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Número total de alarmes ativos no conjunto. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="_conjunto_8cpp_source.html#l00101">101</a> of file <a class="el" href="_conjunto_8cpp_source.html">Conjunto.cpp</a>.</p>
+
 </div>
 </div>
 <a id="aaa6f3eedb031612642961809adb63ea5" name="aaa6f3eedb031612642961809adb63ea5"></a>
@@ -426,6 +542,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Número de equipamentos cadastrados no conjunto. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_conjunto_8cpp_source.html#l00097">97</a> of file <a class="el" href="_conjunto_8cpp_source.html">Conjunto.cpp</a>.</p>
 
 </div>
 </div>
@@ -453,6 +571,8 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Implementa US-008 (Remover <a class="el" href="class_equipamento.html" title="Representa um equipamento físico dentro de um Conjunto.">Equipamento</a>). </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="_conjunto_8cpp_source.html#l00047">47</a> of file <a class="el" href="_conjunto_8cpp_source.html">Conjunto.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a6ffa3278b3e9deb5e16caeff6dba9ee0" name="a6ffa3278b3e9deb5e16caeff6dba9ee0"></a>
@@ -477,6 +597,8 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_conjunto_8cpp_source.html#l00054">54</a> of file <a class="el" href="_conjunto_8cpp_source.html">Conjunto.cpp</a>.</p>
 
 </div>
 </div>
@@ -503,10 +625,13 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="_conjunto_8cpp_source.html#l00061">61</a> of file <a class="el" href="_conjunto_8cpp_source.html">Conjunto.cpp</a>.</p>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="_conjunto_8hpp_source.html">Conjunto.hpp</a></li>
+<li>src/<a class="el" href="_conjunto_8cpp_source.html">Conjunto.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

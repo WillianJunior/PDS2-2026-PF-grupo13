@@ -7,49 +7,58 @@
 \DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00003}00003\ }
 \DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <string>}}
 \DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_equipamento_8hpp}{Equipamento.hpp}}"{}}}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00007}00007\ }
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00014}\doxymbox{\hyperlink{class_conjunto}{00014}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_conjunto_a584d6d3df7d8aa38b607551a10af3186}{Conjunto}}\ \{}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00015}00015\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00016}00016\ \ \ \ \ \textcolor{keywordtype}{int}\ \_id;}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00017}00017\ \ \ \ \ std::string\ \_desc;}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00018}00018\ \ \ \ \ std::string\ \_nome;}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00019}00019\ }
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00020}00020\ \ \ \ \ std::vector<Equipamento>\ \_Equipamentos;}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00021}00021\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00027}\doxymbox{\hyperlink{class_conjunto_a584d6d3df7d8aa38b607551a10af3186}{00027}}\ \ \ \ \ \doxymbox{\hyperlink{class_conjunto_a584d6d3df7d8aa38b607551a10af3186}{Conjunto}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ std::string\ desc);}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00028}00028\ }
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00035}\doxymbox{\hyperlink{class_conjunto_af6904bb53f69fbdbdb8353cd3526e8f4}{00035}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_conjunto_af6904bb53f69fbdbdb8353cd3526e8f4}{AdicionarEquipamento}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ std::string\ desc);}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00036}00036\ }
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00042}\doxymbox{\hyperlink{class_conjunto_a89809c3933ae572644c4e4c8eb9f88f0}{00042}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_conjunto_a89809c3933ae572644c4e4c8eb9f88f0}{RemoverEquipamento}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00043}00043\ }
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00045}\doxymbox{\hyperlink{class_conjunto_a6ffa3278b3e9deb5e16caeff6dba9ee0}{00045}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_conjunto_a6ffa3278b3e9deb5e16caeff6dba9ee0}{SetDesc}}(std::string\ desc);}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_equipamento_8hpp}{Equipamento.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00016}\doxymbox{\hyperlink{class_conjunto}{00016}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_conjunto_a6ed2a14038d54e06d1f5c19f579184c2}{Conjunto}}\ \{}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00017}00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00018}00018\ \ \ \ \ \textcolor{keywordtype}{int}\ \_id;}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00019}00019\ \ \ \ \ std::string\ \_desc;}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00020}00020\ \ \ \ \ std::string\ \_nome;}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \_ProximoIdEquipamento\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00023}00023\ \ \ \ \ std::map<int,\ std::unique\_ptr<Equipamento>>\ \_Equipamentos;}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00024}00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00030}00030\ \ \ \ \ \doxymbox{\hyperlink{class_conjunto_a6ed2a14038d54e06d1f5c19f579184c2}{Conjunto}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ std::string\ nome\ ,std::string\ desc);}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00038}00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_conjunto_af6904bb53f69fbdbdb8353cd3526e8f4}{AdicionarEquipamento}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ std::string\ desc);}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_conjunto_af6904bb53f69fbdbdb8353cd3526e8f4}{AdicionarEquipamento}}(std::unique\_ptr<Equipamento>\ equip);}
 \DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00046}00046\ }
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00048}\doxymbox{\hyperlink{class_conjunto_a902d6030efd75d594032225a4392cd82}{00048}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_conjunto_a902d6030efd75d594032225a4392cd82}{SetNome}}(std::string\ nome);}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_conjunto_a4e8dd548627ec53335bd6d7b4618c7dd}{ProximoIdEquipamento}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00054}\doxymbox{\hyperlink{class_conjunto_ac63d40fb4b3b01506221dcbbb0fb5ad6}{00054}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_conjunto_ac63d40fb4b3b01506221dcbbb0fb5ad6}{ExibirEquipamentos}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00055}00055\ }
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00057}\doxymbox{\hyperlink{class_conjunto_a54e91ee8dfa4f75dc42accc2c82ec404}{00057}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_conjunto_a54e91ee8dfa4f75dc42accc2c82ec404}{ExibirAlarmes}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00058}00058\ }
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00063}\doxymbox{\hyperlink{class_conjunto_a51adba06dc4a931f49943e053b60278d}{00063}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_conjunto_a51adba06dc4a931f49943e053b60278d}{ExibirTudo}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00064}00064\ }
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00066}\doxymbox{\hyperlink{class_conjunto_aaa6f3eedb031612642961809adb63ea5}{00066}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_conjunto_aaa6f3eedb031612642961809adb63ea5}{QuantidadeEquipamentos}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00067}00067\ }
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00069}\doxymbox{\hyperlink{class_conjunto_adfb6617fc64265725f21a248b4cf234d}{00069}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_conjunto_adfb6617fc64265725f21a248b4cf234d}{QuantidadeAlarmes}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00070}00070\ }
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00076}\doxymbox{\hyperlink{class_conjunto_a7884a0038c48f1ff5828a75222dc0347}{00076}}\ \ \ \ \ std::vector<int>\ \doxymbox{\hyperlink{class_conjunto_a7884a0038c48f1ff5828a75222dc0347}{DiagnosticarConjunto}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00055}00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_conjunto_a89809c3933ae572644c4e4c8eb9f88f0}{RemoverEquipamento}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00058}00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_conjunto_a6ffa3278b3e9deb5e16caeff6dba9ee0}{SetDesc}}(std::string\ desc);}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00061}00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_conjunto_a902d6030efd75d594032225a4392cd82}{SetNome}}(std::string\ nome);}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00067}00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_conjunto_ac63d40fb4b3b01506221dcbbb0fb5ad6}{ExibirEquipamentos}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00070}00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_conjunto_a54e91ee8dfa4f75dc42accc2c82ec404}{ExibirAlarmes}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00076}00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_conjunto_a51adba06dc4a931f49943e053b60278d}{ExibirTudo}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00077}00077\ }
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00082}\doxymbox{\hyperlink{class_conjunto_a0739cef0f5b457b0c831d7e9058577ff}{00082}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_conjunto_a0739cef0f5b457b0c831d7e9058577ff}{AtualizarAlarmes}}();}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_conjunto_aaa6f3eedb031612642961809adb63ea5}{QuantidadeEquipamentos}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00082}00082\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_conjunto_adfb6617fc64265725f21a248b4cf234d}{QuantidadeAlarmes}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00083}00083\ }
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00085}\doxymbox{\hyperlink{class_conjunto_a1205859c86ccfbeeff22c80b872ad8ff}{00085}}\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Equipamento>\&\ \doxymbox{\hyperlink{class_conjunto_a1205859c86ccfbeeff22c80b872ad8ff}{GetEquipamentos}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00086}00086\ }
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00088}\doxymbox{\hyperlink{class_conjunto_a8a2649d2b5bfc3f47df79428cf926712}{00088}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_conjunto_a8a2649d2b5bfc3f47df79428cf926712}{GetId}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00089}00089\ }
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00091}\doxymbox{\hyperlink{class_conjunto_a37138db72cda36c28e0164986d506365}{00091}}\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_conjunto_a37138db72cda36c28e0164986d506365}{GetDesc}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00092}00092\ }
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00094}\doxymbox{\hyperlink{class_conjunto_a421fd30a997cb6323668105bb29150ed}{00094}}\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_conjunto_a421fd30a997cb6323668105bb29150ed}{GetNome}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00095}00095\ \};}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00089}00089\ \ \ \ \ std::vector<int>\ \doxymbox{\hyperlink{class_conjunto_a7884a0038c48f1ff5828a75222dc0347}{DiagnosticarConjunto}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00095}00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_conjunto_a0739cef0f5b457b0c831d7e9058577ff}{AtualizarAlarmes}}();}
 \DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00096}00096\ }
-\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00097}00097\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00098}00098\ \ \ \ \ \textcolor{keyword}{const}\ std::map<int,\ std::unique\_ptr<Equipamento>>\&\ \doxymbox{\hyperlink{class_conjunto_adc19bf681108c526a5a761884ac0e8ac}{GetEquipamentos}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00106}00106\ \ \ \ \ \doxymbox{\hyperlink{class_equipamento}{Equipamento}}\&\ \doxymbox{\hyperlink{class_conjunto_af30103ab5528f286e6041a4c2156e24c}{AcessarEquipamento}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00109}00109\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_conjunto_a8a2649d2b5bfc3f47df79428cf926712}{GetId}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00112}00112\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_conjunto_a37138db72cda36c28e0164986d506365}{GetDesc}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00115}00115\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_conjunto_a421fd30a997cb6323668105bb29150ed}{GetNome}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00116}00116\ \};}
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{_conjunto_8hpp_source_l00118}00118\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

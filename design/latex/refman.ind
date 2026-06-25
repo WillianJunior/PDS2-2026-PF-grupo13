@@ -1,317 +1,2980 @@
 \begin{theindex}
 
+  \item {\texorpdfstring{$\sim$}{\string~}Atuador}
+    \subitem {Atuador}, \hyperpage{59}
+  \item {\texorpdfstring{$\sim$}{\string~}Context}
+    \subitem {doctest::Context}, \hyperpage{69}
+  \item {\texorpdfstring{$\sim$}{\string~}ContextScope}
+    \subitem {doctest::detail::ContextScope$<$ L $>$}, \hyperpage{78}
+  \item {\texorpdfstring{$\sim$}{\string~}ContextScopeBase}
+    \subitem {doctest::detail::ContextScopeBase}, \hyperpage{80}
+  \item {\texorpdfstring{$\sim$}{\string~}Equipamento}
+    \subitem {Equipamento}, \hyperpage{87}
+  \item {\texorpdfstring{$\sim$}{\string~}MessageBuilder}
+    \subitem {doctest::detail::MessageBuilder}, \hyperpage{132}
+  \item {\texorpdfstring{$\sim$}{\string~}Motor}
+    \subitem {Motor}, \hyperpage{136}
+  \item {\texorpdfstring{$\sim$}{\string~}Sensor}
+    \subitem {Sensor}, \hyperpage{152}
+  \item {\texorpdfstring{$\sim$}{\string~}String}
+    \subitem {doctest::String}, \hyperpage{162}
+  \item {\texorpdfstring{$\sim$}{\string~}Subcase}
+    \subitem {doctest::detail::Subcase}, \hyperpage{170}
+  \item {\texorpdfstring{$\sim$}{\string~}TestCase}
+    \subitem {doctest::detail::TestCase}, \hyperpage{173}
+  \item {\texorpdfstring{$\sim$}{\string~}Valvula}
+    \subitem {Valvula}, \hyperpage{187}
+
+  \indexspace
+
+  \item {abort\_after}
+    \subitem {doctest::ContextOptions}, \hyperpage{72}
+  \item {AcessarConjunto}
+    \subitem {LinhaDeProducao}, \hyperpage{123}
+  \item {AcessarEquipamento}
+    \subitem {Conjunto}, \hyperpage{62}
+  \item {AcessarLinha}
+    \subitem {Sistema}, \hyperpage{155}
+  \item {AcessoNegado}, \hyperpage{49}
+  \item {acquireGeneratorDecisionIndex}
+    \subitem {doctest::detail}, \hyperpage{40}
+  \item {acquireGeneratorValue}
+    \subitem {doctest::detail}, \hyperpage{40}
+  \item {ADD\_FAIL\_AT}
+    \subitem {doctest.h}, \hyperpage{233}
+  \item {ADD\_FAIL\_CHECK\_AT}
+    \subitem {doctest.h}, \hyperpage{233}
+  \item {ADD\_MESSAGE\_AT}
+    \subitem {doctest.h}, \hyperpage{233}
+  \item {addFilter}
+    \subitem {doctest::Context}, \hyperpage{69}
   \item {AdicionarConjunto}
-    \subitem {LinhaDeProducao}, \hyperpage{24}
+    \subitem {LinhaDeProducao}, \hyperpage{124}
   \item {AdicionarEquipamento}
-    \subitem {Conjunto}, \hyperpage{14}
+    \subitem {Conjunto}, \hyperpage{62, 63}
   \item {AdicionarLinha}
-    \subitem {Sistema}, \hyperpage{36}
+    \subitem {Sistema}, \hyperpage{155, 156}
   \item {AdicionarParametro}
-    \subitem {Equipamento}, \hyperpage{19}
-  \item {AdicionarParametroComLimites}
-    \subitem {Equipamento}, \hyperpage{19}
+    \subitem {Equipamento}, \hyperpage{87, 88}
   \item {AdicionarUsuario}
-    \subitem {Sistema}, \hyperpage{36}
+    \subitem {Sistema}, \hyperpage{156}
   \item {ADMIN}
-    \subitem {Cargo.hpp}, \hyperpage{44}
-  \item {Alarme}, \hyperpage{11}
-    \subitem {Alarme}, \hyperpage{12}
-    \subitem {AtualizarAlarme}, \hyperpage{12}
-    \subitem {GetEstado}, \hyperpage{12}
-    \subitem {SetDesc}, \hyperpage{12}
-    \subitem {SetEstado}, \hyperpage{13}
+    \subitem {Cargo.hpp}, \hyperpage{191}
+  \item {Alarme}, \hyperpage{49}
+    \subitem {Alarme}, \hyperpage{50}
+    \subitem {AtualizarAlarme}, \hyperpage{51}
+    \subitem {GetEstado}, \hyperpage{51}
+    \subitem {SetDesc}, \hyperpage{51}
+    \subitem {SetEstado}, \hyperpage{51}
+  \item {AND\_GIVEN}
+    \subitem {doctest.h}, \hyperpage{233}
+  \item {AND\_THEN}
+    \subitem {doctest.h}, \hyperpage{234}
+  \item {AND\_WHEN}
+    \subitem {doctest.h}, \hyperpage{234}
+  \item {applyCommandLine}
+    \subitem {doctest::Context}, \hyperpage{69}
+  \item {Approx}
+    \subitem {doctest::Approx}, \hyperpage{53}
+  \item {assert\_handler}
+    \subitem {doctest::detail}, \hyperpage{40}
+  \item {AssertData}
+    \subitem {doctest::AssertData}, \hyperpage{56}
+  \item {AssertFailure}
+    \subitem {doctest::TestCaseFailureReason}, \hyperpage{46}
+  \item {assertString}
+    \subitem {doctest}, \hyperpage{27}
+  \item {Atuador}, \hyperpage{58}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Atuador}, \hyperpage{59}
+    \subitem {Atuador}, \hyperpage{59}
+    \subitem {Tipo}, \hyperpage{60}
   \item {AtualizarAlarme}
-    \subitem {Alarme}, \hyperpage{12}
+    \subitem {Alarme}, \hyperpage{51}
   \item {AtualizarAlarmes}
-    \subitem {Conjunto}, \hyperpage{15}
-    \subitem {Equipamento}, \hyperpage{20}
-    \subitem {LinhaDeProducao}, \hyperpage{24}
+    \subitem {Conjunto}, \hyperpage{63}
+    \subitem {Equipamento}, \hyperpage{89}
+    \subitem {LinhaDeProducao}, \hyperpage{124}
 
   \indexspace
 
+  \item {binary\_assert}
+    \subitem {doctest::detail}, \hyperpage{40}
+    \subitem {doctest::detail::ResultBuilder}, \hyperpage{150}
+  \item {binary\_name}
+    \subitem {doctest::ContextOptions}, \hyperpage{72}
+  \item {Blue}
+    \subitem {doctest::Color}, \hyperpage{37}
+  \item {Bright}
+    \subitem {doctest::Color}, \hyperpage{37}
+  \item {BrightGreen}
+    \subitem {doctest::Color}, \hyperpage{37}
+  \item {BrightRed}
+    \subitem {doctest::Color}, \hyperpage{37}
+  \item {BrightWhite}
+    \subitem {doctest::Color}, \hyperpage{37}
+  \item {buf}
+    \subitem {doctest::String}, \hyperpage{165}
+
+  \indexspace
+
+  \item {c\_str}
+    \subitem {doctest::AssertData::StringContains}, \hyperpage{166}
+    \subitem {doctest::String}, \hyperpage{163}
+  \item {capacity}
+    \subitem {doctest::String}, \hyperpage{163}
+  \item {CAPTURE}
+    \subitem {doctest.h}, \hyperpage{234}
   \item {Cargo}
-    \subitem {Cargo.hpp}, \hyperpage{44}
+    \subitem {Cargo.hpp}, \hyperpage{190}
   \item {Cargo.hpp}
-    \subitem {ADMIN}, \hyperpage{44}
-    \subitem {Cargo}, \hyperpage{44}
-    \subitem {ENGENHEIRO}, \hyperpage{44}
-    \subitem {TECNICO}, \hyperpage{44}
+    \subitem {ADMIN}, \hyperpage{191}
+    \subitem {Cargo}, \hyperpage{190}
+    \subitem {ENGENHEIRO}, \hyperpage{191}
+    \subitem {TECNICO}, \hyperpage{191}
   \item {CarregarSave}
-    \subitem {Sistema}, \hyperpage{37}
+    \subitem {Sistema}, \hyperpage{157}
   \item {CarregarUltimoSave}
-    \subitem {Sistema}, \hyperpage{37}
-  \item {Conjunto}, \hyperpage{13}
-    \subitem {AdicionarEquipamento}, \hyperpage{14}
-    \subitem {AtualizarAlarmes}, \hyperpage{15}
-    \subitem {Conjunto}, \hyperpage{14}
-    \subitem {DiagnosticarConjunto}, \hyperpage{15}
-    \subitem {ExibirAlarmes}, \hyperpage{15}
-    \subitem {ExibirEquipamentos}, \hyperpage{15}
-    \subitem {ExibirTudo}, \hyperpage{15}
-    \subitem {GetDesc}, \hyperpage{16}
-    \subitem {GetEquipamentos}, \hyperpage{16}
-    \subitem {GetId}, \hyperpage{16}
-    \subitem {GetNome}, \hyperpage{16}
-    \subitem {QuantidadeAlarmes}, \hyperpage{16}
-    \subitem {QuantidadeEquipamentos}, \hyperpage{17}
-    \subitem {RemoverEquipamento}, \hyperpage{17}
-    \subitem {SetDesc}, \hyperpage{17}
-    \subitem {SetNome}, \hyperpage{17}
+    \subitem {Sistema}, \hyperpage{157}
+  \item {case\_sensitive}
+    \subitem {doctest::ContextOptions}, \hyperpage{72}
+  \item {CHECK}
+    \subitem {doctest.h}, \hyperpage{234}
+  \item {check}
+    \subitem {doctest::AssertData::StringContains}, \hyperpage{166}
+  \item {CHECK\_EQ}
+    \subitem {doctest.h}, \hyperpage{234}
+  \item {CHECK\_FALSE}
+    \subitem {doctest.h}, \hyperpage{235}
+  \item {CHECK\_FALSE\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{235}
+  \item {CHECK\_GE}
+    \subitem {doctest.h}, \hyperpage{235}
+  \item {CHECK\_GT}
+    \subitem {doctest.h}, \hyperpage{235}
+  \item {CHECK\_LE}
+    \subitem {doctest.h}, \hyperpage{235}
+  \item {CHECK\_LT}
+    \subitem {doctest.h}, \hyperpage{236}
+  \item {CHECK\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{236}
+  \item {CHECK\_NE}
+    \subitem {doctest.h}, \hyperpage{236}
+  \item {CHECK\_NOTHROW}
+    \subitem {doctest.h}, \hyperpage{236}
+  \item {CHECK\_NOTHROW\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{236}
+  \item {CHECK\_THROWS}
+    \subitem {doctest.h}, \hyperpage{237}
+  \item {CHECK\_THROWS\_AS}
+    \subitem {doctest.h}, \hyperpage{237}
+  \item {CHECK\_THROWS\_AS\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{237}
+  \item {CHECK\_THROWS\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{237}
+  \item {CHECK\_THROWS\_WITH}
+    \subitem {doctest.h}, \hyperpage{237}
+  \item {CHECK\_THROWS\_WITH\_AS}
+    \subitem {doctest.h}, \hyperpage{238}
+  \item {CHECK\_THROWS\_WITH\_AS\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{238}
+  \item {CHECK\_THROWS\_WITH\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{238}
+  \item {CHECK\_UNARY}
+    \subitem {doctest.h}, \hyperpage{238}
+  \item {CHECK\_UNARY\_FALSE}
+    \subitem {doctest.h}, \hyperpage{239}
+  \item {checkIfShouldThrow}
+    \subitem {doctest::detail}, \hyperpage{41}
+  \item {checkWith}
+    \subitem {doctest::Contains}, \hyperpage{68}
+  \item {clearFilters}
+    \subitem {doctest::Context}, \hyperpage{69}
+  \item {compare}
+    \subitem {doctest::String}, \hyperpage{163}
+  \item {Conjunto}, \hyperpage{61}
+    \subitem {AcessarEquipamento}, \hyperpage{62}
+    \subitem {AdicionarEquipamento}, \hyperpage{62, 63}
+    \subitem {AtualizarAlarmes}, \hyperpage{63}
+    \subitem {Conjunto}, \hyperpage{62}
+    \subitem {DiagnosticarConjunto}, \hyperpage{63}
+    \subitem {ExibirAlarmes}, \hyperpage{64}
+    \subitem {ExibirEquipamentos}, \hyperpage{64}
+    \subitem {ExibirTudo}, \hyperpage{64}
+    \subitem {GetDesc}, \hyperpage{64}
+    \subitem {GetEquipamentos}, \hyperpage{65}
+    \subitem {GetId}, \hyperpage{65}
+    \subitem {GetNome}, \hyperpage{65}
+    \subitem {ProximoIdEquipamento}, \hyperpage{65}
+    \subitem {QuantidadeAlarmes}, \hyperpage{65}
+    \subitem {QuantidadeEquipamentos}, \hyperpage{66}
+    \subitem {RemoverEquipamento}, \hyperpage{66}
+    \subitem {SetDesc}, \hyperpage{66}
+    \subitem {SetNome}, \hyperpage{67}
+  \item {Contains}
+    \subitem {doctest::Contains}, \hyperpage{68}
+  \item {Context}
+    \subitem {doctest::Context}, \hyperpage{69}
+  \item {ContextScope}
+    \subitem {doctest::detail::ContextScope$<$ L $>$}, \hyperpage{78}
+  \item {ContextScopeBase}
+    \subitem {doctest::detail::ContextScopeBase}, \hyperpage{80}
+  \item {convert}
+    \subitem {doctest::detail::StringMakerBase$<$ C $>$}, 
+		\hyperpage{168}
+    \subitem {doctest::detail::StringMakerBase$<$ true $>$}, 
+		\hyperpage{169}
+  \item {CouldHaveFailedAndDid}
+    \subitem {doctest::TestCaseFailureReason}, \hyperpage{46}
+  \item {count}
+    \subitem {doctest::ContextOptions}, \hyperpage{72}
+  \item {cout}
+    \subitem {doctest::ContextOptions}, \hyperpage{72}
+  \item {Crash}
+    \subitem {doctest::TestCaseFailureReason}, \hyperpage{46}
+  \item {currentTest}
+    \subitem {doctest::ContextOptions}, \hyperpage{72}
+  \item {Cyan}
+    \subitem {doctest::Color}, \hyperpage{37}
 
   \indexspace
 
+  \item {data}
+    \subitem {doctest::QueryData}, \hyperpage{143}
+    \subitem {doctest::String}, \hyperpage{165}
+  \item {declval}
+    \subitem {doctest::detail}, \hyperpage{41}
+  \item {decomp\_assert}
+    \subitem {doctest::detail}, \hyperpage{41}
+  \item {Dependencia}, \hyperpage{83}
+    \subitem {Dependencia}, \hyperpage{83}
+    \subitem {Get\_Condicao}, \hyperpage{83}
+    \subitem {Get\_Id}, \hyperpage{83}
+    \subitem {Get\_Resultado}, \hyperpage{84}
+  \item {design Directory Reference}, \hyperpage{23}
+  \item {design/notas-\/C6.md}, \hyperpage{189}
+  \item {design/notas-\/C7.md}, \hyperpage{189}
+  \item {destroy}
+    \subitem {doctest::detail::ContextScopeBase}, \hyperpage{80}
   \item {DiagnosticarConjunto}
-    \subitem {Conjunto}, \hyperpage{15}
+    \subitem {Conjunto}, \hyperpage{63}
   \item {DiagnosticarEquipamento}
-    \subitem {Equipamento}, \hyperpage{20}
+    \subitem {Equipamento}, \hyperpage{89}
   \item {DiagnosticarLinha}
-    \subitem {LinhaDeProducao}, \hyperpage{24}
+    \subitem {LinhaDeProducao}, \hyperpage{124}
   \item {DiagnosticarParametro}
-    \subitem {Parametro}, \hyperpage{31}
+    \subitem {Parametro}, \hyperpage{138}
+  \item {DidntFailExactlyNumTimes}
+    \subitem {doctest::TestCaseFailureReason}, \hyperpage{46}
+  \item {doctest}, \hyperpage{25}
+    \subitem {assertString}, \hyperpage{27}
+    \subitem {DOCTEST\_DEFINE\_DECORATOR}, \hyperpage{27, 28}
+    \subitem {failureString}, \hyperpage{28}
+    \subitem {getContextOptions}, \hyperpage{28}
+    \subitem {is\_running\_in\_test}, \hyperpage{34}
+    \subitem {IsNaN$<$ double $>$}, \hyperpage{34}
+    \subitem {IsNaN$<$ float $>$}, \hyperpage{34}
+    \subitem {IsNaN$<$ long double $>$}, \hyperpage{34}
+    \subitem {operator!=}, \hyperpage{29}
+    \subitem {operator$<$}, \hyperpage{29}
+    \subitem {operator$<$=}, \hyperpage{29}
+    \subitem {operator$>$}, \hyperpage{30}
+    \subitem {operator$>$=}, \hyperpage{30}
+    \subitem {operator+}, \hyperpage{29}
+    \subitem {operator==}, \hyperpage{29, 30}
+    \subitem {registerExceptionTranslator}, \hyperpage{30}
+    \subitem {registerReporter}, \hyperpage{30}
+    \subitem {size\_t}, \hyperpage{27}
+    \subitem {skipPathFromFilename}, \hyperpage{30}
+    \subitem {TestCaseData}, \hyperpage{34}
+    \subitem {toString}, \hyperpage{30--33}
+  \item {doctest.h}
+    \subitem {ADD\_FAIL\_AT}, \hyperpage{233}
+    \subitem {ADD\_FAIL\_CHECK\_AT}, \hyperpage{233}
+    \subitem {ADD\_MESSAGE\_AT}, \hyperpage{233}
+    \subitem {AND\_GIVEN}, \hyperpage{233}
+    \subitem {AND\_THEN}, \hyperpage{234}
+    \subitem {AND\_WHEN}, \hyperpage{234}
+    \subitem {CAPTURE}, \hyperpage{234}
+    \subitem {CHECK}, \hyperpage{234}
+    \subitem {CHECK\_EQ}, \hyperpage{234}
+    \subitem {CHECK\_FALSE}, \hyperpage{235}
+    \subitem {CHECK\_FALSE\_MESSAGE}, \hyperpage{235}
+    \subitem {CHECK\_GE}, \hyperpage{235}
+    \subitem {CHECK\_GT}, \hyperpage{235}
+    \subitem {CHECK\_LE}, \hyperpage{235}
+    \subitem {CHECK\_LT}, \hyperpage{236}
+    \subitem {CHECK\_MESSAGE}, \hyperpage{236}
+    \subitem {CHECK\_NE}, \hyperpage{236}
+    \subitem {CHECK\_NOTHROW}, \hyperpage{236}
+    \subitem {CHECK\_NOTHROW\_MESSAGE}, \hyperpage{236}
+    \subitem {CHECK\_THROWS}, \hyperpage{237}
+    \subitem {CHECK\_THROWS\_AS}, \hyperpage{237}
+    \subitem {CHECK\_THROWS\_AS\_MESSAGE}, \hyperpage{237}
+    \subitem {CHECK\_THROWS\_MESSAGE}, \hyperpage{237}
+    \subitem {CHECK\_THROWS\_WITH}, \hyperpage{237}
+    \subitem {CHECK\_THROWS\_WITH\_AS}, \hyperpage{238}
+    \subitem {CHECK\_THROWS\_WITH\_AS\_MESSAGE}, \hyperpage{238}
+    \subitem {CHECK\_THROWS\_WITH\_MESSAGE}, \hyperpage{238}
+    \subitem {CHECK\_UNARY}, \hyperpage{238}
+    \subitem {CHECK\_UNARY\_FALSE}, \hyperpage{239}
+    \subitem {DOCTEST\_ADD\_AT\_IMPL}, \hyperpage{239}
+    \subitem {DOCTEST\_ADD\_FAIL\_AT}, \hyperpage{239}
+    \subitem {DOCTEST\_ADD\_FAIL\_CHECK\_AT}, \hyperpage{239}
+    \subitem {DOCTEST\_ADD\_MESSAGE\_AT}, \hyperpage{240}
+    \subitem {DOCTEST\_ALIGNMENT}, \hyperpage{240}
+    \subitem {DOCTEST\_AND\_GIVEN}, \hyperpage{240}
+    \subitem {DOCTEST\_AND\_THEN}, \hyperpage{240}
+    \subitem {DOCTEST\_AND\_WHEN}, \hyperpage{240}
+    \subitem {DOCTEST\_ANONYMOUS}, \hyperpage{241}
+    \subitem {DOCTEST\_ASSERT\_IMPLEMENT\_1}, \hyperpage{241}
+    \subitem {DOCTEST\_ASSERT\_IMPLEMENT\_2}, \hyperpage{241}
+    \subitem {DOCTEST\_ASSERT\_IN\_TESTS}, \hyperpage{241}
+    \subitem {DOCTEST\_ASSERT\_LOG\_REACT\_RETURN}, \hyperpage{242}
+    \subitem {DOCTEST\_ASSERT\_OUT\_OF\_TESTS}, \hyperpage{242}
+    \subitem {DOCTEST\_BINARY\_ASSERT}, \hyperpage{242}
+    \subitem {DOCTEST\_BINARY\_RELATIONAL\_OP}, \hyperpage{243}
+    \subitem {DOCTEST\_BREAK\_INTO\_DEBUGGER}, \hyperpage{243}
+    \subitem {DOCTEST\_CAPTURE}, \hyperpage{243}
+    \subitem {DOCTEST\_CAST\_TO\_VOID}, \hyperpage{243}
+    \subitem {DOCTEST\_CAT}, \hyperpage{244}
+    \subitem {DOCTEST\_CAT\_IMPL}, \hyperpage{244}
+    \subitem {DOCTEST\_CHECK}, \hyperpage{244}
+    \subitem {DOCTEST\_CHECK\_EQ}, \hyperpage{244}
+    \subitem {DOCTEST\_CHECK\_FALSE}, \hyperpage{244}
+    \subitem {DOCTEST\_CHECK\_FALSE\_MESSAGE}, \hyperpage{245}
+    \subitem {DOCTEST\_CHECK\_GE}, \hyperpage{245}
+    \subitem {DOCTEST\_CHECK\_GT}, \hyperpage{245}
+    \subitem {DOCTEST\_CHECK\_LE}, \hyperpage{245}
+    \subitem {DOCTEST\_CHECK\_LT}, \hyperpage{245}
+    \subitem {DOCTEST\_CHECK\_MESSAGE}, \hyperpage{246}
+    \subitem {DOCTEST\_CHECK\_NE}, \hyperpage{246}
+    \subitem {DOCTEST\_CHECK\_NOTHROW}, \hyperpage{246}
+    \subitem {DOCTEST\_CHECK\_NOTHROW\_MESSAGE}, \hyperpage{246}
+    \subitem {DOCTEST\_CHECK\_THROWS}, \hyperpage{246}
+    \subitem {DOCTEST\_CHECK\_THROWS\_AS}, \hyperpage{247}
+    \subitem {DOCTEST\_CHECK\_THROWS\_AS\_MESSAGE}, \hyperpage{247}
+    \subitem {DOCTEST\_CHECK\_THROWS\_MESSAGE}, \hyperpage{247}
+    \subitem {DOCTEST\_CHECK\_THROWS\_WITH}, \hyperpage{247}
+    \subitem {DOCTEST\_CHECK\_THROWS\_WITH\_AS}, \hyperpage{247}
+    \subitem {DOCTEST\_CHECK\_THROWS\_WITH\_AS\_MESSAGE}, 
+		\hyperpage{248}
+    \subitem {DOCTEST\_CHECK\_THROWS\_WITH\_MESSAGE}, \hyperpage{248}
+    \subitem {DOCTEST\_CHECK\_UNARY}, \hyperpage{248}
+    \subitem {DOCTEST\_CHECK\_UNARY\_FALSE}, \hyperpage{248}
+    \subitem {DOCTEST\_CLANG}, \hyperpage{249}
+    \subitem {DOCTEST\_CLANG\_SUPPRESS\_WARNING}, \hyperpage{249}
+    \subitem {DOCTEST\_CLANG\_SUPPRESS\_WARNING\_POP}, \hyperpage{249}
+    \subitem {DOCTEST\_CLANG\_SUPPRESS\_WARNING\_PUSH}, \hyperpage{249}
+    \subitem {DOCTEST\_CLANG\_SUPPRESS\_WARNING\_WITH\_PUSH}, 
+		\hyperpage{249}
+    \subitem {DOCTEST\_CMP\_EQ}, \hyperpage{249}
+    \subitem {DOCTEST\_CMP\_GE}, \hyperpage{249}
+    \subitem {DOCTEST\_CMP\_GT}, \hyperpage{250}
+    \subitem {DOCTEST\_CMP\_LE}, \hyperpage{250}
+    \subitem {DOCTEST\_CMP\_LT}, \hyperpage{250}
+    \subitem {DOCTEST\_CMP\_NE}, \hyperpage{250}
+    \subitem {DOCTEST\_COMPARISON\_RETURN\_TYPE}, \hyperpage{250}
+    \subitem {DOCTEST\_COMPILER}, \hyperpage{251}
+    \subitem {DOCTEST\_CONFIG\_NO\_EXCEPTIONS}, \hyperpage{251}
+    \subitem {DOCTEST\_CONFIG\_NO\_TRY\_CATCH\_IN\_ASSERTS}, 
+		\hyperpage{251}
+    \subitem {DOCTEST\_CONFIG\_POSIX\_SIGNALS}, \hyperpage{251}
+    \subitem {DOCTEST\_CONFIG\_STRING\_SIZE\_TYPE}, \hyperpage{251}
+    \subitem {DOCTEST\_CONSTEXPR}, \hyperpage{251}
+    \subitem {DOCTEST\_CONSTEXPR\_FUNC}, \hyperpage{251}
+    \subitem {DOCTEST\_COUNTER}, \hyperpage{252}
+    \subitem {DOCTEST\_CPLUSPLUS}, \hyperpage{252}
+    \subitem {DOCTEST\_CREATE\_AND\_REGISTER\_FUNCTION}, 
+		\hyperpage{252}
+    \subitem {DOCTEST\_CREATE\_AND\_REGISTER\_FUNCTION\_IN\_CLASS}, 
+		\hyperpage{252}
+    \subitem {DOCTEST\_DECLARE\_INTERFACE}, \hyperpage{252}
+    \subitem {DOCTEST\_DEFINE\_DECORATOR}, \hyperpage{253}
+    \subitem {DOCTEST\_DEFINE\_INTERFACE}, \hyperpage{253}
+    \subitem {DOCTEST\_DO\_BINARY\_EXPRESSION\_COMPARISON}, 
+		\hyperpage{253}
+    \subitem {DOCTEST\_EMPTY}, \hyperpage{254}
+    \subitem {DOCTEST\_EXCEPTION\_EMPTY\_FUNC}, \hyperpage{254}
+    \subitem {DOCTEST\_FAIL}, \hyperpage{254}
+    \subitem {DOCTEST\_FAIL\_CHECK}, \hyperpage{255}
+    \subitem {DOCTEST\_FAST\_CHECK\_EQ}, \hyperpage{255}
+    \subitem {DOCTEST\_FAST\_CHECK\_GE}, \hyperpage{255}
+    \subitem {DOCTEST\_FAST\_CHECK\_GT}, \hyperpage{255}
+    \subitem {DOCTEST\_FAST\_CHECK\_LE}, \hyperpage{255}
+    \subitem {DOCTEST\_FAST\_CHECK\_LT}, \hyperpage{255}
+    \subitem {DOCTEST\_FAST\_CHECK\_NE}, \hyperpage{255}
+    \subitem {DOCTEST\_FAST\_CHECK\_UNARY}, \hyperpage{256}
+    \subitem {DOCTEST\_FAST\_CHECK\_UNARY\_FALSE}, \hyperpage{256}
+    \subitem {DOCTEST\_FAST\_REQUIRE\_EQ}, \hyperpage{256}
+    \subitem {DOCTEST\_FAST\_REQUIRE\_GE}, \hyperpage{256}
+    \subitem {DOCTEST\_FAST\_REQUIRE\_GT}, \hyperpage{256}
+    \subitem {DOCTEST\_FAST\_REQUIRE\_LE}, \hyperpage{256}
+    \subitem {DOCTEST\_FAST\_REQUIRE\_LT}, \hyperpage{256}
+    \subitem {DOCTEST\_FAST\_REQUIRE\_NE}, \hyperpage{256}
+    \subitem {DOCTEST\_FAST\_REQUIRE\_UNARY}, \hyperpage{257}
+    \subitem {DOCTEST\_FAST\_REQUIRE\_UNARY\_FALSE}, \hyperpage{257}
+    \subitem {DOCTEST\_FAST\_WARN\_EQ}, \hyperpage{257}
+    \subitem {DOCTEST\_FAST\_WARN\_GE}, \hyperpage{257}
+    \subitem {DOCTEST\_FAST\_WARN\_GT}, \hyperpage{257}
+    \subitem {DOCTEST\_FAST\_WARN\_LE}, \hyperpage{257}
+    \subitem {DOCTEST\_FAST\_WARN\_LT}, \hyperpage{257}
+    \subitem {DOCTEST\_FAST\_WARN\_NE}, \hyperpage{257}
+    \subitem {DOCTEST\_FAST\_WARN\_UNARY}, \hyperpage{258}
+    \subitem {DOCTEST\_FAST\_WARN\_UNARY\_FALSE}, \hyperpage{258}
+    \subitem {DOCTEST\_FORBIT\_EXPRESSION}, \hyperpage{258}
+    \subitem {DOCTEST\_FUNC\_EMPTY}, \hyperpage{258}
+    \subitem {DOCTEST\_FUNC\_SCOPE\_BEGIN}, \hyperpage{258}
+    \subitem {DOCTEST\_FUNC\_SCOPE\_END}, \hyperpage{258}
+    \subitem {DOCTEST\_FUNC\_SCOPE\_RET}, \hyperpage{259}
+    \subitem {DOCTEST\_GCC}, \hyperpage{259}
+    \subitem {DOCTEST\_GCC\_SUPPRESS\_WARNING}, \hyperpage{259}
+    \subitem {DOCTEST\_GCC\_SUPPRESS\_WARNING\_POP}, \hyperpage{259}
+    \subitem {DOCTEST\_GCC\_SUPPRESS\_WARNING\_PUSH}, \hyperpage{259}
+    \subitem {DOCTEST\_GCC\_SUPPRESS\_WARNING\_WITH\_PUSH}, 
+		\hyperpage{259}
+    \subitem {DOCTEST\_GENERATE}, \hyperpage{259}
+    \subitem {DOCTEST\_GIVEN}, \hyperpage{260}
+    \subitem {DOCTEST\_GLOBAL\_NO\_WARNINGS}, \hyperpage{260}
+    \subitem {DOCTEST\_HAS\_BUILTIN}, \hyperpage{260}
+    \subitem {DOCTEST\_ICC}, \hyperpage{260}
+    \subitem {DOCTEST\_IMPLEMENT\_FIXTURE}, \hyperpage{260}
+    \subitem {DOCTEST\_INFO}, \hyperpage{261}
+    \subitem {DOCTEST\_INFO\_IMPL}, \hyperpage{261}
+    \subitem {DOCTEST\_INLINE\_NOINLINE}, \hyperpage{261}
+    \subitem {DOCTEST\_INTERFACE}, \hyperpage{262}
+    \subitem {DOCTEST\_INTERFACE\_DECL}, \hyperpage{262}
+    \subitem {DOCTEST\_INTERFACE\_DEF}, \hyperpage{262}
+    \subitem {DOCTEST\_MAKE\_STD\_HEADERS\_CLEAN\_FROM\_WARNINGS\_ON\_WALL\_BEGIN}, 
+		\hyperpage{262}
+    \subitem {DOCTEST\_MAKE\_STD\_HEADERS\_CLEAN\_FROM\_WARNINGS\_ON\_WALL\_END}, 
+		\hyperpage{262}
+    \subitem {DOCTEST\_MESSAGE}, \hyperpage{263}
+    \subitem {DOCTEST\_MSVC}, \hyperpage{263}
+    \subitem {DOCTEST\_MSVC\_SUPPRESS\_WARNING}, \hyperpage{263}
+    \subitem {DOCTEST\_MSVC\_SUPPRESS\_WARNING\_POP}, \hyperpage{263}
+    \subitem {DOCTEST\_MSVC\_SUPPRESS\_WARNING\_PUSH}, \hyperpage{263}
+    \subitem {DOCTEST\_MSVC\_SUPPRESS\_WARNING\_WITH\_PUSH}, 
+		\hyperpage{263}
+    \subitem {DOCTEST\_NO\_SANITIZE\_INTEGER}, \hyperpage{263}
+    \subitem {DOCTEST\_NOEXCEPT}, \hyperpage{264}
+    \subitem {DOCTEST\_NOINLINE}, \hyperpage{264}
+    \subitem {DOCTEST\_NORETURN}, \hyperpage{264}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_ASSERT\_COMPARATOR}, 
+		\hyperpage{264}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_ASSERT\_DATA}, \hyperpage{264}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_ASSERT\_EXPRESSION}, 
+		\hyperpage{264}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_ASSERT\_HANDLER}, \hyperpage{264}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_ASSERT\_MESSAGE}, \hyperpage{264}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_ASSERT\_RESULT}, \hyperpage{265}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_ASSERT\_TYPE}, \hyperpage{265}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_COLOR}, \hyperpage{265}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_COMPILER}, \hyperpage{265}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_CONFIG}, \hyperpage{265}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_CONTEXT}, \hyperpage{265}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_CONTEXT\_OPTIONS}, 
+		\hyperpage{265}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_CONTEXT\_SCOPE}, \hyperpage{265}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_DEBUGGER}, \hyperpage{266}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_DECORATORS}, \hyperpage{266}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_EXCEPTION\_TRANSLATOR}, 
+		\hyperpage{266}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_EXCEPTIONS}, \hyperpage{266}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_GENERATOR}, \hyperpage{266}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_MACROS}, \hyperpage{266}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_MATCHERS\_APPROX}, 
+		\hyperpage{266}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_MATCHERS\_CONTAINS}, 
+		\hyperpage{266}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_MATCHERS\_IS\_NAN}, 
+		\hyperpage{267}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_PATH}, \hyperpage{267}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_PLATFORM}, \hyperpage{267}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_REPORTER}, \hyperpage{267}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_STD\_FWD}, \hyperpage{267}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_STD\_TYPE\_TRAITS}, 
+		\hyperpage{267}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_STD\_UTILITY}, \hyperpage{267}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_STRING}, \hyperpage{267}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_SUBCASE}, \hyperpage{268}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_TEST\_CASE}, \hyperpage{268}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_TEST\_SUITE}, \hyperpage{268}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_UTILITY}, \hyperpage{268}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_VERSION}, \hyperpage{268}
+    \subitem {DOCTEST\_PARTS\_PUBLIC\_WARNINGS}, \hyperpage{268}
+    \subitem {DOCTEST\_PLATFORM\_LINUX}, \hyperpage{268}
+    \subitem {DOCTEST\_REF\_WRAP}, \hyperpage{268}
+    \subitem {DOCTEST\_REGISTER\_EXCEPTION\_TRANSLATOR}, 
+		\hyperpage{269}
+    \subitem {DOCTEST\_REGISTER\_EXCEPTION\_TRANSLATOR\_IMPL}, 
+		\hyperpage{269}
+    \subitem {DOCTEST\_REGISTER\_FUNCTION}, \hyperpage{269}
+    \subitem {DOCTEST\_REGISTER\_LISTENER}, \hyperpage{269}
+    \subitem {DOCTEST\_REGISTER\_REPORTER}, \hyperpage{270}
+    \subitem {DOCTEST\_RELATIONAL\_OP}, \hyperpage{270}
+    \subitem {DOCTEST\_REQUIRE}, \hyperpage{270}
+    \subitem {DOCTEST\_REQUIRE\_EQ}, \hyperpage{271}
+    \subitem {DOCTEST\_REQUIRE\_FALSE}, \hyperpage{271}
+    \subitem {DOCTEST\_REQUIRE\_FALSE\_MESSAGE}, \hyperpage{271}
+    \subitem {DOCTEST\_REQUIRE\_GE}, \hyperpage{272}
+    \subitem {DOCTEST\_REQUIRE\_GT}, \hyperpage{272}
+    \subitem {DOCTEST\_REQUIRE\_LE}, \hyperpage{272}
+    \subitem {DOCTEST\_REQUIRE\_LT}, \hyperpage{273}
+    \subitem {DOCTEST\_REQUIRE\_MESSAGE}, \hyperpage{273}
+    \subitem {DOCTEST\_REQUIRE\_NE}, \hyperpage{273}
+    \subitem {DOCTEST\_REQUIRE\_NOTHROW}, \hyperpage{274}
+    \subitem {DOCTEST\_REQUIRE\_NOTHROW\_MESSAGE}, \hyperpage{274}
+    \subitem {DOCTEST\_REQUIRE\_THROWS}, \hyperpage{274}
+    \subitem {DOCTEST\_REQUIRE\_THROWS\_AS}, \hyperpage{274}
+    \subitem {DOCTEST\_REQUIRE\_THROWS\_AS\_MESSAGE}, \hyperpage{274}
+    \subitem {DOCTEST\_REQUIRE\_THROWS\_MESSAGE}, \hyperpage{275}
+    \subitem {DOCTEST\_REQUIRE\_THROWS\_WITH}, \hyperpage{275}
+    \subitem {DOCTEST\_REQUIRE\_THROWS\_WITH\_AS}, \hyperpage{275}
+    \subitem {DOCTEST\_REQUIRE\_THROWS\_WITH\_AS\_MESSAGE}, 
+		\hyperpage{275}
+    \subitem {DOCTEST\_REQUIRE\_THROWS\_WITH\_MESSAGE}, \hyperpage{276}
+    \subitem {DOCTEST\_REQUIRE\_UNARY}, \hyperpage{276}
+    \subitem {DOCTEST\_REQUIRE\_UNARY\_FALSE}, \hyperpage{276}
+    \subitem {DOCTEST\_SCENARIO}, \hyperpage{277}
+    \subitem {DOCTEST\_SCENARIO\_CLASS}, \hyperpage{277}
+    \subitem {DOCTEST\_SCENARIO\_METHOD}, \hyperpage{277}
+    \subitem {DOCTEST\_SCENARIO\_TEMPLATE}, \hyperpage{277}
+    \subitem {DOCTEST\_SCENARIO\_TEMPLATE\_DEFINE}, \hyperpage{277}
+    \subitem {DOCTEST\_STRINGIFY}, \hyperpage{278}
+    \subitem {DOCTEST\_SUBCASE}, \hyperpage{278}
+    \subitem {DOCTEST\_SUPPRESS\_COMMON\_WARNINGS\_POP}, 
+		\hyperpage{278}
+    \subitem {DOCTEST\_SUPPRESS\_COMMON\_WARNINGS\_PUSH}, 
+		\hyperpage{278}
+    \subitem {DOCTEST\_SUPPRESS\_PRIVATE\_WARNINGS\_POP}, 
+		\hyperpage{278}
+    \subitem {DOCTEST\_SUPPRESS\_PRIVATE\_WARNINGS\_PUSH}, 
+		\hyperpage{279}
+    \subitem {DOCTEST\_SUPPRESS\_PUBLIC\_WARNINGS\_POP}, 
+		\hyperpage{279}
+    \subitem {DOCTEST\_SUPPRESS\_PUBLIC\_WARNINGS\_PUSH}, 
+		\hyperpage{279}
+    \subitem {DOCTEST\_SYMBOL\_EXPORT}, \hyperpage{279}
+    \subitem {DOCTEST\_SYMBOL\_IMPORT}, \hyperpage{279}
+    \subitem {DOCTEST\_TEST\_CASE}, \hyperpage{279}
+    \subitem {DOCTEST\_TEST\_CASE\_CLASS}, \hyperpage{280}
+    \subitem {DOCTEST\_TEST\_CASE\_FIXTURE}, \hyperpage{280}
+    \subitem {DOCTEST\_TEST\_CASE\_TEMPLATE}, \hyperpage{280}
+    \subitem {DOCTEST\_TEST\_CASE\_TEMPLATE\_APPLY}, \hyperpage{280}
+    \subitem {DOCTEST\_TEST\_CASE\_TEMPLATE\_DEFINE}, \hyperpage{280}
+    \subitem {DOCTEST\_TEST\_CASE\_TEMPLATE\_DEFINE\_IMPL}, 
+		\hyperpage{281}
+    \subitem {DOCTEST\_TEST\_CASE\_TEMPLATE\_IMPL}, \hyperpage{282}
+    \subitem {DOCTEST\_TEST\_CASE\_TEMPLATE\_INSTANTIATE}, 
+		\hyperpage{282}
+    \subitem {DOCTEST\_TEST\_CASE\_TEMPLATE\_INSTANTIATE\_IMPL}, 
+		\hyperpage{282}
+    \subitem {DOCTEST\_TEST\_CASE\_TEMPLATE\_INVOKE}, \hyperpage{282}
+    \subitem {DOCTEST\_TEST\_SUITE}, \hyperpage{283}
+    \subitem {DOCTEST\_TEST\_SUITE\_BEGIN}, \hyperpage{283}
+    \subitem {DOCTEST\_TEST\_SUITE\_END}, \hyperpage{283}
+    \subitem {DOCTEST\_TEST\_SUITE\_IMPL}, \hyperpage{283}
+    \subitem {DOCTEST\_THEN}, \hyperpage{284}
+    \subitem {DOCTEST\_TO\_LVALUE}, \hyperpage{284}
+    \subitem {DOCTEST\_TOSTR}, \hyperpage{284}
+    \subitem {DOCTEST\_TOSTR\_IMPL}, \hyperpage{285}
+    \subitem {DOCTEST\_TYPE\_TO\_STRING}, \hyperpage{285}
+    \subitem {DOCTEST\_TYPE\_TO\_STRING\_AS}, \hyperpage{285}
+    \subitem {DOCTEST\_UNARY\_ASSERT}, \hyperpage{285}
+    \subitem {DOCTEST\_UNUSED}, \hyperpage{286}
+    \subitem {DOCTEST\_VERSION}, \hyperpage{286}
+    \subitem {DOCTEST\_VERSION\_MAJOR}, \hyperpage{286}
+    \subitem {DOCTEST\_VERSION\_MINOR}, \hyperpage{286}
+    \subitem {DOCTEST\_VERSION\_PATCH}, \hyperpage{286}
+    \subitem {DOCTEST\_VERSION\_STR}, \hyperpage{286}
+    \subitem {DOCTEST\_WARN}, \hyperpage{287}
+    \subitem {DOCTEST\_WARN\_EQ}, \hyperpage{287}
+    \subitem {DOCTEST\_WARN\_FALSE}, \hyperpage{287}
+    \subitem {DOCTEST\_WARN\_FALSE\_MESSAGE}, \hyperpage{287}
+    \subitem {DOCTEST\_WARN\_GE}, \hyperpage{287}
+    \subitem {DOCTEST\_WARN\_GT}, \hyperpage{288}
+    \subitem {DOCTEST\_WARN\_LE}, \hyperpage{288}
+    \subitem {DOCTEST\_WARN\_LT}, \hyperpage{288}
+    \subitem {DOCTEST\_WARN\_MESSAGE}, \hyperpage{288}
+    \subitem {DOCTEST\_WARN\_NE}, \hyperpage{288}
+    \subitem {DOCTEST\_WARN\_NOTHROW}, \hyperpage{289}
+    \subitem {DOCTEST\_WARN\_NOTHROW\_MESSAGE}, \hyperpage{289}
+    \subitem {DOCTEST\_WARN\_THROWS}, \hyperpage{289}
+    \subitem {DOCTEST\_WARN\_THROWS\_AS}, \hyperpage{289}
+    \subitem {DOCTEST\_WARN\_THROWS\_AS\_MESSAGE}, \hyperpage{289}
+    \subitem {DOCTEST\_WARN\_THROWS\_MESSAGE}, \hyperpage{290}
+    \subitem {DOCTEST\_WARN\_THROWS\_WITH}, \hyperpage{290}
+    \subitem {DOCTEST\_WARN\_THROWS\_WITH\_AS}, \hyperpage{290}
+    \subitem {DOCTEST\_WARN\_THROWS\_WITH\_AS\_MESSAGE}, 
+		\hyperpage{290}
+    \subitem {DOCTEST\_WARN\_THROWS\_WITH\_MESSAGE}, \hyperpage{291}
+    \subitem {DOCTEST\_WARN\_UNARY}, \hyperpage{291}
+    \subitem {DOCTEST\_WARN\_UNARY\_FALSE}, \hyperpage{291}
+    \subitem {DOCTEST\_WHEN}, \hyperpage{291}
+    \subitem {DOCTEST\_WRAP\_IN\_TRY}, \hyperpage{291}
+    \subitem {FAIL}, \hyperpage{292}
+    \subitem {FAIL\_CHECK}, \hyperpage{292}
+    \subitem {FAST\_CHECK\_EQ}, \hyperpage{292}
+    \subitem {FAST\_CHECK\_GE}, \hyperpage{292}
+    \subitem {FAST\_CHECK\_GT}, \hyperpage{292}
+    \subitem {FAST\_CHECK\_LE}, \hyperpage{293}
+    \subitem {FAST\_CHECK\_LT}, \hyperpage{293}
+    \subitem {FAST\_CHECK\_NE}, \hyperpage{293}
+    \subitem {FAST\_CHECK\_UNARY}, \hyperpage{293}
+    \subitem {FAST\_CHECK\_UNARY\_FALSE}, \hyperpage{293}
+    \subitem {FAST\_REQUIRE\_EQ}, \hyperpage{294}
+    \subitem {FAST\_REQUIRE\_GE}, \hyperpage{294}
+    \subitem {FAST\_REQUIRE\_GT}, \hyperpage{294}
+    \subitem {FAST\_REQUIRE\_LE}, \hyperpage{294}
+    \subitem {FAST\_REQUIRE\_LT}, \hyperpage{294}
+    \subitem {FAST\_REQUIRE\_NE}, \hyperpage{295}
+    \subitem {FAST\_REQUIRE\_UNARY}, \hyperpage{295}
+    \subitem {FAST\_REQUIRE\_UNARY\_FALSE}, \hyperpage{295}
+    \subitem {FAST\_WARN\_EQ}, \hyperpage{295}
+    \subitem {FAST\_WARN\_GE}, \hyperpage{295}
+    \subitem {FAST\_WARN\_GT}, \hyperpage{296}
+    \subitem {FAST\_WARN\_LE}, \hyperpage{296}
+    \subitem {FAST\_WARN\_LT}, \hyperpage{296}
+    \subitem {FAST\_WARN\_NE}, \hyperpage{296}
+    \subitem {FAST\_WARN\_UNARY}, \hyperpage{296}
+    \subitem {FAST\_WARN\_UNARY\_FALSE}, \hyperpage{297}
+    \subitem {GENERATE}, \hyperpage{297}
+    \subitem {GIVEN}, \hyperpage{297}
+    \subitem {INFO}, \hyperpage{297}
+    \subitem {MESSAGE}, \hyperpage{297}
+    \subitem {REGISTER\_EXCEPTION\_TRANSLATOR}, \hyperpage{298}
+    \subitem {REGISTER\_LISTENER}, \hyperpage{298}
+    \subitem {REGISTER\_REPORTER}, \hyperpage{298}
+    \subitem {REQUIRE}, \hyperpage{298}
+    \subitem {REQUIRE\_EQ}, \hyperpage{298}
+    \subitem {REQUIRE\_FALSE}, \hyperpage{299}
+    \subitem {REQUIRE\_FALSE\_MESSAGE}, \hyperpage{299}
+    \subitem {REQUIRE\_GE}, \hyperpage{299}
+    \subitem {REQUIRE\_GT}, \hyperpage{299}
+    \subitem {REQUIRE\_LE}, \hyperpage{299}
+    \subitem {REQUIRE\_LT}, \hyperpage{300}
+    \subitem {REQUIRE\_MESSAGE}, \hyperpage{300}
+    \subitem {REQUIRE\_NE}, \hyperpage{300}
+    \subitem {REQUIRE\_NOTHROW}, \hyperpage{300}
+    \subitem {REQUIRE\_NOTHROW\_MESSAGE}, \hyperpage{300}
+    \subitem {REQUIRE\_THROWS}, \hyperpage{301}
+    \subitem {REQUIRE\_THROWS\_AS}, \hyperpage{301}
+    \subitem {REQUIRE\_THROWS\_AS\_MESSAGE}, \hyperpage{301}
+    \subitem {REQUIRE\_THROWS\_MESSAGE}, \hyperpage{301}
+    \subitem {REQUIRE\_THROWS\_WITH}, \hyperpage{301}
+    \subitem {REQUIRE\_THROWS\_WITH\_AS}, \hyperpage{302}
+    \subitem {REQUIRE\_THROWS\_WITH\_AS\_MESSAGE}, \hyperpage{302}
+    \subitem {REQUIRE\_THROWS\_WITH\_MESSAGE}, \hyperpage{302}
+    \subitem {REQUIRE\_UNARY}, \hyperpage{302}
+    \subitem {REQUIRE\_UNARY\_FALSE}, \hyperpage{303}
+    \subitem {SCENARIO}, \hyperpage{303}
+    \subitem {SCENARIO\_CLASS}, \hyperpage{303}
+    \subitem {SCENARIO\_METHOD}, \hyperpage{303}
+    \subitem {SCENARIO\_TEMPLATE}, \hyperpage{303}
+    \subitem {SCENARIO\_TEMPLATE\_DEFINE}, \hyperpage{304}
+    \subitem {SFINAE\_OP}, \hyperpage{304}
+    \subitem {SUBCASE}, \hyperpage{304}
+    \subitem {TEST\_CASE}, \hyperpage{304}
+    \subitem {TEST\_CASE\_CLASS}, \hyperpage{304}
+    \subitem {TEST\_CASE\_FIXTURE}, \hyperpage{305}
+    \subitem {TEST\_CASE\_TEMPLATE}, \hyperpage{305}
+    \subitem {TEST\_CASE\_TEMPLATE\_APPLY}, \hyperpage{305}
+    \subitem {TEST\_CASE\_TEMPLATE\_DEFINE}, \hyperpage{305}
+    \subitem {TEST\_CASE\_TEMPLATE\_INSTANTIATE}, \hyperpage{305}
+    \subitem {TEST\_CASE\_TEMPLATE\_INVOKE}, \hyperpage{306}
+    \subitem {TEST\_SUITE}, \hyperpage{306}
+    \subitem {TEST\_SUITE\_BEGIN}, \hyperpage{306}
+    \subitem {TEST\_SUITE\_END}, \hyperpage{306}
+    \subitem {THEN}, \hyperpage{306}
+    \subitem {TO\_LVALUE}, \hyperpage{307}
+    \subitem {TYPE\_TO\_STRING}, \hyperpage{307}
+    \subitem {TYPE\_TO\_STRING\_AS}, \hyperpage{307}
+    \subitem {WARN}, \hyperpage{307}
+    \subitem {WARN\_EQ}, \hyperpage{307}
+    \subitem {WARN\_FALSE}, \hyperpage{308}
+    \subitem {WARN\_FALSE\_MESSAGE}, \hyperpage{308}
+    \subitem {WARN\_GE}, \hyperpage{308}
+    \subitem {WARN\_GT}, \hyperpage{308}
+    \subitem {WARN\_LE}, \hyperpage{308}
+    \subitem {WARN\_LT}, \hyperpage{309}
+    \subitem {WARN\_MESSAGE}, \hyperpage{309}
+    \subitem {WARN\_NE}, \hyperpage{309}
+    \subitem {WARN\_NOTHROW}, \hyperpage{309}
+    \subitem {WARN\_NOTHROW\_MESSAGE}, \hyperpage{309}
+    \subitem {WARN\_THROWS}, \hyperpage{310}
+    \subitem {WARN\_THROWS\_AS}, \hyperpage{310}
+    \subitem {WARN\_THROWS\_AS\_MESSAGE}, \hyperpage{310}
+    \subitem {WARN\_THROWS\_MESSAGE}, \hyperpage{310}
+    \subitem {WARN\_THROWS\_WITH}, \hyperpage{310}
+    \subitem {WARN\_THROWS\_WITH\_AS}, \hyperpage{311}
+    \subitem {WARN\_THROWS\_WITH\_AS\_MESSAGE}, \hyperpage{311}
+    \subitem {WARN\_THROWS\_WITH\_MESSAGE}, \hyperpage{311}
+    \subitem {WARN\_UNARY}, \hyperpage{311}
+    \subitem {WARN\_UNARY\_FALSE}, \hyperpage{312}
+    \subitem {WHEN}, \hyperpage{312}
+  \item {doctest::Approx}, \hyperpage{52}
+    \subitem {Approx}, \hyperpage{53}
+    \subitem {epsilon}, \hyperpage{53}
+    \subitem {m\_epsilon}, \hyperpage{55}
+    \subitem {m\_scale}, \hyperpage{55}
+    \subitem {m\_value}, \hyperpage{55}
+    \subitem {operator!=}, \hyperpage{53}
+    \subitem {operator$<$}, \hyperpage{53, 54}
+    \subitem {operator$<$=}, \hyperpage{54}
+    \subitem {operator$>$}, \hyperpage{54}
+    \subitem {operator$>$=}, \hyperpage{54, 55}
+    \subitem {operator()}, \hyperpage{53}
+    \subitem {operator==}, \hyperpage{54}
+    \subitem {scale}, \hyperpage{53}
+  \item {doctest::AssertData}, \hyperpage{55}
+    \subitem {AssertData}, \hyperpage{56}
+    \subitem {m\_at}, \hyperpage{56}
+    \subitem {m\_decomp}, \hyperpage{56}
+    \subitem {m\_exception}, \hyperpage{57}
+    \subitem {m\_exception\_string}, \hyperpage{57}
+    \subitem {m\_exception\_type}, \hyperpage{57}
+    \subitem {m\_expr}, \hyperpage{57}
+    \subitem {m\_failed}, \hyperpage{57}
+    \subitem {m\_file}, \hyperpage{57}
+    \subitem {m\_line}, \hyperpage{57}
+    \subitem {m\_test\_case}, \hyperpage{57}
+    \subitem {m\_threw}, \hyperpage{58}
+    \subitem {m\_threw\_as}, \hyperpage{58}
+  \item {doctest::AssertData::StringContains}, \hyperpage{165}
+    \subitem {c\_str}, \hyperpage{166}
+    \subitem {check}, \hyperpage{166}
+    \subitem {operator const String \&}, \hyperpage{166}
+    \subitem {StringContains}, \hyperpage{166}
+  \item {doctest::assertType}, \hyperpage{34}
+    \subitem {DT\_CHECK}, \hyperpage{35}
+    \subitem {DT\_CHECK\_EQ}, \hyperpage{36}
+    \subitem {DT\_CHECK\_FALSE}, \hyperpage{36}
+    \subitem {DT\_CHECK\_GE}, \hyperpage{36}
+    \subitem {DT\_CHECK\_GT}, \hyperpage{36}
+    \subitem {DT\_CHECK\_LE}, \hyperpage{36}
+    \subitem {DT\_CHECK\_LT}, \hyperpage{36}
+    \subitem {DT\_CHECK\_NE}, \hyperpage{36}
+    \subitem {DT\_CHECK\_NOTHROW}, \hyperpage{36}
+    \subitem {DT\_CHECK\_THROWS}, \hyperpage{36}
+    \subitem {DT\_CHECK\_THROWS\_AS}, \hyperpage{36}
+    \subitem {DT\_CHECK\_THROWS\_WITH}, \hyperpage{36}
+    \subitem {DT\_CHECK\_THROWS\_WITH\_AS}, \hyperpage{36}
+    \subitem {DT\_CHECK\_UNARY}, \hyperpage{36}
+    \subitem {DT\_CHECK\_UNARY\_FALSE}, \hyperpage{36}
+    \subitem {DT\_REQUIRE}, \hyperpage{35}
+    \subitem {DT\_REQUIRE\_EQ}, \hyperpage{36}
+    \subitem {DT\_REQUIRE\_FALSE}, \hyperpage{36}
+    \subitem {DT\_REQUIRE\_GE}, \hyperpage{36}
+    \subitem {DT\_REQUIRE\_GT}, \hyperpage{36}
+    \subitem {DT\_REQUIRE\_LE}, \hyperpage{36}
+    \subitem {DT\_REQUIRE\_LT}, \hyperpage{36}
+    \subitem {DT\_REQUIRE\_NE}, \hyperpage{36}
+    \subitem {DT\_REQUIRE\_NOTHROW}, \hyperpage{36}
+    \subitem {DT\_REQUIRE\_THROWS}, \hyperpage{36}
+    \subitem {DT\_REQUIRE\_THROWS\_AS}, \hyperpage{36}
+    \subitem {DT\_REQUIRE\_THROWS\_WITH}, \hyperpage{36}
+    \subitem {DT\_REQUIRE\_THROWS\_WITH\_AS}, \hyperpage{36}
+    \subitem {DT\_REQUIRE\_UNARY}, \hyperpage{36}
+    \subitem {DT\_REQUIRE\_UNARY\_FALSE}, \hyperpage{36}
+    \subitem {DT\_WARN}, \hyperpage{35}
+    \subitem {DT\_WARN\_EQ}, \hyperpage{36}
+    \subitem {DT\_WARN\_FALSE}, \hyperpage{35}
+    \subitem {DT\_WARN\_GE}, \hyperpage{36}
+    \subitem {DT\_WARN\_GT}, \hyperpage{36}
+    \subitem {DT\_WARN\_LE}, \hyperpage{36}
+    \subitem {DT\_WARN\_LT}, \hyperpage{36}
+    \subitem {DT\_WARN\_NE}, \hyperpage{36}
+    \subitem {DT\_WARN\_NOTHROW}, \hyperpage{36}
+    \subitem {DT\_WARN\_THROWS}, \hyperpage{36}
+    \subitem {DT\_WARN\_THROWS\_AS}, \hyperpage{36}
+    \subitem {DT\_WARN\_THROWS\_WITH}, \hyperpage{36}
+    \subitem {DT\_WARN\_THROWS\_WITH\_AS}, \hyperpage{36}
+    \subitem {DT\_WARN\_UNARY}, \hyperpage{36}
+    \subitem {DT\_WARN\_UNARY\_FALSE}, \hyperpage{36}
+    \subitem {Enum}, \hyperpage{35}
+    \subitem {is\_check}, \hyperpage{35}
+    \subitem {is\_eq}, \hyperpage{35}
+    \subitem {is\_false}, \hyperpage{35}
+    \subitem {is\_ge}, \hyperpage{35}
+    \subitem {is\_gt}, \hyperpage{35}
+    \subitem {is\_le}, \hyperpage{35}
+    \subitem {is\_lt}, \hyperpage{35}
+    \subitem {is\_ne}, \hyperpage{35}
+    \subitem {is\_normal}, \hyperpage{35}
+    \subitem {is\_nothrow}, \hyperpage{35}
+    \subitem {is\_require}, \hyperpage{35}
+    \subitem {is\_throws}, \hyperpage{35}
+    \subitem {is\_throws\_as}, \hyperpage{35}
+    \subitem {is\_throws\_with}, \hyperpage{35}
+    \subitem {is\_unary}, \hyperpage{35}
+    \subitem {is\_warn}, \hyperpage{35}
+  \item {doctest::Color}, \hyperpage{37}
+    \subitem {Blue}, \hyperpage{37}
+    \subitem {Bright}, \hyperpage{37}
+    \subitem {BrightGreen}, \hyperpage{37}
+    \subitem {BrightRed}, \hyperpage{37}
+    \subitem {BrightWhite}, \hyperpage{37}
+    \subitem {Cyan}, \hyperpage{37}
+    \subitem {Enum}, \hyperpage{37}
+    \subitem {Green}, \hyperpage{37}
+    \subitem {Grey}, \hyperpage{37}
+    \subitem {LightGrey}, \hyperpage{37}
+    \subitem {None}, \hyperpage{37}
+    \subitem {operator$<$$<$}, \hyperpage{37}
+    \subitem {Red}, \hyperpage{37}
+    \subitem {White}, \hyperpage{37}
+    \subitem {Yellow}, \hyperpage{37}
+  \item {doctest::Contains}, \hyperpage{67}
+    \subitem {checkWith}, \hyperpage{68}
+    \subitem {Contains}, \hyperpage{68}
+    \subitem {string}, \hyperpage{68}
+  \item {doctest::Context}, \hyperpage{68}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Context}, \hyperpage{69}
+    \subitem {addFilter}, \hyperpage{69}
+    \subitem {applyCommandLine}, \hyperpage{69}
+    \subitem {clearFilters}, \hyperpage{69}
+    \subitem {Context}, \hyperpage{69}
+    \subitem {operator=}, \hyperpage{69, 70}
+    \subitem {run}, \hyperpage{70}
+    \subitem {setAsDefaultForAssertsOutOfTestCases}, \hyperpage{70}
+    \subitem {setAssertHandler}, \hyperpage{70}
+    \subitem {setCout}, \hyperpage{70}
+    \subitem {setOption}, \hyperpage{70}
+    \subitem {shouldExit}, \hyperpage{70}
+  \item {doctest::ContextOptions}, \hyperpage{71}
+    \subitem {abort\_after}, \hyperpage{72}
+    \subitem {binary\_name}, \hyperpage{72}
+    \subitem {case\_sensitive}, \hyperpage{72}
+    \subitem {count}, \hyperpage{72}
+    \subitem {cout}, \hyperpage{72}
+    \subitem {currentTest}, \hyperpage{72}
+    \subitem {duration}, \hyperpage{72}
+    \subitem {exit}, \hyperpage{73}
+    \subitem {first}, \hyperpage{73}
+    \subitem {force\_colors}, \hyperpage{73}
+    \subitem {gnu\_file\_line}, \hyperpage{73}
+    \subitem {help}, \hyperpage{73}
+    \subitem {last}, \hyperpage{73}
+    \subitem {list\_reporters}, \hyperpage{73}
+    \subitem {list\_test\_cases}, \hyperpage{73}
+    \subitem {list\_test\_suites}, \hyperpage{74}
+    \subitem {minimal}, \hyperpage{74}
+    \subitem {no\_breaks}, \hyperpage{74}
+    \subitem {no\_colors}, \hyperpage{74}
+    \subitem {no\_debug\_output}, \hyperpage{74}
+    \subitem {no\_exitcode}, \hyperpage{74}
+    \subitem {no\_intro}, \hyperpage{74}
+    \subitem {no\_line\_numbers}, \hyperpage{74}
+    \subitem {no\_path\_in\_filenames}, \hyperpage{75}
+    \subitem {no\_run}, \hyperpage{75}
+    \subitem {no\_skip}, \hyperpage{75}
+    \subitem {no\_skipped\_summary}, \hyperpage{75}
+    \subitem {no\_throw}, \hyperpage{75}
+    \subitem {no\_time\_in\_output}, \hyperpage{75}
+    \subitem {no\_version}, \hyperpage{75}
+    \subitem {order\_by}, \hyperpage{75}
+    \subitem {out}, \hyperpage{76}
+    \subitem {quiet}, \hyperpage{76}
+    \subitem {rand\_seed}, \hyperpage{76}
+    \subitem {strip\_file\_prefixes}, \hyperpage{76}
+    \subitem {subcase\_filter\_levels}, \hyperpage{76}
+    \subitem {success}, \hyperpage{76}
+    \subitem {version}, \hyperpage{76}
+  \item {doctest::CurrentTestCaseStats}, \hyperpage{81}
+    \subitem {failure\_flags}, \hyperpage{81}
+    \subitem {numAssertsCurrentTest}, \hyperpage{81}
+    \subitem {numAssertsFailedCurrentTest}, \hyperpage{82}
+    \subitem {seconds}, \hyperpage{82}
+    \subitem {testCaseSuccess}, \hyperpage{82}
+  \item {doctest::detail}, \hyperpage{38}
+    \subitem {acquireGeneratorDecisionIndex}, \hyperpage{40}
+    \subitem {acquireGeneratorValue}, \hyperpage{40}
+    \subitem {assert\_handler}, \hyperpage{40}
+    \subitem {binary\_assert}, \hyperpage{40}
+    \subitem {checkIfShouldThrow}, \hyperpage{41}
+    \subitem {declval}, \hyperpage{41}
+    \subitem {decomp\_assert}, \hyperpage{41}
+    \subitem {failed\_out\_of\_a\_testing\_context}, \hyperpage{41}
+    \subitem {filloss}, \hyperpage{41}
+    \subitem {forward}, \hyperpage{42}
+    \subitem {funcType}, \hyperpage{40}
+    \subitem {instantiationHelper}, \hyperpage{42}
+    \subitem {isDebuggerActive}, \hyperpage{42}
+    \subitem {MakeContextScope}, \hyperpage{42}
+    \subitem {registerExceptionTranslatorImpl}, \hyperpage{42}
+    \subitem {registerReporterImpl}, \hyperpage{42}
+    \subitem {regTest}, \hyperpage{43}
+    \subitem {reporterCreator}, \hyperpage{43}
+    \subitem {reporterCreatorFunc}, \hyperpage{40}
+    \subitem {setTestSuite}, \hyperpage{43}
+    \subitem {stringifyBinaryExpr}, \hyperpage{43}
+    \subitem {TestCase}, \hyperpage{44}
+    \subitem {throwException}, \hyperpage{43}
+    \subitem {tlssPop}, \hyperpage{43}
+    \subitem {tlssPush}, \hyperpage{43}
+    \subitem {toStream}, \hyperpage{44}
+    \subitem {unary\_assert}, \hyperpage{44}
+  \item {doctest::detail::binaryAssertComparison}, \hyperpage{44}
+    \subitem {Enum}, \hyperpage{45}
+    \subitem {eq}, \hyperpage{45}
+    \subitem {ge}, \hyperpage{45}
+    \subitem {gt}, \hyperpage{45}
+    \subitem {le}, \hyperpage{45}
+    \subitem {lt}, \hyperpage{45}
+    \subitem {ne}, \hyperpage{45}
+  \item {doctest::detail::ContextScope$<$ L $>$}, \hyperpage{77}
+    \subitem {\texorpdfstring{$\sim$}{\string~}ContextScope}, 
+		\hyperpage{78}
+    \subitem {ContextScope}, \hyperpage{78}
+    \subitem {operator=}, \hyperpage{79}
+    \subitem {stringify}, \hyperpage{79}
+  \item {doctest::detail::ContextScopeBase}, \hyperpage{79}
+    \subitem {\texorpdfstring{$\sim$}{\string~}ContextScopeBase}, 
+		\hyperpage{80}
+    \subitem {ContextScopeBase}, \hyperpage{80}
+    \subitem {destroy}, \hyperpage{80}
+    \subitem {need\_to\_destroy}, \hyperpage{81}
+    \subitem {operator=}, \hyperpage{80, 81}
+  \item {doctest::detail::deferred\_false$<$ T $>$}, \hyperpage{82}
+  \item {doctest::detail::ExceptionTranslator$<$ T $>$}, \hyperpage{93}
+    \subitem {ExceptionTranslator}, \hyperpage{94}
+    \subitem {translate}, \hyperpage{94}
+  \item {doctest::detail::Expression\_lhs$<$ L $>$}, \hyperpage{94}
+    \subitem {Expression\_lhs}, \hyperpage{95}
+    \subitem {lhs}, \hyperpage{95}
+    \subitem {m\_at}, \hyperpage{95}
+    \subitem {operator L}, \hyperpage{95}
+    \subitem {operator Result}, \hyperpage{95}
+  \item {doctest::detail::ExpressionDecomposer}, \hyperpage{96}
+    \subitem {ExpressionDecomposer}, \hyperpage{96}
+    \subitem {m\_at}, \hyperpage{97}
+    \subitem {operator$<$$<$}, \hyperpage{96}
+  \item {doctest::detail::filldata$<$ const char[N]$>$}, \hyperpage{98}
+    \subitem {fill}, \hyperpage{99}
+  \item {doctest::detail::filldata$<$ const void \texorpdfstring{$\ast$}{*} $>$}, 
+		\hyperpage{99}
+    \subitem {fill}, \hyperpage{99}
+  \item {doctest::detail::filldata$<$ const volatile void \texorpdfstring{$\ast$}{*} $>$}, 
+		\hyperpage{100}
+    \subitem {fill}, \hyperpage{100}
+  \item {doctest::detail::filldata$<$ T \texorpdfstring{$\ast$}{*} $>$}, 
+		\hyperpage{100}
+    \subitem {fill}, \hyperpage{101}
+  \item {doctest::detail::filldata$<$ T, Enable $>$}, \hyperpage{98}
+    \subitem {fill}, \hyperpage{98}
+  \item {doctest::detail::filldata$<$ T, typename detail::types::enable\_if$<$ !detail::has\_insertion\_operator$<$ T $>$::value \&\&detail::is\_container$<$ T $>$::value $>$::type $>$}, 
+		\hyperpage{101}
+    \subitem {fill}, \hyperpage{101}
+  \item {doctest::detail::filldata$<$ T, typename detail::types::enable\_if$<$!detail::has\_insertion\_operator$<$ T $>$::value \&\&detail::is\_pair$<$ T $>$::value $>$::type $>$}, 
+		\hyperpage{102}
+    \subitem {fill}, \hyperpage{102}
+  \item {doctest::detail::filldata$<$ T[N]$>$}, \hyperpage{102}
+    \subitem {fill}, \hyperpage{103}
+  \item {doctest::detail::has\_insertion\_operator$<$ T, decltype(operator$<$$<$(declval$<$ std::ostream \& $>$(), declval$<$ const T \& $>$()), void())$>$}, 
+		\hyperpage{104}
+  \item {doctest::detail::has\_insertion\_operator$<$ T, typename $>$}, 
+		\hyperpage{103}
+  \item {doctest::detail::IExceptionTranslator}, \hyperpage{107}
+    \subitem {translate}, \hyperpage{107}
+  \item {doctest::detail::is\_container$<$ T, typename $>$}, 
+		\hyperpage{111}
+  \item {doctest::detail::is\_container$<$ T, types::void\_t$<$ typename T::value\_type, typename T::iterator, decltype(declval$<$ T $>$().begin()), decltype(declval$<$ T $>$().end())$>$ $>$}, 
+		\hyperpage{112}
+  \item {doctest::detail::is\_pair$<$ T, typename $>$}, \hyperpage{113}
+  \item {doctest::detail::is\_pair$<$ T, types::void\_t$<$ typename T::first\_type, typename T::second\_type, decltype(declval$<$ T $>$().first), decltype(declval$<$ T $>$().second)$>$ $>$}, 
+		\hyperpage{114}
+  \item {doctest::detail::is\_std\_string$<$ T, Enable $>$}, 
+		\hyperpage{118}
+  \item {doctest::detail::is\_std\_string$<$ T, typename types::enable\_if$<$ types::is\_same$<$ decltype(declval$<$ const T \& $>$().c\_str()), const char \texorpdfstring{$\ast$}{*} $>$::value \&\&types::is\_same$<$ decltype(declval$<$ const T \& $>$().size()), size\_t $>$::value $>$::type $>$}, 
+		\hyperpage{119}
+  \item {doctest::detail::MessageBuilder}, \hyperpage{130}
+    \subitem {\texorpdfstring{$\sim$}{\string~}MessageBuilder}, 
+		\hyperpage{132}
+    \subitem {log}, \hyperpage{132}
+    \subitem {logged}, \hyperpage{133}
+    \subitem {m\_stream}, \hyperpage{133}
+    \subitem {MessageBuilder}, \hyperpage{131}
+    \subitem {operator$<$$<$}, \hyperpage{132}
+    \subitem {operator,}, \hyperpage{132}
+    \subitem {operator=}, \hyperpage{132}
+    \subitem {operator\texorpdfstring{$\ast$}{*}}, \hyperpage{132}
+    \subitem {react}, \hyperpage{133}
+  \item {doctest::detail::RelationalComparator$<$ int, L, R $>$}, 
+		\hyperpage{143}
+    \subitem {operator()}, \hyperpage{144}
+  \item {doctest::detail::Result}, \hyperpage{147}
+    \subitem {m\_decomp}, \hyperpage{148}
+    \subitem {m\_passed}, \hyperpage{148}
+    \subitem {Result}, \hyperpage{148}
+  \item {doctest::detail::ResultBuilder}, \hyperpage{148}
+    \subitem {binary\_assert}, \hyperpage{150}
+    \subitem {log}, \hyperpage{150}
+    \subitem {react}, \hyperpage{150}
+    \subitem {ResultBuilder}, \hyperpage{149}
+    \subitem {setResult}, \hyperpage{150}
+    \subitem {translateException}, \hyperpage{150}
+    \subitem {unary\_assert}, \hyperpage{150}
+  \item {doctest::detail::should\_stringify\_as\_underlying\_type$<$ T $>$}, 
+		\hyperpage{153}
+    \subitem {value}, \hyperpage{154}
+  \item {doctest::detail::StringMakerBase$<$ C $>$}, \hyperpage{167}
+    \subitem {convert}, \hyperpage{168}
+  \item {doctest::detail::StringMakerBase$<$ true $>$}, \hyperpage{168}
+    \subitem {convert}, \hyperpage{169}
+  \item {doctest::detail::Subcase}, \hyperpage{169}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Subcase}, 
+		\hyperpage{170}
+    \subitem {m\_entered}, \hyperpage{170}
+    \subitem {m\_signature}, \hyperpage{170}
+    \subitem {operator bool}, \hyperpage{170}
+    \subitem {operator=}, \hyperpage{170}
+    \subitem {Subcase}, \hyperpage{169, 170}
+  \item {doctest::detail::TestCase}, \hyperpage{172}
+    \subitem {\texorpdfstring{$\sim$}{\string~}TestCase}, 
+		\hyperpage{173}
+    \subitem {m\_full\_name}, \hyperpage{174}
+    \subitem {m\_template\_id}, \hyperpage{174}
+    \subitem {m\_test}, \hyperpage{174}
+    \subitem {m\_type}, \hyperpage{175}
+    \subitem {operator$<$}, \hyperpage{174}
+    \subitem {operator=}, \hyperpage{174}
+    \subitem {operator\texorpdfstring{$\ast$}{*}}, \hyperpage{174}
+    \subitem {TestCase}, \hyperpage{173}
+  \item {doctest::detail::TestFailureException}, \hyperpage{178}
+  \item {doctest::detail::TestSuite}, \hyperpage{180}
+    \subitem {m\_description}, \hyperpage{180}
+    \subitem {m\_expected\_failures}, \hyperpage{180}
+    \subitem {m\_may\_fail}, \hyperpage{181}
+    \subitem {m\_no\_breaks}, \hyperpage{181}
+    \subitem {m\_no\_output}, \hyperpage{181}
+    \subitem {m\_should\_fail}, \hyperpage{181}
+    \subitem {m\_skip}, \hyperpage{181}
+    \subitem {m\_test\_suite}, \hyperpage{181}
+    \subitem {m\_timeout}, \hyperpage{181}
+    \subitem {operator\texorpdfstring{$\ast$}{*}}, \hyperpage{180}
+  \item {doctest::detail::types}, \hyperpage{45}
+    \subitem {void\_t}, \hyperpage{46}
+  \item {doctest::detail::types::enable\_if$<$ COND, T $>$}, 
+		\hyperpage{84}
+  \item {doctest::detail::types::enable\_if$<$ true, T $>$}, 
+		\hyperpage{84}
+    \subitem {type}, \hyperpage{85}
+  \item {doctest::detail::types::false\_type}, \hyperpage{97}
+    \subitem {value}, \hyperpage{98}
+  \item {doctest::detail::types::is\_array$<$ T $>$}, \hyperpage{110}
+  \item {doctest::detail::types::is\_array$<$ T[SIZE]$>$}, 
+		\hyperpage{110}
+  \item {doctest::detail::types::is\_enum$<$ T $>$}, \hyperpage{112}
+    \subitem {value}, \hyperpage{113}
+  \item {doctest::detail::types::is\_pointer$<$ T $>$}, \hyperpage{114}
+  \item {doctest::detail::types::is\_pointer$<$ T \texorpdfstring{$\ast$}{*} $>$}, 
+		\hyperpage{115}
+  \item {doctest::detail::types::is\_rvalue\_reference$<$ T $>$}, 
+		\hyperpage{116}
+  \item {doctest::detail::types::is\_rvalue\_reference$<$ T \&\& $>$}, 
+		\hyperpage{116}
+  \item {doctest::detail::types::is\_same$<$ T, T $>$}, \hyperpage{118}
+  \item {doctest::detail::types::is\_same$<$ T, U $>$}, \hyperpage{117}
+  \item {doctest::detail::types::remove\_const$<$ const T $>$}, 
+		\hyperpage{145}
+    \subitem {type}, \hyperpage{145}
+  \item {doctest::detail::types::remove\_const$<$ T $>$}, 
+		\hyperpage{144}
+    \subitem {type}, \hyperpage{144}
+  \item {doctest::detail::types::remove\_reference$<$ T $>$}, 
+		\hyperpage{145}
+    \subitem {type}, \hyperpage{146}
+  \item {doctest::detail::types::remove\_reference$<$ T \& $>$}, 
+		\hyperpage{146}
+    \subitem {type}, \hyperpage{146}
+  \item {doctest::detail::types::remove\_reference$<$ T \&\& $>$}, 
+		\hyperpage{146}
+    \subitem {type}, \hyperpage{147}
+  \item {doctest::detail::types::true\_type}, \hyperpage{182}
+    \subitem {value}, \hyperpage{182}
+  \item {doctest::detail::types::underlying\_type$<$ T $>$}, 
+		\hyperpage{183}
+    \subitem {type}, \hyperpage{183}
+  \item {doctest::IContextScope}, \hyperpage{104}
+    \subitem {stringify}, \hyperpage{105}
+  \item {doctest::IReporter}, \hyperpage{107}
+    \subitem {get\_active\_contexts}, \hyperpage{108}
+    \subitem {get\_num\_active\_contexts}, \hyperpage{108}
+    \subitem {get\_num\_stringified\_contexts}, \hyperpage{108}
+    \subitem {get\_stringified\_contexts}, \hyperpage{108}
+    \subitem {log\_assert}, \hyperpage{108}
+    \subitem {log\_message}, \hyperpage{108}
+    \subitem {report\_query}, \hyperpage{108}
+    \subitem {subcase\_end}, \hyperpage{108}
+    \subitem {subcase\_start}, \hyperpage{109}
+    \subitem {test\_case\_end}, \hyperpage{109}
+    \subitem {test\_case\_exception}, \hyperpage{109}
+    \subitem {test\_case\_reenter}, \hyperpage{109}
+    \subitem {test\_case\_skipped}, \hyperpage{109}
+    \subitem {test\_case\_start}, \hyperpage{109}
+    \subitem {test\_run\_end}, \hyperpage{109}
+    \subitem {test\_run\_start}, \hyperpage{109}
+  \item {doctest::IsNaN$<$ F $>$}, \hyperpage{120}
+    \subitem {flipped}, \hyperpage{121}
+    \subitem {IsNaN}, \hyperpage{120}
+    \subitem {operator bool}, \hyperpage{121}
+    \subitem {operator!}, \hyperpage{121}
+    \subitem {value}, \hyperpage{121}
+  \item {doctest::MessageData}, \hyperpage{133}
+    \subitem {m\_file}, \hyperpage{134}
+    \subitem {m\_line}, \hyperpage{134}
+    \subitem {m\_severity}, \hyperpage{134}
+    \subitem {m\_string}, \hyperpage{134}
+  \item {doctest::QueryData}, \hyperpage{142}
+    \subitem {data}, \hyperpage{143}
+    \subitem {num\_data}, \hyperpage{143}
+    \subitem {run\_stats}, \hyperpage{143}
+  \item {doctest::String}, \hyperpage{161}
+    \subitem {\texorpdfstring{$\sim$}{\string~}String}, \hyperpage{162}
+    \subitem {buf}, \hyperpage{165}
+    \subitem {c\_str}, \hyperpage{163}
+    \subitem {capacity}, \hyperpage{163}
+    \subitem {compare}, \hyperpage{163}
+    \subitem {data}, \hyperpage{165}
+    \subitem {find}, \hyperpage{163}
+    \subitem {npos}, \hyperpage{165}
+    \subitem {operator$<$$<$}, \hyperpage{165}
+    \subitem {operator+=}, \hyperpage{163}
+    \subitem {operator=}, \hyperpage{164}
+    \subitem {operator[]}, \hyperpage{164}
+    \subitem {rfind}, \hyperpage{164}
+    \subitem {size}, \hyperpage{164}
+    \subitem {size\_type}, \hyperpage{162}
+    \subitem {String}, \hyperpage{162, 163}
+    \subitem {substr}, \hyperpage{164}
+  \item {doctest::StringMaker$<$ T $>$}, \hyperpage{167}
+  \item {doctest::SubcaseSignature}, \hyperpage{171}
+    \subitem {m\_file}, \hyperpage{171}
+    \subitem {m\_line}, \hyperpage{171}
+    \subitem {m\_name}, \hyperpage{171}
+    \subitem {operator$<$}, \hyperpage{171}
+    \subitem {operator==}, \hyperpage{171}
+  \item {doctest::TestCaseData}, \hyperpage{175}
+    \subitem {m\_description}, \hyperpage{176}
+    \subitem {m\_expected\_failures}, \hyperpage{176}
+    \subitem {m\_file}, \hyperpage{176}
+    \subitem {m\_line}, \hyperpage{176}
+    \subitem {m\_may\_fail}, \hyperpage{176}
+    \subitem {m\_name}, \hyperpage{176}
+    \subitem {m\_no\_breaks}, \hyperpage{176}
+    \subitem {m\_no\_output}, \hyperpage{176}
+    \subitem {m\_should\_fail}, \hyperpage{177}
+    \subitem {m\_skip}, \hyperpage{177}
+    \subitem {m\_test\_suite}, \hyperpage{177}
+    \subitem {m\_timeout}, \hyperpage{177}
+  \item {doctest::TestCaseException}, \hyperpage{177}
+    \subitem {error\_string}, \hyperpage{178}
+    \subitem {is\_crash}, \hyperpage{178}
+  \item {doctest::TestCaseFailureReason}, \hyperpage{46}
+    \subitem {AssertFailure}, \hyperpage{46}
+    \subitem {CouldHaveFailedAndDid}, \hyperpage{46}
+    \subitem {Crash}, \hyperpage{46}
+    \subitem {DidntFailExactlyNumTimes}, \hyperpage{46}
+    \subitem {Enum}, \hyperpage{46}
+    \subitem {Exception}, \hyperpage{46}
+    \subitem {FailedExactlyNumTimes}, \hyperpage{46}
+    \subitem {None}, \hyperpage{46}
+    \subitem {ShouldHaveFailedAndDid}, \hyperpage{46}
+    \subitem {ShouldHaveFailedButDidnt}, \hyperpage{46}
+    \subitem {Timeout}, \hyperpage{46}
+    \subitem {TooManyFailedAsserts}, \hyperpage{46}
+  \item {doctest::TestRunStats}, \hyperpage{178}
+    \subitem {numAsserts}, \hyperpage{179}
+    \subitem {numAssertsFailed}, \hyperpage{179}
+    \subitem {numTestCases}, \hyperpage{179}
+    \subitem {numTestCasesFailed}, \hyperpage{179}
+    \subitem {numTestCasesPassingFilters}, \hyperpage{179}
+    \subitem {numTestSuitesPassingFilters}, \hyperpage{179}
+  \item {DOCTEST\_ADD\_AT\_IMPL}
+    \subitem {doctest.h}, \hyperpage{239}
+  \item {DOCTEST\_ADD\_FAIL\_AT}
+    \subitem {doctest.h}, \hyperpage{239}
+  \item {DOCTEST\_ADD\_FAIL\_CHECK\_AT}
+    \subitem {doctest.h}, \hyperpage{239}
+  \item {DOCTEST\_ADD\_MESSAGE\_AT}
+    \subitem {doctest.h}, \hyperpage{240}
+  \item {DOCTEST\_ALIGNMENT}
+    \subitem {doctest.h}, \hyperpage{240}
+  \item {DOCTEST\_AND\_GIVEN}
+    \subitem {doctest.h}, \hyperpage{240}
+  \item {DOCTEST\_AND\_THEN}
+    \subitem {doctest.h}, \hyperpage{240}
+  \item {DOCTEST\_AND\_WHEN}
+    \subitem {doctest.h}, \hyperpage{240}
+  \item {DOCTEST\_ANONYMOUS}
+    \subitem {doctest.h}, \hyperpage{241}
+  \item {DOCTEST\_ASSERT\_IMPLEMENT\_1}
+    \subitem {doctest.h}, \hyperpage{241}
+  \item {DOCTEST\_ASSERT\_IMPLEMENT\_2}
+    \subitem {doctest.h}, \hyperpage{241}
+  \item {DOCTEST\_ASSERT\_IN\_TESTS}
+    \subitem {doctest.h}, \hyperpage{241}
+  \item {DOCTEST\_ASSERT\_LOG\_REACT\_RETURN}
+    \subitem {doctest.h}, \hyperpage{242}
+  \item {DOCTEST\_ASSERT\_OUT\_OF\_TESTS}
+    \subitem {doctest.h}, \hyperpage{242}
+  \item {DOCTEST\_BINARY\_ASSERT}
+    \subitem {doctest.h}, \hyperpage{242}
+  \item {DOCTEST\_BINARY\_RELATIONAL\_OP}
+    \subitem {doctest.h}, \hyperpage{243}
+  \item {DOCTEST\_BREAK\_INTO\_DEBUGGER}
+    \subitem {doctest.h}, \hyperpage{243}
+  \item {DOCTEST\_CAPTURE}
+    \subitem {doctest.h}, \hyperpage{243}
+  \item {DOCTEST\_CAST\_TO\_VOID}
+    \subitem {doctest.h}, \hyperpage{243}
+  \item {DOCTEST\_CAT}
+    \subitem {doctest.h}, \hyperpage{244}
+  \item {DOCTEST\_CAT\_IMPL}
+    \subitem {doctest.h}, \hyperpage{244}
+  \item {DOCTEST\_CHECK}
+    \subitem {doctest.h}, \hyperpage{244}
+  \item {DOCTEST\_CHECK\_EQ}
+    \subitem {doctest.h}, \hyperpage{244}
+  \item {DOCTEST\_CHECK\_FALSE}
+    \subitem {doctest.h}, \hyperpage{244}
+  \item {DOCTEST\_CHECK\_FALSE\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{245}
+  \item {DOCTEST\_CHECK\_GE}
+    \subitem {doctest.h}, \hyperpage{245}
+  \item {DOCTEST\_CHECK\_GT}
+    \subitem {doctest.h}, \hyperpage{245}
+  \item {DOCTEST\_CHECK\_LE}
+    \subitem {doctest.h}, \hyperpage{245}
+  \item {DOCTEST\_CHECK\_LT}
+    \subitem {doctest.h}, \hyperpage{245}
+  \item {DOCTEST\_CHECK\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{246}
+  \item {DOCTEST\_CHECK\_NE}
+    \subitem {doctest.h}, \hyperpage{246}
+  \item {DOCTEST\_CHECK\_NOTHROW}
+    \subitem {doctest.h}, \hyperpage{246}
+  \item {DOCTEST\_CHECK\_NOTHROW\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{246}
+  \item {DOCTEST\_CHECK\_THROWS}
+    \subitem {doctest.h}, \hyperpage{246}
+  \item {DOCTEST\_CHECK\_THROWS\_AS}
+    \subitem {doctest.h}, \hyperpage{247}
+  \item {DOCTEST\_CHECK\_THROWS\_AS\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{247}
+  \item {DOCTEST\_CHECK\_THROWS\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{247}
+  \item {DOCTEST\_CHECK\_THROWS\_WITH}
+    \subitem {doctest.h}, \hyperpage{247}
+  \item {DOCTEST\_CHECK\_THROWS\_WITH\_AS}
+    \subitem {doctest.h}, \hyperpage{247}
+  \item {DOCTEST\_CHECK\_THROWS\_WITH\_AS\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{248}
+  \item {DOCTEST\_CHECK\_THROWS\_WITH\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{248}
+  \item {DOCTEST\_CHECK\_UNARY}
+    \subitem {doctest.h}, \hyperpage{248}
+  \item {DOCTEST\_CHECK\_UNARY\_FALSE}
+    \subitem {doctest.h}, \hyperpage{248}
+  \item {DOCTEST\_CLANG}
+    \subitem {doctest.h}, \hyperpage{249}
+  \item {DOCTEST\_CLANG\_SUPPRESS\_WARNING}
+    \subitem {doctest.h}, \hyperpage{249}
+  \item {DOCTEST\_CLANG\_SUPPRESS\_WARNING\_POP}
+    \subitem {doctest.h}, \hyperpage{249}
+  \item {DOCTEST\_CLANG\_SUPPRESS\_WARNING\_PUSH}
+    \subitem {doctest.h}, \hyperpage{249}
+  \item {DOCTEST\_CLANG\_SUPPRESS\_WARNING\_WITH\_PUSH}
+    \subitem {doctest.h}, \hyperpage{249}
+  \item {DOCTEST\_CMP\_EQ}
+    \subitem {doctest.h}, \hyperpage{249}
+  \item {DOCTEST\_CMP\_GE}
+    \subitem {doctest.h}, \hyperpage{249}
+  \item {DOCTEST\_CMP\_GT}
+    \subitem {doctest.h}, \hyperpage{250}
+  \item {DOCTEST\_CMP\_LE}
+    \subitem {doctest.h}, \hyperpage{250}
+  \item {DOCTEST\_CMP\_LT}
+    \subitem {doctest.h}, \hyperpage{250}
+  \item {DOCTEST\_CMP\_NE}
+    \subitem {doctest.h}, \hyperpage{250}
+  \item {DOCTEST\_COMPARISON\_RETURN\_TYPE}
+    \subitem {doctest.h}, \hyperpage{250}
+  \item {DOCTEST\_COMPILER}
+    \subitem {doctest.h}, \hyperpage{251}
+  \item {DOCTEST\_CONFIG\_IMPLEMENT\_WITH\_MAIN}
+    \subitem {test\_main.cpp}, \hyperpage{454}
+  \item {DOCTEST\_CONFIG\_NO\_EXCEPTIONS}
+    \subitem {doctest.h}, \hyperpage{251}
+  \item {DOCTEST\_CONFIG\_NO\_TRY\_CATCH\_IN\_ASSERTS}
+    \subitem {doctest.h}, \hyperpage{251}
+  \item {DOCTEST\_CONFIG\_POSIX\_SIGNALS}
+    \subitem {doctest.h}, \hyperpage{251}
+  \item {DOCTEST\_CONFIG\_STRING\_SIZE\_TYPE}
+    \subitem {doctest.h}, \hyperpage{251}
+  \item {DOCTEST\_CONSTEXPR}
+    \subitem {doctest.h}, \hyperpage{251}
+  \item {DOCTEST\_CONSTEXPR\_FUNC}
+    \subitem {doctest.h}, \hyperpage{251}
+  \item {DOCTEST\_COUNTER}
+    \subitem {doctest.h}, \hyperpage{252}
+  \item {DOCTEST\_CPLUSPLUS}
+    \subitem {doctest.h}, \hyperpage{252}
+  \item {DOCTEST\_CREATE\_AND\_REGISTER\_FUNCTION}
+    \subitem {doctest.h}, \hyperpage{252}
+  \item {DOCTEST\_CREATE\_AND\_REGISTER\_FUNCTION\_IN\_CLASS}
+    \subitem {doctest.h}, \hyperpage{252}
+  \item {DOCTEST\_DECLARE\_INTERFACE}
+    \subitem {doctest.h}, \hyperpage{252}
+  \item {DOCTEST\_DEFINE\_DECORATOR}
+    \subitem {doctest}, \hyperpage{27, 28}
+    \subitem {doctest.h}, \hyperpage{253}
+  \item {DOCTEST\_DEFINE\_INTERFACE}
+    \subitem {doctest.h}, \hyperpage{253}
+  \item {doctest\_detail\_test\_suite\_ns}, \hyperpage{46}
+    \subitem {getCurrentTestSuite}, \hyperpage{47}
+  \item {DOCTEST\_DO\_BINARY\_EXPRESSION\_COMPARISON}
+    \subitem {doctest.h}, \hyperpage{253}
+  \item {DOCTEST\_EMPTY}
+    \subitem {doctest.h}, \hyperpage{254}
+  \item {DOCTEST\_EXCEPTION\_EMPTY\_FUNC}
+    \subitem {doctest.h}, \hyperpage{254}
+  \item {DOCTEST\_FAIL}
+    \subitem {doctest.h}, \hyperpage{254}
+  \item {DOCTEST\_FAIL\_CHECK}
+    \subitem {doctest.h}, \hyperpage{255}
+  \item {DOCTEST\_FAST\_CHECK\_EQ}
+    \subitem {doctest.h}, \hyperpage{255}
+  \item {DOCTEST\_FAST\_CHECK\_GE}
+    \subitem {doctest.h}, \hyperpage{255}
+  \item {DOCTEST\_FAST\_CHECK\_GT}
+    \subitem {doctest.h}, \hyperpage{255}
+  \item {DOCTEST\_FAST\_CHECK\_LE}
+    \subitem {doctest.h}, \hyperpage{255}
+  \item {DOCTEST\_FAST\_CHECK\_LT}
+    \subitem {doctest.h}, \hyperpage{255}
+  \item {DOCTEST\_FAST\_CHECK\_NE}
+    \subitem {doctest.h}, \hyperpage{255}
+  \item {DOCTEST\_FAST\_CHECK\_UNARY}
+    \subitem {doctest.h}, \hyperpage{256}
+  \item {DOCTEST\_FAST\_CHECK\_UNARY\_FALSE}
+    \subitem {doctest.h}, \hyperpage{256}
+  \item {DOCTEST\_FAST\_REQUIRE\_EQ}
+    \subitem {doctest.h}, \hyperpage{256}
+  \item {DOCTEST\_FAST\_REQUIRE\_GE}
+    \subitem {doctest.h}, \hyperpage{256}
+  \item {DOCTEST\_FAST\_REQUIRE\_GT}
+    \subitem {doctest.h}, \hyperpage{256}
+  \item {DOCTEST\_FAST\_REQUIRE\_LE}
+    \subitem {doctest.h}, \hyperpage{256}
+  \item {DOCTEST\_FAST\_REQUIRE\_LT}
+    \subitem {doctest.h}, \hyperpage{256}
+  \item {DOCTEST\_FAST\_REQUIRE\_NE}
+    \subitem {doctest.h}, \hyperpage{256}
+  \item {DOCTEST\_FAST\_REQUIRE\_UNARY}
+    \subitem {doctest.h}, \hyperpage{257}
+  \item {DOCTEST\_FAST\_REQUIRE\_UNARY\_FALSE}
+    \subitem {doctest.h}, \hyperpage{257}
+  \item {DOCTEST\_FAST\_WARN\_EQ}
+    \subitem {doctest.h}, \hyperpage{257}
+  \item {DOCTEST\_FAST\_WARN\_GE}
+    \subitem {doctest.h}, \hyperpage{257}
+  \item {DOCTEST\_FAST\_WARN\_GT}
+    \subitem {doctest.h}, \hyperpage{257}
+  \item {DOCTEST\_FAST\_WARN\_LE}
+    \subitem {doctest.h}, \hyperpage{257}
+  \item {DOCTEST\_FAST\_WARN\_LT}
+    \subitem {doctest.h}, \hyperpage{257}
+  \item {DOCTEST\_FAST\_WARN\_NE}
+    \subitem {doctest.h}, \hyperpage{257}
+  \item {DOCTEST\_FAST\_WARN\_UNARY}
+    \subitem {doctest.h}, \hyperpage{258}
+  \item {DOCTEST\_FAST\_WARN\_UNARY\_FALSE}
+    \subitem {doctest.h}, \hyperpage{258}
+  \item {DOCTEST\_FORBIT\_EXPRESSION}
+    \subitem {doctest.h}, \hyperpage{258}
+  \item {DOCTEST\_FUNC\_EMPTY}
+    \subitem {doctest.h}, \hyperpage{258}
+  \item {DOCTEST\_FUNC\_SCOPE\_BEGIN}
+    \subitem {doctest.h}, \hyperpage{258}
+  \item {DOCTEST\_FUNC\_SCOPE\_END}
+    \subitem {doctest.h}, \hyperpage{258}
+  \item {DOCTEST\_FUNC\_SCOPE\_RET}
+    \subitem {doctest.h}, \hyperpage{259}
+  \item {DOCTEST\_GCC}
+    \subitem {doctest.h}, \hyperpage{259}
+  \item {DOCTEST\_GCC\_SUPPRESS\_WARNING}
+    \subitem {doctest.h}, \hyperpage{259}
+  \item {DOCTEST\_GCC\_SUPPRESS\_WARNING\_POP}
+    \subitem {doctest.h}, \hyperpage{259}
+  \item {DOCTEST\_GCC\_SUPPRESS\_WARNING\_PUSH}
+    \subitem {doctest.h}, \hyperpage{259}
+  \item {DOCTEST\_GCC\_SUPPRESS\_WARNING\_WITH\_PUSH}
+    \subitem {doctest.h}, \hyperpage{259}
+  \item {DOCTEST\_GENERATE}
+    \subitem {doctest.h}, \hyperpage{259}
+  \item {DOCTEST\_GIVEN}
+    \subitem {doctest.h}, \hyperpage{260}
+  \item {DOCTEST\_GLOBAL\_NO\_WARNINGS}
+    \subitem {doctest.h}, \hyperpage{260}
+  \item {DOCTEST\_HAS\_BUILTIN}
+    \subitem {doctest.h}, \hyperpage{260}
+  \item {DOCTEST\_ICC}
+    \subitem {doctest.h}, \hyperpage{260}
+  \item {DOCTEST\_IMPLEMENT\_FIXTURE}
+    \subitem {doctest.h}, \hyperpage{260}
+  \item {DOCTEST\_INFO}
+    \subitem {doctest.h}, \hyperpage{261}
+  \item {DOCTEST\_INFO\_IMPL}
+    \subitem {doctest.h}, \hyperpage{261}
+  \item {DOCTEST\_INLINE\_NOINLINE}
+    \subitem {doctest.h}, \hyperpage{261}
+  \item {DOCTEST\_INTERFACE}
+    \subitem {doctest.h}, \hyperpage{262}
+  \item {DOCTEST\_INTERFACE\_DECL}
+    \subitem {doctest.h}, \hyperpage{262}
+  \item {DOCTEST\_INTERFACE\_DEF}
+    \subitem {doctest.h}, \hyperpage{262}
+  \item {DOCTEST\_MAKE\_STD\_HEADERS\_CLEAN\_FROM\_WARNINGS\_ON\_WALL\_BEGIN}
+    \subitem {doctest.h}, \hyperpage{262}
+  \item {DOCTEST\_MAKE\_STD\_HEADERS\_CLEAN\_FROM\_WARNINGS\_ON\_WALL\_END}
+    \subitem {doctest.h}, \hyperpage{262}
+  \item {DOCTEST\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{263}
+  \item {DOCTEST\_MSVC}
+    \subitem {doctest.h}, \hyperpage{263}
+  \item {DOCTEST\_MSVC\_SUPPRESS\_WARNING}
+    \subitem {doctest.h}, \hyperpage{263}
+  \item {DOCTEST\_MSVC\_SUPPRESS\_WARNING\_POP}
+    \subitem {doctest.h}, \hyperpage{263}
+  \item {DOCTEST\_MSVC\_SUPPRESS\_WARNING\_PUSH}
+    \subitem {doctest.h}, \hyperpage{263}
+  \item {DOCTEST\_MSVC\_SUPPRESS\_WARNING\_WITH\_PUSH}
+    \subitem {doctest.h}, \hyperpage{263}
+  \item {DOCTEST\_NO\_SANITIZE\_INTEGER}
+    \subitem {doctest.h}, \hyperpage{263}
+  \item {DOCTEST\_NOEXCEPT}
+    \subitem {doctest.h}, \hyperpage{264}
+  \item {DOCTEST\_NOINLINE}
+    \subitem {doctest.h}, \hyperpage{264}
+  \item {DOCTEST\_NORETURN}
+    \subitem {doctest.h}, \hyperpage{264}
+  \item {DOCTEST\_PARTS\_PUBLIC\_ASSERT\_COMPARATOR}
+    \subitem {doctest.h}, \hyperpage{264}
+  \item {DOCTEST\_PARTS\_PUBLIC\_ASSERT\_DATA}
+    \subitem {doctest.h}, \hyperpage{264}
+  \item {DOCTEST\_PARTS\_PUBLIC\_ASSERT\_EXPRESSION}
+    \subitem {doctest.h}, \hyperpage{264}
+  \item {DOCTEST\_PARTS\_PUBLIC\_ASSERT\_HANDLER}
+    \subitem {doctest.h}, \hyperpage{264}
+  \item {DOCTEST\_PARTS\_PUBLIC\_ASSERT\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{264}
+  \item {DOCTEST\_PARTS\_PUBLIC\_ASSERT\_RESULT}
+    \subitem {doctest.h}, \hyperpage{265}
+  \item {DOCTEST\_PARTS\_PUBLIC\_ASSERT\_TYPE}
+    \subitem {doctest.h}, \hyperpage{265}
+  \item {DOCTEST\_PARTS\_PUBLIC\_COLOR}
+    \subitem {doctest.h}, \hyperpage{265}
+  \item {DOCTEST\_PARTS\_PUBLIC\_COMPILER}
+    \subitem {doctest.h}, \hyperpage{265}
+  \item {DOCTEST\_PARTS\_PUBLIC\_CONFIG}
+    \subitem {doctest.h}, \hyperpage{265}
+  \item {DOCTEST\_PARTS\_PUBLIC\_CONTEXT}
+    \subitem {doctest.h}, \hyperpage{265}
+  \item {DOCTEST\_PARTS\_PUBLIC\_CONTEXT\_OPTIONS}
+    \subitem {doctest.h}, \hyperpage{265}
+  \item {DOCTEST\_PARTS\_PUBLIC\_CONTEXT\_SCOPE}
+    \subitem {doctest.h}, \hyperpage{265}
+  \item {DOCTEST\_PARTS\_PUBLIC\_DEBUGGER}
+    \subitem {doctest.h}, \hyperpage{266}
+  \item {DOCTEST\_PARTS\_PUBLIC\_DECORATORS}
+    \subitem {doctest.h}, \hyperpage{266}
+  \item {DOCTEST\_PARTS\_PUBLIC\_EXCEPTION\_TRANSLATOR}
+    \subitem {doctest.h}, \hyperpage{266}
+  \item {DOCTEST\_PARTS\_PUBLIC\_EXCEPTIONS}
+    \subitem {doctest.h}, \hyperpage{266}
+  \item {DOCTEST\_PARTS\_PUBLIC\_GENERATOR}
+    \subitem {doctest.h}, \hyperpage{266}
+  \item {DOCTEST\_PARTS\_PUBLIC\_MACROS}
+    \subitem {doctest.h}, \hyperpage{266}
+  \item {DOCTEST\_PARTS\_PUBLIC\_MATCHERS\_APPROX}
+    \subitem {doctest.h}, \hyperpage{266}
+  \item {DOCTEST\_PARTS\_PUBLIC\_MATCHERS\_CONTAINS}
+    \subitem {doctest.h}, \hyperpage{266}
+  \item {DOCTEST\_PARTS\_PUBLIC\_MATCHERS\_IS\_NAN}
+    \subitem {doctest.h}, \hyperpage{267}
+  \item {DOCTEST\_PARTS\_PUBLIC\_PATH}
+    \subitem {doctest.h}, \hyperpage{267}
+  \item {DOCTEST\_PARTS\_PUBLIC\_PLATFORM}
+    \subitem {doctest.h}, \hyperpage{267}
+  \item {DOCTEST\_PARTS\_PUBLIC\_REPORTER}
+    \subitem {doctest.h}, \hyperpage{267}
+  \item {DOCTEST\_PARTS\_PUBLIC\_STD\_FWD}
+    \subitem {doctest.h}, \hyperpage{267}
+  \item {DOCTEST\_PARTS\_PUBLIC\_STD\_TYPE\_TRAITS}
+    \subitem {doctest.h}, \hyperpage{267}
+  \item {DOCTEST\_PARTS\_PUBLIC\_STD\_UTILITY}
+    \subitem {doctest.h}, \hyperpage{267}
+  \item {DOCTEST\_PARTS\_PUBLIC\_STRING}
+    \subitem {doctest.h}, \hyperpage{267}
+  \item {DOCTEST\_PARTS\_PUBLIC\_SUBCASE}
+    \subitem {doctest.h}, \hyperpage{268}
+  \item {DOCTEST\_PARTS\_PUBLIC\_TEST\_CASE}
+    \subitem {doctest.h}, \hyperpage{268}
+  \item {DOCTEST\_PARTS\_PUBLIC\_TEST\_SUITE}
+    \subitem {doctest.h}, \hyperpage{268}
+  \item {DOCTEST\_PARTS\_PUBLIC\_UTILITY}
+    \subitem {doctest.h}, \hyperpage{268}
+  \item {DOCTEST\_PARTS\_PUBLIC\_VERSION}
+    \subitem {doctest.h}, \hyperpage{268}
+  \item {DOCTEST\_PARTS\_PUBLIC\_WARNINGS}
+    \subitem {doctest.h}, \hyperpage{268}
+  \item {DOCTEST\_PLATFORM\_LINUX}
+    \subitem {doctest.h}, \hyperpage{268}
+  \item {DOCTEST\_REF\_WRAP}
+    \subitem {doctest.h}, \hyperpage{268}
+  \item {DOCTEST\_REGISTER\_EXCEPTION\_TRANSLATOR}
+    \subitem {doctest.h}, \hyperpage{269}
+  \item {DOCTEST\_REGISTER\_EXCEPTION\_TRANSLATOR\_IMPL}
+    \subitem {doctest.h}, \hyperpage{269}
+  \item {DOCTEST\_REGISTER\_FUNCTION}
+    \subitem {doctest.h}, \hyperpage{269}
+  \item {DOCTEST\_REGISTER\_LISTENER}
+    \subitem {doctest.h}, \hyperpage{269}
+  \item {DOCTEST\_REGISTER\_REPORTER}
+    \subitem {doctest.h}, \hyperpage{270}
+  \item {DOCTEST\_RELATIONAL\_OP}
+    \subitem {doctest.h}, \hyperpage{270}
+  \item {DOCTEST\_REQUIRE}
+    \subitem {doctest.h}, \hyperpage{270}
+  \item {DOCTEST\_REQUIRE\_EQ}
+    \subitem {doctest.h}, \hyperpage{271}
+  \item {DOCTEST\_REQUIRE\_FALSE}
+    \subitem {doctest.h}, \hyperpage{271}
+  \item {DOCTEST\_REQUIRE\_FALSE\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{271}
+  \item {DOCTEST\_REQUIRE\_GE}
+    \subitem {doctest.h}, \hyperpage{272}
+  \item {DOCTEST\_REQUIRE\_GT}
+    \subitem {doctest.h}, \hyperpage{272}
+  \item {DOCTEST\_REQUIRE\_LE}
+    \subitem {doctest.h}, \hyperpage{272}
+  \item {DOCTEST\_REQUIRE\_LT}
+    \subitem {doctest.h}, \hyperpage{273}
+  \item {DOCTEST\_REQUIRE\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{273}
+  \item {DOCTEST\_REQUIRE\_NE}
+    \subitem {doctest.h}, \hyperpage{273}
+  \item {DOCTEST\_REQUIRE\_NOTHROW}
+    \subitem {doctest.h}, \hyperpage{274}
+  \item {DOCTEST\_REQUIRE\_NOTHROW\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{274}
+  \item {DOCTEST\_REQUIRE\_THROWS}
+    \subitem {doctest.h}, \hyperpage{274}
+  \item {DOCTEST\_REQUIRE\_THROWS\_AS}
+    \subitem {doctest.h}, \hyperpage{274}
+  \item {DOCTEST\_REQUIRE\_THROWS\_AS\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{274}
+  \item {DOCTEST\_REQUIRE\_THROWS\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{275}
+  \item {DOCTEST\_REQUIRE\_THROWS\_WITH}
+    \subitem {doctest.h}, \hyperpage{275}
+  \item {DOCTEST\_REQUIRE\_THROWS\_WITH\_AS}
+    \subitem {doctest.h}, \hyperpage{275}
+  \item {DOCTEST\_REQUIRE\_THROWS\_WITH\_AS\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{275}
+  \item {DOCTEST\_REQUIRE\_THROWS\_WITH\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{276}
+  \item {DOCTEST\_REQUIRE\_UNARY}
+    \subitem {doctest.h}, \hyperpage{276}
+  \item {DOCTEST\_REQUIRE\_UNARY\_FALSE}
+    \subitem {doctest.h}, \hyperpage{276}
+  \item {DOCTEST\_SCENARIO}
+    \subitem {doctest.h}, \hyperpage{277}
+  \item {DOCTEST\_SCENARIO\_CLASS}
+    \subitem {doctest.h}, \hyperpage{277}
+  \item {DOCTEST\_SCENARIO\_METHOD}
+    \subitem {doctest.h}, \hyperpage{277}
+  \item {DOCTEST\_SCENARIO\_TEMPLATE}
+    \subitem {doctest.h}, \hyperpage{277}
+  \item {DOCTEST\_SCENARIO\_TEMPLATE\_DEFINE}
+    \subitem {doctest.h}, \hyperpage{277}
+  \item {DOCTEST\_STRINGIFY}
+    \subitem {doctest.h}, \hyperpage{278}
+  \item {DOCTEST\_SUBCASE}
+    \subitem {doctest.h}, \hyperpage{278}
+  \item {DOCTEST\_SUPPRESS\_COMMON\_WARNINGS\_POP}
+    \subitem {doctest.h}, \hyperpage{278}
+  \item {DOCTEST\_SUPPRESS\_COMMON\_WARNINGS\_PUSH}
+    \subitem {doctest.h}, \hyperpage{278}
+  \item {DOCTEST\_SUPPRESS\_PRIVATE\_WARNINGS\_POP}
+    \subitem {doctest.h}, \hyperpage{278}
+  \item {DOCTEST\_SUPPRESS\_PRIVATE\_WARNINGS\_PUSH}
+    \subitem {doctest.h}, \hyperpage{279}
+  \item {DOCTEST\_SUPPRESS\_PUBLIC\_WARNINGS\_POP}
+    \subitem {doctest.h}, \hyperpage{279}
+  \item {DOCTEST\_SUPPRESS\_PUBLIC\_WARNINGS\_PUSH}
+    \subitem {doctest.h}, \hyperpage{279}
+  \item {DOCTEST\_SYMBOL\_EXPORT}
+    \subitem {doctest.h}, \hyperpage{279}
+  \item {DOCTEST\_SYMBOL\_IMPORT}
+    \subitem {doctest.h}, \hyperpage{279}
+  \item {DOCTEST\_TEST\_CASE}
+    \subitem {doctest.h}, \hyperpage{279}
+  \item {DOCTEST\_TEST\_CASE\_CLASS}
+    \subitem {doctest.h}, \hyperpage{280}
+  \item {DOCTEST\_TEST\_CASE\_FIXTURE}
+    \subitem {doctest.h}, \hyperpage{280}
+  \item {DOCTEST\_TEST\_CASE\_TEMPLATE}
+    \subitem {doctest.h}, \hyperpage{280}
+  \item {DOCTEST\_TEST\_CASE\_TEMPLATE\_APPLY}
+    \subitem {doctest.h}, \hyperpage{280}
+  \item {DOCTEST\_TEST\_CASE\_TEMPLATE\_DEFINE}
+    \subitem {doctest.h}, \hyperpage{280}
+  \item {DOCTEST\_TEST\_CASE\_TEMPLATE\_DEFINE\_IMPL}
+    \subitem {doctest.h}, \hyperpage{281}
+  \item {DOCTEST\_TEST\_CASE\_TEMPLATE\_IMPL}
+    \subitem {doctest.h}, \hyperpage{282}
+  \item {DOCTEST\_TEST\_CASE\_TEMPLATE\_INSTANTIATE}
+    \subitem {doctest.h}, \hyperpage{282}
+  \item {DOCTEST\_TEST\_CASE\_TEMPLATE\_INSTANTIATE\_IMPL}
+    \subitem {doctest.h}, \hyperpage{282}
+  \item {DOCTEST\_TEST\_CASE\_TEMPLATE\_INVOKE}
+    \subitem {doctest.h}, \hyperpage{282}
+  \item {DOCTEST\_TEST\_SUITE}
+    \subitem {doctest.h}, \hyperpage{283}
+  \item {DOCTEST\_TEST\_SUITE\_BEGIN}
+    \subitem {doctest.h}, \hyperpage{283}
+  \item {DOCTEST\_TEST\_SUITE\_END}
+    \subitem {doctest.h}, \hyperpage{283}
+  \item {DOCTEST\_TEST\_SUITE\_IMPL}
+    \subitem {doctest.h}, \hyperpage{283}
+  \item {DOCTEST\_THEN}
+    \subitem {doctest.h}, \hyperpage{284}
+  \item {DOCTEST\_TO\_LVALUE}
+    \subitem {doctest.h}, \hyperpage{284}
+  \item {DOCTEST\_TOSTR}
+    \subitem {doctest.h}, \hyperpage{284}
+  \item {DOCTEST\_TOSTR\_IMPL}
+    \subitem {doctest.h}, \hyperpage{285}
+  \item {DOCTEST\_TYPE\_TO\_STRING}
+    \subitem {doctest.h}, \hyperpage{285}
+  \item {DOCTEST\_TYPE\_TO\_STRING\_AS}
+    \subitem {doctest.h}, \hyperpage{285}
+  \item {DOCTEST\_UNARY\_ASSERT}
+    \subitem {doctest.h}, \hyperpage{285}
+  \item {DOCTEST\_UNUSED}
+    \subitem {doctest.h}, \hyperpage{286}
+  \item {DOCTEST\_VERSION}
+    \subitem {doctest.h}, \hyperpage{286}
+  \item {DOCTEST\_VERSION\_MAJOR}
+    \subitem {doctest.h}, \hyperpage{286}
+  \item {DOCTEST\_VERSION\_MINOR}
+    \subitem {doctest.h}, \hyperpage{286}
+  \item {DOCTEST\_VERSION\_PATCH}
+    \subitem {doctest.h}, \hyperpage{286}
+  \item {DOCTEST\_VERSION\_STR}
+    \subitem {doctest.h}, \hyperpage{286}
+  \item {DOCTEST\_WARN}
+    \subitem {doctest.h}, \hyperpage{287}
+  \item {DOCTEST\_WARN\_EQ}
+    \subitem {doctest.h}, \hyperpage{287}
+  \item {DOCTEST\_WARN\_FALSE}
+    \subitem {doctest.h}, \hyperpage{287}
+  \item {DOCTEST\_WARN\_FALSE\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{287}
+  \item {DOCTEST\_WARN\_GE}
+    \subitem {doctest.h}, \hyperpage{287}
+  \item {DOCTEST\_WARN\_GT}
+    \subitem {doctest.h}, \hyperpage{288}
+  \item {DOCTEST\_WARN\_LE}
+    \subitem {doctest.h}, \hyperpage{288}
+  \item {DOCTEST\_WARN\_LT}
+    \subitem {doctest.h}, \hyperpage{288}
+  \item {DOCTEST\_WARN\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{288}
+  \item {DOCTEST\_WARN\_NE}
+    \subitem {doctest.h}, \hyperpage{288}
+  \item {DOCTEST\_WARN\_NOTHROW}
+    \subitem {doctest.h}, \hyperpage{289}
+  \item {DOCTEST\_WARN\_NOTHROW\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{289}
+  \item {DOCTEST\_WARN\_THROWS}
+    \subitem {doctest.h}, \hyperpage{289}
+  \item {DOCTEST\_WARN\_THROWS\_AS}
+    \subitem {doctest.h}, \hyperpage{289}
+  \item {DOCTEST\_WARN\_THROWS\_AS\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{289}
+  \item {DOCTEST\_WARN\_THROWS\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{290}
+  \item {DOCTEST\_WARN\_THROWS\_WITH}
+    \subitem {doctest.h}, \hyperpage{290}
+  \item {DOCTEST\_WARN\_THROWS\_WITH\_AS}
+    \subitem {doctest.h}, \hyperpage{290}
+  \item {DOCTEST\_WARN\_THROWS\_WITH\_AS\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{290}
+  \item {DOCTEST\_WARN\_THROWS\_WITH\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{291}
+  \item {DOCTEST\_WARN\_UNARY}
+    \subitem {doctest.h}, \hyperpage{291}
+  \item {DOCTEST\_WARN\_UNARY\_FALSE}
+    \subitem {doctest.h}, \hyperpage{291}
+  \item {DOCTEST\_WHEN}
+    \subitem {doctest.h}, \hyperpage{291}
+  \item {DOCTEST\_WRAP\_IN\_TRY}
+    \subitem {doctest.h}, \hyperpage{291}
+  \item {DT\_CHECK}
+    \subitem {doctest::assertType}, \hyperpage{35}
+  \item {DT\_CHECK\_EQ}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_CHECK\_FALSE}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_CHECK\_GE}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_CHECK\_GT}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_CHECK\_LE}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_CHECK\_LT}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_CHECK\_NE}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_CHECK\_NOTHROW}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_CHECK\_THROWS}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_CHECK\_THROWS\_AS}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_CHECK\_THROWS\_WITH}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_CHECK\_THROWS\_WITH\_AS}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_CHECK\_UNARY}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_CHECK\_UNARY\_FALSE}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_REQUIRE}
+    \subitem {doctest::assertType}, \hyperpage{35}
+  \item {DT\_REQUIRE\_EQ}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_REQUIRE\_FALSE}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_REQUIRE\_GE}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_REQUIRE\_GT}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_REQUIRE\_LE}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_REQUIRE\_LT}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_REQUIRE\_NE}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_REQUIRE\_NOTHROW}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_REQUIRE\_THROWS}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_REQUIRE\_THROWS\_AS}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_REQUIRE\_THROWS\_WITH}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_REQUIRE\_THROWS\_WITH\_AS}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_REQUIRE\_UNARY}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_REQUIRE\_UNARY\_FALSE}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_WARN}
+    \subitem {doctest::assertType}, \hyperpage{35}
+  \item {DT\_WARN\_EQ}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_WARN\_FALSE}
+    \subitem {doctest::assertType}, \hyperpage{35}
+  \item {DT\_WARN\_GE}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_WARN\_GT}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_WARN\_LE}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_WARN\_LT}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_WARN\_NE}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_WARN\_NOTHROW}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_WARN\_THROWS}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_WARN\_THROWS\_AS}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_WARN\_THROWS\_WITH}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_WARN\_THROWS\_WITH\_AS}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_WARN\_UNARY}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {DT\_WARN\_UNARY\_FALSE}
+    \subitem {doctest::assertType}, \hyperpage{36}
+  \item {duration}
+    \subitem {doctest::ContextOptions}, \hyperpage{72}
 
   \indexspace
 
   \item {ENGENHEIRO}
-    \subitem {Cargo.hpp}, \hyperpage{44}
-  \item {Equipamento}, \hyperpage{18}
-    \subitem {AdicionarParametro}, \hyperpage{19}
-    \subitem {AdicionarParametroComLimites}, \hyperpage{19}
-    \subitem {AtualizarAlarmes}, \hyperpage{20}
-    \subitem {DiagnosticarEquipamento}, \hyperpage{20}
-    \subitem {Equipamento}, \hyperpage{19}
-    \subitem {ExibirAlarmes}, \hyperpage{20}
-    \subitem {ExibirParametros}, \hyperpage{21}
-    \subitem {GetAlarmes}, \hyperpage{21}
-    \subitem {GetId}, \hyperpage{21}
-    \subitem {GetParametros}, \hyperpage{21}
-    \subitem {QuantidadeAlarmes}, \hyperpage{21}
-    \subitem {QuantidadeParametros}, \hyperpage{22}
-    \subitem {RemoverParametro}, \hyperpage{22}
-    \subitem {SetDesc}, \hyperpage{22}
+    \subitem {Cargo.hpp}, \hyperpage{191}
+  \item {EntradaInvalida}, \hyperpage{85}
+  \item {Enum}
+    \subitem {doctest::assertType}, \hyperpage{35}
+    \subitem {doctest::Color}, \hyperpage{37}
+    \subitem {doctest::detail::binaryAssertComparison}, \hyperpage{45}
+    \subitem {doctest::TestCaseFailureReason}, \hyperpage{46}
+  \item {epsilon}
+    \subitem {doctest::Approx}, \hyperpage{53}
+  \item {eq}
+    \subitem {doctest::detail::binaryAssertComparison}, \hyperpage{45}
+  \item {Equipamento}, \hyperpage{86}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Equipamento}, 
+		\hyperpage{87}
+    \subitem {AdicionarParametro}, \hyperpage{87, 88}
+    \subitem {AtualizarAlarmes}, \hyperpage{89}
+    \subitem {DiagnosticarEquipamento}, \hyperpage{89}
+    \subitem {Equipamento}, \hyperpage{87}
+    \subitem {ExibirAlarmes}, \hyperpage{89}
+    \subitem {ExibirParametros}, \hyperpage{89}
+    \subitem {GetAlarmes}, \hyperpage{90}
+    \subitem {GetDesc}, \hyperpage{90}
+    \subitem {GetId}, \hyperpage{90}
+    \subitem {GetNome}, \hyperpage{90}
+    \subitem {GetParametros}, \hyperpage{90}
+    \subitem {ProximoIdParametro}, \hyperpage{91}
+    \subitem {QuantidadeAlarmes}, \hyperpage{91}
+    \subitem {QuantidadeParametros}, \hyperpage{91}
+    \subitem {RemoverParametro}, \hyperpage{91}
+    \subitem {SetDesc}, \hyperpage{92}
+    \subitem {Tipo}, \hyperpage{92}
+  \item {error\_string}
+    \subitem {doctest::TestCaseException}, \hyperpage{178}
+  \item {EstadoOperacional}
+    \subitem {EstadoOperacional.hpp}, \hyperpage{194}
+  \item {EstadoOperacional.hpp}
+    \subitem {EstadoOperacional}, \hyperpage{194}
+    \subitem {FALHA\_INTERNA}, \hyperpage{194}
+    \subitem {FALHA\_NA\_ALIMENTACAO}, \hyperpage{194}
+    \subitem {FALHA\_NA\_SAIDA}, \hyperpage{194}
+    \subitem {OPERACIONAL}, \hyperpage{194}
+  \item {ExcecaoSistema}, \hyperpage{93}
+  \item {Exception}
+    \subitem {doctest::TestCaseFailureReason}, \hyperpage{46}
+  \item {ExceptionTranslator}
+    \subitem {doctest::detail::ExceptionTranslator$<$ T $>$}, 
+		\hyperpage{94}
   \item {ExibirAlarmes}
-    \subitem {Conjunto}, \hyperpage{15}
-    \subitem {Equipamento}, \hyperpage{20}
-    \subitem {LinhaDeProducao}, \hyperpage{24}
+    \subitem {Conjunto}, \hyperpage{64}
+    \subitem {Equipamento}, \hyperpage{89}
+    \subitem {LinhaDeProducao}, \hyperpage{125}
   \item {ExibirConjuntos}
-    \subitem {LinhaDeProducao}, \hyperpage{25}
+    \subitem {LinhaDeProducao}, \hyperpage{125}
   \item {ExibirEquipamentos}
-    \subitem {Conjunto}, \hyperpage{15}
+    \subitem {Conjunto}, \hyperpage{64}
   \item {ExibirLinhas}
-    \subitem {Sistema}, \hyperpage{37}
+    \subitem {Sistema}, \hyperpage{157}
   \item {ExibirParametros}
-    \subitem {Equipamento}, \hyperpage{21}
+    \subitem {Equipamento}, \hyperpage{89}
   \item {ExibirTudo}
-    \subitem {Conjunto}, \hyperpage{15}
-    \subitem {LinhaDeProducao}, \hyperpage{25}
+    \subitem {Conjunto}, \hyperpage{64}
+    \subitem {LinhaDeProducao}, \hyperpage{125}
+  \item {exit}
+    \subitem {doctest::ContextOptions}, \hyperpage{73}
+  \item {Expression\_lhs}
+    \subitem {doctest::detail::Expression\_lhs$<$ L $>$}, 
+		\hyperpage{95}
+  \item {ExpressionDecomposer}
+    \subitem {doctest::detail::ExpressionDecomposer}, \hyperpage{96}
 
   \indexspace
 
+  \item {FAIL}
+    \subitem {doctest.h}, \hyperpage{292}
+  \item {FAIL\_CHECK}
+    \subitem {doctest.h}, \hyperpage{292}
+  \item {failed\_out\_of\_a\_testing\_context}
+    \subitem {doctest::detail}, \hyperpage{41}
+  \item {FailedExactlyNumTimes}
+    \subitem {doctest::TestCaseFailureReason}, \hyperpage{46}
+  \item {failure\_flags}
+    \subitem {doctest::CurrentTestCaseStats}, \hyperpage{81}
+  \item {failureString}
+    \subitem {doctest}, \hyperpage{28}
+  \item {FALHA\_INTERNA}
+    \subitem {EstadoOperacional.hpp}, \hyperpage{194}
+  \item {FALHA\_NA\_ALIMENTACAO}
+    \subitem {EstadoOperacional.hpp}, \hyperpage{194}
+  \item {FALHA\_NA\_SAIDA}
+    \subitem {EstadoOperacional.hpp}, \hyperpage{194}
+  \item {FAST\_CHECK\_EQ}
+    \subitem {doctest.h}, \hyperpage{292}
+  \item {FAST\_CHECK\_GE}
+    \subitem {doctest.h}, \hyperpage{292}
+  \item {FAST\_CHECK\_GT}
+    \subitem {doctest.h}, \hyperpage{292}
+  \item {FAST\_CHECK\_LE}
+    \subitem {doctest.h}, \hyperpage{293}
+  \item {FAST\_CHECK\_LT}
+    \subitem {doctest.h}, \hyperpage{293}
+  \item {FAST\_CHECK\_NE}
+    \subitem {doctest.h}, \hyperpage{293}
+  \item {FAST\_CHECK\_UNARY}
+    \subitem {doctest.h}, \hyperpage{293}
+  \item {FAST\_CHECK\_UNARY\_FALSE}
+    \subitem {doctest.h}, \hyperpage{293}
+  \item {FAST\_REQUIRE\_EQ}
+    \subitem {doctest.h}, \hyperpage{294}
+  \item {FAST\_REQUIRE\_GE}
+    \subitem {doctest.h}, \hyperpage{294}
+  \item {FAST\_REQUIRE\_GT}
+    \subitem {doctest.h}, \hyperpage{294}
+  \item {FAST\_REQUIRE\_LE}
+    \subitem {doctest.h}, \hyperpage{294}
+  \item {FAST\_REQUIRE\_LT}
+    \subitem {doctest.h}, \hyperpage{294}
+  \item {FAST\_REQUIRE\_NE}
+    \subitem {doctest.h}, \hyperpage{295}
+  \item {FAST\_REQUIRE\_UNARY}
+    \subitem {doctest.h}, \hyperpage{295}
+  \item {FAST\_REQUIRE\_UNARY\_FALSE}
+    \subitem {doctest.h}, \hyperpage{295}
+  \item {FAST\_WARN\_EQ}
+    \subitem {doctest.h}, \hyperpage{295}
+  \item {FAST\_WARN\_GE}
+    \subitem {doctest.h}, \hyperpage{295}
+  \item {FAST\_WARN\_GT}
+    \subitem {doctest.h}, \hyperpage{296}
+  \item {FAST\_WARN\_LE}
+    \subitem {doctest.h}, \hyperpage{296}
+  \item {FAST\_WARN\_LT}
+    \subitem {doctest.h}, \hyperpage{296}
+  \item {FAST\_WARN\_NE}
+    \subitem {doctest.h}, \hyperpage{296}
+  \item {FAST\_WARN\_UNARY}
+    \subitem {doctest.h}, \hyperpage{296}
+  \item {FAST\_WARN\_UNARY\_FALSE}
+    \subitem {doctest.h}, \hyperpage{297}
+  \item {fill}
+    \subitem {doctest::detail::filldata$<$ const char[N]$>$}, 
+		\hyperpage{99}
+    \subitem {doctest::detail::filldata$<$ const void \texorpdfstring{$\ast$}{*} $>$}, 
+		\hyperpage{99}
+    \subitem {doctest::detail::filldata$<$ const volatile void \texorpdfstring{$\ast$}{*} $>$}, 
+		\hyperpage{100}
+    \subitem {doctest::detail::filldata$<$ T \texorpdfstring{$\ast$}{*} $>$}, 
+		\hyperpage{101}
+    \subitem {doctest::detail::filldata$<$ T, Enable $>$}, 
+		\hyperpage{98}
+    \subitem {doctest::detail::filldata$<$ T, typename detail::types::enable\_if$<$ !detail::has\_insertion\_operator$<$ T $>$::value \&\&detail::is\_container$<$ T $>$::value $>$::type $>$}, 
+		\hyperpage{101}
+    \subitem {doctest::detail::filldata$<$ T, typename detail::types::enable\_if$<$!detail::has\_insertion\_operator$<$ T $>$::value \&\&detail::is\_pair$<$ T $>$::value $>$::type $>$}, 
+		\hyperpage{102}
+    \subitem {doctest::detail::filldata$<$ T[N]$>$}, \hyperpage{103}
+  \item {filloss}
+    \subitem {doctest::detail}, \hyperpage{41}
+  \item {find}
+    \subitem {doctest::String}, \hyperpage{163}
+  \item {first}
+    \subitem {doctest::ContextOptions}, \hyperpage{73}
+  \item {flipped}
+    \subitem {doctest::IsNaN$<$ F $>$}, \hyperpage{121}
+  \item {force\_colors}
+    \subitem {doctest::ContextOptions}, \hyperpage{73}
+  \item {forward}
+    \subitem {doctest::detail}, \hyperpage{42}
+  \item {funcType}
+    \subitem {doctest::detail}, \hyperpage{40}
+
+  \indexspace
+
+  \item {ge}
+    \subitem {doctest::detail::binaryAssertComparison}, \hyperpage{45}
+  \item {GENERATE}
+    \subitem {doctest.h}, \hyperpage{297}
+  \item {get\_active\_contexts}
+    \subitem {doctest::IReporter}, \hyperpage{108}
+  \item {Get\_Condicao}
+    \subitem {Dependencia}, \hyperpage{83}
+  \item {Get\_Id}
+    \subitem {Dependencia}, \hyperpage{83}
+  \item {get\_num\_active\_contexts}
+    \subitem {doctest::IReporter}, \hyperpage{108}
+  \item {get\_num\_stringified\_contexts}
+    \subitem {doctest::IReporter}, \hyperpage{108}
+  \item {Get\_Resultado}
+    \subitem {Dependencia}, \hyperpage{84}
+  \item {get\_stringified\_contexts}
+    \subitem {doctest::IReporter}, \hyperpage{108}
   \item {GetAlarmes}
-    \subitem {Equipamento}, \hyperpage{21}
+    \subitem {Equipamento}, \hyperpage{90}
   \item {GetArquivoLog}
-    \subitem {Log}, \hyperpage{29}
+    \subitem {Log}, \hyperpage{129}
   \item {GetCargo}
-    \subitem {Usuario}, \hyperpage{42}
+    \subitem {Usuario}, \hyperpage{185}
   \item {GetConjuntos}
-    \subitem {LinhaDeProducao}, \hyperpage{25}
+    \subitem {LinhaDeProducao}, \hyperpage{125}
+  \item {getContextOptions}
+    \subitem {doctest}, \hyperpage{28}
+  \item {getCurrentTestSuite}
+    \subitem {doctest\_detail\_test\_suite\_ns}, \hyperpage{47}
   \item {GetDesc}
-    \subitem {Conjunto}, \hyperpage{16}
-    \subitem {LinhaDeProducao}, \hyperpage{25}
-    \subitem {Parametro}, \hyperpage{31}
+    \subitem {Conjunto}, \hyperpage{64}
+    \subitem {Equipamento}, \hyperpage{90}
+    \subitem {LinhaDeProducao}, \hyperpage{126}
+    \subitem {Parametro}, \hyperpage{138}
   \item {GetEquipamentos}
-    \subitem {Conjunto}, \hyperpage{16}
+    \subitem {Conjunto}, \hyperpage{65}
   \item {GetEstado}
-    \subitem {Alarme}, \hyperpage{12}
-    \subitem {Parametro}, \hyperpage{32}
+    \subitem {Alarme}, \hyperpage{51}
+    \subitem {Parametro}, \hyperpage{139}
   \item {GetHist}
-    \subitem {Parametro}, \hyperpage{32}
+    \subitem {Parametro}, \hyperpage{139}
   \item {GetId}
-    \subitem {Conjunto}, \hyperpage{16}
-    \subitem {Equipamento}, \hyperpage{21}
-    \subitem {LinhaDeProducao}, \hyperpage{25}
-    \subitem {Parametro}, \hyperpage{32}
+    \subitem {Conjunto}, \hyperpage{65}
+    \subitem {Equipamento}, \hyperpage{90}
+    \subitem {LinhaDeProducao}, \hyperpage{126}
+    \subitem {Parametro}, \hyperpage{139}
   \item {GetLinhas}
-    \subitem {Sistema}, \hyperpage{38}
+    \subitem {Sistema}, \hyperpage{158}
   \item {GetLocal}
-    \subitem {LinhaDeProducao}, \hyperpage{26}
+    \subitem {LinhaDeProducao}, \hyperpage{126}
   \item {GetLogin}
-    \subitem {Usuario}, \hyperpage{42}
+    \subitem {Usuario}, \hyperpage{185}
   \item {GetMax}
-    \subitem {Parametro}, \hyperpage{32}
+    \subitem {Parametro}, \hyperpage{139}
   \item {GetMin}
-    \subitem {Parametro}, \hyperpage{32}
+    \subitem {Parametro}, \hyperpage{140}
   \item {GetNome}
-    \subitem {Conjunto}, \hyperpage{16}
-    \subitem {LinhaDeProducao}, \hyperpage{26}
+    \subitem {Conjunto}, \hyperpage{65}
+    \subitem {Equipamento}, \hyperpage{90}
+    \subitem {LinhaDeProducao}, \hyperpage{126}
   \item {GetParametros}
-    \subitem {Equipamento}, \hyperpage{21}
+    \subitem {Equipamento}, \hyperpage{90}
+  \item {GetSenha}
+    \subitem {Usuario}, \hyperpage{185}
   \item {GetUsuarioLogado}
-    \subitem {Sistema}, \hyperpage{38}
+    \subitem {Sistema}, \hyperpage{158}
   \item {GetValorAtual}
-    \subitem {Parametro}, \hyperpage{33}
+    \subitem {Parametro}, \hyperpage{140}
+  \item {GIVEN}
+    \subitem {doctest.h}, \hyperpage{297}
+  \item {gnu\_file\_line}
+    \subitem {doctest::ContextOptions}, \hyperpage{73}
+  \item {Green}
+    \subitem {doctest::Color}, \hyperpage{37}
+  \item {Grey}
+    \subitem {doctest::Color}, \hyperpage{37}
+  \item {gt}
+    \subitem {doctest::detail::binaryAssertComparison}, \hyperpage{45}
 
   \indexspace
 
-  \item {IdDisponivel}
-    \subitem {Sistema}, \hyperpage{38}
-  \item {include Directory Reference}, \hyperpage{9}
-  \item {include/Alarme.hpp}, \hyperpage{43}
-  \item {include/Cargo.hpp}, \hyperpage{44}
-  \item {include/Conjunto.hpp}, \hyperpage{44, 45}
-  \item {include/Equipamento.hpp}, \hyperpage{45, 46}
-  \item {include/LinhaDeProducao.hpp}, \hyperpage{46}
-  \item {include/Log.hpp}, \hyperpage{47}
-  \item {include/Parametro.hpp}, \hyperpage{48}
-  \item {include/Sistema.hpp}, \hyperpage{49}
-  \item {include/Usuario.hpp}, \hyperpage{50}
+  \item {help}
+    \subitem {doctest::ContextOptions}, \hyperpage{73}
 
   \indexspace
 
-  \item {LinhaDeProducao}, \hyperpage{22}
-    \subitem {AdicionarConjunto}, \hyperpage{24}
-    \subitem {AtualizarAlarmes}, \hyperpage{24}
-    \subitem {DiagnosticarLinha}, \hyperpage{24}
-    \subitem {ExibirAlarmes}, \hyperpage{24}
-    \subitem {ExibirConjuntos}, \hyperpage{25}
-    \subitem {ExibirTudo}, \hyperpage{25}
-    \subitem {GetConjuntos}, \hyperpage{25}
-    \subitem {GetDesc}, \hyperpage{25}
-    \subitem {GetId}, \hyperpage{25}
-    \subitem {GetLocal}, \hyperpage{26}
-    \subitem {GetNome}, \hyperpage{26}
-    \subitem {LinhaDeProducao}, \hyperpage{23}
-    \subitem {QuantidadeAlarmes}, \hyperpage{26}
-    \subitem {QuantidadeConjuntos}, \hyperpage{26}
-    \subitem {RemoverConjunto}, \hyperpage{26}
-    \subitem {SetDesc}, \hyperpage{27}
-    \subitem {SetLocal}, \hyperpage{27}
-    \subitem {SetNome}, \hyperpage{27}
-  \item {Log}, \hyperpage{28}
-    \subitem {GetArquivoLog}, \hyperpage{29}
-    \subitem {Log}, \hyperpage{28}
-    \subitem {Registrar}, \hyperpage{29}
-    \subitem {SetArquivoLog}, \hyperpage{29}
+  \item {IdAtivo}
+    \subitem {Sistema}, \hyperpage{158}
+  \item {IdDuplicado}, \hyperpage{105}
+  \item {IdInexistente}, \hyperpage{106}
+  \item {IdInvalido}, \hyperpage{106}
+  \item {include Directory Reference}, \hyperpage{23}
+  \item {include/Alarme.hpp}, \hyperpage{189}
+  \item {include/Atuador.hpp}, \hyperpage{190}
+  \item {include/Cargo.hpp}, \hyperpage{190, 191}
+  \item {include/Conjunto.hpp}, \hyperpage{191}
+  \item {include/Dependencia.hpp}, \hyperpage{192}
+  \item {include/Equipamento.hpp}, \hyperpage{193}
+  \item {include/EstadoOperacional.hpp}, \hyperpage{194}
+  \item {include/Excecoes.hpp}, \hyperpage{194, 195}
+  \item {include/LinhaDeProducao.hpp}, \hyperpage{196}
+  \item {include/Log.hpp}, \hyperpage{197}
+  \item {include/Motor.hpp}, \hyperpage{197, 198}
+  \item {include/Parametro.hpp}, \hyperpage{198}
+  \item {include/Sensor.hpp}, \hyperpage{199}
+  \item {include/Sistema.hpp}, \hyperpage{199, 200}
+  \item {include/Usuario.hpp}, \hyperpage{200, 201}
+  \item {include/Valvula.hpp}, \hyperpage{201}
+  \item {INFO}
+    \subitem {doctest.h}, \hyperpage{297}
+  \item {instantiationHelper}
+    \subitem {doctest::detail}, \hyperpage{42}
+  \item {is\_check}
+    \subitem {doctest::assertType}, \hyperpage{35}
+  \item {is\_crash}
+    \subitem {doctest::TestCaseException}, \hyperpage{178}
+  \item {is\_eq}
+    \subitem {doctest::assertType}, \hyperpage{35}
+  \item {is\_false}
+    \subitem {doctest::assertType}, \hyperpage{35}
+  \item {is\_ge}
+    \subitem {doctest::assertType}, \hyperpage{35}
+  \item {is\_gt}
+    \subitem {doctest::assertType}, \hyperpage{35}
+  \item {is\_le}
+    \subitem {doctest::assertType}, \hyperpage{35}
+  \item {is\_lt}
+    \subitem {doctest::assertType}, \hyperpage{35}
+  \item {is\_ne}
+    \subitem {doctest::assertType}, \hyperpage{35}
+  \item {is\_normal}
+    \subitem {doctest::assertType}, \hyperpage{35}
+  \item {is\_nothrow}
+    \subitem {doctest::assertType}, \hyperpage{35}
+  \item {is\_require}
+    \subitem {doctest::assertType}, \hyperpage{35}
+  \item {is\_running\_in\_test}
+    \subitem {doctest}, \hyperpage{34}
+  \item {is\_throws}
+    \subitem {doctest::assertType}, \hyperpage{35}
+  \item {is\_throws\_as}
+    \subitem {doctest::assertType}, \hyperpage{35}
+  \item {is\_throws\_with}
+    \subitem {doctest::assertType}, \hyperpage{35}
+  \item {is\_unary}
+    \subitem {doctest::assertType}, \hyperpage{35}
+  \item {is\_warn}
+    \subitem {doctest::assertType}, \hyperpage{35}
+  \item {isDebuggerActive}
+    \subitem {doctest::detail}, \hyperpage{42}
+  \item {IsNaN}
+    \subitem {doctest::IsNaN$<$ F $>$}, \hyperpage{120}
+  \item {IsNaN$<$ double $>$}
+    \subitem {doctest}, \hyperpage{34}
+  \item {IsNaN$<$ float $>$}
+    \subitem {doctest}, \hyperpage{34}
+  \item {IsNaN$<$ long double $>$}
+    \subitem {doctest}, \hyperpage{34}
+  \item {istream}
+    \subitem {std}, \hyperpage{47}
+
+  \indexspace
+
+  \item {last}
+    \subitem {doctest::ContextOptions}, \hyperpage{73}
+  \item {le}
+    \subitem {doctest::detail::binaryAssertComparison}, \hyperpage{45}
+  \item {lhs}
+    \subitem {doctest::detail::Expression\_lhs$<$ L $>$}, 
+		\hyperpage{95}
+  \item {LightGrey}
+    \subitem {doctest::Color}, \hyperpage{37}
+  \item {LimitesInvalidos}, \hyperpage{121}
+  \item {LinhaDeProducao}, \hyperpage{122}
+    \subitem {AcessarConjunto}, \hyperpage{123}
+    \subitem {AdicionarConjunto}, \hyperpage{124}
+    \subitem {AtualizarAlarmes}, \hyperpage{124}
+    \subitem {DiagnosticarLinha}, \hyperpage{124}
+    \subitem {ExibirAlarmes}, \hyperpage{125}
+    \subitem {ExibirConjuntos}, \hyperpage{125}
+    \subitem {ExibirTudo}, \hyperpage{125}
+    \subitem {GetConjuntos}, \hyperpage{125}
+    \subitem {GetDesc}, \hyperpage{126}
+    \subitem {GetId}, \hyperpage{126}
+    \subitem {GetLocal}, \hyperpage{126}
+    \subitem {GetNome}, \hyperpage{126}
+    \subitem {LinhaDeProducao}, \hyperpage{123}
+    \subitem {ProximoIdConjunto}, \hyperpage{126}
+    \subitem {QuantidadeAlarmes}, \hyperpage{127}
+    \subitem {QuantidadeConjuntos}, \hyperpage{127}
+    \subitem {RemoverConjunto}, \hyperpage{127}
+    \subitem {SetDesc}, \hyperpage{127}
+    \subitem {SetLocal}, \hyperpage{128}
+    \subitem {SetNome}, \hyperpage{128}
+  \item {list\_reporters}
+    \subitem {doctest::ContextOptions}, \hyperpage{73}
+  \item {list\_test\_cases}
+    \subitem {doctest::ContextOptions}, \hyperpage{73}
+  \item {list\_test\_suites}
+    \subitem {doctest::ContextOptions}, \hyperpage{74}
+  \item {Log}, \hyperpage{128}
+    \subitem {GetArquivoLog}, \hyperpage{129}
+    \subitem {Log}, \hyperpage{129}
+    \subitem {Registrar}, \hyperpage{129}
+    \subitem {SetArquivoLog}, \hyperpage{130}
+  \item {log}
+    \subitem {doctest::detail::MessageBuilder}, \hyperpage{132}
+    \subitem {doctest::detail::ResultBuilder}, \hyperpage{150}
+  \item {log\_assert}
+    \subitem {doctest::IReporter}, \hyperpage{108}
+  \item {log\_message}
+    \subitem {doctest::IReporter}, \hyperpage{108}
+  \item {logged}
+    \subitem {doctest::detail::MessageBuilder}, \hyperpage{133}
   \item {Login}
-    \subitem {Sistema}, \hyperpage{38}
+    \subitem {Sistema}, \hyperpage{158}
   \item {Logout}
-    \subitem {Sistema}, \hyperpage{39}
+    \subitem {Sistema}, \hyperpage{159}
+  \item {lt}
+    \subitem {doctest::detail::binaryAssertComparison}, \hyperpage{45}
 
   \indexspace
 
-  \item {Parametro}, \hyperpage{30}
-    \subitem {DiagnosticarParametro}, \hyperpage{31}
-    \subitem {GetDesc}, \hyperpage{31}
-    \subitem {GetEstado}, \hyperpage{32}
-    \subitem {GetHist}, \hyperpage{32}
-    \subitem {GetId}, \hyperpage{32}
-    \subitem {GetMax}, \hyperpage{32}
-    \subitem {GetMin}, \hyperpage{32}
-    \subitem {GetValorAtual}, \hyperpage{33}
-    \subitem {Parametro}, \hyperpage{31}
-    \subitem {ResetarHistorico}, \hyperpage{33}
-    \subitem {ResetarLimites}, \hyperpage{33}
-    \subitem {SetDesc}, \hyperpage{33}
-    \subitem {SetMax}, \hyperpage{33}
-    \subitem {SetMin}, \hyperpage{34}
-    \subitem {SetValorAtual}, \hyperpage{34}
-    \subitem {ValorValido}, \hyperpage{34}
+  \item {m\_at}
+    \subitem {doctest::AssertData}, \hyperpage{56}
+    \subitem {doctest::detail::Expression\_lhs$<$ L $>$}, 
+		\hyperpage{95}
+    \subitem {doctest::detail::ExpressionDecomposer}, \hyperpage{97}
+  \item {m\_decomp}
+    \subitem {doctest::AssertData}, \hyperpage{56}
+    \subitem {doctest::detail::Result}, \hyperpage{148}
+  \item {m\_description}
+    \subitem {doctest::detail::TestSuite}, \hyperpage{180}
+    \subitem {doctest::TestCaseData}, \hyperpage{176}
+  \item {m\_entered}
+    \subitem {doctest::detail::Subcase}, \hyperpage{170}
+  \item {m\_epsilon}
+    \subitem {doctest::Approx}, \hyperpage{55}
+  \item {m\_exception}
+    \subitem {doctest::AssertData}, \hyperpage{57}
+  \item {m\_exception\_string}
+    \subitem {doctest::AssertData}, \hyperpage{57}
+  \item {m\_exception\_type}
+    \subitem {doctest::AssertData}, \hyperpage{57}
+  \item {m\_expected\_failures}
+    \subitem {doctest::detail::TestSuite}, \hyperpage{180}
+    \subitem {doctest::TestCaseData}, \hyperpage{176}
+  \item {m\_expr}
+    \subitem {doctest::AssertData}, \hyperpage{57}
+  \item {m\_failed}
+    \subitem {doctest::AssertData}, \hyperpage{57}
+  \item {m\_file}
+    \subitem {doctest::AssertData}, \hyperpage{57}
+    \subitem {doctest::MessageData}, \hyperpage{134}
+    \subitem {doctest::SubcaseSignature}, \hyperpage{171}
+    \subitem {doctest::TestCaseData}, \hyperpage{176}
+  \item {m\_full\_name}
+    \subitem {doctest::detail::TestCase}, \hyperpage{174}
+  \item {m\_line}
+    \subitem {doctest::AssertData}, \hyperpage{57}
+    \subitem {doctest::MessageData}, \hyperpage{134}
+    \subitem {doctest::SubcaseSignature}, \hyperpage{171}
+    \subitem {doctest::TestCaseData}, \hyperpage{176}
+  \item {m\_may\_fail}
+    \subitem {doctest::detail::TestSuite}, \hyperpage{181}
+    \subitem {doctest::TestCaseData}, \hyperpage{176}
+  \item {m\_name}
+    \subitem {doctest::SubcaseSignature}, \hyperpage{171}
+    \subitem {doctest::TestCaseData}, \hyperpage{176}
+  \item {m\_no\_breaks}
+    \subitem {doctest::detail::TestSuite}, \hyperpage{181}
+    \subitem {doctest::TestCaseData}, \hyperpage{176}
+  \item {m\_no\_output}
+    \subitem {doctest::detail::TestSuite}, \hyperpage{181}
+    \subitem {doctest::TestCaseData}, \hyperpage{176}
+  \item {m\_passed}
+    \subitem {doctest::detail::Result}, \hyperpage{148}
+  \item {m\_scale}
+    \subitem {doctest::Approx}, \hyperpage{55}
+  \item {m\_severity}
+    \subitem {doctest::MessageData}, \hyperpage{134}
+  \item {m\_should\_fail}
+    \subitem {doctest::detail::TestSuite}, \hyperpage{181}
+    \subitem {doctest::TestCaseData}, \hyperpage{177}
+  \item {m\_signature}
+    \subitem {doctest::detail::Subcase}, \hyperpage{170}
+  \item {m\_skip}
+    \subitem {doctest::detail::TestSuite}, \hyperpage{181}
+    \subitem {doctest::TestCaseData}, \hyperpage{177}
+  \item {m\_stream}
+    \subitem {doctest::detail::MessageBuilder}, \hyperpage{133}
+  \item {m\_string}
+    \subitem {doctest::MessageData}, \hyperpage{134}
+  \item {m\_template\_id}
+    \subitem {doctest::detail::TestCase}, \hyperpage{174}
+  \item {m\_test}
+    \subitem {doctest::detail::TestCase}, \hyperpage{174}
+  \item {m\_test\_case}
+    \subitem {doctest::AssertData}, \hyperpage{57}
+  \item {m\_test\_suite}
+    \subitem {doctest::detail::TestSuite}, \hyperpage{181}
+    \subitem {doctest::TestCaseData}, \hyperpage{177}
+  \item {m\_threw}
+    \subitem {doctest::AssertData}, \hyperpage{58}
+  \item {m\_threw\_as}
+    \subitem {doctest::AssertData}, \hyperpage{58}
+  \item {m\_timeout}
+    \subitem {doctest::detail::TestSuite}, \hyperpage{181}
+    \subitem {doctest::TestCaseData}, \hyperpage{177}
+  \item {m\_type}
+    \subitem {doctest::detail::TestCase}, \hyperpage{175}
+  \item {m\_value}
+    \subitem {doctest::Approx}, \hyperpage{55}
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{209}
+  \item {main.cpp}
+    \subitem {main}, \hyperpage{209}
+  \item {MakeContextScope}
+    \subitem {doctest::detail}, \hyperpage{42}
+  \item {MESSAGE}
+    \subitem {doctest.h}, \hyperpage{297}
+  \item {MessageBuilder}
+    \subitem {doctest::detail::MessageBuilder}, \hyperpage{131}
+  \item {minimal}
+    \subitem {doctest::ContextOptions}, \hyperpage{74}
+  \item {Motor}, \hyperpage{134}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Motor}, \hyperpage{136}
+    \subitem {Motor}, \hyperpage{136}
+    \subitem {Tipo}, \hyperpage{136}
+
+  \indexspace
+
+  \item {ne}
+    \subitem {doctest::detail::binaryAssertComparison}, \hyperpage{45}
+  \item {need\_to\_destroy}
+    \subitem {doctest::detail::ContextScopeBase}, \hyperpage{81}
+  \item {no\_breaks}
+    \subitem {doctest::ContextOptions}, \hyperpage{74}
+  \item {no\_colors}
+    \subitem {doctest::ContextOptions}, \hyperpage{74}
+  \item {no\_debug\_output}
+    \subitem {doctest::ContextOptions}, \hyperpage{74}
+  \item {no\_exitcode}
+    \subitem {doctest::ContextOptions}, \hyperpage{74}
+  \item {no\_intro}
+    \subitem {doctest::ContextOptions}, \hyperpage{74}
+  \item {no\_line\_numbers}
+    \subitem {doctest::ContextOptions}, \hyperpage{74}
+  \item {no\_path\_in\_filenames}
+    \subitem {doctest::ContextOptions}, \hyperpage{75}
+  \item {no\_run}
+    \subitem {doctest::ContextOptions}, \hyperpage{75}
+  \item {no\_skip}
+    \subitem {doctest::ContextOptions}, \hyperpage{75}
+  \item {no\_skipped\_summary}
+    \subitem {doctest::ContextOptions}, \hyperpage{75}
+  \item {no\_throw}
+    \subitem {doctest::ContextOptions}, \hyperpage{75}
+  \item {no\_time\_in\_output}
+    \subitem {doctest::ContextOptions}, \hyperpage{75}
+  \item {no\_version}
+    \subitem {doctest::ContextOptions}, \hyperpage{75}
+  \item {None}
+    \subitem {doctest::Color}, \hyperpage{37}
+    \subitem {doctest::TestCaseFailureReason}, \hyperpage{46}
+  \item {notas-\/C6}, \hyperpage{5}
+  \item {notas-\/C7}, \hyperpage{7}
+  \item {npos}
+    \subitem {doctest::String}, \hyperpage{165}
+  \item {nullptr\_t}
+    \subitem {std}, \hyperpage{47}
+  \item {num\_data}
+    \subitem {doctest::QueryData}, \hyperpage{143}
+  \item {numAsserts}
+    \subitem {doctest::TestRunStats}, \hyperpage{179}
+  \item {numAssertsCurrentTest}
+    \subitem {doctest::CurrentTestCaseStats}, \hyperpage{81}
+  \item {numAssertsFailed}
+    \subitem {doctest::TestRunStats}, \hyperpage{179}
+  \item {numAssertsFailedCurrentTest}
+    \subitem {doctest::CurrentTestCaseStats}, \hyperpage{82}
+  \item {numTestCases}
+    \subitem {doctest::TestRunStats}, \hyperpage{179}
+  \item {numTestCasesFailed}
+    \subitem {doctest::TestRunStats}, \hyperpage{179}
+  \item {numTestCasesPassingFilters}
+    \subitem {doctest::TestRunStats}, \hyperpage{179}
+  \item {numTestSuitesPassingFilters}
+    \subitem {doctest::TestRunStats}, \hyperpage{179}
+
+  \indexspace
+
+  \item {OPERACIONAL}
+    \subitem {EstadoOperacional.hpp}, \hyperpage{194}
+  \item {operator bool}
+    \subitem {doctest::detail::Subcase}, \hyperpage{170}
+    \subitem {doctest::IsNaN$<$ F $>$}, \hyperpage{121}
+  \item {operator const String \&}
+    \subitem {doctest::AssertData::StringContains}, \hyperpage{166}
+  \item {operator L}
+    \subitem {doctest::detail::Expression\_lhs$<$ L $>$}, 
+		\hyperpage{95}
+  \item {operator Result}
+    \subitem {doctest::detail::Expression\_lhs$<$ L $>$}, 
+		\hyperpage{95}
+  \item {operator!}
+    \subitem {doctest::IsNaN$<$ F $>$}, \hyperpage{121}
+  \item {operator!=}
+    \subitem {doctest}, \hyperpage{29}
+    \subitem {doctest::Approx}, \hyperpage{53}
+  \item {operator$<$}
+    \subitem {doctest}, \hyperpage{29}
+    \subitem {doctest::Approx}, \hyperpage{53, 54}
+    \subitem {doctest::detail::TestCase}, \hyperpage{174}
+    \subitem {doctest::SubcaseSignature}, \hyperpage{171}
+  \item {operator$<$$<$}
+    \subitem {doctest::Color}, \hyperpage{37}
+    \subitem {doctest::detail::ExpressionDecomposer}, \hyperpage{96}
+    \subitem {doctest::detail::MessageBuilder}, \hyperpage{132}
+    \subitem {doctest::String}, \hyperpage{165}
+    \subitem {std}, \hyperpage{48}
+  \item {operator$<$=}
+    \subitem {doctest}, \hyperpage{29}
+    \subitem {doctest::Approx}, \hyperpage{54}
+  \item {operator$>$}
+    \subitem {doctest}, \hyperpage{30}
+    \subitem {doctest::Approx}, \hyperpage{54}
+  \item {operator$>$=}
+    \subitem {doctest}, \hyperpage{30}
+    \subitem {doctest::Approx}, \hyperpage{54, 55}
+  \item {operator()}
+    \subitem {doctest::Approx}, \hyperpage{53}
+    \subitem {doctest::detail::RelationalComparator$<$ int, L, R $>$}, 
+		\hyperpage{144}
+  \item {operator+}
+    \subitem {doctest}, \hyperpage{29}
+  \item {operator+=}
+    \subitem {doctest::String}, \hyperpage{163}
+  \item {operator,}
+    \subitem {doctest::detail::MessageBuilder}, \hyperpage{132}
+  \item {operator=}
+    \subitem {doctest::Context}, \hyperpage{69, 70}
+    \subitem {doctest::detail::ContextScope$<$ L $>$}, \hyperpage{79}
+    \subitem {doctest::detail::ContextScopeBase}, \hyperpage{80, 81}
+    \subitem {doctest::detail::MessageBuilder}, \hyperpage{132}
+    \subitem {doctest::detail::Subcase}, \hyperpage{170}
+    \subitem {doctest::detail::TestCase}, \hyperpage{174}
+    \subitem {doctest::String}, \hyperpage{164}
+  \item {operator==}
+    \subitem {doctest}, \hyperpage{29, 30}
+    \subitem {doctest::Approx}, \hyperpage{54}
+    \subitem {doctest::SubcaseSignature}, \hyperpage{171}
+  \item {operator[]}
+    \subitem {doctest::String}, \hyperpage{164}
+  \item {operator\texorpdfstring{$\ast$}{*}}
+    \subitem {doctest::detail::MessageBuilder}, \hyperpage{132}
+    \subitem {doctest::detail::TestCase}, \hyperpage{174}
+    \subitem {doctest::detail::TestSuite}, \hyperpage{180}
+  \item {order\_by}
+    \subitem {doctest::ContextOptions}, \hyperpage{75}
+  \item {ostream}
+    \subitem {std}, \hyperpage{47}
+  \item {out}
+    \subitem {doctest::ContextOptions}, \hyperpage{76}
+
+  \indexspace
+
+  \item {Parametro}, \hyperpage{136}
+    \subitem {DiagnosticarParametro}, \hyperpage{138}
+    \subitem {GetDesc}, \hyperpage{138}
+    \subitem {GetEstado}, \hyperpage{139}
+    \subitem {GetHist}, \hyperpage{139}
+    \subitem {GetId}, \hyperpage{139}
+    \subitem {GetMax}, \hyperpage{139}
+    \subitem {GetMin}, \hyperpage{140}
+    \subitem {GetValorAtual}, \hyperpage{140}
+    \subitem {Parametro}, \hyperpage{137, 138}
+    \subitem {ResetarHistorico}, \hyperpage{140}
+    \subitem {ResetarLimites}, \hyperpage{140}
+    \subitem {SetDesc}, \hyperpage{140}
+    \subitem {SetMax}, \hyperpage{141}
+    \subitem {SetMin}, \hyperpage{141}
+    \subitem {SetValorAtual}, \hyperpage{141}
+    \subitem {ValorValido}, \hyperpage{142}
+  \item {ProximoIdConjunto}
+    \subitem {LinhaDeProducao}, \hyperpage{126}
   \item {ProximoIdDisponivel}
-    \subitem {Sistema}, \hyperpage{39}
+    \subitem {Sistema}, \hyperpage{159}
+  \item {ProximoIdEquipamento}
+    \subitem {Conjunto}, \hyperpage{65}
+  \item {ProximoIdParametro}
+    \subitem {Equipamento}, \hyperpage{91}
 
   \indexspace
 
   \item {QuantidadeAlarmes}
-    \subitem {Conjunto}, \hyperpage{16}
-    \subitem {Equipamento}, \hyperpage{21}
-    \subitem {LinhaDeProducao}, \hyperpage{26}
+    \subitem {Conjunto}, \hyperpage{65}
+    \subitem {Equipamento}, \hyperpage{91}
+    \subitem {LinhaDeProducao}, \hyperpage{127}
   \item {QuantidadeConjuntos}
-    \subitem {LinhaDeProducao}, \hyperpage{26}
+    \subitem {LinhaDeProducao}, \hyperpage{127}
   \item {QuantidadeEquipamentos}
-    \subitem {Conjunto}, \hyperpage{17}
+    \subitem {Conjunto}, \hyperpage{66}
   \item {QuantidadeParametros}
-    \subitem {Equipamento}, \hyperpage{22}
+    \subitem {Equipamento}, \hyperpage{91}
+  \item {quiet}
+    \subitem {doctest::ContextOptions}, \hyperpage{76}
 
   \indexspace
 
-  \item {README.md}, \hyperpage{50}
+  \item {rand\_seed}
+    \subitem {doctest::ContextOptions}, \hyperpage{76}
+  \item {react}
+    \subitem {doctest::detail::MessageBuilder}, \hyperpage{133}
+    \subitem {doctest::detail::ResultBuilder}, \hyperpage{150}
+  \item {README.md}, \hyperpage{202}
+  \item {Red}
+    \subitem {doctest::Color}, \hyperpage{37}
+  \item {REGISTER\_EXCEPTION\_TRANSLATOR}
+    \subitem {doctest.h}, \hyperpage{298}
+  \item {REGISTER\_LISTENER}
+    \subitem {doctest.h}, \hyperpage{298}
+  \item {REGISTER\_REPORTER}
+    \subitem {doctest.h}, \hyperpage{298}
+  \item {registerExceptionTranslator}
+    \subitem {doctest}, \hyperpage{30}
+  \item {registerExceptionTranslatorImpl}
+    \subitem {doctest::detail}, \hyperpage{42}
+  \item {registerReporter}
+    \subitem {doctest}, \hyperpage{30}
+  \item {registerReporterImpl}
+    \subitem {doctest::detail}, \hyperpage{42}
   \item {Registrar}
-    \subitem {Log}, \hyperpage{29}
+    \subitem {Log}, \hyperpage{129}
+  \item {regTest}
+    \subitem {doctest::detail}, \hyperpage{43}
   \item {RemoverConjunto}
-    \subitem {LinhaDeProducao}, \hyperpage{26}
+    \subitem {LinhaDeProducao}, \hyperpage{127}
   \item {RemoverEquipamento}
-    \subitem {Conjunto}, \hyperpage{17}
+    \subitem {Conjunto}, \hyperpage{66}
   \item {RemoverLinha}
-    \subitem {Sistema}, \hyperpage{39}
+    \subitem {Sistema}, \hyperpage{159}
   \item {RemoverParametro}
-    \subitem {Equipamento}, \hyperpage{22}
+    \subitem {Equipamento}, \hyperpage{91}
   \item {RemoverUsuario}
-    \subitem {Sistema}, \hyperpage{40}
+    \subitem {Sistema}, \hyperpage{160}
+  \item {report\_query}
+    \subitem {doctest::IReporter}, \hyperpage{108}
+  \item {reporterCreator}
+    \subitem {doctest::detail}, \hyperpage{43}
+  \item {reporterCreatorFunc}
+    \subitem {doctest::detail}, \hyperpage{40}
+  \item {REQUIRE}
+    \subitem {doctest.h}, \hyperpage{298}
+  \item {REQUIRE\_EQ}
+    \subitem {doctest.h}, \hyperpage{298}
+  \item {REQUIRE\_FALSE}
+    \subitem {doctest.h}, \hyperpage{299}
+  \item {REQUIRE\_FALSE\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{299}
+  \item {REQUIRE\_GE}
+    \subitem {doctest.h}, \hyperpage{299}
+  \item {REQUIRE\_GT}
+    \subitem {doctest.h}, \hyperpage{299}
+  \item {REQUIRE\_LE}
+    \subitem {doctest.h}, \hyperpage{299}
+  \item {REQUIRE\_LT}
+    \subitem {doctest.h}, \hyperpage{300}
+  \item {REQUIRE\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{300}
+  \item {REQUIRE\_NE}
+    \subitem {doctest.h}, \hyperpage{300}
+  \item {REQUIRE\_NOTHROW}
+    \subitem {doctest.h}, \hyperpage{300}
+  \item {REQUIRE\_NOTHROW\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{300}
+  \item {REQUIRE\_THROWS}
+    \subitem {doctest.h}, \hyperpage{301}
+  \item {REQUIRE\_THROWS\_AS}
+    \subitem {doctest.h}, \hyperpage{301}
+  \item {REQUIRE\_THROWS\_AS\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{301}
+  \item {REQUIRE\_THROWS\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{301}
+  \item {REQUIRE\_THROWS\_WITH}
+    \subitem {doctest.h}, \hyperpage{301}
+  \item {REQUIRE\_THROWS\_WITH\_AS}
+    \subitem {doctest.h}, \hyperpage{302}
+  \item {REQUIRE\_THROWS\_WITH\_AS\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{302}
+  \item {REQUIRE\_THROWS\_WITH\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{302}
+  \item {REQUIRE\_UNARY}
+    \subitem {doctest.h}, \hyperpage{302}
+  \item {REQUIRE\_UNARY\_FALSE}
+    \subitem {doctest.h}, \hyperpage{303}
   \item {ResetarHistorico}
-    \subitem {Parametro}, \hyperpage{33}
+    \subitem {Parametro}, \hyperpage{140}
   \item {ResetarLimites}
-    \subitem {Parametro}, \hyperpage{33}
+    \subitem {Parametro}, \hyperpage{140}
+  \item {Result}
+    \subitem {doctest::detail::Result}, \hyperpage{148}
+  \item {ResultBuilder}
+    \subitem {doctest::detail::ResultBuilder}, \hyperpage{149}
+  \item {rfind}
+    \subitem {doctest::String}, \hyperpage{164}
+  \item {run}
+    \subitem {doctest::Context}, \hyperpage{70}
+  \item {run\_stats}
+    \subitem {doctest::QueryData}, \hyperpage{143}
 
   \indexspace
 
   \item {SalvarAlteracoes}
-    \subitem {Sistema}, \hyperpage{40}
+    \subitem {Sistema}, \hyperpage{160}
+  \item {scale}
+    \subitem {doctest::Approx}, \hyperpage{53}
+  \item {SCENARIO}
+    \subitem {doctest.h}, \hyperpage{303}
+  \item {SCENARIO\_CLASS}
+    \subitem {doctest.h}, \hyperpage{303}
+  \item {SCENARIO\_METHOD}
+    \subitem {doctest.h}, \hyperpage{303}
+  \item {SCENARIO\_TEMPLATE}
+    \subitem {doctest.h}, \hyperpage{303}
+  \item {SCENARIO\_TEMPLATE\_DEFINE}
+    \subitem {doctest.h}, \hyperpage{304}
+  \item {seconds}
+    \subitem {doctest::CurrentTestCaseStats}, \hyperpage{82}
+  \item {Sensor}, \hyperpage{151}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Sensor}, \hyperpage{152}
+    \subitem {Sensor}, \hyperpage{152}
+    \subitem {Tipo}, \hyperpage{152}
+  \item {SessaoInvalida}, \hyperpage{153}
   \item {SetArquivoLog}
-    \subitem {Log}, \hyperpage{29}
+    \subitem {Log}, \hyperpage{130}
+  \item {setAsDefaultForAssertsOutOfTestCases}
+    \subitem {doctest::Context}, \hyperpage{70}
+  \item {setAssertHandler}
+    \subitem {doctest::Context}, \hyperpage{70}
+  \item {setCout}
+    \subitem {doctest::Context}, \hyperpage{70}
   \item {SetDesc}
-    \subitem {Alarme}, \hyperpage{12}
-    \subitem {Conjunto}, \hyperpage{17}
-    \subitem {Equipamento}, \hyperpage{22}
-    \subitem {LinhaDeProducao}, \hyperpage{27}
-    \subitem {Parametro}, \hyperpage{33}
+    \subitem {Alarme}, \hyperpage{51}
+    \subitem {Conjunto}, \hyperpage{66}
+    \subitem {Equipamento}, \hyperpage{92}
+    \subitem {LinhaDeProducao}, \hyperpage{127}
+    \subitem {Parametro}, \hyperpage{140}
   \item {SetEstado}
-    \subitem {Alarme}, \hyperpage{13}
+    \subitem {Alarme}, \hyperpage{51}
   \item {SetLocal}
-    \subitem {LinhaDeProducao}, \hyperpage{27}
+    \subitem {LinhaDeProducao}, \hyperpage{128}
   \item {SetMax}
-    \subitem {Parametro}, \hyperpage{33}
+    \subitem {Parametro}, \hyperpage{141}
   \item {SetMin}
-    \subitem {Parametro}, \hyperpage{34}
+    \subitem {Parametro}, \hyperpage{141}
   \item {SetNome}
-    \subitem {Conjunto}, \hyperpage{17}
-    \subitem {LinhaDeProducao}, \hyperpage{27}
+    \subitem {Conjunto}, \hyperpage{67}
+    \subitem {LinhaDeProducao}, \hyperpage{128}
+  \item {setOption}
+    \subitem {doctest::Context}, \hyperpage{70}
+  \item {setResult}
+    \subitem {doctest::detail::ResultBuilder}, \hyperpage{150}
+  \item {setTestSuite}
+    \subitem {doctest::detail}, \hyperpage{43}
   \item {SetValorAtual}
-    \subitem {Parametro}, \hyperpage{34}
-  \item {Sistema}, \hyperpage{35}
-    \subitem {AdicionarLinha}, \hyperpage{36}
-    \subitem {AdicionarUsuario}, \hyperpage{36}
-    \subitem {CarregarSave}, \hyperpage{37}
-    \subitem {CarregarUltimoSave}, \hyperpage{37}
-    \subitem {ExibirLinhas}, \hyperpage{37}
-    \subitem {GetLinhas}, \hyperpage{38}
-    \subitem {GetUsuarioLogado}, \hyperpage{38}
-    \subitem {IdDisponivel}, \hyperpage{38}
-    \subitem {Login}, \hyperpage{38}
-    \subitem {Logout}, \hyperpage{39}
-    \subitem {ProximoIdDisponivel}, \hyperpage{39}
-    \subitem {RemoverLinha}, \hyperpage{39}
-    \subitem {RemoverUsuario}, \hyperpage{40}
-    \subitem {SalvarAlteracoes}, \hyperpage{40}
-    \subitem {Sistema}, \hyperpage{36}
+    \subitem {Parametro}, \hyperpage{141}
+  \item {SFINAE\_OP}
+    \subitem {doctest.h}, \hyperpage{304}
+  \item {shouldExit}
+    \subitem {doctest::Context}, \hyperpage{70}
+  \item {ShouldHaveFailedAndDid}
+    \subitem {doctest::TestCaseFailureReason}, \hyperpage{46}
+  \item {ShouldHaveFailedButDidnt}
+    \subitem {doctest::TestCaseFailureReason}, \hyperpage{46}
+  \item {Sistema}, \hyperpage{154}
+    \subitem {AcessarLinha}, \hyperpage{155}
+    \subitem {AdicionarLinha}, \hyperpage{155, 156}
+    \subitem {AdicionarUsuario}, \hyperpage{156}
+    \subitem {CarregarSave}, \hyperpage{157}
+    \subitem {CarregarUltimoSave}, \hyperpage{157}
+    \subitem {ExibirLinhas}, \hyperpage{157}
+    \subitem {GetLinhas}, \hyperpage{158}
+    \subitem {GetUsuarioLogado}, \hyperpage{158}
+    \subitem {IdAtivo}, \hyperpage{158}
+    \subitem {Login}, \hyperpage{158}
+    \subitem {Logout}, \hyperpage{159}
+    \subitem {ProximoIdDisponivel}, \hyperpage{159}
+    \subitem {RemoverLinha}, \hyperpage{159}
+    \subitem {RemoverUsuario}, \hyperpage{160}
+    \subitem {SalvarAlteracoes}, \hyperpage{160}
+    \subitem {Sistema}, \hyperpage{155}
   \item {Sistema de Tolerância de Falha em Fábricas}, \hyperpage{1}
+  \item {size}
+    \subitem {doctest::String}, \hyperpage{164}
+  \item {size\_t}
+    \subitem {doctest}, \hyperpage{27}
+    \subitem {std}, \hyperpage{47}
+  \item {size\_type}
+    \subitem {doctest::String}, \hyperpage{162}
+  \item {skipPathFromFilename}
+    \subitem {doctest}, \hyperpage{30}
+  \item {src Directory Reference}, \hyperpage{23}
+  \item {src/Alarme.cpp}, \hyperpage{202}
+  \item {src/Atuador.cpp}, \hyperpage{202}
+  \item {src/Conjunto.cpp}, \hyperpage{203}
+  \item {src/Dependencia.cpp}, \hyperpage{204, 205}
+  \item {src/Equipamento.cpp}, \hyperpage{205}
+  \item {src/LinhaDeProducao.cpp}, \hyperpage{207}
+  \item {src/Log.cpp}, \hyperpage{208}
+  \item {src/main.cpp}, \hyperpage{209, 210}
+  \item {src/Motor.cpp}, \hyperpage{213}
+  \item {src/Parametro.cpp}, \hyperpage{214}
+  \item {src/Sensor.cpp}, \hyperpage{215}
+  \item {src/Sistema.cpp}, \hyperpage{216}
+  \item {src/Usuario.cpp}, \hyperpage{219}
+  \item {src/Valvula.cpp}, \hyperpage{220}
+  \item {std}, \hyperpage{47}
+    \subitem {istream}, \hyperpage{47}
+    \subitem {nullptr\_t}, \hyperpage{47}
+    \subitem {operator$<$$<$}, \hyperpage{48}
+    \subitem {ostream}, \hyperpage{47}
+    \subitem {size\_t}, \hyperpage{47}
+  \item {std::basic\_istream$<$ charT, traits $>$}, \hyperpage{60}
+  \item {std::basic\_ostream$<$ charT, traits $>$}, \hyperpage{60}
+  \item {std::char\_traits$<$ charT $>$}, \hyperpage{61}
+  \item {std::tuple$<$ Types $>$}, \hyperpage{183}
+  \item {String}
+    \subitem {doctest::String}, \hyperpage{162, 163}
+  \item {string}
+    \subitem {doctest::Contains}, \hyperpage{68}
+  \item {StringContains}
+    \subitem {doctest::AssertData::StringContains}, \hyperpage{166}
+  \item {stringify}
+    \subitem {doctest::detail::ContextScope$<$ L $>$}, \hyperpage{79}
+    \subitem {doctest::IContextScope}, \hyperpage{105}
+  \item {stringifyBinaryExpr}
+    \subitem {doctest::detail}, \hyperpage{43}
+  \item {strip\_file\_prefixes}
+    \subitem {doctest::ContextOptions}, \hyperpage{76}
+  \item {SUBCASE}
+    \subitem {doctest.h}, \hyperpage{304}
+  \item {Subcase}
+    \subitem {doctest::detail::Subcase}, \hyperpage{169, 170}
+  \item {subcase\_end}
+    \subitem {doctest::IReporter}, \hyperpage{108}
+  \item {subcase\_filter\_levels}
+    \subitem {doctest::ContextOptions}, \hyperpage{76}
+  \item {subcase\_start}
+    \subitem {doctest::IReporter}, \hyperpage{109}
+  \item {substr}
+    \subitem {doctest::String}, \hyperpage{164}
+  \item {success}
+    \subitem {doctest::ContextOptions}, \hyperpage{76}
 
   \indexspace
 
   \item {TECNICO}
-    \subitem {Cargo.hpp}, \hyperpage{44}
+    \subitem {Cargo.hpp}, \hyperpage{191}
+  \item {test\_Alarme.cpp}
+    \subitem {TEST\_CASE}, \hyperpage{426, 427}
+  \item {TEST\_CASE}
+    \subitem {doctest.h}, \hyperpage{304}
+    \subitem {test\_Alarme.cpp}, \hyperpage{426, 427}
+    \subitem {test\_Conjunto.cpp}, \hyperpage{429--432}
+    \subitem {test\_Equipamento.cpp}, \hyperpage{435--438}
+    \subitem {test\_Excecoes.cpp}, \hyperpage{441--444}
+    \subitem {test\_LinhaDeProducao.cpp}, \hyperpage{446--449}
+    \subitem {test\_Log.cpp}, \hyperpage{452, 453}
+    \subitem {test\_Parametro.cpp}, \hyperpage{455, 456}
+    \subitem {test\_Sistema.cpp}, \hyperpage{459--462}
+    \subitem {test\_Usuario.cpp}, \hyperpage{465}
+  \item {TEST\_CASE\_CLASS}
+    \subitem {doctest.h}, \hyperpage{304}
+  \item {test\_case\_end}
+    \subitem {doctest::IReporter}, \hyperpage{109}
+  \item {test\_case\_exception}
+    \subitem {doctest::IReporter}, \hyperpage{109}
+  \item {TEST\_CASE\_FIXTURE}
+    \subitem {doctest.h}, \hyperpage{305}
+  \item {test\_case\_reenter}
+    \subitem {doctest::IReporter}, \hyperpage{109}
+  \item {test\_case\_skipped}
+    \subitem {doctest::IReporter}, \hyperpage{109}
+  \item {test\_case\_start}
+    \subitem {doctest::IReporter}, \hyperpage{109}
+  \item {TEST\_CASE\_TEMPLATE}
+    \subitem {doctest.h}, \hyperpage{305}
+  \item {TEST\_CASE\_TEMPLATE\_APPLY}
+    \subitem {doctest.h}, \hyperpage{305}
+  \item {TEST\_CASE\_TEMPLATE\_DEFINE}
+    \subitem {doctest.h}, \hyperpage{305}
+  \item {TEST\_CASE\_TEMPLATE\_INSTANTIATE}
+    \subitem {doctest.h}, \hyperpage{305}
+  \item {TEST\_CASE\_TEMPLATE\_INVOKE}
+    \subitem {doctest.h}, \hyperpage{306}
+  \item {test\_Conjunto.cpp}
+    \subitem {TEST\_CASE}, \hyperpage{429--432}
+  \item {test\_Equipamento.cpp}
+    \subitem {TEST\_CASE}, \hyperpage{435--438}
+  \item {test\_Excecoes.cpp}
+    \subitem {TEST\_CASE}, \hyperpage{441--444}
+  \item {test\_LinhaDeProducao.cpp}
+    \subitem {TEST\_CASE}, \hyperpage{446--449}
+  \item {test\_Log.cpp}
+    \subitem {TEST\_CASE}, \hyperpage{452, 453}
+  \item {test\_main.cpp}
+    \subitem {DOCTEST\_CONFIG\_IMPLEMENT\_WITH\_MAIN}, \hyperpage{454}
+  \item {test\_Parametro.cpp}
+    \subitem {TEST\_CASE}, \hyperpage{455, 456}
+  \item {test\_run\_end}
+    \subitem {doctest::IReporter}, \hyperpage{109}
+  \item {test\_run\_start}
+    \subitem {doctest::IReporter}, \hyperpage{109}
+  \item {test\_Sistema.cpp}
+    \subitem {TEST\_CASE}, \hyperpage{459--462}
+  \item {TEST\_SUITE}
+    \subitem {doctest.h}, \hyperpage{306}
+  \item {TEST\_SUITE\_BEGIN}
+    \subitem {doctest.h}, \hyperpage{306}
+  \item {TEST\_SUITE\_END}
+    \subitem {doctest.h}, \hyperpage{306}
+  \item {test\_Usuario.cpp}
+    \subitem {TEST\_CASE}, \hyperpage{465}
+  \item {TestCase}
+    \subitem {doctest::detail}, \hyperpage{44}
+    \subitem {doctest::detail::TestCase}, \hyperpage{173}
+  \item {TestCaseData}
+    \subitem {doctest}, \hyperpage{34}
+  \item {testCaseSuccess}
+    \subitem {doctest::CurrentTestCaseStats}, \hyperpage{82}
+  \item {tests Directory Reference}, \hyperpage{24}
+  \item {tests/doctest.h}, \hyperpage{220}, \hyperpage{312}
+  \item {tests/test\_Alarme.cpp}, \hyperpage{426, 427}
+  \item {tests/test\_Conjunto.cpp}, \hyperpage{428}, \hyperpage{433}
+  \item {tests/test\_Equipamento.cpp}, \hyperpage{435}, \hyperpage{439}
+  \item {tests/test\_Excecoes.cpp}, \hyperpage{440}, \hyperpage{444}
+  \item {tests/test\_LinhaDeProducao.cpp}, \hyperpage{446}, 
+		\hyperpage{450}
+  \item {tests/test\_Log.cpp}, \hyperpage{452, 453}
+  \item {tests/test\_main.cpp}, \hyperpage{454}
+  \item {tests/test\_Parametro.cpp}, \hyperpage{454}, \hyperpage{457}
+  \item {tests/test\_Sistema.cpp}, \hyperpage{458}, \hyperpage{462}
+  \item {tests/test\_Usuario.cpp}, \hyperpage{464}, \hyperpage{466}
+  \item {THEN}
+    \subitem {doctest.h}, \hyperpage{306}
+  \item {throwException}
+    \subitem {doctest::detail}, \hyperpage{43}
+  \item {Timeout}
+    \subitem {doctest::TestCaseFailureReason}, \hyperpage{46}
+  \item {Tipo}
+    \subitem {Atuador}, \hyperpage{60}
+    \subitem {Equipamento}, \hyperpage{92}
+    \subitem {Motor}, \hyperpage{136}
+    \subitem {Sensor}, \hyperpage{152}
+    \subitem {Valvula}, \hyperpage{188}
+  \item {tlssPop}
+    \subitem {doctest::detail}, \hyperpage{43}
+  \item {tlssPush}
+    \subitem {doctest::detail}, \hyperpage{43}
+  \item {TO\_LVALUE}
+    \subitem {doctest.h}, \hyperpage{307}
+  \item {TooManyFailedAsserts}
+    \subitem {doctest::TestCaseFailureReason}, \hyperpage{46}
+  \item {toStream}
+    \subitem {doctest::detail}, \hyperpage{44}
+  \item {toString}
+    \subitem {doctest}, \hyperpage{30--33}
+  \item {translate}
+    \subitem {doctest::detail::ExceptionTranslator$<$ T $>$}, 
+		\hyperpage{94}
+    \subitem {doctest::detail::IExceptionTranslator}, \hyperpage{107}
+  \item {translateException}
+    \subitem {doctest::detail::ResultBuilder}, \hyperpage{150}
+  \item {type}
+    \subitem {doctest::detail::types::enable\_if$<$ true, T $>$}, 
+		\hyperpage{85}
+    \subitem {doctest::detail::types::remove\_const$<$ const T $>$}, 
+		\hyperpage{145}
+    \subitem {doctest::detail::types::remove\_const$<$ T $>$}, 
+		\hyperpage{144}
+    \subitem {doctest::detail::types::remove\_reference$<$ T $>$}, 
+		\hyperpage{146}
+    \subitem {doctest::detail::types::remove\_reference$<$ T \& $>$}, 
+		\hyperpage{146}
+    \subitem {doctest::detail::types::remove\_reference$<$ T \&\& $>$}, 
+		\hyperpage{147}
+    \subitem {doctest::detail::types::underlying\_type$<$ T $>$}, 
+		\hyperpage{183}
+  \item {TYPE\_TO\_STRING}
+    \subitem {doctest.h}, \hyperpage{307}
+  \item {TYPE\_TO\_STRING\_AS}
+    \subitem {doctest.h}, \hyperpage{307}
 
   \indexspace
 
-  \item {Usuario}, \hyperpage{41}
-    \subitem {GetCargo}, \hyperpage{42}
-    \subitem {GetLogin}, \hyperpage{42}
-    \subitem {Usuario}, \hyperpage{41}
-    \subitem {ValidarSenha}, \hyperpage{42}
+  \item {unary\_assert}
+    \subitem {doctest::detail}, \hyperpage{44}
+    \subitem {doctest::detail::ResultBuilder}, \hyperpage{150}
+  \item {Usuario}, \hyperpage{184}
+    \subitem {GetCargo}, \hyperpage{185}
+    \subitem {GetLogin}, \hyperpage{185}
+    \subitem {GetSenha}, \hyperpage{185}
+    \subitem {Usuario}, \hyperpage{184}
+    \subitem {ValidarSenha}, \hyperpage{185}
 
   \indexspace
 
   \item {ValidarSenha}
-    \subitem {Usuario}, \hyperpage{42}
+    \subitem {Usuario}, \hyperpage{185}
   \item {ValorValido}
-    \subitem {Parametro}, \hyperpage{34}
+    \subitem {Parametro}, \hyperpage{142}
+  \item {value}
+    \subitem {doctest::detail::should\_stringify\_as\_underlying\_type$<$ T $>$}, 
+		\hyperpage{154}
+    \subitem {doctest::detail::types::false\_type}, \hyperpage{98}
+    \subitem {doctest::detail::types::is\_enum$<$ T $>$}, 
+		\hyperpage{113}
+    \subitem {doctest::detail::types::true\_type}, \hyperpage{182}
+    \subitem {doctest::IsNaN$<$ F $>$}, \hyperpage{121}
+  \item {Valvula}, \hyperpage{186}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Valvula}, 
+		\hyperpage{187}
+    \subitem {Tipo}, \hyperpage{188}
+    \subitem {Valvula}, \hyperpage{187}
+  \item {version}
+    \subitem {doctest::ContextOptions}, \hyperpage{76}
+  \item {void\_t}
+    \subitem {doctest::detail::types}, \hyperpage{46}
+
+  \indexspace
+
+  \item {WARN}
+    \subitem {doctest.h}, \hyperpage{307}
+  \item {WARN\_EQ}
+    \subitem {doctest.h}, \hyperpage{307}
+  \item {WARN\_FALSE}
+    \subitem {doctest.h}, \hyperpage{308}
+  \item {WARN\_FALSE\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{308}
+  \item {WARN\_GE}
+    \subitem {doctest.h}, \hyperpage{308}
+  \item {WARN\_GT}
+    \subitem {doctest.h}, \hyperpage{308}
+  \item {WARN\_LE}
+    \subitem {doctest.h}, \hyperpage{308}
+  \item {WARN\_LT}
+    \subitem {doctest.h}, \hyperpage{309}
+  \item {WARN\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{309}
+  \item {WARN\_NE}
+    \subitem {doctest.h}, \hyperpage{309}
+  \item {WARN\_NOTHROW}
+    \subitem {doctest.h}, \hyperpage{309}
+  \item {WARN\_NOTHROW\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{309}
+  \item {WARN\_THROWS}
+    \subitem {doctest.h}, \hyperpage{310}
+  \item {WARN\_THROWS\_AS}
+    \subitem {doctest.h}, \hyperpage{310}
+  \item {WARN\_THROWS\_AS\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{310}
+  \item {WARN\_THROWS\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{310}
+  \item {WARN\_THROWS\_WITH}
+    \subitem {doctest.h}, \hyperpage{310}
+  \item {WARN\_THROWS\_WITH\_AS}
+    \subitem {doctest.h}, \hyperpage{311}
+  \item {WARN\_THROWS\_WITH\_AS\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{311}
+  \item {WARN\_THROWS\_WITH\_MESSAGE}
+    \subitem {doctest.h}, \hyperpage{311}
+  \item {WARN\_UNARY}
+    \subitem {doctest.h}, \hyperpage{311}
+  \item {WARN\_UNARY\_FALSE}
+    \subitem {doctest.h}, \hyperpage{312}
+  \item {WHEN}
+    \subitem {doctest.h}, \hyperpage{312}
+  \item {White}
+    \subitem {doctest::Color}, \hyperpage{37}
+
+  \indexspace
+
+  \item {Yellow}
+    \subitem {doctest::Color}, \hyperpage{37}
 
 \end{theindex}

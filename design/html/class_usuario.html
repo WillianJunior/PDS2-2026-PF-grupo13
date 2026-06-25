@@ -133,6 +133,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acbf27b0c58e85a50a4415507d4f55130" id="r_acbf27b0c58e85a50a4415507d4f55130"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#acbf27b0c58e85a50a4415507d4f55130">GetLogin</a> () const</td></tr>
 <tr class="memitem:a74f88159d10c106ca0fd4e9ad3eab9c6" id="r_a74f88159d10c106ca0fd4e9ad3eab9c6"><td class="memItemLeft"><a class="el" href="_cargo_8hpp.html#ad202395025143887571b4a5f857b1ac1">Cargo</a>&#160;</td><td class="memItemRight"><a class="el" href="#a74f88159d10c106ca0fd4e9ad3eab9c6">GetCargo</a> (std::string login)</td></tr>
 <tr class="memdesc:a74f88159d10c106ca0fd4e9ad3eab9c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o cargo do usuário identificado pelo login.  <br /></td></tr>
+<tr class="memitem:ab4c07df0c59cc5e924d4bf3e651ae10e" id="r_ab4c07df0c59cc5e924d4bf3e651ae10e"><td class="memItemLeft"><a class="el" href="_cargo_8hpp.html#ad202395025143887571b4a5f857b1ac1">Cargo</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab4c07df0c59cc5e924d4bf3e651ae10e">GetCargo</a> () const</td></tr>
+<tr class="memitem:a79f915ccb041db36553d4f27201a3f22" id="r_a79f915ccb041db36553d4f27201a3f22"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a79f915ccb041db36553d4f27201a3f22">GetSenha</a> () const</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Representa um usuário do sistema com credenciais e cargo. </p>
@@ -174,11 +176,33 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Implementa US-015 (Criar usuários). </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="_usuario_8cpp_source.html#l00004">4</a> of file <a class="el" href="_usuario_8cpp_source.html">Usuario.cpp</a>.</p>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ab4c07df0c59cc5e924d4bf3e651ae10e" name="ab4c07df0c59cc5e924d4bf3e651ae10e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4c07df0c59cc5e924d4bf3e651ae10e">&#9670;&#160;</a></span>GetCargo() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_cargo_8hpp.html#ad202395025143887571b4a5f857b1ac1">Cargo</a> Usuario::GetCargo </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="_cargo_8hpp.html#ad202395025143887571b4a5f857b1ac1" title="Níveis de acesso dos usuários do sistema.">Cargo</a> do usuário. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_usuario_8cpp_source.html#l00033">33</a> of file <a class="el" href="_usuario_8cpp_source.html">Usuario.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a74f88159d10c106ca0fd4e9ad3eab9c6" name="a74f88159d10c106ca0fd4e9ad3eab9c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74f88159d10c106ca0fd4e9ad3eab9c6">&#9670;&#160;</a></span>GetCargo()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a74f88159d10c106ca0fd4e9ad3eab9c6">&#9670;&#160;</a></span>GetCargo() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,6 +225,8 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="_cargo_8hpp.html#ad202395025143887571b4a5f857b1ac1" title="Níveis de acesso dos usuários do sistema.">Cargo</a> associado ao login. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="_usuario_8cpp_source.html#l00028">28</a> of file <a class="el" href="_usuario_8cpp_source.html">Usuario.cpp</a>.</p>
+
 </div>
 </div>
 <a id="acbf27b0c58e85a50a4415507d4f55130" name="acbf27b0c58e85a50a4415507d4f55130"></a>
@@ -218,6 +244,28 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Login do usuário. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_usuario_8cpp_source.html#l00024">24</a> of file <a class="el" href="_usuario_8cpp_source.html">Usuario.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a79f915ccb041db36553d4f27201a3f22" name="a79f915ccb041db36553d4f27201a3f22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79f915ccb041db36553d4f27201a3f22">&#9670;&#160;</a></span>GetSenha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Usuario::GetSenha </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Senha do usuário (uso interno: persistência). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_usuario_8cpp_source.html#l00037">37</a> of file <a class="el" href="_usuario_8cpp_source.html">Usuario.cpp</a>.</p>
 
 </div>
 </div>
@@ -246,10 +294,13 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>true se a senha estiver correta. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Implementa US-017 (Login de usuário). </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="_usuario_8cpp_source.html#l00016">16</a> of file <a class="el" href="_usuario_8cpp_source.html">Usuario.cpp</a>.</p>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="_usuario_8hpp_source.html">Usuario.hpp</a></li>
+<li>src/<a class="el" href="_usuario_8cpp_source.html">Usuario.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

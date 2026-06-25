@@ -4,7 +4,8 @@
 \Hypertarget{index_md__r_e_a_d_m_e}%
 
 
-\doxylink{class_sistema}{Sistema} de monitoramento industrial orientado a objetos desenvolvido em C++. Permite o acompanhamento em tempo real de parâmetros de equipamentos organizados em linhas de produção, detectando automaticamente condições de falha e disparando alarmes.\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Funcionalidades}{Funcionalidades}}\label{index_autotoc_md1}
+\doxylink{class_sistema}{Sistema} de monitoramento industrial orientado a objetos desenvolvido em C++. Permite o acompanhamento em tempo real de parâmetros de equipamentos organizados em linhas de produção, detectando automaticamente condições de falha e disparando alarmes.\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Motivação}{Motivação}}\label{index_autotoc_md1}
+A indústria depende de equipamentos que operam continuamente sob limites bem definidos de temperatura, pressão, vibração e outros parâmetros. Uma falha não detectada em um único equipamento pode se propagar pela linha de produção e gerar paradas custosas ou riscos de segurança. Escolhemos este tema porque ele exercita de forma natural os pilares da disciplina:\+ uma {\bfseries{hierarquia clara de composição}} (\doxylink{class_sistema}{Sistema} → Linha → \doxylink{class_conjunto}{Conjunto} → \doxylink{class_equipamento}{Equipamento} → Parâmetro), {\bfseries{herança}} entre tipos de equipamento (\doxylink{class_motor}{Motor}, \doxylink{class_sensor}{Sensor}, Válvula, \doxylink{class_atuador}{Atuador}), {\bfseries{encapsulamento}} dos limites e do histórico de cada parâmetro, e {\bfseries{propagação de diagnóstico}} por toda a estrutura. Além de ser um domínio rico em regras de negócio, é um problema concreto e fácil de visualizar, o que facilita a modelagem e a escrita de testes significativos.\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Funcionalidades}{Funcionalidades}}\label{index_autotoc_md2}
 
 \begin{DoxyItemize}
 \item Gerenciamento hierárquico de {\bfseries{Linhas de Produção → Conjuntos → Equipamentos → Parâmetros}}
@@ -14,7 +15,9 @@
 \item Controle de acesso por usuários com três níveis de cargo
 \item Persistência de dados com save/\+load de estado
 \item Registro de eventos via {\bfseries{\doxylink{class_log}{Log}}} em arquivo
-\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Hierarquia do Sistema}{Hierarquia do Sistema}}\label{index_autotoc_md2}
+\end{DoxyItemize}\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Hierarquia do Sistema}{Hierarquia do Sistema}}\label{index_autotoc_md3}
+Composição (relação "{}tem-\/um"{}):\+
+
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{Sistema}
@@ -25,7 +28,20 @@
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)-\/-\/\ Alarme}
 
 \end{DoxyCode}
-\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Cargos de Usuário}{Cargos de Usuário}}\label{index_autotoc_md3}
+
+
+Herança (relação "{}é-\/um"{}) — especializações de {\ttfamily \doxylink{class_equipamento}{Equipamento}}:\+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Equipamento}
+\DoxyCodeLine{\ +-\/-\/\ Motor\ \ \ \ \ \ (velocidade,\ torque)}
+\DoxyCodeLine{\ +-\/-\/\ Sensor\ \ \ \ \ (sinal)}
+\DoxyCodeLine{\ +-\/-\/\ Valvula\ \ \ \ (vazao)}
+\DoxyCodeLine{\ \(\backslash\)-\/-\/\ Atuador\ \ \ \ (retorno)}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Cargos de Usuário}{Cargos de Usuário}}\label{index_autotoc_md4}
 
 \begin{DoxyTable}{2}{}{}{1}
 \SetCell{c,bg=\tableheadbgcolor,font=\bfseries}\doxylink{_cargo_8hpp_ad202395025143887571b4a5f857b1ac1}{Cargo}  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Permissões  \\
@@ -33,26 +49,119 @@
 {\ttfamily ENGENHEIRO}  &Configura linhas, conjuntos e equipamentos  \\
 {\ttfamily TECNICO}  &Visualiza dados e alarmes  \\
 \end{DoxyTable}
-\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Estrutura de Diretórios}{Estrutura de Diretórios}}\label{index_autotoc_md4}
+\hypertarget{index_autotoc_md5}{}\doxysection{\texorpdfstring{Estrutura de Diretórios}{Estrutura de Diretórios}}\label{index_autotoc_md5}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{.}
-\DoxyCodeLine{+-\/-\/\ include/\ \ \ \ \ \ \ \ \#\ Contratos\ das\ classes\ (.hpp)}
-\DoxyCodeLine{+-\/-\/\ src/\ \ \ \ \ \ \ \ \ \ \ \ \#\ Implementacoes\ (.cpp)}
-\DoxyCodeLine{+-\/-\/\ design/\ \ \ \ \ \ \ \ \ \#\ User\ Stories\ e\ Cartoes\ CRC}
-\DoxyCodeLine{+-\/-\/\ tests/\ \ \ \ \ \ \ \ \ \ \#\ Testes\ automatizados}
+\DoxyCodeLine{+-\/-\/\ include/\ \ \ \ \ \ \ \ \#\ Contratos\ das\ classes\ (.hpp),\ incl.\ Excecoes.hpp}
+\DoxyCodeLine{+-\/-\/\ src/\ \ \ \ \ \ \ \ \ \ \ \ \#\ Implementacoes\ (.cpp)\ e\ main.cpp\ (interface\ de\ terminal)}
+\DoxyCodeLine{+-\/-\/\ design/\ \ \ \ \ \ \ \ \ \#\ User\ Stories,\ Cartoes\ CRC\ e\ documentacao\ gerada}
+\DoxyCodeLine{+-\/-\/\ tests/\ \ \ \ \ \ \ \ \ \ \#\ Testes\ automatizados\ (doctest)}
+\DoxyCodeLine{+-\/-\/\ dados/\ \ \ \ \ \ \ \ \ \ \#\ Arquivos\ de\ inicializacao\ (ex.:\ inicial.txt)}
 \DoxyCodeLine{+-\/-\/\ build/\ \ \ \ \ \ \ \ \ \ \#\ Artefatos\ de\ compilacao}
-\DoxyCodeLine{+-\/-\/\ docs/\ \ \ \ \ \ \ \ \ \ \ \#\ Documentacao\ gerada\ pelo\ Doxygen}
+\DoxyCodeLine{+-\/-\/\ Makefile\ \ \ \ \ \ \ \ \#\ Automacao\ de\ build\ e\ testes}
+\DoxyCodeLine{+-\/-\/\ Doxyfile\ \ \ \ \ \ \ \ \#\ Configuracao\ do\ Doxygen}
 \DoxyCodeLine{\(\backslash\)-\/-\/\ README.md}
 
 \end{DoxyCode}
-\hypertarget{index_autotoc_md5}{}\doxysection{\texorpdfstring{Compilação}{Compilação}}\label{index_autotoc_md5}
+\hypertarget{index_autotoc_md6}{}\doxysection{\texorpdfstring{Estado de Desenvolvimento}{Estado de Desenvolvimento}}\label{index_autotoc_md6}
+Comportamentos implementados e validados:\+
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Contratos ({\ttfamily .hpp})}} e {\bfseries{documentação Doxygen}} para todas as classes principais.
+\item {\bfseries{Implementação ({\ttfamily .cpp})}} completa das entidades e do {\ttfamily \doxylink{class_sistema}{Sistema}}, incluindo diagnóstico propagado, alarmes e persistência (save/\+load) de estado.
+\item {\bfseries{Especializações}} de equipamento (\doxylink{class_motor}{Motor}, \doxylink{class_sensor}{Sensor}, Válvula, \doxylink{class_atuador}{Atuador}) integradas via {\bfseries{polimorfismo}} com {\ttfamily std::\+unique\+\_\+ptr\texorpdfstring{$<$}{<}\doxylink{class_equipamento}{Equipamento}\texorpdfstring{$>$}{>}}.
+\item {\bfseries{Programação defensiva}}:\+ validação de entradas com {\bfseries{exceções próprias}} (hierarquia {\ttfamily \doxylink{class_excecao_sistema}{Excecao\+Sistema}} em {\ttfamily \doxylink{_excecoes_8hpp}{include/\+\+Excecoes.\+hpp}}).
+\item {\bfseries{RAII}}:\+ nenhuma gestão manual de memória ({\ttfamily new}/\+{\ttfamily delete}); alocação dinâmica apenas via smart pointers.
+\item {\bfseries{Interface de terminal}} interativa ({\ttfamily \doxylink{main_8cpp}{src/\+main.\+cpp}}) com login, controle de acesso por cargo e tratamento de exceções.
+\item {\bfseries{Testes de unidade}} (doctest):\+ uma suíte por classe principal + suíte de exceções/\+polimorfismo/\+persistência. Atualmente {\bfseries{98 testes}} passando com \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\sim$}{\string~}74\% de cobertura\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} ({\ttfamily gcovr}).
+\end{DoxyItemize}\hypertarget{index_autotoc_md7}{}\doxysection{\texorpdfstring{Programação Defensiva e Tratamento de Exceções}{Programação Defensiva e Tratamento de Exceções}}\label{index_autotoc_md7}
+As entradas inválidas lançam exceções específicas do domínio, todas derivadas de {\ttfamily \doxylink{class_excecao_sistema}{Excecao\+Sistema}} (logo, captráveis por um único {\ttfamily catch (const \doxylink{class_excecao_sistema}{Excecao\+Sistema}\&)}):\+
+
+
+\begin{DoxyTable}{2}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Exceção  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Quando  \\
+{\ttfamily \doxylink{class_entrada_invalida}{Entrada\+Invalida}}  &string vazia (descrição, login, senha)  \\
+{\ttfamily \doxylink{class_limites_invalidos}{Limites\+Invalidos}}  &{\ttfamily Max \texorpdfstring{$<$}{<} Min} em um parâmetro  \\
+{\ttfamily \doxylink{class_id_invalido}{Id\+Invalido}}  &identificador negativo  \\
+{\ttfamily \doxylink{class_id_duplicado}{Id\+Duplicado}}  &inserir um ID já existente  \\
+{\ttfamily \doxylink{class_id_inexistente}{Id\+Inexistente}}  &acessar/\+remover um ID ausente  \\
+{\ttfamily \doxylink{class_acesso_negado}{Acesso\+Negado}}  &operação acima do cargo do usuário (interface)  \\
+{\ttfamily \doxylink{class_sessao_invalida}{Sessao\+Invalida}}  &operação que exige sessão sem usuário logado (interface)  \\
+\end{DoxyTable}
+
+
+\begin{quote}
+Observação:\+ uma {\bfseries{leitura fora dos limites}} de um parâmetro {\bfseries{não}} é erro — é justamente a condição de falha que o sistema detecta, então é armazenada e sinalizada via diagnóstico/\+alarme. \end{quote}
+\hypertarget{index_autotoc_md8}{}\doxysection{\texorpdfstring{Compilação e Testes}{Compilação e Testes}}\label{index_autotoc_md8}
+O {\ttfamily Makefile} automatiza a compilação e a verificação por testes de unidade (framework \href{https://github.com/doctest/doctest}{\texttt{doctest}}):\+
+
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{make}
+\DoxyCodeLine{make\ \ \ \ \ \ \ \ \#\ compila\ os\ módulos\ e\ gera\ build/test\_runner}
+\DoxyCodeLine{make\ test\ \ \ \#\ executa\ os\ testes\ e\ gera\ os\ relatórios\ de\ cobertura\ (gcovr)}
+\DoxyCodeLine{make\ app\ \ \ \ \#\ compila\ a\ aplicação\ interativa\ em\ build/sistema}
+\DoxyCodeLine{make\ run\ \ \ \ \#\ compila\ (se\ preciso)\ e\ executa\ a\ aplicação}
+\DoxyCodeLine{make\ clean\ \ \#\ remove\ a\ pasta\ build/}
 
 \end{DoxyCode}
-\hypertarget{index_autotoc_md6}{}\doxysection{\texorpdfstring{Documentação}{Documentação}}\label{index_autotoc_md6}
+
+
+
+\begin{DoxyItemize}
+\item {\ttfamily make test} executa todos os casos de teste e, em seguida, gera a cobertura via {\ttfamily gcovr} (saída em texto e em {\ttfamily build/\+coverage.\+html}).
+\item O {\ttfamily make clean} é portável:\+ usa {\ttfamily rmdir /\+S /\+Q} no Windows e {\ttfamily rm -\/rf} em Linux/\+mac\+OS (detecção automática de SO no Makefile).
+\end{DoxyItemize}\hypertarget{index_autotoc_md9}{}\doxysubsection{\texorpdfstring{Instalação do gcovr}{Instalação do gcovr}}\label{index_autotoc_md9}
+O {\ttfamily gcovr} é uma ferramenta Python (wrapper do {\ttfamily gcov}) e precisa ser instalado à parte. Caso o {\ttfamily pip} não esteja disponível, primeiro habilite-\/o com:\+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python\ -\/m\ ensurepip\ -\/-\/upgrade}
+
+\end{DoxyCode}
+
+
+Em seguida instale o {\ttfamily gcovr} via {\ttfamily pip}:\+
+
+
+\begin{DoxyTable}{2}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}SO  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Comando  \\
+{\bfseries{Linux}}  &{\ttfamily python3 -\/m pip install -\/-\/user gcovr}  \\
+{\bfseries{mac\+OS}}  &{\ttfamily python3 -\/m pip install -\/-\/user gcovr}  \\
+{\bfseries{Windows}}  &{\ttfamily python -\/m pip install -\/-\/user gcovr}  \\
+\end{DoxyTable}
+
+
+Alternativas pelo gerenciador de pacotes do sistema:\+
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Fedora/\+\+RHEL:\+}} {\ttfamily sudo dnf install gcovr}
+\item {\bfseries{Debian/\+\+Ubuntu:\+}} {\ttfamily sudo apt install gcovr}
+\item {\bfseries{mac\+OS (Homebrew):\+}} {\ttfamily brew install gcovr}
+\end{DoxyItemize}
+
+Verifique a instalação com {\ttfamily python3 -\/m gcovr -\/-\/version} (use {\ttfamily python} no Windows). O Makefile invoca {\ttfamily python3 -\/m gcovr} em Linux/\+mac\+OS e {\ttfamily python -\/m gcovr} em Windows.\hypertarget{index_autotoc_md10}{}\doxysection{\texorpdfstring{Execução da Aplicação}{Execução da Aplicação}}\label{index_autotoc_md10}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make\ run\ \ \ \ \ \#\ ou:\ make\ app\ \&\&\ ./build/sistema}
+
+\end{DoxyCode}
+
+
+Ao iniciar, o sistema carrega o arquivo de inicialização {\ttfamily dados/\+inicial.\+txt} (fornecido no repositório), que cadastra três usuários de exemplo:\+
+
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Login  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Senha  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}\doxylink{_cargo_8hpp_ad202395025143887571b4a5f857b1ac1}{Cargo}  \\
+{\ttfamily admin}  &{\ttfamily admin123}  &ADMIN  \\
+{\ttfamily eng}  &{\ttfamily eng123}  &ENGENHEIRO  \\
+{\ttfamily tec}  &{\ttfamily tec123}  &TECNICO  \\
+\end{DoxyTable}
+
+
+Após o login, um menu por cargo permite criar/\+listar/\+remover linhas, conjuntos, equipamentos (Motor/\+\+Sensor/\+\+Válvula/\+\+Atuador) e parâmetros, executar diagnóstico, e salvar/\+carregar o estado ({\ttfamily save.\+txt}). Entradas inválidas são tratadas por exceções e exibidas sem encerrar o programa.\hypertarget{index_autotoc_md11}{}\doxysection{\texorpdfstring{Documentação}{Documentação}}\label{index_autotoc_md11}
 A documentação das classes pode ser gerada com o Doxygen a partir da raiz do projeto:\+
 
 
@@ -62,11 +171,11 @@ A documentação das classes pode ser gerada com o Doxygen a partir da raiz do p
 \end{DoxyCode}
 
 
-A saída HTML estará disponível em {\ttfamily docs/\+html/\+index.\+html}. Uma versão, atualiza, em PDF pode ser encontrada na raiz do projeto como {\ttfamily doxygen\+\_\+doc.\+pdf}.\hypertarget{index_autotoc_md7}{}\doxysection{\texorpdfstring{Equipe}{Equipe}}\label{index_autotoc_md7}
+A saída HTML estará disponível em {\ttfamily docs/\+html/\+index.\+html}. Uma versão, atualiza, em PDF pode ser encontrada na raiz do projeto como {\ttfamily doxygen\+\_\+doc.\+pdf}.\hypertarget{index_autotoc_md12}{}\doxysection{\texorpdfstring{Equipe}{Equipe}}\label{index_autotoc_md12}
 
 \begin{DoxyTable}{2}{}{}{1}
 \SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Nº Matrícula  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Nome  \\
 2024010002  &Felipe Hildegardes Jorge  \\
-2022028400dox  &Wennedes de Oliveira Nogueira Junior  \\
+2022028400  &Wennedes de Oliveira Nogueira Junior  \\
 2020057144  &Gustavo Coelho Santos  \\
 \end{DoxyTable}

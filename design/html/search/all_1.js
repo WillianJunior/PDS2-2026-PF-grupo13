@@ -1,11 +1,15 @@
 var searchData=
 [
-  ['cargo_0',['Cargo',['../_cargo_8hpp.html#ad202395025143887571b4a5f857b1ac1',1,'Cargo.hpp']]],
-  ['cargo_2ehpp_1',['Cargo.hpp',['../_cargo_8hpp.html',1,'']]],
-  ['cargos_20de_20usuário_2',['Cargos de Usuário',['../index.html#autotoc_md3',1,'']]],
-  ['carregarsave_3',['CarregarSave',['../class_sistema.html#a5badd4c242b4768ff987d7fcc8ff8fc6',1,'Sistema']]],
-  ['carregarultimosave_4',['CarregarUltimoSave',['../class_sistema.html#a3c93d0378078aa5079f52bdec12910d0',1,'Sistema']]],
-  ['compilação_5',['Compilação',['../index.html#autotoc_md5',1,'']]],
-  ['conjunto_6',['Conjunto',['../class_conjunto.html',1,'Conjunto'],['../class_conjunto.html#a584d6d3df7d8aa38b607551a10af3186',1,'Conjunto::Conjunto()']]],
-  ['conjunto_2ehpp_7',['Conjunto.hpp',['../_conjunto_8hpp.html',1,'']]]
+  ['basic_5fistream_0',['basic_istream',['../classstd_1_1basic__istream.html',1,'std']]],
+  ['basic_5fistream_3c_20char_2c_20char_5ftraits_3c_20char_20_3e_20_3e_1',['basic_istream&lt; char, char_traits&lt; char &gt; &gt;',['../classstd_1_1basic__istream.html',1,'std']]],
+  ['basic_5fostream_2',['basic_ostream',['../classstd_1_1basic__ostream.html',1,'std']]],
+  ['basic_5fostream_3c_20char_2c_20char_5ftraits_3c_20char_20_3e_20_3e_3',['basic_ostream&lt; char, char_traits&lt; char &gt; &gt;',['../classstd_1_1basic__ostream.html',1,'std']]],
+  ['binary_5fassert_4',['binary_assert',['../structdoctest_1_1detail_1_1_result_builder.html#aa920a0617a26939d7adcd1ba2dec0e85',1,'doctest::detail::ResultBuilder::binary_assert()'],['../namespacedoctest_1_1detail.html#a1e295c708d2de0e47ac89c1632211159',1,'doctest::detail::binary_assert()']]],
+  ['binary_5fname_5',['binary_name',['../structdoctest_1_1_context_options.html#a0590006b4d10296c9a697e32ff886f74',1,'doctest::ContextOptions']]],
+  ['blue_6',['Blue',['../namespacedoctest_1_1_color.html#a32e9eaf6013139846e848af6e6cf2b92aada3ad8958b1319450cc20f3f8e5e2d6',1,'doctest::Color']]],
+  ['bright_7',['Bright',['../namespacedoctest_1_1_color.html#a32e9eaf6013139846e848af6e6cf2b92a7659647d16a78c607f9bafaa207b9e07',1,'doctest::Color']]],
+  ['brightgreen_8',['BrightGreen',['../namespacedoctest_1_1_color.html#a32e9eaf6013139846e848af6e6cf2b92a016090b96620a42a63dadf0265977664',1,'doctest::Color']]],
+  ['brightred_9',['BrightRed',['../namespacedoctest_1_1_color.html#a32e9eaf6013139846e848af6e6cf2b92a236dfdbcd49d10dbf1a31f9e2947a671',1,'doctest::Color']]],
+  ['brightwhite_10',['BrightWhite',['../namespacedoctest_1_1_color.html#a32e9eaf6013139846e848af6e6cf2b92a4f80853796b4875d61ff5e4ad138492e',1,'doctest::Color']]],
+  ['buf_11',['buf',['../classdoctest_1_1_string.html#a7e031ced488588936a540eba26facf67',1,'doctest::String']]]
 ];

@@ -12,10 +12,14 @@ Agrupamento lógico de equipamentos dentro de uma \doxylink{class_linha_de_produ
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\doxymbox{\hyperlink{class_conjunto_a584d6d3df7d8aa38b607551a10af3186}{Conjunto}} (int id, std::\+string desc)
+\doxymbox{\hyperlink{class_conjunto_a6ed2a14038d54e06d1f5c19f579184c2}{Conjunto}} (int id, std::\+string nome, std::\+string desc)
 \begin{DoxyCompactList}\small\item\em Constrói um conjunto. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_conjunto_af6904bb53f69fbdbdb8353cd3526e8f4}{Adicionar\+Equipamento}} (int id, std::\+string desc)
 \begin{DoxyCompactList}\small\item\em Adiciona um equipamento ao conjunto. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_conjunto_aa263654c35ae4d905518dfa77d21104d}{Adicionar\+Equipamento}} (std::\+unique\+\_\+ptr$<$ \doxymbox{\hyperlink{class_equipamento}{Equipamento}} $>$ equip)
+\begin{DoxyCompactList}\small\item\em Adiciona um equipamento já construído (permite tipos derivados). \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_conjunto_a4e8dd548627ec53335bd6d7b4618c7dd}{Proximo\+Id\+Equipamento}} () const
+\item 
 void \doxymbox{\hyperlink{class_conjunto_a89809c3933ae572644c4e4c8eb9f88f0}{Remover\+Equipamento}} (int id)
 \begin{DoxyCompactList}\small\item\em Remove o equipamento com o ID fornecido. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_conjunto_a6ffa3278b3e9deb5e16caeff6dba9ee0}{Set\+Desc}} (std::\+string desc)
@@ -36,8 +40,10 @@ std::\+vector$<$ int $>$ \doxymbox{\hyperlink{class_conjunto_a7884a0038c48f1ff58
 \begin{DoxyCompactList}\small\item\em Diagnostica todos os equipamentos do conjunto. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_conjunto_a0739cef0f5b457b0c831d7e9058577ff}{Atualizar\+Alarmes}} ()
 \begin{DoxyCompactList}\small\item\em Propaga a atualização de alarmes para todos os equipamentos. \end{DoxyCompactList}\item 
-const std::\+vector$<$ \doxymbox{\hyperlink{class_equipamento}{Equipamento}} $>$ \& \doxymbox{\hyperlink{class_conjunto_a1205859c86ccfbeeff22c80b872ad8ff}{Get\+Equipamentos}} () const
+const std::\+map$<$ int, std::\+unique\+\_\+ptr$<$ \doxymbox{\hyperlink{class_equipamento}{Equipamento}} $>$ $>$ \& \doxymbox{\hyperlink{class_conjunto_adc19bf681108c526a5a761884ac0e8ac}{Get\+Equipamentos}} () const
 \item 
+\doxymbox{\hyperlink{class_equipamento}{Equipamento}} \& \doxymbox{\hyperlink{class_conjunto_af30103ab5528f286e6041a4c2156e24c}{Acessar\+Equipamento}} (int id)
+\begin{DoxyCompactList}\small\item\em Acesso mutável a um equipamento pelo ID. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{class_conjunto_a8a2649d2b5bfc3f47df79428cf926712}{Get\+Id}} () const
 \item 
 std::\+string \doxymbox{\hyperlink{class_conjunto_a37138db72cda36c28e0164986d506365}{Get\+Desc}} () const
@@ -51,18 +57,18 @@ Agrupamento lógico de equipamentos dentro de uma \doxylink{class_linha_de_produ
 
 Um conjunto reúne equipamentos correlacionados e propaga operações de diagnóstico e atualização de alarmes para todos eles. 
 
-Definition at line \doxymbox{\hyperlink{_conjunto_8hpp_source_l00014}{14}} of file \doxymbox{\hyperlink{_conjunto_8hpp_source}{Conjunto.\+hpp}}.
+Definition at line \doxymbox{\hyperlink{_conjunto_8hpp_source_l00016}{16}} of file \doxymbox{\hyperlink{_conjunto_8hpp_source}{Conjunto.\+hpp}}.
 
 
 
 \label{class_conjunto_doc-constructors}
 \Hypertarget{class_conjunto_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{class_conjunto_a584d6d3df7d8aa38b607551a10af3186}\index{Conjunto@{Conjunto}!Conjunto@{Conjunto}}
+\Hypertarget{class_conjunto_a6ed2a14038d54e06d1f5c19f579184c2}\index{Conjunto@{Conjunto}!Conjunto@{Conjunto}}
 \index{Conjunto@{Conjunto}!Conjunto@{Conjunto}}
 \doxysubsubsection{\texorpdfstring{Conjunto()}{Conjunto()}}
-{\footnotesize\ttfamily \label{class_conjunto_a584d6d3df7d8aa38b607551a10af3186} 
-Conjunto::\+\+Conjunto (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{std::\+string}]{desc}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_conjunto_a6ed2a14038d54e06d1f5c19f579184c2} 
+Conjunto::\+\+Conjunto (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{std::\+string}]{nome}{, }\item[{std::\+string}]{desc}{}\end{DoxyParamCaption})}
 
 
 
@@ -77,12 +83,43 @@ Constrói um conjunto.
 \end{DoxyParams}
 
 
+Definition at line \doxymbox{\hyperlink{_conjunto_8cpp_source_l00007}{7}} of file \doxymbox{\hyperlink{_conjunto_8cpp_source}{Conjunto.\+cpp}}.
+
+
+
 \label{class_conjunto_doc-func-members}
 \Hypertarget{class_conjunto_doc-func-members}
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_conjunto_af30103ab5528f286e6041a4c2156e24c}\index{Conjunto@{Conjunto}!AcessarEquipamento@{AcessarEquipamento}}
+\index{AcessarEquipamento@{AcessarEquipamento}!Conjunto@{Conjunto}}
+\doxysubsubsection{\texorpdfstring{AcessarEquipamento()}{AcessarEquipamento()}}
+{\footnotesize\ttfamily \label{class_conjunto_af30103ab5528f286e6041a4c2156e24c} 
+\doxymbox{\hyperlink{class_equipamento}{Equipamento}} \& Conjunto::\+\+Acessar\+Equipamento (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Acesso mutável a um equipamento pelo ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador do equipamento. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referência ao equipamento. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Id\+Inexistente} & se não houver equipamento com o ID. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \doxymbox{\hyperlink{_conjunto_8cpp_source_l00128}{128}} of file \doxymbox{\hyperlink{_conjunto_8cpp_source}{Conjunto.\+cpp}}.
+
 \Hypertarget{class_conjunto_af6904bb53f69fbdbdb8353cd3526e8f4}\index{Conjunto@{Conjunto}!AdicionarEquipamento@{AdicionarEquipamento}}
 \index{AdicionarEquipamento@{AdicionarEquipamento}!Conjunto@{Conjunto}}
-\doxysubsubsection{\texorpdfstring{AdicionarEquipamento()}{AdicionarEquipamento()}}
+\doxysubsubsection{\texorpdfstring{AdicionarEquipamento()}{AdicionarEquipamento()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \label{class_conjunto_af6904bb53f69fbdbdb8353cd3526e8f4} 
 void Conjunto::\+\+Adicionar\+Equipamento (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{std::\+string}]{desc}{}\end{DoxyParamCaption})}
 
@@ -100,6 +137,32 @@ Adiciona um equipamento ao conjunto.
 \begin{DoxyNote}{Note}
 Implementa US-\/007 (Criar Equipamentos). 
 \end{DoxyNote}
+
+
+Definition at line \doxymbox{\hyperlink{_conjunto_8cpp_source_l00019}{19}} of file \doxymbox{\hyperlink{_conjunto_8cpp_source}{Conjunto.\+cpp}}.
+
+\Hypertarget{class_conjunto_aa263654c35ae4d905518dfa77d21104d}\index{Conjunto@{Conjunto}!AdicionarEquipamento@{AdicionarEquipamento}}
+\index{AdicionarEquipamento@{AdicionarEquipamento}!Conjunto@{Conjunto}}
+\doxysubsubsection{\texorpdfstring{AdicionarEquipamento()}{AdicionarEquipamento()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_conjunto_aa263654c35ae4d905518dfa77d21104d} 
+void Conjunto::\+\+Adicionar\+Equipamento (\begin{DoxyParamCaption}\item[{std::\+unique\+\_\+ptr$<$ \doxymbox{\hyperlink{class_equipamento}{Equipamento}} $>$}]{equip}{}\end{DoxyParamCaption})}
+
+
+
+Adiciona um equipamento já construído (permite tipos derivados). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em equip} & \doxylink{class_equipamento}{Equipamento} (posse transferida ao conjunto via unique\+\_\+ptr). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Suporta polimorfismo:\+ \doxylink{class_motor}{Motor}, \doxylink{class_sensor}{Sensor}, \doxylink{class_valvula}{Valvula}, \doxylink{class_atuador}{Atuador}. 
+\end{DoxyNote}
+
+
+Definition at line \doxymbox{\hyperlink{_conjunto_8cpp_source_l00029}{29}} of file \doxymbox{\hyperlink{_conjunto_8cpp_source}{Conjunto.\+cpp}}.
+
 \Hypertarget{class_conjunto_a0739cef0f5b457b0c831d7e9058577ff}\index{Conjunto@{Conjunto}!AtualizarAlarmes@{AtualizarAlarmes}}
 \index{AtualizarAlarmes@{AtualizarAlarmes}!Conjunto@{Conjunto}}
 \doxysubsubsection{\texorpdfstring{AtualizarAlarmes()}{AtualizarAlarmes()}}
@@ -113,6 +176,10 @@ Propaga a atualização de alarmes para todos os equipamentos.
 \begin{DoxyNote}{Note}
 Implementa US-\/014 (Criar \doxylink{class_alarme}{Alarme}). 
 \end{DoxyNote}
+
+
+Definition at line \doxymbox{\hyperlink{_conjunto_8cpp_source_l00118}{118}} of file \doxymbox{\hyperlink{_conjunto_8cpp_source}{Conjunto.\+cpp}}.
+
 \Hypertarget{class_conjunto_a7884a0038c48f1ff5828a75222dc0347}\index{Conjunto@{Conjunto}!DiagnosticarConjunto@{DiagnosticarConjunto}}
 \index{DiagnosticarConjunto@{DiagnosticarConjunto}!Conjunto@{Conjunto}}
 \doxysubsubsection{\texorpdfstring{DiagnosticarConjunto()}{DiagnosticarConjunto()}}
@@ -129,6 +196,10 @@ Vetor com IDs dos parâmetros em estado de falha.
 \begin{DoxyNote}{Note}
 Implementa US-\/012 (Diagnóstico de \doxylink{class_conjunto}{Conjunto}). 
 \end{DoxyNote}
+
+
+Definition at line \doxymbox{\hyperlink{_conjunto_8cpp_source_l00109}{109}} of file \doxymbox{\hyperlink{_conjunto_8cpp_source}{Conjunto.\+cpp}}.
+
 \Hypertarget{class_conjunto_a54e91ee8dfa4f75dc42accc2c82ec404}\index{Conjunto@{Conjunto}!ExibirAlarmes@{ExibirAlarmes}}
 \index{ExibirAlarmes@{ExibirAlarmes}!Conjunto@{Conjunto}}
 \doxysubsubsection{\texorpdfstring{ExibirAlarmes()}{ExibirAlarmes()}}
@@ -138,6 +209,10 @@ void Conjunto::\+\+Exibir\+Alarmes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCa
 
 
 Exibe no console os alarmes ativos de todos os equipamentos. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_conjunto_8cpp_source_l00080}{80}} of file \doxymbox{\hyperlink{_conjunto_8cpp_source}{Conjunto.\+cpp}}.
 
 \Hypertarget{class_conjunto_ac63d40fb4b3b01506221dcbbb0fb5ad6}\index{Conjunto@{Conjunto}!ExibirEquipamentos@{ExibirEquipamentos}}
 \index{ExibirEquipamentos@{ExibirEquipamentos}!Conjunto@{Conjunto}}
@@ -152,6 +227,10 @@ Exibe no console os equipamentos do conjunto.
 \begin{DoxyNote}{Note}
 Implementa US-\/006 (Acessar \doxylink{class_conjunto}{Conjunto}). 
 \end{DoxyNote}
+
+
+Definition at line \doxymbox{\hyperlink{_conjunto_8cpp_source_l00065}{65}} of file \doxymbox{\hyperlink{_conjunto_8cpp_source}{Conjunto.\+cpp}}.
+
 \Hypertarget{class_conjunto_a51adba06dc4a931f49943e053b60278d}\index{Conjunto@{Conjunto}!ExibirTudo@{ExibirTudo}}
 \index{ExibirTudo@{ExibirTudo}!Conjunto@{Conjunto}}
 \doxysubsubsection{\texorpdfstring{ExibirTudo()}{ExibirTudo()}}
@@ -165,6 +244,10 @@ Exibe equipamentos e alarmes de forma consolidada.
 \begin{DoxyNote}{Note}
 Implementa US-\/006 (Acessar \doxylink{class_conjunto}{Conjunto}). 
 \end{DoxyNote}
+
+
+Definition at line \doxymbox{\hyperlink{_conjunto_8cpp_source_l00092}{92}} of file \doxymbox{\hyperlink{_conjunto_8cpp_source}{Conjunto.\+cpp}}.
+
 \Hypertarget{class_conjunto_a37138db72cda36c28e0164986d506365}\index{Conjunto@{Conjunto}!GetDesc@{GetDesc}}
 \index{GetDesc@{GetDesc}!Conjunto@{Conjunto}}
 \doxysubsubsection{\texorpdfstring{GetDesc()}{GetDesc()}}
@@ -174,15 +257,23 @@ std::\+string Conjunto::\+\+Get\+Desc (\begin{DoxyParamCaption}{}{}\end{DoxyPara
 \begin{DoxyReturn}{Returns}
 Descrição do conjunto. 
 \end{DoxyReturn}
-\Hypertarget{class_conjunto_a1205859c86ccfbeeff22c80b872ad8ff}\index{Conjunto@{Conjunto}!GetEquipamentos@{GetEquipamentos}}
+
+
+Definition at line \doxymbox{\hyperlink{_conjunto_8cpp_source_l00138}{138}} of file \doxymbox{\hyperlink{_conjunto_8cpp_source}{Conjunto.\+cpp}}.
+
+\Hypertarget{class_conjunto_adc19bf681108c526a5a761884ac0e8ac}\index{Conjunto@{Conjunto}!GetEquipamentos@{GetEquipamentos}}
 \index{GetEquipamentos@{GetEquipamentos}!Conjunto@{Conjunto}}
 \doxysubsubsection{\texorpdfstring{GetEquipamentos()}{GetEquipamentos()}}
-{\footnotesize\ttfamily \label{class_conjunto_a1205859c86ccfbeeff22c80b872ad8ff} 
-const std::\+vector$<$ \doxymbox{\hyperlink{class_equipamento}{Equipamento}} $>$ \& Conjunto::\+\+Get\+Equipamentos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \label{class_conjunto_adc19bf681108c526a5a761884ac0e8ac} 
+const std::\+map$<$ int, std::\+unique\+\_\+ptr$<$ \doxymbox{\hyperlink{class_equipamento}{Equipamento}} $>$ $>$ \& Conjunto::\+\+Get\+Equipamentos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
 
 \begin{DoxyReturn}{Returns}
-Referência constante ao vetor de equipamentos. 
+Referência constante ao mapa de equipamentos (posse via unique\+\_\+ptr). 
 \end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_conjunto_8cpp_source_l00124}{124}} of file \doxymbox{\hyperlink{_conjunto_8cpp_source}{Conjunto.\+cpp}}.
+
 \Hypertarget{class_conjunto_a8a2649d2b5bfc3f47df79428cf926712}\index{Conjunto@{Conjunto}!GetId@{GetId}}
 \index{GetId@{GetId}!Conjunto@{Conjunto}}
 \doxysubsubsection{\texorpdfstring{GetId()}{GetId()}}
@@ -192,6 +283,10 @@ int Conjunto::\+\+Get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) c
 \begin{DoxyReturn}{Returns}
 Identificador único do conjunto. 
 \end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_conjunto_8cpp_source_l00136}{136}} of file \doxymbox{\hyperlink{_conjunto_8cpp_source}{Conjunto.\+cpp}}.
+
 \Hypertarget{class_conjunto_a421fd30a997cb6323668105bb29150ed}\index{Conjunto@{Conjunto}!GetNome@{GetNome}}
 \index{GetNome@{GetNome}!Conjunto@{Conjunto}}
 \doxysubsubsection{\texorpdfstring{GetNome()}{GetNome()}}
@@ -201,6 +296,23 @@ std::\+string Conjunto::\+\+Get\+Nome (\begin{DoxyParamCaption}{}{}\end{DoxyPara
 \begin{DoxyReturn}{Returns}
 Nome do conjunto. 
 \end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_conjunto_8cpp_source_l00140}{140}} of file \doxymbox{\hyperlink{_conjunto_8cpp_source}{Conjunto.\+cpp}}.
+
+\Hypertarget{class_conjunto_a4e8dd548627ec53335bd6d7b4618c7dd}\index{Conjunto@{Conjunto}!ProximoIdEquipamento@{ProximoIdEquipamento}}
+\index{ProximoIdEquipamento@{ProximoIdEquipamento}!Conjunto@{Conjunto}}
+\doxysubsubsection{\texorpdfstring{ProximoIdEquipamento()}{ProximoIdEquipamento()}}
+{\footnotesize\ttfamily \label{class_conjunto_a4e8dd548627ec53335bd6d7b4618c7dd} 
+int Conjunto::\+\+Proximo\+Id\+Equipamento (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Próximo ID disponível para equipamento (monotônico). 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_conjunto_8cpp_source_l00043}{43}} of file \doxymbox{\hyperlink{_conjunto_8cpp_source}{Conjunto.\+cpp}}.
+
 \Hypertarget{class_conjunto_adfb6617fc64265725f21a248b4cf234d}\index{Conjunto@{Conjunto}!QuantidadeAlarmes@{QuantidadeAlarmes}}
 \index{QuantidadeAlarmes@{QuantidadeAlarmes}!Conjunto@{Conjunto}}
 \doxysubsubsection{\texorpdfstring{QuantidadeAlarmes()}{QuantidadeAlarmes()}}
@@ -210,6 +322,10 @@ int Conjunto::\+\+Quantidade\+Alarmes (\begin{DoxyParamCaption}{}{}\end{DoxyPara
 \begin{DoxyReturn}{Returns}
 Número total de alarmes ativos no conjunto. 
 \end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_conjunto_8cpp_source_l00101}{101}} of file \doxymbox{\hyperlink{_conjunto_8cpp_source}{Conjunto.\+cpp}}.
+
 \Hypertarget{class_conjunto_aaa6f3eedb031612642961809adb63ea5}\index{Conjunto@{Conjunto}!QuantidadeEquipamentos@{QuantidadeEquipamentos}}
 \index{QuantidadeEquipamentos@{QuantidadeEquipamentos}!Conjunto@{Conjunto}}
 \doxysubsubsection{\texorpdfstring{QuantidadeEquipamentos()}{QuantidadeEquipamentos()}}
@@ -219,6 +335,10 @@ int Conjunto::\+\+Quantidade\+Equipamentos (\begin{DoxyParamCaption}{}{}\end{Dox
 \begin{DoxyReturn}{Returns}
 Número de equipamentos cadastrados no conjunto. 
 \end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_conjunto_8cpp_source_l00097}{97}} of file \doxymbox{\hyperlink{_conjunto_8cpp_source}{Conjunto.\+cpp}}.
+
 \Hypertarget{class_conjunto_a89809c3933ae572644c4e4c8eb9f88f0}\index{Conjunto@{Conjunto}!RemoverEquipamento@{RemoverEquipamento}}
 \index{RemoverEquipamento@{RemoverEquipamento}!Conjunto@{Conjunto}}
 \doxysubsubsection{\texorpdfstring{RemoverEquipamento()}{RemoverEquipamento()}}
@@ -237,6 +357,10 @@ Remove o equipamento com o ID fornecido.
 \begin{DoxyNote}{Note}
 Implementa US-\/008 (Remover \doxylink{class_equipamento}{Equipamento}). 
 \end{DoxyNote}
+
+
+Definition at line \doxymbox{\hyperlink{_conjunto_8cpp_source_l00047}{47}} of file \doxymbox{\hyperlink{_conjunto_8cpp_source}{Conjunto.\+cpp}}.
+
 \Hypertarget{class_conjunto_a6ffa3278b3e9deb5e16caeff6dba9ee0}\index{Conjunto@{Conjunto}!SetDesc@{SetDesc}}
 \index{SetDesc@{SetDesc}!Conjunto@{Conjunto}}
 \doxysubsubsection{\texorpdfstring{SetDesc()}{SetDesc()}}
@@ -252,6 +376,10 @@ Atualiza a descrição do conjunto.
 {\em desc} & Nova descrição. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{_conjunto_8cpp_source_l00054}{54}} of file \doxymbox{\hyperlink{_conjunto_8cpp_source}{Conjunto.\+cpp}}.
+
 \Hypertarget{class_conjunto_a902d6030efd75d594032225a4392cd82}\index{Conjunto@{Conjunto}!SetNome@{SetNome}}
 \index{SetNome@{SetNome}!Conjunto@{Conjunto}}
 \doxysubsubsection{\texorpdfstring{SetNome()}{SetNome()}}
@@ -269,6 +397,11 @@ Atualiza o nome do conjunto.
 \end{DoxyParams}
 
 
-The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+Definition at line \doxymbox{\hyperlink{_conjunto_8cpp_source_l00061}{61}} of file \doxymbox{\hyperlink{_conjunto_8cpp_source}{Conjunto.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
 \item 
-include/\+\doxymbox{\hyperlink{_conjunto_8hpp}{Conjunto.\+hpp}}\end{DoxyCompactItemize}
+include/\+\doxymbox{\hyperlink{_conjunto_8hpp}{Conjunto.\+hpp}}\item 
+src/\+\doxymbox{\hyperlink{_conjunto_8cpp}{Conjunto.\+cpp}}\end{DoxyCompactItemize}

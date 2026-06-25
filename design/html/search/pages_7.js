@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['usuário_0',['Cargos de Usuário',['../index.html#autotoc_md3',1,'']]]
+  ['instalação_20do_20gcovr_0',['Instalação do gcovr',['../index.html#autotoc_md9',1,'']]]
 ];

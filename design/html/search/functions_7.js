@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['parametro_0',['Parametro',['../class_parametro.html#a0071399fb14dfc6022306a1b11eb395b',1,'Parametro::Parametro(double ValorAtual, std::string Desc, int id)'],['../class_parametro.html#a7b2c8bd8c468fdd88cad4bbf38f153fd',1,'Parametro::Parametro(double ValorAtual, double Max, double Min, std::string Desc, int id)']]],
-  ['proximoiddisponivel_1',['ProximoIdDisponivel',['../class_sistema.html#a0b89a026170c87279c8a01df8846fe04',1,'Sistema']]]
+  ['idativo_0',['IdAtivo',['../class_sistema.html#a600cc879713b7412cfe1f4c6a36120d4',1,'Sistema']]],
+  ['instantiationhelper_1',['instantiationHelper',['../namespacedoctest_1_1detail.html#ada128f4eed1d652e6b525798d368800c',1,'doctest::detail']]],
+  ['isdebuggeractive_2',['isDebuggerActive',['../namespacedoctest_1_1detail.html#a013828c4e677241cc26aeea33f762710',1,'doctest::detail']]],
+  ['isnan_3',['IsNaN',['../structdoctest_1_1_is_na_n.html#a47f3957c504f7d8bc40dd4014cce5ee1',1,'doctest::IsNaN']]]
 ];

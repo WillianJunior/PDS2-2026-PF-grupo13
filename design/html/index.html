@@ -121,6 +121,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('index.html',''
 <div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a></p>
 <p><a class="el" href="class_sistema.html" title="Ponto de entrada central do sistema de monitoramento.">Sistema</a> de monitoramento industrial orientado a objetos desenvolvido em C++. Permite o acompanhamento em tempo real de parâmetros de equipamentos organizados em linhas de produção, detectando automaticamente condições de falha e disparando alarmes.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+Motivação</h1>
+<p>A indústria depende de equipamentos que operam continuamente sob limites bem definidos de temperatura, pressão, vibração e outros parâmetros. Uma falha não detectada em um único equipamento pode se propagar pela linha de produção e gerar paradas custosas ou riscos de segurança. Escolhemos este tema porque ele exercita de forma natural os pilares da disciplina: uma <b>hierarquia clara de composição</b> (<a class="el" href="class_sistema.html" title="Ponto de entrada central do sistema de monitoramento.">Sistema</a> → Linha → <a class="el" href="class_conjunto.html" title="Agrupamento lógico de equipamentos dentro de uma LinhaDeProducao.">Conjunto</a> → <a class="el" href="class_equipamento.html" title="Representa um equipamento físico dentro de um Conjunto.">Equipamento</a> → Parâmetro), <b>herança</b> entre tipos de equipamento (<a class="el" href="class_motor.html">Motor</a>, <a class="el" href="class_sensor.html">Sensor</a>, Válvula, <a class="el" href="class_atuador.html">Atuador</a>), <b>encapsulamento</b> dos limites e do histórico de cada parâmetro, e <b>propagação de diagnóstico</b> por toda a estrutura. Além de ser um domínio rico em regras de negócio, é um problema concreto e fácil de visualizar, o que facilita a modelagem e a escrita de testes significativos.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
 Funcionalidades</h1>
 <ul>
 <li>Gerenciamento hierárquico de <b>Linhas de Produção → Conjuntos → Equipamentos → Parâmetros</b></li>
@@ -131,15 +134,22 @@ Funcionalidades</h1>
 <li>Persistência de dados com save/load de estado</li>
 <li>Registro de eventos via <b><a class="el" href="class_log.html" title="Registra eventos e operações do sistema em arquivo de texto.">Log</a></b> em arquivo</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
 Hierarquia do Sistema</h1>
+<p>Composição (relação "tem-um"):</p>
 <div class="fragment"><div class="line">Sistema</div>
 <div class="line"> \-- LinhaDeProducao</div>
 <div class="line">       \-- Conjunto</div>
 <div class="line">             \-- Equipamento</div>
 <div class="line">                   +-- Parametro</div>
 <div class="line">                   \-- Alarme</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+</div><!-- fragment --><p>Herança (relação "é-um") — especializações de <span class="tt"><a class="el" href="class_equipamento.html" title="Representa um equipamento físico dentro de um Conjunto.">Equipamento</a></span>:</p>
+<div class="fragment"><div class="line">Equipamento</div>
+<div class="line"> +-- Motor      (velocidade, torque)</div>
+<div class="line"> +-- Sensor     (sinal)</div>
+<div class="line"> +-- Valvula    (vazao)</div>
+<div class="line"> \-- Atuador    (retorno)</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
 Cargos de Usuário</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -151,25 +161,109 @@ Cargos de Usuário</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><span class="tt">TECNICO</span>  </td><td class="markdownTableBodyNone">Visualiza dados e alarmes  </td></tr>
 </table>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
 Estrutura de Diretórios</h1>
 <div class="fragment"><div class="line">.</div>
-<div class="line">+-- include/        # Contratos das classes (.hpp)</div>
-<div class="line">+-- src/            # Implementacoes (.cpp)</div>
-<div class="line">+-- design/         # User Stories e Cartoes CRC</div>
-<div class="line">+-- tests/          # Testes automatizados</div>
+<div class="line">+-- include/        # Contratos das classes (.hpp), incl. Excecoes.hpp</div>
+<div class="line">+-- src/            # Implementacoes (.cpp) e main.cpp (interface de terminal)</div>
+<div class="line">+-- design/         # User Stories, Cartoes CRC e documentacao gerada</div>
+<div class="line">+-- tests/          # Testes automatizados (doctest)</div>
+<div class="line">+-- dados/          # Arquivos de inicializacao (ex.: inicial.txt)</div>
 <div class="line">+-- build/          # Artefatos de compilacao</div>
-<div class="line">+-- docs/           # Documentacao gerada pelo Doxygen</div>
+<div class="line">+-- Makefile        # Automacao de build e testes</div>
+<div class="line">+-- Doxyfile        # Configuracao do Doxygen</div>
 <div class="line">\-- README.md</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
-Compilação</h1>
-<div class="fragment"><div class="line">make</div>
 </div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+Estado de Desenvolvimento</h1>
+<p>Comportamentos implementados e validados:</p>
+<ul>
+<li><b>Contratos (<span class="tt">.hpp</span>)</b> e <b>documentação Doxygen</b> para todas as classes principais.</li>
+<li><b>Implementação (<span class="tt">.cpp</span>)</b> completa das entidades e do <span class="tt"><a class="el" href="class_sistema.html" title="Ponto de entrada central do sistema de monitoramento.">Sistema</a></span>, incluindo diagnóstico propagado, alarmes e persistência (save/load) de estado.</li>
+<li><b>Especializações</b> de equipamento (<a class="el" href="class_motor.html">Motor</a>, <a class="el" href="class_sensor.html">Sensor</a>, Válvula, <a class="el" href="class_atuador.html">Atuador</a>) integradas via <b>polimorfismo</b> com <span class="tt">std::unique_ptr&lt;<a class="el" href="class_equipamento.html" title="Representa um equipamento físico dentro de um Conjunto.">Equipamento</a>&gt;</span>.</li>
+<li><b>Programação defensiva</b>: validação de entradas com <b>exceções próprias</b> (hierarquia <span class="tt"><a class="el" href="class_excecao_sistema.html" title="Exceção base do sistema de monitoramento.">ExcecaoSistema</a></span> em <span class="tt"><a class="el" href="_excecoes_8hpp.html">include/Excecoes.hpp</a></span>).</li>
+<li><b>RAII</b>: nenhuma gestão manual de memória (<span class="tt">new</span>/<span class="tt">delete</span>); alocação dinâmica apenas via smart pointers.</li>
+<li><b>Interface de terminal</b> interativa (<span class="tt"><a class="el" href="main_8cpp.html">src/main.cpp</a></span>) com login, controle de acesso por cargo e tratamento de exceções.</li>
+<li><b>Testes de unidade</b> (doctest): uma suíte por classe principal + suíte de exceções/polimorfismo/persistência. Atualmente <b>98 testes</b> passando com **~74% de cobertura** (<span class="tt">gcovr</span>).</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+Programação Defensiva e Tratamento de Exceções</h1>
+<p>As entradas inválidas lançam exceções específicas do domínio, todas derivadas de <span class="tt"><a class="el" href="class_excecao_sistema.html" title="Exceção base do sistema de monitoramento.">ExcecaoSistema</a></span> (logo, captráveis por um único <span class="tt">catch (const <a class="el" href="class_excecao_sistema.html" title="Exceção base do sistema de monitoramento.">ExcecaoSistema</a>&amp;)</span>):</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Exceção  </th><th class="markdownTableHeadNone">Quando  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt"><a class="el" href="class_entrada_invalida.html" title="Entrada inválida (string vazia, argumento sem sentido).">EntradaInvalida</a></span>  </td><td class="markdownTableBodyNone">string vazia (descrição, login, senha)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt"><a class="el" href="class_limites_invalidos.html" title="Limites incoerentes (Max &lt; Min).">LimitesInvalidos</a></span>  </td><td class="markdownTableBodyNone"><span class="tt">Max &lt; Min</span> em um parâmetro  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt"><a class="el" href="class_id_invalido.html" title="Identificador inválido (ex.: negativo).">IdInvalido</a></span>  </td><td class="markdownTableBodyNone">identificador negativo  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt"><a class="el" href="class_id_duplicado.html" title="Tentativa de inserir um identificador já existente.">IdDuplicado</a></span>  </td><td class="markdownTableBodyNone">inserir um ID já existente  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt"><a class="el" href="class_id_inexistente.html" title="Acesso a um identificador inexistente.">IdInexistente</a></span>  </td><td class="markdownTableBodyNone">acessar/remover um ID ausente  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt"><a class="el" href="class_acesso_negado.html" title="Operação sem permissão para o cargo do usuário logado.">AcessoNegado</a></span>  </td><td class="markdownTableBodyNone">operação acima do cargo do usuário (interface)  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt"><a class="el" href="class_sessao_invalida.html" title="Operação que exige sessão ativa sem usuário logado.">SessaoInvalida</a></span>  </td><td class="markdownTableBodyNone">operação que exige sessão sem usuário logado (interface)  </td></tr>
+</table>
+<blockquote class="doxtable">
+<p>Observação: uma <b>leitura fora dos limites</b> de um parâmetro <b>não</b> é erro — é justamente a condição de falha que o sistema detecta, então é armazenada e sinalizada via diagnóstico/alarme. </p>
+</blockquote>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+Compilação e Testes</h1>
+<p>O <span class="tt">Makefile</span> automatiza a compilação e a verificação por testes de unidade (framework <a href="https://github.com/doctest/doctest">doctest</a>):</p>
+<div class="fragment"><div class="line">make        # compila os módulos e gera build/test_runner</div>
+<div class="line">make test   # executa os testes e gera os relatórios de cobertura (gcovr)</div>
+<div class="line">make app    # compila a aplicação interativa em build/sistema</div>
+<div class="line">make run    # compila (se preciso) e executa a aplicação</div>
+<div class="line">make clean  # remove a pasta build/</div>
+</div><!-- fragment --><ul>
+<li><span class="tt">make test</span> executa todos os casos de teste e, em seguida, gera a cobertura via <span class="tt">gcovr</span> (saída em texto e em <span class="tt">build/coverage.html</span>).</li>
+<li>O <span class="tt">make clean</span> é portável: usa <span class="tt">rmdir /S /Q</span> no Windows e <span class="tt">rm -rf</span> em Linux/macOS (detecção automática de SO no Makefile).</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+Instalação do gcovr</h2>
+<p>O <span class="tt">gcovr</span> é uma ferramenta Python (wrapper do <span class="tt">gcov</span>) e precisa ser instalado à parte. Caso o <span class="tt">pip</span> não esteja disponível, primeiro habilite-o com:</p>
+<div class="fragment"><div class="line">python -m ensurepip --upgrade</div>
+</div><!-- fragment --><p>Em seguida instale o <span class="tt">gcovr</span> via <span class="tt">pip</span>:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">SO  </th><th class="markdownTableHeadNone">Comando  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Linux</b>  </td><td class="markdownTableBodyNone"><span class="tt">python3 -m pip install --user gcovr</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>macOS</b>  </td><td class="markdownTableBodyNone"><span class="tt">python3 -m pip install --user gcovr</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Windows</b>  </td><td class="markdownTableBodyNone"><span class="tt">python -m pip install --user gcovr</span>  </td></tr>
+</table>
+<p>Alternativas pelo gerenciador de pacotes do sistema:</p>
+<ul>
+<li><b>Fedora/RHEL:</b> <span class="tt">sudo dnf install gcovr</span></li>
+<li><b>Debian/Ubuntu:</b> <span class="tt">sudo apt install gcovr</span></li>
+<li><b>macOS (Homebrew):</b> <span class="tt">brew install gcovr</span></li>
+</ul>
+<p>Verifique a instalação com <span class="tt">python3 -m gcovr --version</span> (use <span class="tt">python</span> no Windows). O Makefile invoca <span class="tt">python3 -m gcovr</span> em Linux/macOS e <span class="tt">python -m gcovr</span> em Windows.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+Execução da Aplicação</h1>
+<div class="fragment"><div class="line">make run     # ou: make app &amp;&amp; ./build/sistema</div>
+</div><!-- fragment --><p>Ao iniciar, o sistema carrega o arquivo de inicialização <span class="tt">dados/inicial.txt</span> (fornecido no repositório), que cadastra três usuários de exemplo:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Login  </th><th class="markdownTableHeadNone">Senha  </th><th class="markdownTableHeadNone"><a class="el" href="_cargo_8hpp.html#ad202395025143887571b4a5f857b1ac1" title="Níveis de acesso dos usuários do sistema.">Cargo</a>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">admin</span>  </td><td class="markdownTableBodyNone"><span class="tt">admin123</span>  </td><td class="markdownTableBodyNone">ADMIN  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">eng</span>  </td><td class="markdownTableBodyNone"><span class="tt">eng123</span>  </td><td class="markdownTableBodyNone">ENGENHEIRO  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">tec</span>  </td><td class="markdownTableBodyNone"><span class="tt">tec123</span>  </td><td class="markdownTableBodyNone">TECNICO  </td></tr>
+</table>
+<p>Após o login, um menu por cargo permite criar/listar/remover linhas, conjuntos, equipamentos (Motor/Sensor/Válvula/Atuador) e parâmetros, executar diagnóstico, e salvar/carregar o estado (<span class="tt">save.txt</span>). Entradas inválidas são tratadas por exceções e exibidas sem encerrar o programa.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
 Documentação</h1>
 <p>A documentação das classes pode ser gerada com o Doxygen a partir da raiz do projeto:</p>
 <div class="fragment"><div class="line">doxygen Doxyfile</div>
 </div><!-- fragment --><p>A saída HTML estará disponível em <span class="tt">docs/html/index.html</span>. Uma versão, atualiza, em PDF pode ser encontrada na raiz do projeto como <span class="tt">doxygen_doc.pdf</span>.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
 Equipe</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -177,7 +271,7 @@ Equipe</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">2024010002  </td><td class="markdownTableBodyNone">Felipe Hildegardes Jorge  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">2022028400dox  </td><td class="markdownTableBodyNone">Wennedes de Oliveira Nogueira Junior  </td></tr>
+<td class="markdownTableBodyNone">2022028400  </td><td class="markdownTableBodyNone">Wennedes de Oliveira Nogueira Junior  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">2020057144  </td><td class="markdownTableBodyNone">Gustavo Coelho Santos  </td></tr>
 </table>
