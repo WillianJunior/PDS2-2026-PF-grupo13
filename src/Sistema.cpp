@@ -7,7 +7,7 @@
 #include <fstream>
 #include <sstream>
 
-Sistema::Sistema() : _UsuarioLogadoIdx(-1), _arquivoSave("save.txt") {
+Sistema::Sistema() : _UsuarioLogadoIdx(-1), _arquivoSave("dados/save.txt") {
     this->_ProximoId = 1;
 }
 

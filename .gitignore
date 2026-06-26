@@ -4,5 +4,5 @@ design/html/
 design/latex/
 
 # Artefatos de runtime
-save.txt
+dados/save.txt
 *.log

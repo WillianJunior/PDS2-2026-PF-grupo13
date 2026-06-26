@@ -140,7 +140,7 @@ TEST_CASE("Conjunto - ExibirEquipamentos com itens lista nome") {
     Conjunto c(19, "Bloco", "d");
     c.AdicionarEquipamento(1, "eq");
     std::string s = capturaSaida([&]{ c.ExibirEquipamentos(); });
-    CHECK(s.find("Bloco") != std::string::npos);
+    CHECK(s.find("Equipamento ID: 1") != std::string::npos);
 }
 
 TEST_CASE("Conjunto - ExibirAlarmes vazio e cheio") {

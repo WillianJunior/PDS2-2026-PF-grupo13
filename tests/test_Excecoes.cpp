@@ -132,7 +132,7 @@ TEST_CASE("Sistema - salvar e carregar restaura estrutura") {
     CHECK(s1.SalvarAlteracoes() == true);
 
     Sistema s2;
-    CHECK(s2.CarregarSave("save.txt") == true);
+    CHECK(s2.CarregarSave("dados/save.txt") == true);
     CHECK(s2.GetLinhas().size() == 1);
     CHECK(s2.AcessarLinha(1).QuantidadeConjuntos() == 1);
     CHECK(s2.AcessarLinha(1).AcessarConjunto(1).QuantidadeEquipamentos() == 1);

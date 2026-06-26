@@ -151,7 +151,7 @@ TEST_CASE("Sistema - RemoverUsuario inexistente quando ha outros") {
 }
 
 TEST_CASE("Sistema - persistencia round-trip") {
-    std::remove("save.txt");
+    std::remove("dados/save.txt");
     {
         Sistema s;
         s.AdicionarUsuario("u", "p", Cargo::ADMIN);
@@ -166,7 +166,7 @@ TEST_CASE("Sistema - persistencia round-trip") {
     REQUIRE(s2.CarregarUltimoSave());
     CHECK(s2.GetLinhas().size() == 1);
     CHECK(s2.Login("u", "p") == true);
-    std::remove("save.txt");
+    std::remove("dados/save.txt");
 }
 
 TEST_CASE("Sistema - CarregarSave arquivo inexistente retorna false") {
