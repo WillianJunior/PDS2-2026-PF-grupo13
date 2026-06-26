@@ -50,7 +50,6 @@ public:
     /**
      * @brief Remove o equipamento com o ID fornecido.
      * @param id Identificador do equipamento a remover.
-     * @note Implementa US-008 (Remover Equipamento).
      */
     void RemoverEquipamento(int id);
 
@@ -62,7 +61,6 @@ public:
 
     /**
      * @brief Exibe no console os equipamentos do conjunto.
-     * @note Implementa US-006 (Acessar Conjunto).
      */
     void ExibirEquipamentos() const;
 
@@ -71,7 +69,6 @@ public:
 
     /**
      * @brief Exibe equipamentos e alarmes de forma consolidada.
-     * @note Implementa US-006 (Acessar Conjunto).
      */
     void ExibirTudo() const;
 
@@ -90,7 +87,6 @@ public:
 
     /**
      * @brief Propaga a atualização de alarmes para todos os equipamentos.
-     * @note Implementa US-014 (Criar Alarme).
      */
     void AtualizarAlarmes();
 

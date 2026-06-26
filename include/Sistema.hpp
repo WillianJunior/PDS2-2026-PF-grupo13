@@ -46,7 +46,6 @@ public:
     /**
      * @brief Remove a linha de produção com o ID fornecido.
      * @param id Identificador da linha a remover.
-     * @note Implementa US-002 (Remover Linhas de Produção).
      */
     void RemoverLinha(int id);
 
@@ -63,7 +62,6 @@ public:
 
     /**
      * @brief Exibe no console todas as linhas de produção cadastradas.
-     * @note Implementa US-003 (Acessar Linhas de Produção).
      */
     void ExibirLinhas();
 
@@ -72,14 +70,12 @@ public:
      * @param login Login de acesso.
      * @param senha Senha do usuário.
      * @param cargo Cargo/nível de acesso.
-     * @note Implementa US-015 (Criar usuários).
      */
     void AdicionarUsuario(std::string login, std::string senha, Cargo cargo);
 
     /**
      * @brief Remove o usuário identificado pelo login.
      * @param login Login do usuário a remover.
-     * @note Implementa US-016 (Remover usuários).
      */
     void RemoverUsuario(std::string login);
 
@@ -132,7 +128,6 @@ public:
      * @brief Carrega o estado do sistema a partir de um arquivo específico.
      * @param arquivo Caminho do arquivo de save.
      * @return true se o carregamento foi bem-sucedido.
-     * @note Implementa US-021 (Carregar dados).
      */
     bool CarregarSave(std::string arquivo);
 };

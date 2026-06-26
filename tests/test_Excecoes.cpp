@@ -15,8 +15,6 @@
 
 #include <memory>
 
-// ---------- Validação / exceções ----------
-
 TEST_CASE("Parametro - Max < Min lanca LimitesInvalidos") {
     CHECK_THROWS_AS(Parametro(5.0, 0.0, 10.0, "Temp", 1), LimitesInvalidos);
 }
@@ -93,8 +91,6 @@ TEST_CASE("Excecoes - derivadas capturaveis como ExcecaoSistema") {
     CHECK_THROWS_AS(Parametro(5.0, 0.0, 10.0, "Temp", 1), ExcecaoSistema);
 }
 
-// ---------- Polimorfismo via unique_ptr ----------
-
 TEST_CASE("Polimorfismo - Tipo() despacha para a classe concreta") {
     std::unique_ptr<Equipamento> motor   = std::make_unique<Motor>(1, "M", 100.0, 50.0);
     std::unique_ptr<Equipamento> sensor  = std::make_unique<Sensor>(2, "S", 1.0);
@@ -118,8 +114,6 @@ TEST_CASE("Conjunto - aceita equipamento derivado via unique_ptr") {
     CHECK(c.QuantidadeEquipamentos() == 1);
     CHECK(c.AcessarEquipamento(5).Tipo() == "Sensor");
 }
-
-// ---------- Persistência (round-trip) ----------
 
 TEST_CASE("Sistema - salvar e carregar restaura estrutura") {
     Sistema s1;

@@ -19,7 +19,6 @@ public:
      * @param login Login de acesso.
      * @param senha Senha do usuário.
      * @param cargo Cargo/nível de acesso.
-     * @note Implementa US-015 (Criar usuários).
      */
     Usuario(std::string login, std::string senha, Cargo cargo);
 
@@ -27,7 +26,6 @@ public:
      * @brief Verifica se a senha fornecida corresponde à senha do usuário.
      * @param senha Senha a validar.
      * @return true se a senha estiver correta.
-     * @note Implementa US-017 (Login de usuário).
      */
     bool ValidarSenha(std::string senha) const;
 

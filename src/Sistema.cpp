@@ -7,13 +7,45 @@
 #include <fstream>
 #include <sstream>
 
+static std::string cargoParaTexto(Cargo c) {
+    switch (c) {
+        case Cargo::ADMIN:
+            return "ADMIN";
+        case Cargo::ENGENHEIRO:
+            return "ENGENHEIRO";
+        case Cargo::TECNICO:
+            return "TECNICO";
+    }
+    return "TECNICO";
+}
+
+static Cargo textoParaCargo(const std::string& s) {
+    if (s == "ADMIN") {
+        return Cargo::ADMIN;
+    }
+    if (s == "ENGENHEIRO") {
+        return Cargo::ENGENHEIRO;
+    }
+    return Cargo::TECNICO;
+}
+
+static std::vector<std::string> dividir(const std::string& linha, char sep) {
+    std::vector<std::string> campos;
+    std::string atual;
+    std::istringstream iss(linha);
+    while (std::getline(iss, atual, sep)) {
+        campos.push_back(atual);
+    }
+    return campos;
+}
+
 Sistema::Sistema() : _UsuarioLogadoIdx(-1), _arquivoSave("dados/save.txt") {
     this->_ProximoId = 1;
 }
 
 void Sistema::AdicionarLinha(int id, std::string desc, std::string local, std::string nome) {
     if (this->IdAtivo(id)) {
-        throw IdDuplicado("Sistema: linha com id ja existente");
+        throw IdDuplicado("ja existe uma linha com esse id");
     }
     LinhaDeProducao Linha(id, desc, local, nome);
 
@@ -31,7 +63,7 @@ int Sistema::AdicionarLinha(std::string desc, std::string local, std::string nom
 
 void Sistema::RemoverLinha(int id) {
     if (this->_Linhas.count(id) == 0) {
-        throw IdInexistente("Sistema: linha inexistente");
+        throw IdInexistente("linha nao encontrada");
     }
     this->_Linhas.erase(id);
 }
@@ -43,7 +75,7 @@ const std::map<int, LinhaDeProducao>& Sistema::GetLinhas() const {
 LinhaDeProducao& Sistema::AcessarLinha(int id) {
     auto it = this->_Linhas.find(id);
     if (it == this->_Linhas.end()) {
-        throw IdInexistente("Sistema: linha inexistente");
+        throw IdInexistente("linha nao encontrada");
     }
     return it->second;
 }
@@ -82,76 +114,38 @@ void Sistema::RemoverUsuario(std::string login) {
     std::cout << "Nenhum usuario removido." << std::endl;
 }
 
-int Sistema::ProximoIdDisponivel() const {
-    return this->_ProximoId;
-}
+int Sistema::ProximoIdDisponivel() const { return _ProximoId; }
 
 bool Sistema::IdAtivo(int Id) const {
-    return this->_Linhas.count(Id) > 0;
+    return _Linhas.count(Id) > 0;
 }
 
 bool Sistema::Login(std::string login, std::string senha) {
-
-    for (size_t i = 0; i < this->_Usuarios.size(); i++){
-        if (this->_Usuarios[i].GetLogin() == login && this->_Usuarios[i].ValidarSenha(senha) == true){
-            this->_UsuarioLogadoIdx = static_cast<int>(i);
-
+    for (size_t i = 0; i < _Usuarios.size(); i++) {
+        if (_Usuarios[i].GetLogin() == login && _Usuarios[i].ValidarSenha(senha)) {
+            _UsuarioLogadoIdx = static_cast<int>(i);
             std::cout << "Usuario " << login << " logado." << std::endl;
-
             return true;
         }
     }
     std::cout << "Usuario " << login << " nao encontrado." << std::endl;
     return false;
-
 }
 
 bool Sistema::Logout() {
-    if (this->_UsuarioLogadoIdx != -1){
-        this->_UsuarioLogadoIdx = -1;
-        return true;
+    if (_UsuarioLogadoIdx == -1) {
+        return false;
     }
-
-    return false;
+    _UsuarioLogadoIdx = -1;
+    return true;
 }
 
 Usuario* Sistema::GetUsuarioLogado() const {
-    if (this->_UsuarioLogadoIdx == -1){
+    if (_UsuarioLogadoIdx == -1) {
         return nullptr;
     }
-
-    return const_cast<Usuario*>(&this->_Usuarios[this->_UsuarioLogadoIdx]);
+    return const_cast<Usuario*>(&_Usuarios[_UsuarioLogadoIdx]);
 }
-
-namespace {
-
-std::string cargoParaTexto(Cargo c) {
-    switch (c) {
-        case Cargo::ADMIN:      return "ADMIN";
-        case Cargo::ENGENHEIRO: return "ENGENHEIRO";
-        case Cargo::TECNICO:    return "TECNICO";
-    }
-    return "TECNICO";
-}
-
-Cargo textoParaCargo(const std::string& s) {
-    if (s == "ADMIN")      return Cargo::ADMIN;
-    if (s == "ENGENHEIRO") return Cargo::ENGENHEIRO;
-    return Cargo::TECNICO;
-}
-
-// Divide uma linha por separador, preservando campos vazios (inclusive finais).
-std::vector<std::string> dividir(const std::string& linha, char sep) {
-    std::vector<std::string> campos;
-    std::string atual;
-    std::istringstream iss(linha);
-    while (std::getline(iss, atual, sep)) {
-        campos.push_back(atual);
-    }
-    return campos;
-}
-
-} // namespace
 
 bool Sistema::SalvarAlteracoes() {
     std::ofstream ofs(this->_arquivoSave);
@@ -206,7 +200,6 @@ bool Sistema::CarregarSave(std::string arquivo) {
         return false;
     }
 
-    // Substitui o estado atual pelo conteúdo do arquivo.
     this->_Linhas.clear();
     this->_Usuarios.clear();
     this->_ProximoId = 1;

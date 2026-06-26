@@ -3,37 +3,29 @@
 
 Usuario::Usuario(std::string login, std::string senha, Cargo cargo) {
     if (login.empty()) {
-        throw EntradaInvalida("Usuario: login vazio");
+        throw EntradaInvalida("login vazio");
     }
     if (senha.empty()) {
-        throw EntradaInvalida("Usuario: senha vazia");
+        throw EntradaInvalida("senha em branco");
     }
     this->_login = login;
     this->_senha = senha;
     this->_cargo = cargo;
 }
 
-bool Usuario::ValidarSenha(std::string senha) const { 
-
-    if (senha == this->_senha){
-        return true;
-    }
-    return false;
+bool Usuario::ValidarSenha(std::string senha) const {
+    return senha == _senha;
 }
 
-std::string Usuario::GetLogin() const { 
-    return this->_login; 
+std::string Usuario::GetLogin() const {
+    return _login;
 }
 
 Cargo Usuario::GetCargo(std::string login) {
     (void)login;
-    return this->_cargo;
+    return _cargo;
 }
 
-Cargo Usuario::GetCargo() const {
-    return this->_cargo;
-}
+Cargo Usuario::GetCargo() const { return _cargo; }
 
-std::string Usuario::GetSenha() const {
-    return this->_senha;
-}
+std::string Usuario::GetSenha() const { return _senha; }

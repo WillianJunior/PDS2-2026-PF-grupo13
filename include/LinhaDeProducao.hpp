@@ -52,13 +52,11 @@ public:
     /**
      * @brief Remove o conjunto com o ID fornecido.
      * @param id Identificador do conjunto a remover.
-     * @note Implementa US-005 (Remover Conjunto).
      */
     void RemoverConjunto(int id);
 
     /**
      * @brief Exibe no console os conjuntos da linha.
-     * @note Implementa US-003 (Acessar Linhas de Produção).
      */
     void ExibirConjuntos() const;
 
@@ -67,7 +65,6 @@ public:
 
     /**
      * @brief Exibe conjuntos, equipamentos e alarmes de forma consolidada.
-     * @note Implementa US-003 (Acessar Linhas de Produção).
      */
     void ExibirTudo() const;
 
@@ -86,7 +83,6 @@ public:
 
     /**
      * @brief Propaga a atualização de alarmes para todos os conjuntos.
-     * @note Implementa US-014 (Criar Alarme).
      */
     void AtualizarAlarmes();
 

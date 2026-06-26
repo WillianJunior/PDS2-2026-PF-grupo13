@@ -30,7 +30,6 @@ public:
     /**
      * @brief Consulta o parâmetro associado e atualiza o estado do alarme.
      * @return true se o alarme estiver ativo (parâmetro em falha).
-     * @note Implementa US-014 (Criar Alarme).
      */
     bool AtualizarAlarme();
 

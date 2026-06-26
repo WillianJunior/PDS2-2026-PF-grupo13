@@ -1,18 +1,17 @@
-CXX      = g++
+CXX = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra -I./include --coverage
-LDFLAGS  = --coverage
+LDFLAGS = --coverage
 
 BUILD_DIR = build
 
-# Deteccao de SO: comandos diferem entre Windows e POSIX (Linux/macOS)
 ifeq ($(OS),Windows_NT)
-    MKDIR  = if not exist "$(BUILD_DIR)" mkdir "$(BUILD_DIR)"
-    RMDIR  = if exist "$(BUILD_DIR)" rmdir /S /Q "$(BUILD_DIR)"
-    PYTHON = python
+	MKDIR = if not exist "$(BUILD_DIR)" mkdir "$(BUILD_DIR)"
+	RMDIR = if exist "$(BUILD_DIR)" rmdir /S /Q "$(BUILD_DIR)"
+	PYTHON = python
 else
-    MKDIR  = mkdir -p $(BUILD_DIR)
-    RMDIR  = rm -rf $(BUILD_DIR)
-    PYTHON = python3
+	MKDIR = mkdir -p $(BUILD_DIR)
+	RMDIR = rm -rf $(BUILD_DIR)
+	PYTHON = python3
 endif
 
 SRC_OBJS = $(BUILD_DIR)/Alarme.o \
@@ -44,13 +43,10 @@ APP_BIN  = $(BUILD_DIR)/sistema
 
 .PHONY: all test test-bin clean app run
 
-# Alvo default: apenas o executavel da aplicacao
 app: $(APP_BIN)
 
-# Builda tudo (app + test runner)
 all: $(APP_BIN) $(TEST_BIN)
 
-# Builda apenas o binario de testes
 test-bin: $(TEST_BIN)
 
 $(BUILD_DIR):

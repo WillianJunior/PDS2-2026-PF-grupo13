@@ -38,7 +38,6 @@ public:
      * @param Min        Limite inferior aceitável.
      * @param Desc       Descrição do parâmetro.
      * @param id         Identificador único.
-     * @note Implementa US-018 (Configurar parâmetros de equipamentos).
      */
     Parametro(double ValorAtual, double Max, double Min, std::string Desc, int id);
 
@@ -52,21 +51,18 @@ public:
     /**
      * @brief Atualiza o valor atual e registra no histórico.
      * @param Valor Novo valor lido.
-     * @note Implementa US-010 (Leitura do Equipamento).
      */
     void SetValorAtual(double Valor);
 
     /**
      * @brief Define o limite superior.
      * @param Valor Novo limite máximo.
-     * @note Implementa US-018 (Configurar parâmetros de equipamentos).
      */
     void SetMax(double Valor);
 
     /**
      * @brief Define o limite inferior.
      * @param Valor Novo limite mínimo.
-     * @note Implementa US-018 (Configurar parâmetros de equipamentos).
      */
     void SetMin(double Valor);
 

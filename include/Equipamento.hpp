@@ -44,7 +44,6 @@ public:
      * @param ValorAtual Leitura inicial.
      * @param Desc       Descrição do parâmetro.
      * @param id         Identificador único do parâmetro.
-     * @note Implementa US-018 (Configurar parâmetros de equipamentos).
      */
     void AdicionarParametro(double ValorAtual, std::string Desc, int id);
 
@@ -60,7 +59,6 @@ public:
      * @param Max        Limite superior aceitável.
      * @param Min        Limite inferior aceitável.
      * @param Desc       Descrição do parâmetro.
-     * @note Implementa US-018 (Configurar parâmetros de equipamentos).
      */
     void AdicionarParametro(double ValorAtual, double Max, double Min, std::string Desc, int id);
 
@@ -88,19 +86,16 @@ public:
 
     /**
      * @brief Atualiza o estado de todos os alarmes do equipamento.
-     * @note Implementa US-014 (Criar Alarme).
      */
     void AtualizarAlarmes();
 
     /**
      * @brief Exibe no console os parâmetros e seus valores atuais.
-     * @note Implementa US-009 (Acessar Equipamento).
      */
     void ExibirParametros() const;
 
     /**
      * @brief Exibe no console os alarmes ativos do equipamento.
-     * @note Implementa US-009 (Acessar Equipamento).
      */
     void ExibirAlarmes() const;
 
